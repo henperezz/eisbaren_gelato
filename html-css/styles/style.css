@@ -1,0 +1,26 @@
+
+:root{
+    --cor-primaria: #FBFBD7 ;
+    --cor-secundaria: #FADADD;
+    --cor-terciaria: #B0E0E6;
+    --font-principal: '', sans-serif;
+    --font-secundaria: '', sans-serif;
+}
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 50px;
+  height: 90px;
+}
+
+
