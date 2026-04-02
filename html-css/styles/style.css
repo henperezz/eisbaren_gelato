@@ -7,20 +7,37 @@
     --font-secundaria: '', sans-serif;
 }
 
+/* Essa primeria parte do css serve para adicionar elementos do seu site, basicamente */
 *{
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
 }
 
-.logo {
+/*Aqui eu deifini o tamanho da classe container, ou seja, o tmaanho do menu etc*/
+.container{
+  max-width: 1440px;  /*largura*/
+  max-height: 150px;  /*altura*/
+  left: 0.24px;  /*Direção*/
+  top: -0.47px; /*Superior*/
+
   display: flex;
-  align-items: center;
+  align-items: left;
+  justify-content: right;
+  margin: auto;
+
 }
 
-.logo img {
-  width: 70px;
-  height: 70px;
+/*Aqui tem a cor do menu, que inclusive mais para frente vou colocar em degrade*/
+header{
+  background-color: var(--cor-secundaria);
+  width: 100%;
 }
+
+/* Definição dos tamanhos dos itens*/
+.logo, .logo{
+
+}
+
 
 
