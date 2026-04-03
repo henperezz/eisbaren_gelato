@@ -170,7 +170,7 @@ body {
 .main-footer {
     background: linear-gradient(to top, var(--rosa-eisbaren), var(--rosa-claro));
     padding: 80px 10% 30px;
-    margin-top: 60px;
+    margin-top: px;
 }
 
 .footer-grid {
@@ -180,10 +180,10 @@ body {
 }
 
 .footer-logo img {
-    width: 110px;
+    width: 250px;
     border-radius: 50%;
-    background: var(--branco);
     padding: 5px;
+    align-items: left;
 }
 
 .footer-links h4, .footer-contact h4 {
