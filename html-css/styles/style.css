@@ -1,5 +1,7 @@
 /* 1. CONFIGURAÇÕES TÉCNICAS E FONTE */
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bigshot+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 
 :root {
     --rosa-eisbaren: #FADADD;
@@ -19,7 +21,7 @@
 }
 
 body {
-    font-family: 'Fredoka', sans-serif;
+    font-family: 'inter', sans-serif;
     color: var(--texto);
     line-height: 1.6;
     background-color: var(--branco);
@@ -31,8 +33,8 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 5%;
-    background: linear-gradient(to top, var(--rosa-claro), var(--rosa-eisbaren));
-    backdrop-filter: blur(none);
+    background: linear-gradient(to top, var(--rosa-c), var(--rosa-ein));
+    backdrop-filter: blur(10px);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -81,10 +83,13 @@ body {
 }
 
 .hero-text h1 {
-    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    font-family: 'Bigshot One', cursive;
+    font-size: clamp(3rem, 8vw, 7rem);
     color: var(--branco);
-    text-shadow: 4px 5px 15px rgba(0, 0, 0, 0.4);
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
+
+    -webkit-text-stroke: 0.7px var(--texto); /* contorno */
+    
 }
 
 .image-loja {
@@ -102,7 +107,7 @@ body {
 /* 4. SEÇÕES DE CONTEÚDO COM DEGRADÊS */
 .info-section {
     padding: 80px 10%;
-    text-align: center;
+    text-align: left;
 }
 
 .container {
@@ -151,7 +156,7 @@ body {
 
 .brand-flex {
     display: flex;
-    align-items: center;
+    flex-direction: row-reverse;
     gap: 60px;
     text-align: left;
 }
@@ -168,7 +173,7 @@ body {
 
 /* 6. FOOTER */
 .main-footer {
-    background: linear-gradient(to top, var(--rosa-eisbaren), var(--rosa-claro));
+    background: linear-gradient(to top, var(--rosa-forte), var(--rosa-claro));
     padding: 80px 10% 30px;
     margin-top: px;
 }
