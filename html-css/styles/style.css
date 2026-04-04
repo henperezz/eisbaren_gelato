@@ -1,0 +1,22 @@
+@import url();
+
+.root {
+  --corHeaderFooter1: #d53e44;
+  --corHeaderFooter2: #95192c;
+  --corHeaderFooter3: #761816;
+  --corHeaderFooter4: #241b1b00;
+  --corCasquinhas: #fdae0c;
+  --corMilkshakes: #ffaec1;
+  --corAcai: #c50d19;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+body {
+  background-color: #f4f0f0cc;
+  flex-direction: column;
+}
