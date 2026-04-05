@@ -1,5 +1,5 @@
 
-:root{
+:root {
     --cor-primaria: #FBFBD7 ;
     --cor-secundaria: #FADADD;
     --cor-terciaria: #B0E0E6;
@@ -9,7 +9,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 /* Essa primeria parte do css serve para adicionar elementos do seu site, basicamente */
-*{
+* {
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
@@ -17,9 +17,9 @@
 }
 
 /*Aqui eu deifini o tamanho da classe container, ou seja, o tmaanho do menu etc*/
-.container{
+.container {
   max-width: 1440px;  /*largura*/
-  height: 150px;  /*altura*/
+  height: 126px;  /*altura*/
   left: 0.24px;  /*Direção*/
   top: -0.47px; /*Superior*/
 
@@ -31,24 +31,27 @@
 }
 
 /*Aqui tem a cor do menu, que inclusive mais para frente vou colocar em degrade*/
-header{
-
+header {
   /*O degradê*/
-  background: linear-gradient(90deg, #D53E44 0%, #95192C 14%, #761816 34%, rgba(36, 27, 27, 0));
+  background: linear-gradient(to bottom, #cf7eae 0%, #e69cc6 14%, #dba7bf 34%, #e8a3b878 70%);
   opacity: 100%;
-  width: auto;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+
   
 }
 
-
 /* Definição dos tamanhos dos itens*/
-.logo img{
+.logo img {
   width: 200px;
   height: 200px;
   left: 0.50px;
+
 }
 
-.menu{
+.menu {
   width: 50%; /*Aqui eu coloquei uma "caixa de texto" ,aior pro topicos, para que não fique um de baixo do outro*/
   letter-spacing: 0.29px; /*Espaçamento entre os tópicos do menu*/
   font-size: 13.7px;
@@ -58,12 +61,44 @@ header{
 
 }
 
-.menu nav a{
+.menu nav a {
   color: #ffffff;
   text-decoration: none;
   padding-right: 30px;
   font-size: 18px;
+  transition: 0.3s; /*Coloquei aqui a transição pr adeixar ela de certa forma mais suave */
 }
+
+.menu nav a:hover {
+  color: #525946;
+}
+
+.menu nav a img {
+  width: 14.67px;
+  height: 12px;/*AQUI TEM QUE ARRUMAR O BONEQUINHO DPS */
+}
+
+section{
+  background-color: #FADADD;
+}
+
+.imagem-inicial {
+  width: 100%;
+  overflow: hidden;
+
+}
+
+.imagem-inicial img {
+  width: 100%; /* Faz a imagem preecher toda a tela*/
+  height: auto; /* Ajuda a fazer com que a iamgem não fique achatada*/
+  display: block; /*Garante que toda a iamgem ocape tudo que falta, basicamente.*/
+  
+}
+
+/*ESTILIZÇÃO DO CARROCEL*/
+
+
+
 
 
 
