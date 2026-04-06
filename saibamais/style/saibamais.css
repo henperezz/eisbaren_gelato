@@ -5,13 +5,13 @@
 
 :root {
     --rosa-eisbaren: #FADADD;
-    --rosa-forte: #ff85a2;   /* Rosa da imagem */
-    --amarelo-eisbaren: #FBFBD7; /* Amarelo da imagem */
-    --azul-eisbaren: #B0E0E6;   /* Azul da imagem */
-    --rosa-claro: #fdf2f5;      /* Rosa fundo suave */
+    --rosa-forte: #ff85a2;   
+    --amarelo-eisbaren: #FBFBD7; 
+    --azul-eisbaren: #B0E0E6;   
+    --rosa-claro: #fdf2f5;      
     --branco: #ffffff;
     --texto: #4D2B1A;
-    --cor-texto:#B9B920;           /* Marrom para leitura confortável */
+    --cor-texto:#B9B920;           
 }
 
 * {
@@ -34,20 +34,19 @@ body {
     align-items: center;
     padding: 10px 5%;
     height: 65px;
-    background: linear-gradient(to bottom, none); /* Fundo sólido rosa claro */
+    background: linear-gradient(to bottom, none); 
     backdrop-filter: blur(10px);
-    position: fixed; /* fixa no topo */
+    position: fixed;  
     top: 0;
     width: 100%;
     z-index: 1000;
-    box-shadow: none; /* Sombra suave */
-    transition: background 0.3s ease; /* transição suave */
+    box-shadow: none; 
+    transition: background 0.3s ease; 
 }
 
-/* Quando rolar a página, a navbar fica transparente */
 .navbar.transparent {
     background: transparent;
-    backdrop-filter: blur(10px); /* opcional: remove o blur */
+    backdrop-filter: blur(10px); 
     box-shadow: none;
 }
 
@@ -57,15 +56,14 @@ body {
 }
 
 .logo-mini img {
-     height: 90px;          /* aumenta a logo */
-    width: auto;           /* mantém proporção */
-     
+     height: 90px;          
+    width: auto;           
     border-radius: 50%;
     transition: transform 0.3s ease;
 }
 
 .logo-mini a:hover img {
-    transform: scale(1.05); /* efeito de zoom suave */
+    transform: scale(1.05); 
 }
 
 .nav.a {
@@ -110,7 +108,7 @@ body {
     color: var(--branco);
     letter-spacing: 1.5px;
 
-    -webkit-text-stroke: 0.7px var(--texto); /* contorno */
+    -webkit-text-stroke: 0.7px var(--texto); 
     
 }
 
@@ -118,8 +116,8 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;   /* ocupa toda a largura */
-    height: 100%;  /* ocupa toda a altura da hero-section */
+    width: 100%;   
+    height: 100%;  
     z-index: 1;
 }
 
@@ -127,8 +125,8 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: top;  /* ajusta o foco da imagem */
-    filter: brightness(0.75); /* Escurece a foto para o texto brilhar */
+    object-position: top; 
+    filter: brightness(0.75); 
 }
 
 /* 4. SEÇÕES DE CONTEÚDO COM DEGRADÊS */
@@ -139,7 +137,7 @@ body {
     align-items: center;
     justify-content: space-between;
     gap: 40px;
-    padding: 0 5%;   /* espaçamento lateral proporcional à largura da tela */
+    padding: 0 5%;   
 }
 
 .info-text {
@@ -152,26 +150,17 @@ body {
     text-align: center;
 }
 
-/* Ajustes para telas menores */
-@media (max-width: 768px) {
-    .info-section .container {
-        flex-direction: column;   /* empilha texto e imagem */
-        text-align: center;       /* centraliza em telas pequenas */
-        padding: 20px;            /* padding fixo para dar respiro */
-    }
-
     .info-text {
-        align-items: center;      /* centraliza texto */
-    }
+        align-items: center;     
+    } 
 
     .info-text p {
-        max-width: 90%;           /* limita largura do texto */
+        max-width: 90%;        
     }
-}
 
 
 .info-text h2 {
-    margin-bottom: 15px;       /* Espaço entre título e parágrafo */
+    margin-bottom: 15px;     
 }
 
 .info-text p {
@@ -185,7 +174,7 @@ body {
 .info-section .container {
     display: flex;
     flex-direction: row;
-    align-items: center;       /* centraliza verticalmente */
+    align-items: center;       
     justify-content: center;
     gap: 40px;
     min-height: 300px;         
@@ -348,7 +337,7 @@ body {
 
 .footer-bottom {
     display: flex;
-    justify-content: space-between; /* separa esquerda e direita */
+    justify-content: space-between; 
     align-items: center;
     margin-top: 50px;
     padding-top: 25px;
