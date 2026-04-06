@@ -19,14 +19,13 @@
         const btnLogin = document.getElementById('btnLogin');
 
         loginForm.addEventListener('submit', (e) => {
-            // Limpa espaços extras do email
+            
             emailInput.value = emailInput.value.trim();
 
-            // Feedback visual no botão
             btnLogin.innerText = "ENTRANDO...";
             btnLogin.style.opacity = "0.7";
             btnLogin.style.cursor = "not-allowed";
 
-            // verificação com o seu banco de dados
+          
             console.log("Tentativa de login para:", emailInput.value);
         });
