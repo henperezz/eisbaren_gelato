@@ -1,0 +1,368 @@
+/* 1. CONFIGURAÇÕES TÉCNICAS E FONTE */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bigshot+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+:root {
+    --rosa-eisbaren: #FADADD;
+    --rosa-forte: #ff85a2;   /* Rosa da imagem */
+    --amarelo-eisbaren: #FBFBD7; /* Amarelo da imagem */
+    --azul-eisbaren: #B0E0E6;   /* Azul da imagem */
+    --rosa-claro: #fdf2f5;      /* Rosa fundo suave */
+    --branco: #ffffff;
+    --texto: #4D2B1A;
+    --cor-texto:#B9B920;           /* Marrom para leitura confortável */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'inter', sans-serif;
+    color: var(--texto);
+    line-height: 1.6;
+    background-color: var(--branco);
+}
+
+/* 2. NAVBAR (MENU) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    height: 65px;
+    background: linear-gradient(to bottom, none); /* Fundo sólido rosa claro */
+    backdrop-filter: blur(10px);
+    position: fixed; /* fixa no topo */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: none; /* Sombra suave */
+    transition: background 0.3s ease; /* transição suave */
+}
+
+/* Quando rolar a página, a navbar fica transparente */
+.navbar.transparent {
+    background: transparent;
+    backdrop-filter: blur(10px); /* opcional: remove o blur */
+    box-shadow: none;
+}
+
+.logo-mini a {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.logo-mini img {
+     height: 90px;          /* aumenta a logo */
+    width: auto;           /* mantém proporção */
+     
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.logo-mini a:hover img {
+    transform: scale(1.05); /* efeito de zoom suave */
+}
+
+.nav.a {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav.a a {
+    text-decoration: none;
+    color: var(--texto);
+    font-weight: 600;
+    font-size: 1rem;
+    transition: 0.3s ease;
+}
+
+.nav.a a:hover {
+    color: var(--azul-eisbaren);
+    transform: scale(1.1);
+}
+
+/* 3. HERO SECTION (BANNER PRINCIPAL) */
+.hero-section {
+    position: relative;
+    height: calc100vh;
+    min-height: 400px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-text {
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-family: 'Bigshot One', cursive;
+    font-size: clamp(3rem, 8vw, 7rem);
+    color: var(--branco);
+    letter-spacing: 1.5px;
+
+    -webkit-text-stroke: 0.7px var(--texto); /* contorno */
+    
+}
+
+.image-loja {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;   /* ocupa toda a largura */
+    height: 100%;  /* ocupa toda a altura da hero-section */
+    z-index: 1;
+}
+
+.image-loja img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;  /* ajusta o foco da imagem */
+    filter: brightness(0.75); /* Escurece a foto para o texto brilhar */
+}
+
+/* 4. SEÇÕES DE CONTEÚDO COM DEGRADÊS */
+/* Apenas as seções do main */
+.info-section .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 0 5%;   /* espaçamento lateral proporcional à largura da tela */
+}
+
+.info-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+    .info-section .container {
+        flex-direction: column;   /* empilha texto e imagem */
+        text-align: center;       /* centraliza em telas pequenas */
+        padding: 20px;            /* padding fixo para dar respiro */
+    }
+
+    .info-text {
+        align-items: center;      /* centraliza texto */
+    }
+
+    .info-text p {
+        max-width: 90%;           /* limita largura do texto */
+    }
+}
+
+
+.info-text h2 {
+    margin-bottom: 15px;       /* Espaço entre título e parágrafo */
+}
+
+.info-text p {
+    max-width: 600px;      
+    line-height: 1.6;      
+    text-align: left;       
+    margin: 0;              
+    word-wrap: break-word;  
+}
+
+.info-section .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;       /* centraliza verticalmente */
+    justify-content: center;
+    gap: 40px;
+    min-height: 300px;         
+    padding: 40px;             
+}
+
+.image-lupa img,
+.image-mps img,
+.image-ps img {
+    max-width: 250px;          
+    width: 230%;
+    aspect-ratio: 1 / 1;       
+    height: auto;
+    object-fit: cover;
+    border-radius: 25px;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* Apenas o estilo das imagens que estão dentro das classes de imagem */
+
+.image-arco img {
+    width: 100%;
+    max-width: 190px;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    object-fit: cover;
+    border-radius: 35px;
+    box-shadow: none;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* Aplicando as cores da penúltima resposta em degradê */
+.section-pink {
+    background: linear-gradient(180deg, var(--rosa-eisbaren) 0%, var(--rosa-eisbaren) 100%);
+}
+.section-pink h2 { color: var(--rosa-forte); }
+
+.section-yellow {
+    background: linear-gradient(180deg, var(--amarelo-eisbaren) 0%, var(--amarelo-eisbaren) 100%);
+}
+.section-yellow h2 { color: #d4a017; }
+
+.section-blue {
+    background: linear-gradient(180deg, var(--azul-eisbaren) 0%, var(--azul-eisbaren) 100%);
+}
+.section-blue h2 { color: #5b8fb9; }
+
+.section-pink-light {
+    background: linear-gradient(180deg, var(--rosa-eisbaren) 0%, var(--rosa-eisbaren) 100%);
+}
+
+/* Grid de Valores Estilizado */
+.valores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+/* 5. SEÇÃO BRAND (POR QUE EISBAREN) */
+.section-brand {
+    padding: 100px 10%;
+    background-color: var(--amarelo-eisbaren);
+}
+
+.brand-flex {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    
+    text-align: left;
+}
+
+.brand-logo {
+    order: 2; 
+}
+
+.brand-text {
+    order: 1; 
+}
+
+.brand-logo img {
+    width: 280px;
+    border-radius: 35px;
+    box-shadow: 20px 20px 0px var(--amarelo-eisbaren); 
+}
+
+.brand-text h2 {
+    color: var(--cor-texto);
+}
+
+/* 6. FOOTER */
+/* 6. FOOTER */
+.main-footer {
+    background: linear-gradient(to top, var(--rosa-forte), var(--rosa-claro));
+    padding: 80px 10% 30px;
+    margin-top: 0;
+    color: var(--branco);
+     font-size: 0.85rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 50px;
+    align-items: start;
+}
+
+.footer-logo img {
+    width: 220px;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--texto);
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: var(--branco);
+    display: block;
+    margin-bottom: 12px;
+     font-size:0.85rem;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--rosa-claro);
+    padding-left: 5px;
+}
+
+.footer-contact p {
+    margin: 6px 0;
+}
+
+.social-icons img {
+    width: 20px;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between; /* separa esquerda e direita */
+    align-items: center;
+    margin-top: 50px;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    font-size: 0.85rem;
+    color: var(--branco);
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.footer-bottom a {
+    color: var(--branco);
+    text-decoration: underline;
+}
+
