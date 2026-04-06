@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #fcfcfc; /* Fundo levemente mais claro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.login-container {
+    background-color: white;
+    padding: 40px 30px;
+    border-radius: 25px;
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.03); 
+}
+
+/* Header */
+header {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.back-icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 18px;
+    color: #333;
+    cursor: pointer;
+}
+
+.profile-icon {
+    width: 130px; 
+    height: 130px;
+    background-color: #e5e5e5;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-icon span {
+    font-size: 90px;
+    color: #444;
+}
+
+h1 {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    color: #000;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Campos de Input */
+.input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+    transition: 0.3s;
+}
+
+.input-group:focus-within {
+    border-color: #ED95AE;
+}
+
+.input-group input {
+    border: none;
+    outline: none;
+    width: 100%;
+    margin-left: 12px;
+    font-size: 14px;
+    color: #333;
+}
+
+.input-group input::placeholder {
+    color: #aaa;
+    font-size: 13px;
+}
+
+.input-group span {
+    color: #888;
+    font-size: 24px;
+}
+
+/* Remove olho padrão do navegador */
+input::-ms-reveal { display: none; }
+input::-webkit-contacts-auto-fill-button,
+input::-webkit-credentials-auto-fill-button { visibility: hidden; position: absolute; right: 0; }
+
+.eye-icon {
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+    font-size: 20px !important;
+    color: #ccc !important;
+}
+
+/*Link de Esqueci Senha */
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11px;
+    margin: 10px 0 30px;
+    color: #777;
+}
+
+.forgot-password {
+    text-decoration: none;
+    color: #777;
+}
+
+/* Estilo do Switch (Toggle Azul) */
+.switch-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.switch-container input { display: none; }
+
+.slider {
+    width: 36px;
+    height: 18px;
+    background-color: #ccc;
+    border-radius: 20px;
+    position: relative;
+    margin-right: 8px;
+    transition: 0.3s;
+}
+
+.slider:before {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: white;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: 0.3s;
+}
+
+/* Cor azul do toggle da imagem */
+input:checked + .slider { background-color: #2D31FA; } 
+input:checked + .slider:before { transform: translateX(18px); }
+
+/* Botão de Login */
+.login-btn {
+    width: 80%; 
+    padding: 16px;
+    background-color: #ED95AE;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 8px 15px rgba(237, 149, 174, 0.3);
+    margin: 0 auto;
+    display: block;
+}
+
+.login-btn:hover {
+    background-color: #e085a0;
+    transform: translateY(-2px);
+}
+
+/* Divisor Social */
+.divider {
+    margin: 25px 0 15px;
+    color: #888;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.divider p {
+    margin-top: 15px;
+    font-weight: normal;
+    font-size: 13px;
+    color: #444;
+}
+
+.social-login {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Alinha verticalmente */
+    gap: 35px;               /* Espaço entre os logos */
+    margin-bottom: 40px;
+}
+
+.social-login img {
+    height: 25px;            
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.social-login img:hover {
+    transform: scale(1.1);
+}
+
+
+footer {
+    font-size: 13px;
+    color: #777;
+}
+
+footer a {
+    color: #f1a1b9;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 5px;
+}
