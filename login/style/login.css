@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #fcfcfc; /* Fundo levemente mais claro */
+    background-color: #fcfcfc; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -202,9 +202,9 @@ input:checked + .slider:before { transform: translateX(18px); }
 
 .social-login {
     display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center;     /* Alinha verticalmente */
-    gap: 35px;               /* Espaço entre os logos */
+    justify-content: center; 
+    align-items: center;     
+    gap: 35px;               
     margin-bottom: 40px;
 }
 
