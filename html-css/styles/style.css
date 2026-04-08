@@ -98,6 +98,12 @@ section{
 /*ESTILIZÇÃO DO CARROCEL*/
 /* FIM DA ESTILIZAÇÃO DO CARROCEL*/
 
+
+
+
+
+
+
 /* ESTILIZAÇÃO DOS PRODUTOS */
 
 
@@ -106,19 +112,25 @@ section{
   text-align: center; /*Garante que o titulo fique no meio */
   margin-top: 40px;
   margin-bottom: 20px;
-  padding-top: 50px; /* Espaço entre em cima do titulo*/
+  padding-top: 61px; /* Espaço entre em cima do titulo*/
   padding-bottom: 50px;/* Espaço em baixo do titulo */
   
 /* Fontes presentes no figma */
   font-family: "inter", sans-serif;/* Colanco a fonte certa*/
   font-weight: 900; /* Deixando em negrito, como no figma*/
-   
+  line-height: 44px; /* Altura da linha conforme o figma*/
+
 }
 
-
+/* estilização dos quadrados que ficam atras dos produtos */
 .card {
-  text-decoration: none;
-  color: #ffffff ;
+  text-decoration: none; /*tira o negritoda palavra*/
+  color: #ffffff ; /* Cor da letra*/
+
+  background-color: #ec98ca /*Cor do fundo */;
+  border-radius: 15px;
+  
+
 }
 
 
