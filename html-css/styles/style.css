@@ -19,7 +19,7 @@
 /*Aqui eu deifini o tamanho da classe container, ou seja, o tmaanho do menu etc*/
 .container {
   max-width: 1440px;  /*largura*/
-  height: 126px;  /*altura*/
+  height: 110px;  /*altura*/
   left: 0.24px;  /*Direção*/
   top: -0.47px; /*Superior*/
 
@@ -33,7 +33,7 @@
 /*Aqui tem a cor do menu, que inclusive mais para frente vou colocar em degrade*/
 header {
   /*O degradê*/
-  background: linear-gradient(to bottom, #cf7eae 0%, #e69cc6 14%, #dba7bf 34%, #e8a3b878 70%);
+  background: linear-gradient(to bottom, #cf7eae 0%, #e69cc6 14%, #dba7bf 34%, #e8a3b8b5 70%);
   opacity: 100%;
   width: 100%;
   position: fixed;
@@ -45,8 +45,8 @@ header {
 
 /* Definição dos tamanhos dos itens*/
 .logo img {
-  width: 200px;
-  height: 200px;
+  width: 125px;
+  height: 125px;
   left: 0.50px;
 
 }
@@ -64,8 +64,8 @@ header {
 .menu nav a {
   color: #ffffff;
   text-decoration: none;
-  padding-right: 30px;
-  font-size: 18px;
+  padding-right: 25px;
+  font-size: 15px;
   transition: 0.3s; /*Coloquei aqui a transição pr adeixar ela de certa forma mais suave */
 }
 
@@ -96,6 +96,30 @@ section{
 }
 
 /*ESTILIZÇÃO DO CARROCEL*/
+/* FIM DA ESTILIZAÇÃO DO CARROCEL*/
+
+/* ESTILIZAÇÃO DOS PRODUTOS */
+
+
+.produtos h2 { /*Mudando o estilo do titulo*/
+  color: #4D2B1A;
+  text-align: center; /*Garante que o titulo fique no meio */
+  margin-top: 40px;
+  margin-bottom: 20px;
+  padding-top: 50px; /* Espaço entre em cima do titulo*/
+  padding-bottom: 50px;/* Espaço em baixo do titulo */
+  
+/* Fontes presentes no figma */
+  font-family: "inter", sans-serif;/* Colanco a fonte certa*/
+  font-weight: 900; /* Deixando em negrito, como no figma*/
+   
+}
+
+
+.card {
+  text-decoration: none;
+  color: #ffffff ;
+}
 
 
 
