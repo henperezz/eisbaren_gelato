@@ -1,8 +1,15 @@
 
 :root {
+  /*-- Cores Principais--*/
     --cor-primaria: #FBFBD7 ;
     --cor-secundaria: #FADADD;
     --cor-terciaria: #B0E0E6;
+
+    /*-- Cores Para Fundo dos produtos-- */
+    --cor-quatenario: #FFAEC1;
+    --cor-quinario: #FDAE0C;
+    --cor-senario: #C50D19;
+
 }
 
 /*Adionando a fonte*/
@@ -106,7 +113,13 @@ section{
 
 /* ESTILIZAÇÃO DOS PRODUTOS */
 
+/*Parte principal*/
+.produtos {
+  background-color: var(--cor-secundaria);
+  padding: 40px 30px 50px;
+}
 
+/* LEgenda principal que fica acima*/
 .produtos h2 { /*Mudando o estilo do titulo*/
   color: #4D2B1A;
   text-align: center; /*Garante que o titulo fique no meio */
@@ -122,17 +135,57 @@ section{
 
 }
 
-/* estilização dos quadrados que ficam atras dos produtos */
-.card {
-  text-decoration: none; /*tira o negritoda palavra*/
-  color: #ffffff ; /* Cor da letra*/
-
-  background-color: #ec98ca /*Cor do fundo */;
-  border-radius: 15px;
-  
+/*Organização para deixar as colunas nos seus lugares devidamente*/
+.grid-produtos{
+  display: grid; /*Ativação do modo grid*/
+  grid-template-columns: repeat(3, 1fr); /* Criação de 3 colunas de tamanho igual*/
+  gap: 20px; /* Enpaçamento entre os cards*/
+  max-width: 960px; /* Largura */
+  margin: 0 auto; /*Centralização do grip/colunas no centro da tela*/
 
 }
 
+
+/* estilização dos quadrados que ficam atras dos produtos */
+.card {
+  position: relative;   /* permite posicionar imagem e legenda dentro do quadrado */
+  display: block;      
+  min-height: 220px;    /* altura mínima do card */
+  border-radius: 6px;  /* bordas arredondadas */
+  overflow: hidden;     /* recorta a imagem para respeitar as bordas arredondadas */
+  text-decoration: none; /*tira o negrito da palavra*/
+  color: #F5F5DC ; /* Cor da letra*/
+}
+
+.card img {
+  position: absolute;      /* tira a imagem do fluxo normal e a coloca atrás do texto */
+  inset: 0;                /* ocupa o card inteiro */
+  width: 100%;             /* preenche toda a largura do card */
+  height: 100%;            /* preenche toda a altura do card */
+  object-position: center top; /* centraliza horizontalmente e ancora no topo */
+
+}
+
+.bg-rosa {
+  background-color: var(--cor-quatenario); /* fundo rosa — usado no Milk Shake e Pote de Sorvete */
+}
+
+.bg-laranja {
+  background-color: var(--cor-quinario); /* fundo laranja — usado no Picolé e Casquinhas */
+}
+
+.bg-vermelho {
+  background-color: var(--cor-senario); /* fundo vermelho — usado no Açaí e Sunday */
+}
+
+.legenda {
+  position: absolute;  /* fica em cima da imagem */
+  bottom: 0;           /* deixa o negrito e as legendas na parte de baixo da iamgem  */
+  left: 0;             /* Deixa o titulo esticado na parte toda de baixo pra esquerda */
+  right: 0;            /* e este para a direita */
+  background: linear-gradient(to top, #000000 0%, transparent);
+  padding: 12px 16px 14px; /* espaço interno: topo, lados, baixo */
+}
 
 
 
