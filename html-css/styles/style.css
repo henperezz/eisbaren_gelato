@@ -40,7 +40,7 @@
 /*Aqui tem a cor do menu, que inclusive mais para frente vou colocar em degrade*/
 header {
   /*O degradê*/
-  background: linear-gradient(to bottom, #cf7eae 0%, #e69cc6 14%, #dba7bf 34%, #e8a3b8b5 70%);
+  background: linear-gradient(to bottom, #cf7eae 0%, #e69cc6 14%, #dba7bf 34%, #e8a3b8 70%);
   opacity: 100%;
   width: 100%;
   position: fixed;
@@ -150,8 +150,8 @@ section{
 .card {
   position: relative;   /* permite posicionar imagem e legenda dentro do quadrado */
   display: block;      
-  min-height: 220px;    /* altura mínima do card */
-  border-radius: 6px;  /* bordas arredondadas */
+  min-height: 300px;    /* altura mínima do card */
+  border-radius: 8px;  /* bordas arredondadas */
   overflow: hidden;     /* recorta a imagem para respeitar as bordas arredondadas */
   text-decoration: none; /*tira o negrito da palavra*/
   color: #F5F5DC ; /* Cor da letra*/
@@ -180,11 +180,11 @@ section{
 
 .legenda {
   position: absolute;  /* fica em cima da imagem */
-  bottom: 0;           /* deixa o negrito e as legendas na parte de baixo da iamgem  */
-  left: 0;             /* Deixa o titulo esticado na parte toda de baixo pra esquerda */
-  right: 0;            /* e este para a direita */
+  bottom: 0; /* deixa o negrito e as legendas na parte de baixo da iamgem  */
+  left: 0;  /* Deixa o titulo esticado na parte toda de baixo pra esquerda */
+  right: 0; /* e este para a direita */
   background: linear-gradient(to top, #000000 0%, transparent);
-  padding: 12px 16px 14px; /* espaço interno: topo, lados, baixo */
+  padding: 12px 16px 14px; /* espaço de dentro: topo, lados, baixo */
 }
 
 
