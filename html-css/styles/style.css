@@ -46,6 +46,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 100; /* Garante que os menus fiquem atrás dos cards */
 
   
 }
@@ -109,25 +110,25 @@ section{
 
 
 
-
-
 /* ESTILIZAÇÃO DOS PRODUTOS */
 
 /*Parte principal*/
 .produtos {
-  background-color: var(--cor-secundaria);
+  background: linear-gradient(to bottom, var(--cor-secundaria) 80%,  var(--cor-terciaria) 100% );
   padding: 40px 30px 50px;
+  padding-top: 90px;
 }
 
 /* LEgenda principal que fica acima*/
 .produtos h2 { /*Mudando o estilo do titulo*/
   color: #4D2B1A;
   text-align: center; /*Garante que o titulo fique no meio */
-  margin-top: 40px;
-  margin-bottom: 20px;
-  padding-top: 61px; /* Espaço entre em cima do titulo*/
-  padding-bottom: 50px;/* Espaço em baixo do titulo */
-  
+  margin-top: 0px;   
+  margin-bottom: 10px;
+  padding-top: 0px;  /* Espaço entre em cima do titulo*/
+  padding-bottom: 10px; /* Espaço em baixo do titulo */
+
+
 /* Fontes presentes no figma */
   font-family: "inter", sans-serif;/* Colanco a fonte certa*/
   font-weight: 900; /* Deixando em negrito, como no figma*/
@@ -139,9 +140,10 @@ section{
 .grid-produtos{
   display: grid; /*Ativação do modo grid*/
   grid-template-columns: repeat(3, 1fr); /* Criação de 3 colunas de tamanho igual*/
-  gap: 150px; /* Enpaçamento entre os cards*/
+  gap: 100px; /* Enpaçamento entre os cards*/
   max-width: 1400px; /* Largura */
   margin: 0 auto; /*Centralização do grip/colunas no centro da tela*/
+  padding-top: 60px;
 
 }
 
@@ -151,12 +153,13 @@ section{
 .card {
   position: relative;    /* permite posicionar imagem e legenda dentro do quadrado */
   display: block;
-  height: 300px;         /* altura do quadrado */
-  width: 100%;           /* ocupa a coluna do grid */
+  height: 350px;         /* altura do quadrado */
+  width: 90%;           /* ocupa a coluna do grid */
   border-radius: 16px;   /* bordas arredondadas */
   overflow: visible;     /* permite a imagem vazar para fora do quadrado */
   text-decoration: none; /* tira o sublinhado do link */
   color: #F5F5DC;        /* cor da letra */
+  z-index: 1;
 }
 
 .card img {
@@ -170,42 +173,47 @@ section{
 /* Ajustes das imagens */
 
 .img-milkskahe {
-  height: 100%; /* O quanto vaza para fora do quadrado */
+  height: 90%; /* O quanto vaza para fora do quadrado */
   width: auto; /* Deixa a largura proporcional */
-  top: -5px;
+  top: -10px; /* Pra fazer ele abaixar */
 }
 
 .img-picole {
-  height: 100%;
+  height: 80%;
   width: auto;
-  top: -5px;
+  top: -10px;
 }
 
 .img-acai {
-  height: 100%;
+  height: 120%;
   width: auto;
-  top: -px;
+  top: -30px;
+  left: 0.11px;
 }
 
 .img-potes {
-  height: 140%;
+  height: 130%;
   width: auto;
+  top: -40px;
 }
 
 .img-casquinhas {
   height: 130%;
   width: auto;
-  top: -5px;
+  top: 0px;
+  bottom: auto;
+  overflow: hidden;
+
 }
 
 .img-sundey {
-  height: 130%;
+  height: 100%;
   width: auto;
 }
 
 
 
-
+/* CORES DO CARDS/QUADRADOS COM AS IMAGENS */
 .bg-rosa {
   background-color: var(--cor-quatenario); /* Milk Shake e Pote de Sorvete */
 }
@@ -245,7 +253,6 @@ section{
   color: #F5F5DC;
   font-size: 0.85rem;
   font-weight: 700;
-  border: 1.5px solid rgba(255,255,255,0.6);
   border-radius: 8px;
   padding: 4px 12px;
 }
