@@ -117,6 +117,7 @@ section{
   background: linear-gradient(to bottom, var(--cor-secundaria) 80%,  var(--cor-terciaria) 100% );
   padding: 40px 30px 50px;
   padding-top: 90px;
+  padding-bottom: 100px;
 }
 
 /* LEgenda principal que fica acima*/
@@ -271,6 +272,30 @@ section{
     grid-template-columns: 1fr;
   }
 }
+
+/* ESTILIZAÇÃO DO SAIBA MAIS */
+.saiba-mais {
+  background: linear-gradient(var(--cor-terciaria) 80%, var(--cor-quatenario) 110%);
+  padding: 120px 50px 50px; /*Aumenta o topo e abaixo ao memso tempo*/
+}
+
+.imagem-loja {
+  height: 832px;
+  width: 750px;
+  border-radius: 32px;
+  overflow: hidden; 
+  display: block;   
+}
+
+.texto h2 {
+  color: #4D2B1A;
+  font-family: "inter", sans-serif;/* Colanco a fonte certa*/
+  font-weight: 900; /* Deixando em negrito, como no figma*/
+
+}
+
+
+
 
 
 
