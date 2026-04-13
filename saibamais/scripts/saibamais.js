@@ -22,3 +22,11 @@ window.addEventListener("scroll", function() {
         navbar.classList.remove("transparent");
     }
 });
+
+// Remove splash após alguns segundos
+window.addEventListener("load", () => {
+    setTimeout(() => {
+        document.getElementById("splash").style.display = "none";
+        document.getElementById("conteudo").style.display = "block";
+    }, 1500); // tempo em milissegundos (1.5segundos)
+});
