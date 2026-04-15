@@ -25,15 +25,13 @@
 
 /*Aqui eu deifini o tamanho da classe container, ou seja, o tmaanho do menu etc*/
 .container {
-  max-width: 1440px;  /*largura*/
+  max-width: auto;  /*largura*/
   height: 110px;  /*altura*/
   left: 0.24px;  /*Direção*/
   top: -0.47px; /*Superior*/
 
   display: flex;
   align-items: center;
-  justify-content: space-between; /*Coloquei a logo na lateral*/
-  margin: right;
 
 }
 
@@ -53,28 +51,29 @@ header {
 
 /* Definição dos tamanhos dos itens*/
 .logo img {
-  width: 125px;
-  height: 125px;
+  width: 150px;
+  height: 150px;
   left: 0.50px;
-
+  margin-right: 42.3rem;
 }
 
 .menu {
-  width: 50%; /*Aqui eu coloquei uma "caixa de texto" ,aior pro topicos, para que não fique um de baixo do outro*/
+  width: 40%; /*Aqui eu coloquei uma "caixa de texto" ,aior pro topicos, para que não fique um de baixo do outro*/
   letter-spacing: 0.29px; /*Espaçamento entre os tópicos do menu*/
   font-size: 13.7px;
   font-weight: 400;
   text-transform: uppercase;/*Deixa tudo do menu em maiusculo*/
-
+  text-align: right;
 
 }
 
 .menu nav a {
   color: #ffffff;
   text-decoration: none;
-  padding-right: 25px;
-  font-size: 15px;
+  padding-right: 30px;
+  font-size: 16px;
   transition: 0.3s; /*Coloquei aqui a transição pr adeixar ela de certa forma mais suave */
+  
 }
 
 .menu nav a:hover {
@@ -161,6 +160,7 @@ section{
   text-decoration: none; /* tira o sublinhado do link */
   color: #F5F5DC;        /* cor da letra */
   z-index: 1;
+  
 }
 
 .card img {
@@ -174,9 +174,11 @@ section{
 /* Ajustes das imagens */
 
 .img-milkskahe {
-  height: 90%; /* O quanto vaza para fora do quadrado */
+  height: 68%; /* O quanto vaza para fora do quadrado */
   width: auto; /* Deixa a largura proporcional */
   top: 20px; /* Pra fazer ele abaixar */
+
+  
 }
 
 .img-picole {
