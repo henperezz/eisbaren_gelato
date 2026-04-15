@@ -154,7 +154,7 @@ section{
 .card {
   position: relative;    /* permite posicionar imagem e legenda dentro do quadrado */
   display: block;
-  height: 350px;         /* altura do quadrado */
+  height: 390px;         /* altura do quadrado */
   width: 90%;           /* ocupa a coluna do grid */
   border-radius: 16px;   /* bordas arredondadas */
   overflow: visible;     /* permite a imagem vazar para fora do quadrado */
@@ -176,26 +176,26 @@ section{
 .img-milkskahe {
   height: 90%; /* O quanto vaza para fora do quadrado */
   width: auto; /* Deixa a largura proporcional */
-  top: -10px; /* Pra fazer ele abaixar */
+  top: 20px; /* Pra fazer ele abaixar */
 }
 
 .img-picole {
-  height: 80%;
+  height: 85%;
   width: auto;
-  top: -10px;
+  top: 30px;
 }
 
 .img-acai {
-  height: 120%;
+  height: 140%;
   width: auto;
-  top: -30px;
-  left: 0.11px;
+  top: -90px;
+
 }
 
 .img-potes {
-  height: 130%;
+  height: 150%;
   width: auto;
-  top: -40px;
+  top: -100px;
 }
 
 .img-casquinhas {
@@ -208,8 +208,9 @@ section{
 }
 
 .img-sundey {
-  height: 100%;
+  height: 120%;
   width: auto;
+  top: -30px;
 }
 
 
