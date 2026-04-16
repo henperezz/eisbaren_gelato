@@ -254,24 +254,23 @@ body {
 
 /* Aplicando as cores da penúltima resposta em degradê */
 .section-pink {
-    background: linear-gradient(180deg, var(--rosa-eisbaren) 76%, var(--amarelo-eisbaren) 83%);
+    background: linear-gradient(180deg, var(--rosa-eisbaren) 0%, var(--rosa-eisbaren) 100%);
 }
 .section-pink h2 { color: var(--rosa-forte); }
 
 .section-yellow {
-    background: linear-gradient(180deg, var(--amarelo-eisbaren) 76%, var(--azul-eisbaren) 83%);
+    background: linear-gradient(180deg, var(--amarelo-eisbaren) 0%, var(--amarelo-eisbaren) 100%);
 }
 .section-yellow h2 { color: #d4a017; }
 
 .section-blue {
-    background: linear-gradient(180deg, var(--azul-eisbaren) 76%, var(--rosa-eisbaren) 83%);
+    background: linear-gradient(180deg, var(--azul-eisbaren) 0%, var(--azul-eisbaren) 100%);
 }
 .section-blue h2 { color: #5b8fb9; }
 
 .section-pink-light {
-    background: linear-gradient(180deg, var(--rosa-eisbaren) 76%, var(--amarelo-eisbaren) 83%);
+    background: linear-gradient(180deg, var(--rosa-eisbaren) 0%, var(--rosa-eisbaren) 100%);
 }
-
 /* Grid de Valores Estilizado */
 .valores-grid {
     display: grid;
