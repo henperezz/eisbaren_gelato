@@ -6,15 +6,12 @@
 
 =======
 >>>>>>> Stashed changes
+
 <!-- github-copilot-toolbox:mcp-skills-awareness-begin -->
 
 ### MCP & Skills awareness (GitHub Copilot Toolbox)
 
-<<<<<<< Updated upstream
-_Last synced: 2026-04-06T17:59:19.532Z._
-=======
-_Last synced: 2026-04-13T11:37:04.617Z._
->>>>>>> Stashed changes
+_Last synced: 2026-04-16T13:24:00.814Z._
 
 - **Full report:** `.github/copilot-toolbox-mcp-skills-awareness.md` in this workspace (auto-overwritten on each scan). Use it as ground truth for configured servers and skill folders.
 - **MCP:** For **live tools**, use **Copilot Chat → Agent** and **trust/start** the right servers in the MCP UI.
@@ -23,13 +20,13 @@ _Last synced: 2026-04-13T11:37:04.617Z._
 
 #### Workspace MCP
 
-- `c:\Users\stefa\OneDrive\Documentos\meupc\eisbaren_gelato\.vscode\mcp.json` _(workspace: eisbaren_gelato)_ — _file missing_
+- `c:\Users\STEFANIPEREIRAALVES\Documents\GitHub\eisbaren_gelato\.vscode\mcp.json` _(workspace: eisbaren_gelato)_ — _file missing_
 
 _No active workspace servers in mcp.json._
 
 #### User MCP
 
-- `C:\Users\stefa\AppData\Roaming\Code\User\mcp.json` — _file missing_
+- `C:\Users\STEFANIPEREIRAALVES\AppData\Roaming\Code\User\mcp.json` — _file missing_
 
 _No active user-scoped servers in mcp.json._
 

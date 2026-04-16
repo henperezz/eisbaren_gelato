@@ -71,13 +71,12 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 5%;
-    height: 65px;
-    background: linear-gradient(to bottom, none); 
-    backdrop-filter: blur(10px);
+    height: 110px;
+    background: linear-gradient(to bottom, #cf7eae 0%, #e69cc6 14%, #dba7bf 34%, #e8a3b8 70%); 
     position: fixed;  
     top: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 100;
     box-shadow: none; 
     transition: background 0.3s ease; 
 }
@@ -94,8 +93,10 @@ body {
 }
 
 .logo-mini img {
-     height: 90px;          
-    width: auto;           
+    height: 150px;          
+    width: 150px;
+    left:-2px;
+    margin-right: 42.3rem;           
     border-radius: 50%;
     transition: transform 0.3s ease;
 }
@@ -126,7 +127,7 @@ body {
 /* 3. HERO SECTION (BANNER PRINCIPAL) */
 .hero-section {
     position: relative;
-    height: calc100vh;
+    height: 100vh;
     min-height: 400px;
     overflow: hidden;
     display: flex;
@@ -175,7 +176,9 @@ body {
     align-items: center;
     justify-content: space-between;
     gap: 40px;
-    padding: 0 5%;   
+    position: relative;
+    top: -100px;
+    padding: 0 5%; 
 }
 
 .info-text {
@@ -186,10 +189,11 @@ body {
     align-items: flex-start;
     max-width: 600px;
     text-align: center;
+    font-size: 23px;
 }
 
     .info-text {
-        align-items: center;     
+        align-items: flex-start;     
     } 
 
     .info-text p {
@@ -214,8 +218,8 @@ body {
     flex-direction: row;
     align-items: center;       
     justify-content: center;
-    gap: 40px;
-    min-height: 300px;         
+    gap: 100px;
+    min-height: 700px;         
     padding: 40px;             
 }
 
@@ -250,22 +254,22 @@ body {
 
 /* Aplicando as cores da penúltima resposta em degradê */
 .section-pink {
-    background: linear-gradient(180deg, var(--rosa-eisbaren) 0%, var(--rosa-eisbaren) 100%);
+    background: linear-gradient(180deg, var(--rosa-eisbaren) 76%, var(--amarelo-eisbaren) 83%);
 }
 .section-pink h2 { color: var(--rosa-forte); }
 
 .section-yellow {
-    background: linear-gradient(180deg, var(--amarelo-eisbaren) 0%, var(--amarelo-eisbaren) 100%);
+    background: linear-gradient(180deg, var(--amarelo-eisbaren) 76%, var(--azul-eisbaren) 83%);
 }
 .section-yellow h2 { color: #d4a017; }
 
 .section-blue {
-    background: linear-gradient(180deg, var(--azul-eisbaren) 0%, var(--azul-eisbaren) 100%);
+    background: linear-gradient(180deg, var(--azul-eisbaren) 76%, var(--rosa-eisbaren) 83%);
 }
 .section-blue h2 { color: #5b8fb9; }
 
 .section-pink-light {
-    background: linear-gradient(180deg, var(--rosa-eisbaren) 0%, var(--rosa-eisbaren) 100%);
+    background: linear-gradient(180deg, var(--rosa-eisbaren) 76%, var(--amarelo-eisbaren) 83%);
 }
 
 /* Grid de Valores Estilizado */
@@ -286,7 +290,6 @@ body {
     display: flex;
     flex-direction: row;
     gap: 60px;
-    
     text-align: left;
 }
 
@@ -315,7 +318,7 @@ body {
     padding: 80px 10% 30px;
     margin-top: 0;
     color: var(--branco);
-     font-size: 0.85rem;
+    font-size: 0.85rem;
 }
 
 .footer-grid {
