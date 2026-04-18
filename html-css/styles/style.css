@@ -157,7 +157,7 @@ section{
   height: 390px;         /* altura do quadrado */
   width: 90%;           /* ocupa a coluna do grid */
   border-radius: 16px;   /* bordas arredondadas */
-  overflow: visible;     /* permite a imagem vazar para fora do quadrado */
+  overflow: hidden;     /* permite que a imagem não irá vazar para fora do quadrado */
   text-decoration: none; /* tira o sublinhado do link */
   color: #F5F5DC;        /* cor da letra */
   z-index: 1;
@@ -175,45 +175,42 @@ section{
 /* Ajustes das imagens */
 
 .img-milkskahe {
-  height: 68%; /* O quanto vaza para fora do quadrado */
+  height: 69%;
   width: auto; /* Deixa a largura proporcional */
-  top: 20px; /* Pra fazer ele abaixar */
+  top: 80px; /* Pra fazer ele abaixar */
 
-  
 }
 
 .img-picole {
-  height: 85%;
+  height: 55%;
   width: auto;
-  top: 30px;
+  top: 120px;
 }
 
 .img-acai {
-  height: 140%;
+  height: 106%;
   width: auto;
-  top: -90px;
+  top: 30px;
 
 }
 
 .img-potes {
-  height: 150%;
+  height: 130%;
   width: auto;
   top: -70px;
 }
 
 .img-casquinhas {
-  height: 130%;
+  height: 100%;
   width: auto;
-  top: 0px;
-  bottom: auto;
-  overflow: hidden;
+  top: 70px;
 
 }
 
 .img-sundey {
-  height: 120%;
+  height: 90%;
   width: auto;
-  top: -20px;
+  top: 30px;
 }
 
 
@@ -264,28 +261,18 @@ section{
 
 
 
-/* Responsividade */
-@media (max-width: 640px) {
-  .grid-produtos {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 400px) {
-  .grid-produtos {
-    grid-template-columns: 1fr;
-  }
-}
-
 /* ESTILIZAÇÃO DO SAIBA MAIS */
 .saiba-mais {
   background: linear-gradient(var(--cor-terciaria) 80%, var(--cor-quatenario) 110%);
-  padding: 120px 50px 50px; /*Aumenta o topo e abaixo ao memso tempo*/
+  padding: 100px 40px 80px; /*Aumenta o topo e abaixo ao memso tempo*/
+  display: flex;         /* coloca imagem e texto lado a lado */
+  align-items: center;   /* centraliza verticalmente */
+  gap: 80px;             /* espaço entre imagem e texto */
 }
 
 .imagem-loja {
-  height: 832px;
-  width: 750px;
+  height: 890px;
+  width: 700px;
   border-radius: 32px;
   overflow: hidden; 
   display: block;   
@@ -295,6 +282,7 @@ section{
   color: #4D2B1A;
   font-family: "inter", sans-serif;/* Colanco a fonte certa*/
   font-weight: 900; /* Deixando em negrito, como no figma*/
+
 
 }
 
