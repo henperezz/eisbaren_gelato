@@ -265,19 +265,30 @@ section{
 .saiba-mais {
   background: linear-gradient(var(--cor-terciaria) 80%, var(--cor-quatenario) 110%);
   padding: 100px 40px 80px; /*Aumenta o topo e abaixo ao memso tempo*/
-  display: flex;         /* coloca imagem e texto lado a lado */
-  align-items: center;   /* centraliza verticalmente */
-  gap: 80px;             /* espaço entre imagem e texto */
+  display: flex; /* Deixei o texto ao lado da imagem */
+  gap: 200px; /*Distancia do texto com a imagem*/
 }
 
+/*Editando a """"Moldura"""" ou seja  aparte que a imagem será colocada.*/
 .imagem-loja {
+  width: 700px; /*Está em pixels pois será um valor fixo*/
   height: 890px;
-  width: 700px;
-  border-radius: 32px;
-  overflow: hidden; 
-  display: block;   
+  border-radius: 32px; /*Bordas arredondadas*/
+  overflow: hidden;
+  flex-shrink: 0;
 }
 
+.imagem-loja img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;        /* preenche sem distorcer */
+  object-position: center;  /* foca no centro da imagem */
+  display: block;
+
+}
+
+
+/*Colocando todos os textos ao lado da imagem*/
 .texto h2 {
   color: #4D2B1A;
   font-family: "inter", sans-serif;/* Colanco a fonte certa*/
