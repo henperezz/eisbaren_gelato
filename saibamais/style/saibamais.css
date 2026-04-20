@@ -39,6 +39,7 @@ body {
     background-color: var(--branco);
 }
 
+
 /* Estilo da splash screen */
 #splash {
     position: fixed;
@@ -94,9 +95,9 @@ body {
 
 .logo-mini img {
     height: 150px;          
-    width: 150px;
-    left:-2px;
-    margin-right: 42.3rem;           
+    width: 150px; 
+    margin-left: -3rem;
+    margin-top: 15px;         
     border-radius: 50%;
     transition: transform 0.3s ease;
 }
@@ -113,16 +114,20 @@ body {
 
 .nav.a a {
     text-decoration: none;
-    color: var(--texto);
-    font-weight: 600;
-    font-size: 1rem;
+    letter-spacing: 0.29px;
+    color: var(--branco);
+    font-weight: 400;
+    font-size: 13.7px;
     transition: 0.3s ease;
+    text-transform: uppercase;/*Deixa tudo do menu em maiusculo*/
+    text-align: right;
 }
 
 .nav.a a:hover {
     color: var(--azul-eisbaren);
     transform: scale(1.1);
 }
+
 
 /* 3. HERO SECTION (BANNER PRINCIPAL) */
 .hero-section {
@@ -252,7 +257,7 @@ body {
 }
 
 
-/* Aplicando as cores da penúltima resposta em degradê */
+/* Aplicando as cores em degradê */
 .section-pink {
     background: linear-gradient(180deg, var(--rosa-eisbaren) 0%, var(--rosa-eisbaren) 100%);
 }
@@ -299,18 +304,28 @@ body {
 .brand-text {
     order: 1; 
 }
+/* Parágrafos */
+.brand-text p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #444;
+}
 
 .brand-logo img {
-    width: 280px;
+    width: 450px;
     border-radius: 35px;
     box-shadow: 20px 20px 0px var(--amarelo-eisbaren); 
 }
 
 .brand-text h2 {
+    font-size: 2.0rem;
     color: var(--cor-texto);
+    
 }
 
-/* 6. FOOTER */
+
+
 /* 6. FOOTER */
 .main-footer {
     background: linear-gradient(to top, var(--rosa-forte), var(--rosa-claro));

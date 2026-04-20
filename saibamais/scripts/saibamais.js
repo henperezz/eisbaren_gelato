@@ -30,3 +30,4 @@ window.addEventListener("load", () => {
         document.getElementById("conteudo").style.display = "block";
     }, 1500); // tempo em milissegundos (1.5segundos)
 });
+
