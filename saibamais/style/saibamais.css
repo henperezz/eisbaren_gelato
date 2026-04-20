@@ -115,7 +115,7 @@ body {
 .nav.a a {
     text-decoration: none;
     letter-spacing: 0.29px;
-    color: var(--branco);
+    color: var(--texto);
     font-weight: 400;
     font-size: 13.7px;
     transition: 0.3s ease;
@@ -287,14 +287,15 @@ body {
 /* 5. SEÇÃO BRAND (POR QUE EISBAREN) */
 .section-brand {
     padding: 100px 10%;
-    background-color: var(--amarelo-eisbaren);
+    background: linear-gradient(180deg, var(--amarelo-eisbaren) 80%, var(--rosa-eisbaren) 100%);
 }
 
 .brand-flex {
     display: flex;
     flex-direction: row;
-    gap: 60px;
+    gap: 40px;
     text-align: left;
+    margin-top: 20px;
 }
 
 .brand-logo {
@@ -328,7 +329,7 @@ body {
 
 /* 6. FOOTER */
 .main-footer {
-    background: linear-gradient(to top, var(--rosa-forte), var(--rosa-claro));
+    background: linear-gradient(to top, var(--rosa-forte), var(--rosa-eisbaren));
     padding: 80px 10% 30px;
     margin-top: 0;
     color: var(--branco);
