@@ -119,9 +119,7 @@ section{
 /*Parte principal*/
 .produtos {
   background: linear-gradient(to bottom, var(--cor-secundaria) 80%,  var(--cor-terciaria) 100% );
-  padding: 40px 30px 50px;
-  padding-top: 90px;
-  padding-bottom: 100px;
+  padding: 150px 40px 300px; 
   
 }
 
@@ -268,10 +266,11 @@ section{
 
 /* ESTILIZAÇÃO DO SAIBA MAIS */
 .saiba-mais {
-  background: linear-gradient(var(--cor-terciaria) 80%, var(--cor-quatenario) 110%);
-  padding: 100px 40px 80px; /*Aumenta o topo e abaixo ao memso tempo*/
+  background: linear-gradient(var(--cor-terciaria) 80%, var(--cor-quatenario) 100%);
   display: flex; /* Deixei o texto ao lado da imagem */
   gap: 90px; /*Distancia do texto com a imagem*/
+  min-height: 700px;
+  padding: 120px 40px 300px; 
 }
 
 /*Editando a """"Moldura"""" ou seja  aparte que a imagem será colocada.*/
@@ -330,7 +329,7 @@ section{
   border-radius: 10px;
   width: 140px;
   text-align: center;
-  padding: 10px 24px;           /* espaço interno — altura e largura do botão */
+  padding: 10px 24px;           /* espaço de dentro, altura e largura do botão */
   color: #ffffff;               /* cor do texto  */
   font-weight: 700;             /* pra dx o texto em negrito */
   display: inline-block;
@@ -344,11 +343,29 @@ section{
 }
 
 
-/*ESTILIZAÇÃO DO FOOTER*/
 
-/* 6. FOOTER */
+/*ESTILIZAÇÃO DO FOOTER*/
+.footer {
+  background: linear-gradient(to bottom, #cf7eae 0%, #e69cc6 14%, #dba7bf 34%, #e8a3b8 70%);
+  padding: 80px 10% 30px;
+  margin-top: 0;
+}
+
+.conteiner-footer {
+  display: flex;
+  align-items: flex-start;        /* alinha tudo no topo */
+  justify-content: flex-start;
+  gap: 80px; 
+  padding-bottom: 40px;
+  padding-left: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(0, 140, 9, 0.248); /* linha divisória */
+}
+
+/*LOGO */
 .main-footer {
-    background: linear-gradient(to bottom, #f5c0e0 0%, #eea6cf 14%, #dba7bf 34%, #e8a3b8 70%);
+  background: linear-gradient(to bottom, #cf7eae 0%, #e69cc6 14%, #dba7bf 34%, #e8a3b8 70%);
     padding: 80px 10% 30px;
     margin-top: 0;
     color: #ffffff;
@@ -366,6 +383,7 @@ section{
     width: 220px;
     border-radius: 20px;
     padding: 5px;
+  ;
 }
 
 .footer-links h4,
@@ -387,12 +405,12 @@ section{
     color: #ffffff;
     display: block;
     margin-bottom: 12px;
-     font-size:0.85rem;
+    font-size:0.85rem;
     transition: 0.3s;
 }
 
 .footer-links a:hover {
-    color: #4D2B1A;
+    color: #525946;
     padding-left: 5px;
 }
 
@@ -418,7 +436,7 @@ section{
     padding-top: 25px;
     border-top: 1px solid rgba(255, 255, 255, 0.4);
     font-size: 0.85rem;
-    color: #ffff;
+    color: #ffffff;
 }
 
 .footer-bottom p {
