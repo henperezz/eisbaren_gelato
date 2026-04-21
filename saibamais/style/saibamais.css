@@ -110,22 +110,30 @@ body {
     display: flex;
     list-style: none;
     gap: 20px;
+    align-items: center; /* garante alinhamento vertical */
 }
 
 .nav.a a {
+    display: flex;              /* coloca texto e ícone lado a lado */
+    align-items: center;        /* centraliza verticalmente */
+    gap: 6px;                   /* espaço entre texto e ícone */
     text-decoration: none;
     letter-spacing: 0.29px;
     color: var(--texto);
     font-weight: 400;
-    font-size: 13.7px;
+    font-size: 18px;
     transition: 0.3s ease;
-    text-transform: uppercase;/*Deixa tudo do menu em maiusculo*/
-    text-align: right;
+    text-transform: uppercase;
 }
 
 .nav.a a:hover {
     color: var(--azul-eisbaren);
     transform: scale(1.1);
+}
+
+.nav.a a .material-symbols-outlined {
+    font-size: 20px;   /* tamanho proporcional ao texto */
+    line-height: 1;    /* evita desalinhamento */
 }
 
 
@@ -241,6 +249,16 @@ body {
     margin: 0 auto;
 }
 
+.image-mps img{
+    max-width: 350px;          
+    width: 230%;
+    aspect-ratio: 1 / 1;       
+    height: auto;
+    object-fit: cover;
+    border-radius: 25px;
+    display: block;
+    margin: 0 auto;
+}
 
 /* Apenas o estilo das imagens que estão dentro das classes de imagem */
 
@@ -281,7 +299,7 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
-    margin-top: 40px;
+    margin-top: 10px;
 }
 
 /* 5. SEÇÃO BRAND (POR QUE EISBAREN) */
@@ -325,15 +343,13 @@ body {
     
 }
 
-
-
 /* 6. FOOTER */
 .main-footer {
     background: linear-gradient(to top, var(--rosa-forte), var(--rosa-eisbaren));
     padding: 80px 10% 30px;
     margin-top: 0;
-    color: var(--branco);
-    font-size: 0.85rem;
+    color: var(--texto);
+    font-size: 1.2rem;
 }
 
 .footer-grid {
@@ -344,7 +360,7 @@ body {
 }
 
 .footer-logo img {
-    width: 220px;
+    width: 350px;
     border-radius: 20px;
     padding: 5px;
 }
@@ -365,10 +381,10 @@ body {
 
 .footer-links a {
     text-decoration: none;
-    color: var(--branco);
+    color: var(--texto);
     display: block;
     margin-bottom: 12px;
-     font-size:0.85rem;
+    font-size: 1.2rem;
     transition: 0.3s;
 }
 
