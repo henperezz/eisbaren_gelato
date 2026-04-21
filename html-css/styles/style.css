@@ -132,7 +132,6 @@ section{
   padding-top: 0px;  /* Espaço entre em cima do titulo*/
   padding-bottom: 10px; /* Espaço em baixo do titulo */
 
-
 /* Fontes presentes no figma */
   font-family: "inter", sans-serif;/* Colanco a fonte certa*/
   font-weight: 900; /* Deixando em negrito, como no figma*/
@@ -157,12 +156,10 @@ section{
 .card {
   position: relative;    /* permite posicionar imagem e legenda dentro do quadrado */
   display: block;
-  height: 390px;         /* altura do quadrado */
-  width: 90%;           /* ocupa a coluna do grid */
-  border-radius: 16px;   /* bordas arredondadas */
-  overflow: hidden;     /* permite que a imagem não irá vazar para fora do quadrado */
+  height: 400px;         /* altura do quadrado */
+  width: 80%;           /* ocupa a coluna do grid */
+  border-radius: 8px;   /* bordas arredondadas */
   text-decoration: none; /* tira o sublinhado do link */
-  color: #F5F5DC;        /* cor da letra */
   z-index: 1;
   
 }
@@ -180,18 +177,18 @@ section{
 .img-milkskahe {
   height: 69%;
   width: auto; /* Deixa a largura proporcional */
-  top: 80px; /* Pra fazer ele abaixar */
+  top: 90px; /* Pra fazer ele abaixar */
 
 }
 
 .img-picole {
-  height: 55%;
+  height: 60%;
   width: auto;
   top: 120px;
 }
 
 .img-acai {
-  height: 106%;
+  height: 105%;
   width: auto;
   top: 30px;
 
@@ -205,15 +202,15 @@ section{
 
 .img-casquinhas {
   height: 100%;
-  width: auto;
-  top: 70px;
+  width: 410px;
+  top: 20px;
 
 }
 
 .img-sundey {
   height: 90%;
   width: auto;
-  top: 30px;
+  top: 60px;
 }
 
 
@@ -238,7 +235,7 @@ section{
   left: 0;
   right: 0;
   z-index: 2;          /* fica na frente da imagem */
-  border-radius: 0 0 16px 16px; /* arredonda só os cantos de baixo */
+  border-radius: 6px; /* arredonda só os cantos de baixo */
   background: linear-gradient(to top, #000000 0%, transparent);
   padding: 12px 16px 14px;
 }
@@ -345,27 +342,11 @@ section{
 
 
 /*ESTILIZAÇÃO DO FOOTER*/
-.footer {
-  background: linear-gradient(to bottom, #cf7eae 0%, #e69cc6 14%, #dba7bf 34%, #e8a3b8 70%);
-  padding: 80px 10% 30px;
-  margin-top: 0;
-}
 
-.conteiner-footer {
-  display: flex;
-  align-items: flex-start;        /* alinha tudo no topo */
-  justify-content: flex-start;
-  gap: 80px; 
-  padding-bottom: 40px;
-  padding-left: 20px;
-  width: 100%;
-  box-sizing: border-box;
-  border-bottom: 1px solid rgba(0, 140, 9, 0.248); /* linha divisória */
-}
 
 /*LOGO */
 .main-footer {
-  background: linear-gradient(to bottom, #cf7eae 0%, #e69cc6 14%, #dba7bf 34%, #e8a3b8 70%);
+  background: linear-gradient(to bottom, #eca6be 0%, #e69cb1 14%, #dba7bf 34%, #e8a3b8 70%);
     padding: 80px 10% 30px;
     margin-top: 0;
     color: #ffffff;
