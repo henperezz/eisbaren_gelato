@@ -29,13 +29,15 @@
 
 /*Aqui eu deifini o tamanho da classe container, ou seja, o tmaanho do menu etc*/
 .container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
   max-width: auto;  /*largura*/
   height: 110px;  /*altura*/
   left: 0.24px;  /*Direção*/
   top: -0.47px; /*Superior*/
 
-  display: flex;
-  align-items: center;
 
 }
 
@@ -68,14 +70,14 @@ header {
   font-weight: 400;
   text-transform: uppercase;/*Deixa tudo do menu em maiusculo*/
   text-align: right;
-
+  margin-left: 14rem;
 }
 
 .menu nav a {
   color: #ffffff;
   text-decoration: none;
   padding-right: 30px;
-  font-size: 16px;
+  font-size:13.7px;
   transition: 0.3s; /*Coloquei aqui a transição pr adeixar ela de certa forma mais suave */
   
 }
@@ -346,7 +348,7 @@ section{
 
 /*LOGO */
 .main-footer {
-  background: linear-gradient(to bottom, #eca6be 0%, #e69cb1 14%, #dba7bf 34%, #e8a3b8 70%);
+  background: linear-gradient(to bottom, #ffb0c4 0%, #faacc1 14%, #f8b0c8 34%, #e8a3b8 70%);
     padding: 80px 10% 30px;
     margin-top: 0;
     color: #ffffff;
@@ -364,7 +366,6 @@ section{
     width: 220px;
     border-radius: 20px;
     padding: 5px;
-  ;
 }
 
 .footer-links h4,
