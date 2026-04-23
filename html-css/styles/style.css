@@ -29,13 +29,15 @@
 
 /*Aqui eu deifini o tamanho da classe container, ou seja, o tmaanho do menu etc*/
 .container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
   max-width: auto;  /*largura*/
   height: 110px;  /*altura*/
   left: 0.24px;  /*Direção*/
   top: -0.47px; /*Superior*/
 
-  display: flex;
-  align-items: center;
 
 }
 
@@ -62,20 +64,20 @@ header {
 }
 
 .menu {
-  width: 40%; /*Aqui eu coloquei uma "caixa de texto" ,aior pro topicos, para que não fique um de baixo do outro*/
+  width: 40%; /*Aqui eu coloquei uma "caixa de texto" maior para os topicos, para que não fique um de baixo do outro*/
   letter-spacing: 0.29px; /*Espaçamento entre os tópicos do menu*/
   font-size: 13.7px;
   font-weight: 400;
   text-transform: uppercase;/*Deixa tudo do menu em maiusculo*/
   text-align: right;
-
+  margin-left: 14rem;
 }
 
 .menu nav a {
   color: #ffffff;
   text-decoration: none;
   padding-right: 30px;
-  font-size: 16px;
+  font-size:13.7px;
   transition: 0.3s; /*Coloquei aqui a transição pr adeixar ela de certa forma mais suave */
   
 }
@@ -88,6 +90,7 @@ header {
   font-size: 23px; /* deixa o ícone do mesmo tamanho do texto */
   position: relative;
   top: 4px;
+  
 }
 
 section{
@@ -102,8 +105,8 @@ section{
 
 .imagem-inicial img {
   width: 100%; /* Faz a imagem preecher toda a tela*/
-  height: auto; /* Ajuda a fazer com que a iamgem não fique achatada*/
-  display: block; /*Garante que toda a iamgem ocape tudo que falta, basicamente.*/
+  height: auto; /* Ajuda a fazer com que a imagem não fique achatada*/
+  display: block; /*Garante que toda a imagem oculpe tudo que falta, basicamente.*/
   
 }
 
@@ -133,7 +136,7 @@ section{
   padding-bottom: 10px; /* Espaço em baixo do titulo */
 
 /* Fontes presentes no figma */
-  font-family: "inter", sans-serif;/* Colanco a fonte certa*/
+  font-family: "inter", sans-serif;/* Colando a fonte certa*/
   font-weight: 900; /* Deixando em negrito, como no figma*/
   line-height: 44px; /* Altura da linha conforme o figma*/
 
@@ -263,6 +266,8 @@ section{
 
 /* ESTILIZAÇÃO DO SAIBA MAIS */
 .saiba-mais {
+  justify-content: center;
+  align-items: center;
   background: linear-gradient(var(--cor-terciaria) 80%, var(--cor-quatenario) 100%);
   display: flex; /* Deixei o texto ao lado da imagem */
   gap: 90px; /*Distancia do texto com a imagem*/
@@ -342,11 +347,8 @@ section{
 
 
 /*ESTILIZAÇÃO DO FOOTER*/
-
-
-/*LOGO */
 .main-footer {
-  background: linear-gradient(to bottom, #eca6be 0%, #e69cb1 14%, #dba7bf 34%, #e8a3b8 70%);
+  background: linear-gradient(to bottom, #ffb0c4 0%, #faacc1 14%, #f8b0c8 34%, #e8a3b8 70%);
     padding: 80px 10% 30px;
     margin-top: 0;
     color: #ffffff;
@@ -357,14 +359,14 @@ section{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 50px;
-    align-items: start;
+    align-items: center;
+    justify-content: center;
 }
 
 .footer-logo img {
-    width: 220px;
+    width: 400px;
     border-radius: 20px;
     padding: 5px;
-  ;
 }
 
 .footer-links h4,
@@ -395,14 +397,37 @@ section{
     padding-left: 5px;
 }
 
+
+.footer-contact ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.linksFooter{
+  text-decoration: none;
+  list-style: none;
+  color: #ffffff;
+  align-items: center;
+  justify-content: center;
+}
+
 .footer-contact p {
     margin: 6px 0;
+}
+
+/*Configurações dos icone de contatos*/
+.footer-contact p img{
+    width: 20px;
+    margin-right: 5px;
+  
 }
 
 .social-icons img {
     width: 20px;
     margin-right: 10px;
     transition: transform 0.3s ease;
+    
 }
 
 .social-icons img:hover {
