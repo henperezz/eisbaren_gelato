@@ -5,9 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Eisbaren Gelato</title>
     <link rel="stylesheet" href="styles/productPage.css" />
+    <link
+      rel="shortcut icon"
+      href="../assets/img/Carrossel de AÇAI.png"
+      type="image/x-icon"
+    />
   </head>
   <body>
-    <header class="headerContainer">
+    <header class="headerContainer" id="headerContainer">
       <div class="logoContainer">
         <img src="../assets/img/logo.png" alt="Logo Eisbaren" />
       </div>
@@ -29,11 +34,11 @@
         </nav>
       </div>
 
-      <div class="buttonLight">
-        <a href="#"
-          ><img src="../assets/img/Toggle right.png" alt="Modo escuro/claro"
-        /></a>
+      <div class="buttonSwitch" id="buttonSwitch">
+        <div class="buttonIndicator"></div>
       </div>
     </header>
+
+    <script src="scripts/ProductPage.js"></script>
   </body>
 </html>

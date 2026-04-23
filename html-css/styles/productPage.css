@@ -52,7 +52,7 @@ body {
 }
 
 .headerTextContainer {
-  margin-left: 42.3rem;
+  margin-left: 79rem;
   margin-right: 53.33px;
 }
 
@@ -69,4 +69,37 @@ body {
   color: var(--text1-color);
   font-family: var(--font1);
   font-size: var(--size-text1);
+}
+
+.buttonSwitch {
+  width: 30px;
+  height: 15px;
+  margin-top: 1.5rem;
+  margin-right: 0.7rem;
+  border: #ffffff solid 2px;
+  border-radius: 30px;
+  position: relative; /*Faz com que o elemento continue em sua posição original sem afetar os elementos ao redor*/
+  cursor: pointer;
+}
+
+.buttonSwitch .buttonIndicator {
+  width: 15px;
+  height: 15px;
+  background-color: #ffffff;
+  border-radius: 150px;
+  transform: scale(
+    0.8
+  ); /*Faz com que o elemento se transforme baseado em uma escala (ele se ajustava a 0.8 do elemento original)*/
+  position: absolute;
+  left: 0;
+  transition: 0.4s;
+}
+
+.buttonSwitch.dark .buttonIndicator {
+  left: 15px;
+  background-color: #859678;
+}
+
+.buttonSwitch.dark {
+  border-color: #859678;
 }
