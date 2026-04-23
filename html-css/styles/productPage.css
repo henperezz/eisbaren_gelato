@@ -27,4 +27,46 @@
 }
 
 body {
+  background-color: #ffffff;
+  font-family: var(--font2);
+  font-size: var(--size-text1);
+}
+
+.headerContainer {
+  display: flex;
+  flex-direction: row;
+  height: 150px;
+  width: auto;
+  background: linear-gradient(
+    to bottom,
+    #cf7eae 0%,
+    #e69cc6 14%,
+    #dba7bf 34%,
+    #e8a3b8 70%
+  );
+}
+
+.logoContainer {
+  width: 9.9rem;
+  height: 9.9rem;
+}
+
+.headerTextContainer {
+  margin-left: 42.3rem;
+  margin-right: 53.33px;
+}
+
+.listHeader {
+  display: flex;
+  flex-direction: row;
+  margin-top: 4rem;
+  list-style: none;
+  gap: 11.22px;
+}
+
+.textLink {
+  text-decoration: none;
+  color: var(--text1-color);
+  font-family: var(--font1);
+  font-size: var(--size-text1);
 }
