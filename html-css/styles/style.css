@@ -347,9 +347,6 @@ section{
 
 
 /*ESTILIZAÇÃO DO FOOTER*/
-
-
-/*LOGO */
 .main-footer {
   background: linear-gradient(to bottom, #ffb0c4 0%, #faacc1 14%, #f8b0c8 34%, #e8a3b8 70%);
     padding: 80px 10% 30px;
@@ -362,15 +359,20 @@ section{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 50px;
-    align-items: start;
+    align-items: center;
+    justify-content: center;
 }
 
 .footer-logo img {
-    width: 220px;
+    width: 300px;
     border-radius: 20px;
     padding: 5px;
 }
 
+.footer-contact {
+    align-items: center;
+    justify-content: center;
+}
 .footer-links h4,
 .footer-contact h4 {
     margin-bottom: 20px;
@@ -403,10 +405,18 @@ section{
     margin: 6px 0;
 }
 
+/*Configurações dos icone de contatos*/
+.footer-contact p img{
+    width: 20px;
+    margin-right: 5px;
+  
+}
+
 .social-icons img {
     width: 20px;
     margin-right: 10px;
     transition: transform 0.3s ease;
+    
 }
 
 .social-icons img:hover {
