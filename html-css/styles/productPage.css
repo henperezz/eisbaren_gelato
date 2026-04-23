@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("   https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap");
+
+:root {
+  --casquinha-color: #fdae0c;
+  --milkshake-color: #ffaec1;
+  --acai-color: #c50d19;
+  --text1-color: #ffffff;
+  --text2-color: #0f0200;
+  --text3-color: #787878;
+  --text4-color: #d788a6;
+  --text5-color: #f83d8e;
+  --text6-color: #3568e9;
+  --size-text1: 13.7px;
+  --size-text3: 16px;
+  --size-text4: 64px;
+  --size-text6: 14px;
+  --font1: "Inter", sans-serif;
+  --font2: "Archivo", sans-serif;
+  --font3: "Berkshire Swash", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+}
