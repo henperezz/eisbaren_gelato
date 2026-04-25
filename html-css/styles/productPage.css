@@ -35,7 +35,7 @@ body {
 .headerContainer {
   display: flex;
   flex-direction: row;
-  height: 150px;
+  height: 98px;
   width: auto;
   background: linear-gradient(
     to bottom,
@@ -46,14 +46,24 @@ body {
   );
 }
 
+.headerLogo {
+  width: 159px;
+  height: 159px;
+}
+
 .logoContainer {
-  width: 9.9rem;
-  height: 9.9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .headerTextContainer {
-  margin-left: 79rem;
-  margin-right: 53.33px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-left: auto;
+  padding-bottom: 3.5rem;
+  padding-right: 4rem;
 }
 
 .listHeader {
@@ -68,14 +78,20 @@ body {
   text-decoration: none;
   color: var(--text1-color);
   font-family: var(--font1);
-  font-size: var(--size-text1);
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.5s;
+}
+
+.textLink:hover {
+  color: #859678;
 }
 
 .buttonSwitch {
   width: 30px;
   height: 15px;
   margin-top: 1.5rem;
-  margin-right: 0.7rem;
+  margin-right: 1%;
   border: #ffffff solid 2px;
   border-radius: 30px;
   position: relative; /*Faz com que o elemento continue em sua posição original sem afetar os elementos ao redor*/
