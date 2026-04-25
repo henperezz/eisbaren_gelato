@@ -75,16 +75,27 @@ body {
 }
 
 .textLink {
+  display: inline-block;
   text-decoration: none;
   color: var(--text1-color);
   font-family: var(--font1);
   font-size: 16px;
   font-weight: 600;
-  transition: 0.5s;
+  transition: 0.3s ease-out;
 }
 
-.textLink:hover {
+.perfilHeader {
+  width: 14.67px;
+  height: 12px;
+  transition: 0.3s ease-out;
+  padding-top: 0.25rem;
+}
+
+.textLink:hover,
+.perfilHeader:hover {
   color: #859678;
+  text-shadow: 0px 5px 6px #859678;
+  transform: translateY(-4px);
 }
 
 .buttonSwitch {
