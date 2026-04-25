@@ -49,8 +49,8 @@ body {
 
 .headerLogo {
   /*Define o tamanho exato da logo*/
-  width: 159px;
-  height: 159px;
+  width: clamp(80px, 12vw, 159px);
+  height: clamp(80px, 12vw, 159px);
 }
 
 .logoContainer {
