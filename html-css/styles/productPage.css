@@ -3,6 +3,7 @@
 @import url("   https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap");
 
 :root {
+  /*Define cores, fontes e tamanhos de textos que serão utilizados posteriormente*/
   --casquinha-color: #fdae0c;
   --milkshake-color: #ffaec1;
   --acai-color: #c50d19;
@@ -22,8 +23,8 @@
 }
 
 * {
-  margin: 0;
-  padding: 0;
+  margin: 0; /* Reseta as configurações de margin pré-existentes na página*/
+  padding: 0; /*Reseta as configurações de padding pré-existentes na página*/
 }
 
 body {
@@ -33,8 +34,8 @@ body {
 }
 
 .headerContainer {
-  display: flex;
-  flex-direction: row;
+  display: flex; /*Define que o container é flexível*/
+  flex-direction: row; /*Define que a direção do container é na horizonta (row) não na vertical (column)*/
   height: 98px;
   width: auto;
   background: linear-gradient(
@@ -43,45 +44,47 @@ body {
     #e69cc6 14%,
     #dba7bf 34%,
     #e8a3b8 70%
-  );
+  ); /*Define que o background do container será gradiente*/
 }
 
 .headerLogo {
+  /*Define o tamanho exato da logo*/
   width: 159px;
   height: 159px;
 }
 
 .logoContainer {
+  /*Define que o container é flex, e é automaticamente ajustado para o meio do container-pai*/
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .headerTextContainer {
-  display: flex;
+  display: flex; /*Define que o display é flex, o alinhamento na horizontal é no fim do container e que o alinhamento na vertical é no centro*/
   align-items: center;
   justify-content: flex-end;
-  margin-left: auto;
-  padding-bottom: 3.5rem;
-  padding-right: 4rem;
+  margin-left: auto; /*Define que o tamanho da margem para o container do logo é automatico, se ajustando conforme necessário*/
+  padding-bottom: 3.5rem; /*Define que o tamanho da margem para baixo do item até a borda do container é 56px (3.5rem)*/
+  padding-right: 4rem; /*Define que o tamanho da margem para direita do item até a borda do container é 64px (4rem)*/
 }
 
 .listHeader {
   display: flex;
   flex-direction: row;
   margin-top: 4rem;
-  list-style: none;
-  gap: 11.22px;
+  list-style: none; /*Define que a lista não terá marcações, nem bolinhas nem quadrados*/
+  gap: 11.22px; /*Define que a distância entre os items do container é 11.22px*/
 }
 
 .textLink {
-  display: inline-block;
-  text-decoration: none;
+  display: inline-block; /*Define que os textos são inline-block, ou seja, os elementos estão um do lado do outro porém se aceita definições de largura ou altura, necessário para o efeito de hover*/
+  text-decoration: none; /*Define que os links não terão a linha embaixo deles*/
   color: var(--text1-color);
   font-family: var(--font1);
   font-size: 16px;
-  font-weight: 600;
-  transition: 0.3s ease-out;
+  font-weight: 600; /*Define que a fonte será semi-bold*/
+  transition: 0.3s ease-out; /*Define que a transição entre os efeitos (no caso :hover) será de 0.3s desacelerando no final do movimento para maior sensação de suavidade*/
 }
 
 .perfilHeader {
@@ -94,8 +97,10 @@ body {
 .textLink:hover,
 .perfilHeader:hover {
   color: #859678;
-  text-shadow: 0px 5px 6px #859678;
-  transform: translateY(-4px);
+  text-shadow: 0px 5px 6px #859678; /*Define que o texto terá nenhuma sombra no eixo x e terá 5px no eixo y com um blur (tipo esfumaceamento) de 6px e a cor a mesma do texto*/
+  transform: translateY(
+    -4px
+  ); /*Define que o texto se moverá para cima (números negativos empurram para cima, positivos para baixo) em -4px*/
 }
 
 .buttonSwitch {
@@ -103,10 +108,10 @@ body {
   height: 15px;
   margin-top: 1.5rem;
   margin-right: 1%;
-  border: #ffffff solid 2px;
+  border: #ffffff solid 2px; /*Define tamanho da borda, cor e tipo*/
   border-radius: 30px;
   position: relative; /*Faz com que o elemento continue em sua posição original sem afetar os elementos ao redor*/
-  cursor: pointer;
+  cursor: pointer; /*Faz com que aparece o ponteiro de clicar quando o mouse está em cima do elemento*/
 }
 
 .buttonSwitch .buttonIndicator {
@@ -117,16 +122,18 @@ body {
   transform: scale(
     0.8
   ); /*Faz com que o elemento se transforme baseado em uma escala (ele se ajustava a 0.8 do elemento original)*/
-  position: absolute;
+  position: absolute; /*O elemento está em posição absoluta, ou seja, se sobressaí sobre outros elementos, saindo do fluxo original*/
   left: 0;
   transition: 0.4s;
 }
 
 .buttonSwitch.dark .buttonIndicator {
+  /*Parte do comando js para quando se é clicado, a ação de mudar a bolinha do switcher e a cor dela*/
   left: 15px;
   background-color: #859678;
 }
 
 .buttonSwitch.dark {
+  /*Parte do comando js para quando se é clicado, alterar a cor da borda do elemento*/
   border-color: #859678;
 }
