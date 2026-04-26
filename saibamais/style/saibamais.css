@@ -67,33 +67,39 @@ body {
 }
 
 /* 2. NAVBAR (MENU) */
-.navbar {
+.headerContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 5%;
     height: 110px;
-    background: linear-gradient(to bottom, #cf7eae 0%, #e69cc6 14%, #dba7bf 34%, #e8a3b8 70%); 
     position: fixed;  
     top: 0;
     width: 100%;
     z-index: 100;
     box-shadow: none; 
-    transition: background 0.3s ease; 
+    transition: background 0.3s ease;
+   background: linear-gradient(
+    to bottom,
+    #cf7eae 0%,
+    #e69cc6 14%,
+    #dba7bf 34%,
+    #e8a3b8 70%
+    ); 
 }
 
-.navbar.transparent {
+.headerContainer.transparent {
     background: transparent;
     backdrop-filter: blur(10px); 
     box-shadow: none;
 }
 
-.logo-mini a {
+.logoContainer  {
     display: inline-block;
     cursor: pointer;
 }
 
-.logo-mini img {
+.logoContainer img {
     height: 150px;          
     width: 150px; 
     margin-left: -3rem;
@@ -102,40 +108,89 @@ body {
     transition: transform 0.3s ease;
 }
 
-.logo-mini a:hover img {
+.headerContainer:hover img {
     transform: scale(1.05); 
 }
 
-.nav.a {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-    align-items: center; /* garante alinhamento vertical */
+.headerTextContainer {
+  display: flex; /*Define que o display é flex, o alinhamento na horizontal é no fim do container e que o alinhamento na vertical é no centro*/
+  align-items: center;
+  justify-content: flex-end;
+  margin-left: auto; /*Define que o tamanho da margem para o container do logo é automatico, se ajustando conforme necessário*/
+  padding-bottom: 3.5rem; /*Define que o tamanho da margem para baixo do item até a borda do container é 56px (3.5rem)*/
+  padding-right: 4rem; /*Define que o tamanho da margem para direita do item até a borda do container é 64px (4rem)*/
 }
 
-.nav.a a {
-    display: flex;              /* coloca texto e ícone lado a lado */
-    align-items: center;        /* centraliza verticalmente */
-    gap: 6px;                   /* espaço entre texto e ícone */
-    text-decoration: none;
-    letter-spacing: 0.29px;
-    color: var(--texto);
-    font-weight: 400;
-    font-size: 18px;
-    transition: 0.3s ease;
-    text-transform: uppercase;
+.listHeader {
+  display: flex;
+  flex-direction: row;
+  margin-top: 4rem;
+  list-style: none; /*Define que a lista não terá marcações, nem bolinhas nem quadrados*/
+  gap: 11.22px; /*Define que a distância entre os items do container é 11.22px*/
 }
 
-.nav.a a:hover {
-    color: var(--azul-eisbaren);
-    transform: scale(1.1);
+.textLink {
+  display: inline-block; /*Define que os textos são inline-block, ou seja, os elementos estão um do lado do outro porém se aceita definições de largura ou altura, necessário para o efeito de hover*/
+  text-decoration: none; /*Define que os links não terão a linha embaixo deles*/
+  color: var(--branco);
+  font-size: 16px;
+  font-weight: 600; /*Define que a fonte será semi-bold*/
+  transition: 0.3s ease-out; /*Define que a transição entre os efeitos (no caso :hover) será de 0.3s desacelerando no final do movimento para maior sensação de suavidade*/
 }
 
-.nav.a a .material-symbols-outlined {
-    font-size: 20px;   /* tamanho proporcional ao texto */
-    line-height: 1;    /* evita desalinhamento */
+.perfilHeader {
+  width: 14.67px;
+  height: 12px;
+  transition: 0.3s ease-out;
+  padding-top: 0.25rem;
 }
 
+.textLink:hover,
+.perfilHeader:hover {
+  color: #859678;
+  text-shadow: 0px 5px 6px #859678; /*Define que o texto terá nenhuma sombra no eixo x e terá 5px no eixo y com um blur (tipo esfumaceamento) de 6px e a cor a mesma do texto*/
+  transform: translateY(
+    -4px
+  ); /*Define que o texto se moverá para cima (números negativos empurram para cima, positivos para baixo) em -4px*/
+}
+
+.buttonSwitch {
+  width: 30px;
+  height: 15px;
+  top: -10px;
+  margin-top: 1.5rem;
+  margin-right: 1%;
+  border: #ffffff solid 2px; /*Define tamanho da borda, cor e tipo*/
+  border-radius: 30px;
+  position: relative; /*Faz com que o elemento continue em sua posição original sem afetar os elementos ao redor*/
+  cursor: pointer; /*Faz com que aparece o ponteiro de clicar quando o mouse está em cima do elemento*/
+}
+
+.buttonSwitch .buttonIndicator {
+  width: 15px;
+  height: 15px;
+  top:auto;
+  background-color: #ffffff;
+  border-radius: 150px;
+  transform: scale(
+    0.8
+  ); /*Faz com que o elemento se transforme baseado em uma escala (ele se ajustava a 0.8 do elemento original)*/
+  position: absolute; /*O elemento está em posição absoluta, ou seja, se sobressaí sobre outros elementos, saindo do fluxo original*/
+  left: 0;
+  transition: 0.4s;
+}
+
+.buttonSwitch.dark .buttonIndicator {
+  /*Parte do comando js para quando se é clicado, a ação de mudar a bolinha do switcher e a cor dela*/
+  left: 15px;
+  background-color: #859678;
+}
+
+.buttonSwitch.dark {
+  /*Parte do comando js para quando se é clicado, alterar a cor da borda do elemento*/
+  border-color: #859678;
+}
+ 
 
 /* 3. HERO SECTION (BANNER PRINCIPAL) */
 .hero-section {
