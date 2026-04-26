@@ -1,10 +1,10 @@
+// script.js
 
 // Efeito de revelação ao rolar
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
             entry.target.classList.add('show');
-        } else {
         }
     });
 });
@@ -18,14 +18,26 @@ buttonSwitch.addEventListener("click", () => {
 });
 
 const hiddenElements = document.querySelectorAll('.hidden');
-hiddenElements.
+hiddenElements.forEach((el) => observer.observe(el));
 
 // Navbar transparente ao rolar
 window.addEventListener("scroll", function() {
-    const headerContainer = document.querySelector(".headerContainer");
+    const navbar = document.querySelector(".navbar");
     if (window.scrollY > 50) {
-        headerContainer.classList.add("transparent");
+        navbar.classList.add("transparent");
     } else {
-        headerContainer.classList.remove("transparent");
+        navbar.classList.remove("transparent");
     }
 });
+
+// Remove splash após alguns segundos
+window.addEventListener("load", () => {
+    const splash = document.getElementById("splash");
+    if (splash) {
+        setTimeout(() => {
+            splash.style.display = "none";
+        }, 1500); // tempo igual ao da animação
+    }
+});
+
+
