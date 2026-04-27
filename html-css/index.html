@@ -6,7 +6,18 @@
     <title>Eisbaren Gelato</title>
 
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!--Icone do perfil-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=group">
+    
+    <!-- LETRA CODA SAIBA MAIS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Coda:wght@800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="ImagensFigma/acai.png" type="image/x-icon">
+
+    <!--ICONE FOOTER-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=mail" />
     
 
 
@@ -16,15 +27,17 @@
 <!-- Aqui eu criei o inicio das divs-->
         <div class="container"> 
 <!-- Logo que ficara também no menu -->
-            <div class="logo"> <img src="ImagensFigma/logo.jpg"> </div>
+            <div class="logo">
+                 <a href="index.html"><img src="ImagensFigma/logo.jpg"></a>
+            </div>
 <!-- Criação dos tópico do menu -->
             <div class="menu">
                 <nav>
                     <a href="#"> INÍCIO </a>
-                    <a href="#"> NOSSA HISTORIA </a>
-                    <a href="#"> KIDS </a>
+                    <a href="#"> SOBRE NÓS </a>
+                    <a href="#"> PRODUTOS </a>
                     <a href="#"> CARRINHO </a>
-                    <a href="#"> PERFIL <img src="imagens/icone1.png" class="icone-perfil"> <!--Aqui precisa do icone que irei baixar --></a>
+                    <a href="#"> PERFIL <span class="material-symbols-outlined"> group </span> </a>
                 </nav>
             </div>
         </div>
@@ -56,8 +69,8 @@
             </a>
 
             <!-- PICOLÉ -->
-            <a href="pagina-pocole" class="card bg-laranja">
-                <img src="ImagensFigma/pocole.png" class="img-picole" alt="Picolé">
+            <a href="pagina-picole" class="card bg-laranja">
+                <img src="ImagensFigma/picole.png" class="img-picole" alt="Picolé">
                 <div class="legenda">
                     <span> Picolé </span>
                     <p> Conheça +</p>
@@ -84,7 +97,7 @@
 
             <!-- CASQUINHAS  -->
             <a href="pagina-casquinhas" class="card bg-laranja">
-                <img src="ImagensFigma/casquinha.png" class="img-casquinhas" alt="Casquinhas">
+                <img src="ImagensFigma/casquinhas.png" class="img-casquinhas" alt="Casquinhas">
                 <div class="legenda">
                     <span> Casquinhas </span>
                     <p> Conheça + </p>
@@ -95,7 +108,7 @@
             <a href="pagina-sundeys" class="card bg-vermelho">
                 <img src="ImagensFigma/sundey.png" class="img-sundey" alt="Sundey">
                 <div class="legenda">
-                    <span> Sundey </span>
+                    <span> Sundae </span>
                     <p> Conheça + </p>
                 </div>
             </a>
@@ -108,18 +121,65 @@
 <!-- INICO DO SAIBA MAIS -->
     <section class="saiba-mais">
             <div class="imagem-loja">
-                <img src="ImagensFigma/SaibaMais.jpeg" alt="Ilustraçã de nossa loja">
+                <img src="ImagensFigma/SaibaMais2.jpeg" alt="Ilustração da nossa loja">
             </div>
 
             <div class="texto">
-                <h2> O que começou com um <br> grupo de amigos. <br> Ficou grande de verdade! </h2>
-                <p> Uma ideia no terceiro ano do ensino médio virou uma sorveteria de verdade com alma, sabor e propósito.
-                <h3>Veja como chegamos até aqui.</h3>
-                <button> Saiba mais </button>
+                <h2 class="titulo-principal"> O que começou com um <br> grupo de amigos. <br> Ficou grande de <br> verdade! </h2>
+
+                <h3 class="titulo-secundario"> Uma ideia no terceiro ano do <br> ensino médio virou uma <br> sorveteria de verdade <br> com alma, sabor e propósito.</h3>
+
+                <h3 class="titulo-terciario">Veja como chegamos até <br> aqui.</h3>
+
+                <a href="saibaMais.html" class="btn-saibaMais"> Saiba Mais </a>
             </div>
+            
     </section>
 
 
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="footer-grid">
+            <!-- Logo -->
+            <div class="footer-logo">
+                <img src="ImagensFigma/logo.jpg" alt="Eisbären Gelato">
+            </div>
+
+            <!-- Menu Institucional -->
+            <div class="footer-links">
+                <h4>MENU INSTITUCIONAL</h4>
+                <ul>
+                    <li><a href="index.html">inicio</a></li>
+                    <li><a href="lojas.html">Nossas lojas</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="saibamais.html">Nossa História</a></li>
+                    <li><a href="pedido.html">Peça Aqui</a></li>
+                </ul>
+            </div>
+
+            <!-- Contato -->
+            <div class="footer-contact">
+                <h4>CONTATO</h4>
+                <!--Lista linkada-->
+                <ul>
+                    <li ><img src="ImagensFigma/emailIcon.png" class="iconLink"><a class="linksFooter" href="mailto:EisbarenGelato@gmail.com">   EisbarenGelato@gmail.com</a></li>
+                    <li><img src="ImagensFigma/telefoneIcon.png" class="iconLink"><a class="linksFooter" href="malito:+55 19 3211-6698">  +55 19 3211-6698</a></li>
+                </ul>
+
+                <p>Acompanhe a gente nas redes sociais</p>
+                <div class="social-icons">
+                    <a href="#"><img src="ImagensFigma/facebook.png" alt="Facebook"></a>
+                    <a href="#"><img src="ImagensFigma/instagram.png" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Texto final -->
+        <div class="footer-bottom">
+            <p>© 2026 Eisbären Gelato Sorvetes. Todos os direitos reservados.</p> 
+            <a href="privacidade.html">Política de Privacidade</a>  
+        </div>
+    </footer>
 
 </body>
 </html>
