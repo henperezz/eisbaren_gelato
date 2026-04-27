@@ -107,7 +107,7 @@ body {
   width: 30px;
   height: 15px;
   margin-top: 1.5rem;
-  margin-right: 1%;
+  margin-right: 1%; /*Define que a margem da direita tem o tamanho de 1% do elemento pai */
   border: #ffffff solid 2px; /*Define tamanho da borda, cor e tipo*/
   border-radius: 30px;
   position: relative; /*Faz com que o elemento continue em sua posição original sem afetar os elementos ao redor*/
@@ -136,4 +136,33 @@ body {
 .buttonSwitch.dark {
   /*Parte do comando js para quando se é clicado, alterar a cor da borda do elemento*/
   border-color: #859678;
+}
+
+.productInfo {
+  display: flex;
+  flex-direction: row;
+  margin-top: 4.6rem;
+  margin-left: 3.9rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.containerImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 597px;
+  height: 571px;
+  background-color: var(--casquinha-color);
+  border-radius: 20px;
+  position: relative;
+}
+.product {
+  width: clamp(250px, 30vw, 415px);
+  height: clamp(300px, 30vw, 634px);
+  transition: 0.7s;
+}
+
+.product:hover {
+  transform: translateY(-20px);
 }
