@@ -1,0 +1,455 @@
+
+:root {
+  /*-- Cores Principais--*/
+    --cor-primaria: #FBFBD7 ;
+    --cor-secundaria: #FADADD;
+    --cor-terciaria: #B0E0E6;
+
+    /*-- Cores Para Fundo dos produtos-- */
+    --cor-quatenario: #FFAEC1;
+    --cor-quinario: #FDAE0C;
+    --cor-senario: #C50D19;
+
+}
+
+/*Adionando a fonte*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+
+
+
+/* Essa primeria parte do css serve para adicionar elementos do seu site, basicamente */
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+/*Aqui eu deifini o tamanho da classe container, ou seja, o tmaanho do menu etc*/
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  max-width: auto;  /*largura*/
+  height: 110px;  /*altura*/
+  left: 0.24px;  /*Direção*/
+  top: -0.47px; /*Superior*/
+
+
+}
+
+/*Aqui tem a cor do menu, que inclusive mais para frente vou colocar em degrade*/
+header {
+  /*O degradê*/
+  background: linear-gradient(to bottom, #cf7eae 0%, #e69cc6 14%, #dba7bf 34%, #e8a3b8 70%);
+  opacity: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100; /* Garante que os menus fiquem atrás dos cards */
+
+  
+}
+
+/* Definição dos tamanhos dos itens*/
+.logo img {
+  width: 150px;
+  height: 150px;
+  left: 0.50px;
+  margin-right: 42.3rem;
+}
+
+.menu {
+  width: 40%; /*Aqui eu coloquei uma "caixa de texto" maior para os topicos, para que não fique um de baixo do outro*/
+  letter-spacing: 0.29px; /*Espaçamento entre os tópicos do menu*/
+  font-size: 13.7px;
+  font-weight: 400;
+  text-transform: uppercase;/*Deixa tudo do menu em maiusculo*/
+  text-align: right;
+  margin-left: 14rem;
+}
+
+.menu nav a {
+  color: #ffffff;
+  text-decoration: none;
+  padding-right: 30px;
+  font-size:13.7px;
+  transition: 0.3s; /*Coloquei aqui a transição pr adeixar ela de certa forma mais suave */
+  
+}
+
+.menu nav a:hover {
+  color: #525946;
+}
+
+.menu nav a .material-symbols-outlined {
+  font-size: 23px; /* deixa o ícone do mesmo tamanho do texto */
+  position: relative;
+  top: 4px;
+  
+}
+
+section{
+  background-color: #FADADD;
+}
+
+.imagem-inicial {
+  width: 100%;
+  overflow: hidden;
+
+}
+
+.imagem-inicial img {
+  width: 100%; /* Faz a imagem preecher toda a tela*/
+  height: auto; /* Ajuda a fazer com que a imagem não fique achatada*/
+  display: block; /*Garante que toda a imagem oculpe tudo que falta, basicamente.*/
+  
+}
+
+/*ESTILIZÇÃO DO CARROCEL*/
+/* FIM DA ESTILIZAÇÃO DO CARROCEL*/
+
+
+
+
+
+/* ESTILIZAÇÃO DOS PRODUTOS */
+
+/*Parte principal*/
+.produtos {
+  background: linear-gradient(to bottom, var(--cor-secundaria) 80%,  var(--cor-terciaria) 100% );
+  padding: 150px 40px 300px; 
+  
+}
+
+/* LEgenda principal que fica acima*/
+.produtos h2 { /*Mudando o estilo do titulo*/
+  color: #4D2B1A;
+  text-align: center; /*Garante que o titulo fique no meio */
+  margin-top: 0px;   
+  margin-bottom: 10px;
+  padding-top: 0px;  /* Espaço entre em cima do titulo*/
+  padding-bottom: 10px; /* Espaço em baixo do titulo */
+
+/* Fontes presentes no figma */
+  font-family: "inter", sans-serif;/* Colando a fonte certa*/
+  font-weight: 900; /* Deixando em negrito, como no figma*/
+  line-height: 44px; /* Altura da linha conforme o figma*/
+
+}
+
+/*Organização para deixar as colunas nos seus lugares devidamente*/
+.grid-produtos{
+  display: grid; /*Ativação do modo grid*/
+  grid-template-columns: repeat(3, 1fr); /* Criação de 3 colunas de tamanho igual*/
+  gap: 100px; /* Enpaçamento entre os cards*/
+  max-width: 1400px; /* Largura */
+  margin: 0 auto; /*Centralização do grip/colunas no centro da tela*/
+  padding-top: 60px;
+
+}
+
+
+/* estilização dos quadrados que ficam atras dos produtos */
+
+.card {
+  position: relative;    /* permite posicionar imagem e legenda dentro do quadrado */
+  display: block;
+  height: 400px;         /* altura do quadrado */
+  width: 80%;           /* ocupa a coluna do grid */
+  border-radius: 8px;   /* bordas arredondadas */
+  text-decoration: none; /* tira o sublinhado do link */
+  z-index: 1;
+  
+}
+
+.card img {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  object-fit: contain;
+}
+
+/* Ajustes das imagens */
+
+.img-milkskahe {
+  height: 69%;
+  width: auto; /* Deixa a largura proporcional */
+  top: 90px; /* Pra fazer ele abaixar */
+
+}
+
+.img-picole {
+  height: 60%;
+  width: auto;
+  top: 120px;
+}
+
+.img-acai {
+  height: 105%;
+  width: auto;
+  top: 30px;
+
+}
+
+.img-potes {
+  height: 130%;
+  width: auto;
+  top: -70px;
+}
+
+.img-casquinhas {
+  height: 100%;
+  width: 410px;
+  top: 20px;
+
+}
+
+.img-sundey {
+  height: 90%;
+  width: auto;
+  top: 60px;
+}
+
+
+
+/* CORES DO CARDS/QUADRADOS COM AS IMAGENS */
+.bg-rosa {
+  background-color: var(--cor-quatenario); /* Milk Shake e Pote de Sorvete */
+}
+
+.bg-laranja {
+  background-color: var(--cor-quinario);   /* Picolé e Casquinhas */
+}
+
+.bg-vermelho {
+  background-color: var(--cor-senario);    /* Açaí e Sunday */
+}
+
+/* Legenda */
+.legenda {
+  position: absolute;  /* fica sobre a imagem */
+  bottom: 0;           /* ancorado na parte inferior do card */
+  left: 0;
+  right: 0;
+  z-index: 2;          /* fica na frente da imagem */
+  border-radius: 6px; /* arredonda só os cantos de baixo */
+  background: linear-gradient(to top, #000000 0%, transparent);
+  padding: 12px 16px 14px;
+}
+
+.legenda span {     /* span não é classe */
+  display: block;
+  color: #F5F5DC;
+  margin-bottom: 8px;
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
+.legenda p {
+  display: inline-block;
+  margin: 0;
+  color: #F5F5DC;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 4px 12px;
+}
+
+
+
+/* ESTILIZAÇÃO DO SAIBA MAIS */
+.saiba-mais {
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(var(--cor-terciaria) 80%, var(--cor-quatenario) 100%);
+  display: flex; /* Deixei o texto ao lado da imagem */
+  gap: 90px; /*Distancia do texto com a imagem*/
+  min-height: 700px;
+  padding: 120px 40px 300px; 
+}
+
+/*Editando a """"Moldura"""" ou seja  aparte que a imagem será colocada.*/
+.imagem-loja {
+  width: 700px; /*Está em pixels pois será um valor fixo*/
+  height: 890px;
+  border-radius: 32px; /*Bordas arredondadas*/
+  overflow: hidden;
+  flex-shrink: 0; /*Mantem o tamanho da imagem fixo, sem que ela encolha*/
+}
+
+.imagem-loja img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;        /* a imagem preenche a """moldura""" sem distorcer */
+  object-position: center;  /* foca no centro da imagem */
+  display: block;
+
+}
+
+/* ESTILIZAÇÃO DOS TEXTOS */
+/*Colocando todos os textos ao lado da imagem*/
+.texto h2 {
+  color: #4D2B1A;
+  font-family: "Coda", system-ui; /*fonte*/
+  font-weight: 800; /*fonte*/
+  font-style: normal; /*fonte*/
+  font-size: 30px;
+  line-height: 46.08px; /*Altura da linha*/
+  margin-bottom: 80px;
+}
+
+.titulo-secundario {
+  color: #4D2B1A;
+  font-family: 'inter', sans-serif;
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 46.08px;
+  font-style: normal;
+
+}
+
+.titulo-terciario {
+  color: #653720; /*cor da letra*/
+  font-family: 'inter', sans-serif; /*fonte*/
+  font-weight: 800; /*negrito*/
+  font-size: 30px; /*tamanho da fonte*/
+  line-height: 50px; /*altura da linha (no figma)*/
+  font-style: normal; /*fonte*/
+}
+
+/*Estilização do botão*/
+.btn-saibaMais {
+  text-decoration: none;        /* tira o sublinhado */
+  background-color: #A8151F;    /* borda vermelha */
+  border-radius: 10px;
+  width: 140px;
+  text-align: center;
+  padding: 10px 24px;           /* espaço de dentro, altura e largura do botão */
+  color: #ffffff;               /* cor do texto  */
+  font-weight: 700;             /* pra dx o texto em negrito */
+  display: inline-block;
+  transition: 0.3s;             /* transição hover */
+  margin-left: 400px;  /* empurra o botao pra direita */
+  margin-top: 250px;   /* deixando mais pra baixo */
+}
+
+.btn-saibaMais:hover {
+  background-color: #870028;    /* fundo vermelho ao passar o mouse */
+}
+
+
+
+/*ESTILIZAÇÃO DO FOOTER*/
+.main-footer {
+  background: linear-gradient(to bottom, #ffb0c4 0%, #faacc1 14%, #f8b0c8 34%, #e8a3b8 70%);
+    padding: 80px 10% 30px;
+    margin-top: 0;
+    color: #ffffff;
+    font-size: 0.85rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-logo img {
+    width: 400px;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #ffffff;
+    display: block;
+    margin-bottom: 12px;
+    font-size:0.85rem;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #525946;
+    padding-left: 5px;
+}
+
+
+.footer-contact ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.linksFooter{
+  text-decoration: none;
+  list-style: none;
+  color: #ffffff;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-contact p {
+    margin: 6px 0;
+}
+
+/*Configurações dos icone de contatos*/
+.footer-contact p img{
+    width: 20px;
+    margin-right: 5px;
+  
+}
+
+.social-icons img {
+    width: 20px;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+    
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    margin-top: 50px;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    font-size: 0.85rem;
+    color: #ffffff;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.footer-bottom a {
+    color: #ffffff;
+    text-decoration: underline;
+}
