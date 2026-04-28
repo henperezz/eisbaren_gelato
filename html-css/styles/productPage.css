@@ -58,6 +58,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 1rem;
 }
 
 .headerTextContainer {
@@ -158,11 +159,24 @@ body {
   position: relative;
 }
 .product {
-  width: clamp(250px, 30vw, 415px);
+  width: clamp(200px, 30vw, 415px);
   height: clamp(300px, 30vw, 634px);
   transition: 0.7s;
 }
 
 .product:hover {
   transform: translateY(-20px);
+}
+
+.containerInfoRight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.productName {
+  color: #212529;
+  margin-left: 4.1rem;
+  padding-bottom: 490px;
 }
