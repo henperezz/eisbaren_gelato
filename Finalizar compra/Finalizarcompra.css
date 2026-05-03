@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("   https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap");
+
+:root {
+  /*Define cores, fontes e tamanhos de textos que serão utilizados posteriormente*/
+  --casquinha-color: #fdae0c;
+  --milkshake-color: #ffaec1;
+  --acai-color: #c50d19;
+  --text1-color: #ffffff;
+  --text2-color: #0f0200;
+  --text3-color: #787878;
+  --text4-color: #d788a6;
+  --text5-color: #f83d8e;
+  --text6-color: #3568e9;
+  --size-text1: 13.7px;
+  --size-text3: 16px;
+  --size-text4: 64px;
+  --size-text6: 14px;
+  --font1: "Inter", sans-serif;
+  --font2: "Archivo", sans-serif;
+  --font3: "Berkshire Swash", sans-serif;
+}
+
+* {
+  margin: 0; /* Reseta as configurações de margin pré-existentes na página*/
+  padding: 0; /*Reseta as configurações de padding pré-existentes na página*/
+}
+
+body {
+  background-color: #ffffff;
+  font-family: var(--font2);
+  font-size: var(--size-text1);
+}
+
+.headerContainer {
+  display: flex; /*Define que o container é flexível*/
+  flex-direction: row; /*Define que a direção do container é na horizonta (row) não na vertical (column)*/
+  height: 98px;
+  width: auto;
+  background: linear-gradient(
+    to bottom,
+    #cf7eae 0%,
+    #e69cc6 14%,
+    #dba7bf 34%,
+    #e8a3b8 70%
+  ); /*Define que o background do container será gradiente*/
+}
+
+.headerLogo {
+  /*Define o tamanho exato da logo*/
+  width: clamp(80px, 12vw, 159px);
+  height: clamp(80px, 12vw, 159px);
+}
+
+.logoContainer {
+  /*Define que o container é flex, e é automaticamente ajustado para o meio do container-pai*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.headerTextContainer {
+  display: flex; /*Define que o display é flex, o alinhamento na horizontal é no fim do container e que o alinhamento na vertical é no centro*/
+  align-items: center;
+  justify-content: flex-end;
+  margin-left: auto; /*Define que o tamanho da margem para o container do logo é automatico, se ajustando conforme necessário*/
+  padding-bottom: 3.5rem; /*Define que o tamanho da margem para baixo do item até a borda do container é 56px (3.5rem)*/
+  padding-right: 4rem; /*Define que o tamanho da margem para direita do item até a borda do container é 64px (4rem)*/
+}
+
+.listHeader {
+  display: flex;
+  flex-direction: row;
+  margin-top: 4rem;
+  list-style: none; /*Define que a lista não terá marcações, nem bolinhas nem quadrados*/
+  gap: 11.22px; /*Define que a distância entre os items do container é 11.22px*/
+}
+
+.textLink {
+  display: inline-block; /*Define que os textos são inline-block, ou seja, os elementos estão um do lado do outro porém se aceita definições de largura ou altura, necessário para o efeito de hover*/
+  text-decoration: none; /*Define que os links não terão a linha embaixo deles*/
+  color: var(--text1-color);
+  font-family: var(--font1);
+  font-size: 16px;
+  font-weight: 600; /*Define que a fonte será semi-bold*/
+  transition: 0.3s ease-out; /*Define que a transição entre os efeitos (no caso :hover) será de 0.3s desacelerando no final do movimento para maior sensação de suavidade*/
+}
+
+/*tenho que ARRUMAR essa parte*/
+.perfilHeader {
+  width: 18.67px;
+  height: 15.67px;
+  transition: 0.3s ease-out;
+  padding-top: 0.25rem;
+}
+
+/*tenho que ARRUMAR essa parte*/
+.textLink:hover,
+.perfilHeader:hover {
+  color: #859678;
+  text-shadow: 0px 5px 6px #859678; /*Define que o texto terá nenhuma sombra no eixo x e terá 5px no eixo y com um blur (tipo esfumaceamento) de 6px e a cor a mesma do texto*/
+  transform: translateY(
+    -4px
+  ); /*Define que o texto se moverá para cima (números negativos empurram para cima, positivos para baixo) em -4px*/
+}
+
+.buttonSwitch {
+  width: 30px;
+  height: 15px;
+  margin-top: 1.5rem;
+  margin-right: 1%; /*Define que a margem da direita tem o tamanho de 1% do elemento pai */
+  border: #ffffff solid 2px; /*Define tamanho da borda, cor e tipo*/
+  border-radius: 30px;
+  position: relative; /*Faz com que o elemento continue em sua posição original sem afetar os elementos ao redor*/
+  cursor: pointer; /*Faz com que aparece o ponteiro de clicar quando o mouse está em cima do elemento*/
+}
+
+.buttonSwitch .buttonIndicator {
+  width: 15px;
+  height: 15px;
+  background-color: #ffffff;
+  border-radius: 150px;
+  transform: scale(
+    0.8
+  ); /*Faz com que o elemento se transforme baseado em uma escala (ele se ajustava a 0.8 do elemento original)*/
+  position: absolute; /*O elemento está em posição absoluta, ou seja, se sobressaí sobre outros elementos, saindo do fluxo original*/
+  left: 0;
+  transition: 0.4s;
+}
+
+.buttonSwitch.dark .buttonIndicator {
+  /*Parte do comando js para quando se é clicado, a ação de mudar a bolinha do switcher e a cor dela*/
+  left: 15px;
+  background-color: #859678;
+}
+
+.buttonSwitch.dark {
+  /*Parte do comando js para quando se é clicado, alterar a cor da borda do elemento*/
+  border-color: #859678;
+}
+
+/*Edição do texto central*/
+.imagem-inicial h1 {
+    width: 90px; /*Altura*/
+    height: 623px; /*Largura*/
+    left: 430px; /*Posição para a direita*/
+    font-family: "Berkshire Swash", serif;
+    text-decoration: none;
+    size: 64px;
+    color: #0f0200;
+    text-align: center;
+    top: 50%; /*Posição para baixo*/
+    transform: translateY(-50%); /*Faz com que o elemento se mova para cima em 50% do seu próprio tamanho, centralizando-o verticalmente*/
+}
+.container {
+    
+}
+ 

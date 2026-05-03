@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Finalizarcompra.css"> 
+    <title>Finalizar compra</title>
+    <link
+      rel="shortcut icon"
+      href="../assets/img/logo 48X48.png"
+      type="image/x-icon"
+    />
+</head>
+<body>
+    <header class="headerContainer" id="headerContainer">
+      <!--id necessário para produzir o efeito de mudança de cor que será adicionado posteriormente-->
+      <div class="logoContainer">
+        <img
+          src="../assets/img/logo.jpg"
+          alt="Logo Eisbaren"
+          class="headerLogo"
+        />
+      </div>
+
+      <div class="headerTextContainer">
+        <nav>
+          <ul class="listHeader">
+            <li class="linksList"><a class="textLink" href="">INÍCIO</a></li>
+            <li class="linksList">
+              <a class="textLink" href="">SAIBA MAIS</a>
+            </li>
+            <li class="linksList"><a class="textLink" href="">PRODUTOS</a></li>
+            <li class="linksList"><a class="textLink" href="">CARRINHO</a></li>
+            <li class="linksList"><a class="textLink" href="">PERFIL</a></li>
+            <li class="linksList">
+              <a href=""
+              <!--tenho que ARRUMAR essa parte-->
+                <img 
+                  src="img/group_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png"
+                  alt="Perfil"
+                  class="perfilHeader"
+              /></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    
+    <div class="buttonSwitch" id="buttonSwitch">
+        <!--id necessária para capitar no js, container especial que é o switcher de modos-->
+        <div class="buttonIndicator"></div>
+        <!--é o indicador do switcher-->
+      </div>
+    </header>
+
+   <script src="Finalizarcompra.js"></script>
+
+</header>
+
+    <section class="imagem-inicial"> <!-- Criei uma sessão ou divisória APENAS para a imagem do banner -->
+        <img src="img/Frame 18.png" alt="imagem inical da Parte de Produtos">
+        <h1> Finalizar compra </h1>
+    </section>
+    
+<div class="container">
+    <h1>Exemplo de inputs</h1>
+    <!--para criar um formulario usamos a tag forms-->
+    <form>
+        
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="sobrenome">Sobrenome</label>
+        <input type="text" id="sobrenome" name="sobrenome" required>
+    
+        <label for="endereco">Email</label>
+        <input type="email" id="endereco" name="email" required>
+    
+        <label>Estado</label>
+        <input type="text" placeholder="Selecionar estado"> <!--tipo de ngc que vc quer que ele seja ou aceite // o placeholder é mensagem que aparece dentro-->
+ 
+        <label for="cidade">Cidade</label>
+        <input type="text" placeholder="Selecione a cidade"> <!--tipo de ngc que vc quer que ele seja ou aceite // o placeholder é mensagem que aparece dentro-->
+ 
+        <label for="cep">CEP / Código Postal</label>
+        <input type="text" id="cep" name="CEP / Código Postal" required>
+    
+      
+
+
+
+</body>
+</html>
