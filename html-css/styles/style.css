@@ -1,5 +1,5 @@
 :root{
-    /*Cores principais das bolinhas*/
+    /*Cores principais das bolinhas (card redondos)*/
     --cor-redonda1: #FFAEC1;
     --cor-redonda2: #FBAB2A;
     --cor-redonda3: #C50D19;
@@ -16,100 +16,26 @@
     padding: 0;
 }
 
-/* Essa primeria parte do css serve para adicionar elementos do seu site, basicamente */
-* {
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
-    font-family: "Inter", sans-serif;
+header {
+  /*O degradê*/
+  background: linear-gradient(to bottom, #cf7eae 0%, #e69cc6 14%, #dba7bf 34%, #e8a3b8 70%);
+  opacity: 100%;
+  width: 100%; /*baseada no tamanho do elemento pai*/
+  position: fixed;/*Deixa o meunu fixo*/
+  top: 0;
+  left: 0;
+  z-index: 100; /* Garante que os menus fiquem atrás dos cards */
 }
 
-/*Aqui eu deifini o tamanho da classe container, ou seja, o tmaanho do menu etc*/
 .container {
   display: flex;
-  flex-direction: row;
+  flex-direction: row; /*Deixa a direção em formato de linha */
   align-items: center;
 
   max-width: auto;  /*largura*/
   height: 110px;  /*altura*/
   left: 0.24px;  /*Direção*/
   top: -0.47px; /*Superior*/
-
-
 }
 
-/*Aqui tem a cor do menu, que inclusive mais para frente vou colocar em degrade*/
-header {
-  /*O degradê*/
-  background: linear-gradient(to bottom, #cf7eae 0%, #e69cc6 14%, #dba7bf 34%, #e8a3b8 70%);
-  opacity: 100%;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100; /* Garante que os menus fiquem atrás dos cards */
 
-  
-}
-
-/* Definição dos tamanhos dos itens*/
-.logo img {
-  width: 150px;
-  height: 150px;
-  left: 0.50px;
-  margin-right: 42.3rem;
-}
-
-.menu {
-  width: 40%; /*Aqui eu coloquei uma "caixa de texto" ,aior pro topicos, para que não fique um de baixo do outro*/
-  letter-spacing: 0.29px; /*Espaçamento entre os tópicos do menu*/
-  font-size: 13.7px;
-  font-weight: 400;
-  text-transform: uppercase;/*Deixa tudo do menu em maiusculo*/
-  text-align: right;
-  margin-left: 14rem;
-}
-
-.menu nav a {
-  color: #ffffff;
-  text-decoration: none;
-  padding-right: 30px;
-  font-size:13.7px;
-  transition: 0.3s; /*Coloquei aqui a transição pr adeixar ela de certa forma mais suave */
-  
-}
-
-.menu nav a:hover {
-  color: #525946;
-}
-
-.menu nav a .material-symbols-outlined {
-  font-size: 23px; /* deixa o ícone do mesmo tamanho do texto */
-  position: relative;
-  top: 4px;
-  
-}
-
-.imagem-inicial {
-  width: 100%;
-  overflow: hidden;
-
-}
-
-.imagem-inicial img {
-  width: 100%; /* Faz a imagem preecher toda a tela*/
-  height: auto; /* Ajuda a fazer com que a iamgem não fique achatada*/
-  display: block; /*Garante que toda a iamgem ocape tudo que falta, basicamente.*/
-  
-}
-
-/*Edição do texto central*/
-.imagem-inicial h1 {
-    width: 80px; /*Altura*/
-    height: 623px; /*Largura*/
-    left: 430px; /*Posição para a direita*/
-    font-family: "Berkshire Swash", serif;
-    text-decoration: none;
-    font
-     
-}
