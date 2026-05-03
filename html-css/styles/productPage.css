@@ -51,6 +51,11 @@ body {
   /*Define o tamanho exato da logo*/
   width: clamp(80px, 12vw, 159px);
   height: clamp(80px, 12vw, 159px);
+  transition: 0.5s;
+}
+
+.headerLogo:hover {
+  transform: translateY(-5px);
 }
 
 .logoContainer {
@@ -160,8 +165,8 @@ body {
   transition: 0.7s;
 }
 .product {
-  width: clamp(70px, 23vw, 415px);
-  height: clamp(100px, 25vw, 634px);
+  width: clamp(70px, 22vw, 415px);
+  height: clamp(100px, 27vw, 634px);
   transition: 0.7s;
 }
 
@@ -178,7 +183,7 @@ body {
 
 .ratingStars {
   padding-bottom: 27px;
-  margin-left: 6.6%;
+  margin-left: 14%;
 }
 
 .productName {
@@ -186,7 +191,7 @@ body {
   font-family: var(--font2);
   font-size: 30px;
   font-weight: 700;
-  margin-left: 66px;
+  padding-left: 4.313rem;
   padding-bottom: 27px;
 }
 
@@ -195,5 +200,104 @@ body {
   font-family: var(--font2);
   font-size: 30px;
   font-weight: 700;
+  padding-left: 4.313rem;
+}
+
+.descriptionProduct {
+  color: var(--text3-color);
+  font-size: 1rem;
+  width: 26.25rem;
+  padding-left: 4.625rem;
+  padding-top: 1.2rem;
+  padding-bottom: 2.625rem;
+}
+
+.additionals,
+.size {
+  /*Ainda em trabalho, pesquisar sobre menu dropdown*/
+  font-size: 18px;
+  padding-left: 4.625rem;
+  color: var(--text2-color);
+  font-weight: 700;
+  padding-bottom: 1.5rem;
+  cursor: pointer;
+}
+
+.material-symbols-outlined {
+  /*Ajeitar posição da seta   */
+  width: 24px;
+  height: 24px;
+}
+
+.listSizeButton {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin-left: 4.625rem;
+  gap: 15.36px;
+}
+
+.sizeButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 43px;
+  height: 43px;
+  border: #e3e4e5 solid 3px;
+  border-radius: 43px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.sizeButton:hover {
+  background-color: #f967a6;
+  border-color: #f967a6;
+  transform: translateY(-5px);
+  box-shadow: 0px 5px 10px #9e4e65;
+}
+
+.textSizeButton {
+  font-size: 18px;
+}
+
+.line {
+  width: 642px;
+  margin-top: 44px;
+  margin-bottom: 32px;
   margin-left: 66px;
+  color: #e3e4e5;
+}
+
+.listCartCounter {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 1.9rem;
+  padding-left: 4.625rem;
+}
+
+/*Fazer contador para quantidade de itens!!!*/
+/*Fazer contador para quantidade de itens!!!*/
+
+.buttonAddCart {
+  width: 252px;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  background-color: #ed95ae;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.textButtonCart {
+  color: var(--text1-color);
+  font-size: var(--size-text3);
+  font-weight: 500;
+}
+
+.buttonAddCart:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 10px #9e4e65;
 }

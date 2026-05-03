@@ -10,6 +10,10 @@
       href="../assets/img/Carrossel de AÇAI.png"
       type="image/x-icon"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_right"
+    />
   </head>
   <body>
     <header class="headerContainer" id="headerContainer">
@@ -76,14 +80,44 @@
             um doce clássico e irresistível
           </p>
 
-          <button class="additionals"></button>
+          <div class="additionals" id="additionals">
+            <p>
+              Adicionais
+              <span class="material-symbols-outlined"> arrow_right </span>
+            </p>
+          </div>
 
           <p class="size">Tamanho:</p>
 
           <ul class="listSizeButton">
-            <li><button class="sizeButton">G</button></li>
-            <li><button class="sizeButton">M</button></li>
-            <li><button class="sizeButton">P</button></li>
+            <li>
+              <div class="sizeButton"><p class="textSizeButton">G</p></div>
+            </li>
+            <li>
+              <div class="sizeButton"><p class="textSizFzeeButton">M</p></div>
+            </li>
+            <li>
+              <div class="sizeButton"><p class="textSizeButton">P</p></div>
+            </li>
+          </ul>
+
+          <hr class="line" />
+
+          <ul class="listCartCounter">
+            <li class="itensCartCounter">
+              <!--Fazer Botões para aumentar ou diminuir a quantidade de itens-->
+
+              <div>
+                <p>Placeholder -</p>
+              </div>
+              <!--Fazer botões para aumentar ou diminuir a quantidade de itens para comprar-->
+            </li>
+
+            <li class="itensCartCounter">
+              <div class="buttonAddCart" id="buttonAddCart">
+                <p class="textButtonCart">Adicionar ao carrinho</p>
+              </div>
+            </li>
           </ul>
         </section>
       </section>
