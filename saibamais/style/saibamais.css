@@ -26,7 +26,7 @@
     transition: all 1s;
 }
 
-.show {
+.show { /*Essa parte é para mostrar os elementos conforme o usúario descer a tela*/
     opacity: 1;
     filter: blur(0);
     transform: translateY(0);
@@ -39,46 +39,19 @@ body {
     background-color: var(--branco);
 }
 
-
-/* Estilo da splash screen */
-#splash {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-}
-
-#splash img {
-    width: 250px; 
-    animation: fadeInOut 1.5s ease forwards;
-}
-
-@keyframes fadeInOut {
-    0% { opacity: 0; }
-    20% { opacity: 1; }
-    80% { opacity: 1; }
-    100% { opacity: 0; }
-}
-
 /* 2. NAVBAR (MENU) */
 .headerContainer {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /*Define que o alinhamento dos itens na horizontal é no início e no fim do container, ou seja, o logo fica no início e os links ficam no fim do container*/
     align-items: center;
-    padding: 10px 5%;
+    padding: 10px 5%; /*Define que o tamanho da margem para os itens do container é 10px para cima e para baixo e 5% para direita e para esquerda, ou seja, a margem lateral é responsiva, se ajustando conforme o tamanho da tela*/
     height: 110px;
     position: fixed;  
     top: 0;
     width: 100%;
     z-index: 100;
-    box-shadow: none; 
-    transition: background 0.3s ease;
+    box-shadow: none; /*Define que o container não terá sombra*/
+    transition: background 0.3s ease; /*Define que a transição entre os efeitos (no caso :hover) será de 0.3s e com uma aceleração suave*/
    background: linear-gradient(
     to bottom,
     #cf7eae 0%,
@@ -86,12 +59,6 @@ body {
     #dba7bf 34%,
     #e8a3b8 70%
     ); 
-}
-
-.headerContainer.transparent {
-    background: transparent;
-    backdrop-filter: blur(10px); 
-    box-shadow: none;
 }
 
 .logoContainer  {
@@ -193,19 +160,19 @@ body {
  
 
 /* 3. HERO SECTION (BANNER PRINCIPAL) */
-.hero-section {
+.hero-section { /*Essa seção é a parte do banner principal, onde tem a imagem de fundo e o texto em cima da imagem, aquela parte do nossa história*/
     position: relative;
-    height: 100vh;
+    height: 100vh; /*Define que a altura da seção é 100% da altura da tela do usuário, ou seja, a seção ocupará toda a altura da tela, independente do tamanho do dispositivo*/
     min-height: 400px;
-    overflow: hidden;
+    overflow: hidden; /*Define que o conteúdo que ultrapassar os limites da seção será escondido, ou seja, a imagem de fundo não ultrapassará os limites da seção, tipo, nn vai invadir a parte do main*/
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .hero-text {
-    position: absolute;
-    z-index: 2;
+    position: absolute; /*Define que o texto está em posição absoluta, ou seja, se sobressaí sobre outros elementos, saindo do fluxo original, ou seja, o texto fica em cima da imagem de fundo*/
+    z-index: 2; /*Isso significa que esse comando será exibido acima de outros elementos com z-index menor, exemplo a imagem da loja seria z-index: 1;*/
     text-align: center;
 }
 
@@ -215,7 +182,7 @@ body {
     color: var(--branco);
     letter-spacing: 1.5px;
 
-    -webkit-text-stroke: 0.7px var(--texto); 
+    -webkit-text-stroke: 0.7px var(--texto); /*isso define o contorno ao redor do texto.*/
     
 }
 
@@ -225,7 +192,7 @@ body {
     left: 0;
     width: 100%;   
     height: 100%;  
-    z-index: 1;
+    z-index: 1; /*como descrito no hero-text, a imagem da loja fica atrás do texto;*/
 }
 
 .image-loja img {
