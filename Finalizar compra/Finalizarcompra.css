@@ -143,8 +143,8 @@ body {
 
 /*Edição do texto central*/
 .imagem-inicial h1 {
-    width: 90px; /*Altura*/
-    height: 623px; /*Largura*/
+    width: 623px; /*Largura*/
+    height: 90px; /*Altura*/
     left: 430px; /*Posição para a direita*/
     font-family: "Berkshire Swash", serif;
     text-decoration: none;
@@ -155,7 +155,7 @@ body {
     transform: translateY(-50%); /*Faz com que o elemento se mova para cima em 50% do seu próprio tamanho, centralizando-o verticalmente*/
 }
 .container {
-    width: 200%;
+    width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
