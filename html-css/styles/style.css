@@ -416,6 +416,8 @@ section{
     margin: 6px 0;
 }
 
+.iconLink
+
 /*Configurações dos icone de contatos*/
 .footer-contact p img{
     width: 20px;
@@ -440,7 +442,7 @@ section{
     align-items: center;
     margin-top: 50px;
     padding-top: 25px;
-    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    border-top: 1px solid rgba(109, 0, 0, 0.4);
     font-size: 0.85rem;
     color: #ffffff;
 }
