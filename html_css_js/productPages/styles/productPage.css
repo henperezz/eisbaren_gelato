@@ -93,15 +93,16 @@ body {
   transition: 0.3s ease-out; /*Define que a transição entre os efeitos (no caso :hover) será de 0.3s desacelerando no final do movimento para maior sensação de suavidade*/
 }
 
-.perfilHeader {
-  width: 14.67px;
-  height: 12px;
+.material-symbols-outlined.profile {
+  font-size: 19px;
+  color: var(--text1-color);
+  cursor: pointer;
   transition: 0.3s ease-out;
-  padding-top: 0.25rem;
 }
 
 .textLink:hover,
-.perfilHeader:hover {
+.perfilHeader:hover,
+.material-symbols-outlined.profile:hover {
   color: #859678;
   text-shadow: 0px 5px 6px #859678; /*Define que o texto terá nenhuma sombra no eixo x e terá 5px no eixo y com um blur (tipo esfumaceamento) de 6px e a cor a mesma do texto*/
   transform: translateY(
@@ -183,7 +184,8 @@ body {
 
 .ratingStars {
   padding-bottom: 27px;
-  margin-left: 14%;
+  padding-left: clamp(67px, 20vw, 150px);
+  transition: 0.7s;
 }
 
 .productName {
@@ -191,8 +193,9 @@ body {
   font-family: var(--font2);
   font-size: 30px;
   font-weight: 700;
-  padding-left: 4.313rem;
+  padding-left: clamp(67px, 20vw, 150px);
   padding-bottom: 27px;
+  transition: 0.7s;
 }
 
 .priceTag {
@@ -200,41 +203,44 @@ body {
   font-family: var(--font2);
   font-size: 30px;
   font-weight: 700;
-  padding-left: 4.313rem;
+  padding-left: clamp(67px, 20vw, 150px);
+  transition: 0.7s;
 }
 
 .descriptionProduct {
   color: var(--text3-color);
   font-size: 1rem;
   width: 26.25rem;
-  padding-left: 4.625rem;
+  padding-left: clamp(67px, 20vw, 150px);
   padding-top: 1.2rem;
   padding-bottom: 2.625rem;
+  transition: 0.7s;
 }
 
 .additionals,
 .size {
   /*Ainda em trabalho, pesquisar sobre menu dropdown*/
   font-size: 18px;
-  padding-left: 4.625rem;
   color: var(--text2-color);
   font-weight: 700;
   padding-bottom: 1.5rem;
+  padding-left: clamp(67px, 20vw, 150px);
   cursor: pointer;
+  transition: 0.7s;
 }
 
-.material-symbols-outlined {
-  /*Ajeitar posição da seta   */
-  width: 24px;
-  height: 24px;
+.material-symbols-outlined.arrow_right {
+  font-size: 18px;
+  vertical-align: middle;
 }
 
 .listSizeButton {
   display: flex;
   flex-direction: row;
   list-style: none;
-  margin-left: 4.625rem;
+  padding-left: clamp(67px, 20vw, 150px);
   gap: 15.36px;
+  transition: 0.7s;
 }
 
 .sizeButton {
@@ -264,8 +270,9 @@ body {
   width: 642px;
   margin-top: 44px;
   margin-bottom: 32px;
-  margin-left: 66px;
+  margin-left: clamp(67px, 20vw, 150px);
   color: #e3e4e5;
+  transition: 0.5s;
 }
 
 .listCartCounter {
@@ -273,7 +280,8 @@ body {
   flex-direction: row;
   list-style: none;
   gap: 1.9rem;
-  padding-left: 4.625rem;
+  padding-left: clamp(67px, 20vw, 200px);
+  transition: 0.5s;
 }
 
 /*Fazer contador para quantidade de itens!!!*/

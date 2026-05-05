@@ -12,7 +12,7 @@
     />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_right"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..20"
     />
   </head>
   <body>
@@ -20,7 +20,7 @@
       <!--id necessário para produzir o efeito de mudança de cor que será adicionado posteriormente-->
       <div class="logoContainer">
         <img
-          src="../assets/img/logo.jpg"
+          src="../../assets/img/icones/logo.jpg"
           alt="Logo Eisbaren"
           class="headerLogo"
         />
@@ -37,12 +37,7 @@
             <li class="linksList"><a class="textLink" href="">CARRINHO</a></li>
             <li class="linksList"><a class="textLink" href="">PERFIL</a></li>
             <li class="linksList">
-              <a href=""
-                ><img
-                  src="../assets/img/perfil.png"
-                  alt="Perfil"
-                  class="perfilHeader"
-              /></a>
+              <span class="material-symbols-outlined profile"> group </span>
             </li>
           </ul>
         </nav>
@@ -56,6 +51,7 @@
     </header>
 
     <script src="scripts/ProductPage.js"></script>
+    <!--chama o script js para a alteração das cores-->
 
     <main>
       <section class="productInfo">
@@ -83,7 +79,9 @@
           <div class="additionals" id="additionals">
             <p>
               Adicionais
-              <span class="material-symbols-outlined"> arrow_right </span>
+              <span class="material-symbols-outlined arrow_right">
+                arrow_right
+              </span>
             </p>
           </div>
 
