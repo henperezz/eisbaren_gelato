@@ -144,4 +144,10 @@ body {
 /*Edição do texto central*/
 .imagem-inicial h1 {
   font-family: var( "Berkshire Swash" );
+  font-size: var(--size-text4);
+  color: var(--text2-color);
+  position: absolute; /*Faz com que o elemento se sobressaia sobre outros elementos, saindo do fluxo original*/
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /*Faz com que o elemento se mova para o centro da página, baseado em sua própria largura e altura*/
 }
