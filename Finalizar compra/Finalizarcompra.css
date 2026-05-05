@@ -143,42 +143,5 @@ body {
 
 /*Edição do texto central*/
 .imagem-inicial h1 {
-    width: 90px; /*Altura*/
-    height: 623px; /*Largura*/
-    left: 430px; /*Posição para a direita*/
-    font-family: "Berkshire Swash", serif;
-    text-decoration: none;
-    size: 64px;
-    color: #0f0200;
-    text-align: center;
-    top: 50%; /*Posição para baixo*/
-    transform: translateY(-50%); /*Faz com que o elemento se mova para cima em 50% do seu próprio tamanho, centralizando-o verticalmente*/
-}
-.container {
-    width: 200%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.container form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-.container form input {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-.container form button {
-    padding: 10px;
-    font-size: 16px;
-    background-color: var(--casquinha-color);
-    color: var(--text1-color);
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+  font-family: var( "Berkshire Swash" );
 }
