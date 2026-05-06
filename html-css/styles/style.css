@@ -416,13 +416,11 @@ section{
     margin: 6px 0;
 }
 
-.iconLink
-
 /*Configurações dos icone de contatos*/
-.footer-contact p img{
-    width: 20px;
-    margin-right: 5px;
-  
+li .material-symbols-outlined {
+  font-size: 18px;     /* controla o tamanho do ícone, pois o  width não funciona em icones*/
+  margin-right: 5px; /*espaço entre o texto e o icone*/
+  vertical-align: middle; /* alinha o ícone com o texto da frente */
 }
 
 .social-icons img {
