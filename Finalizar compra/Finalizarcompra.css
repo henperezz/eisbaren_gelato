@@ -168,3 +168,29 @@ body {
     margin: 20px; /*Define que a margem do container, ou seja, a distância entre o container e outros elementos ao redor, é de 20px*/
 
 }
+.container h2 {
+    font-family: var(--font1); /*Define que a fonte do texto é a variável --font1, que é "Inter", sans-serif*/
+    font-size: var(--size-text3); /*Define que o tamanho do texto é a variável --size-text3, que é 16px*/
+    color: var(--text2-color); /*Define que a cor do texto é a variável --text2-color, que é #0f0200*/
+    margin-bottom: 10px; /*Define que a margem inferior do texto é de 10px, ou seja, a distância entre o texto e os elementos abaixo dele é de 10px*/
+
+}
+.container p {
+    font-family: var(--font1); /*Define que a fonte do texto é a variável --font1, que é "Inter", sans-serif*/
+    font-size: var(--size-text1); /*Define que o tamanho do texto é a variável --size-text1, que é 13.7px*/
+    color: var(--text3-color); /*Define que a cor do texto é a variável --text3-color, que é #787878*/
+    margin-bottom: 10px; /*Define que a margem inferior do texto é de 10px, ou seja, a distância entre o texto e os elementos abaixo dele é de 10px*/
+
+}
+.container .button {
+    background-color: var(--casquinha-color); /*Define que a cor de fundo do botão é a variável --casquinha-color, que é #fdae0c*/
+    color: var(--text1-color); /*Define que a cor do texto do botão é a variável --text1-color, que é #ffffff*/
+    font-family: var(--font1); /*Define que a fonte do texto do botão é a variável --font1, que é "Inter", sans-serif*/
+    font-size: var(--size-text1); /*Define que o tamanho do texto do botão é a variável --size-text1, que é 13.7px*/
+    padding: 10px 20px; /*Define que o espaço interno do botão, ou seja, a distância entre o texto e as bordas do botão, é de 10px na vertical e 20px na horizontal*/
+    border: none; /*Define que o botão não terá borda*/
+    border-radius: 5px; /*Define que as bordas do botão serão arredondadas com um raio de 5px*/
+    cursor: pointer; /*Faz com que aparece o ponteiro de clicar quando o mouse está em cima do botão*/
+    transition: background-color 0.3s ease; /*Define que a transição da cor de fundo do botão será de 0.3s com uma aceleração suave*/
+
+}
