@@ -65,51 +65,43 @@
 <div class="container">
     <h2>Endereço de cobrança:</h2>
     <!--para criar um formulario usamos a tag forms-->
+
     <form>
-        
-        <label for="nome">Nome</label>
-        <input type="text" id="nome" name="nome" required>
 
-        <label for="sobrenome">Sobrenome</label>
-        <input type="text" id="sobrenome" name="sobrenome" required>
+      <div class="linha">
+        <input type="text" placeholder="Nome" required>
+        <input type="text" placeholder="Sobrenome" required>
+      </div>
+
+      <div class="linha">
+        <input type="email" placeholder="Email" required>
+        <input type="text" placeholder="Selecionar estado">
+      </div>
+
+      <div class="linha">
+        <input type="text" placeholder="Selecione a cidade">
+        <input type="text" placeholder="CEP / Código Postal">
+      </div>
+
     
-        <label for="endereco">Email</label>
-        <input type="email" id="endereco" name="email" required>
-    
-        <label>Estado</label>
-        <input type="text" placeholder="Selecionar estado"> <!--tipo de ngc que vc quer que ele seja ou aceite // o placeholder é mensagem que aparece dentro-->
- 
-        <label for="cidade">Cidade</label>
-        <input type="text" placeholder="Selecione a cidade"> <!--tipo de ngc que vc quer que ele seja ou aceite // o placeholder é mensagem que aparece dentro-->
- 
-        <label for="cep">CEP / Código Postal</label>
-        <input type="text" id="cep" name="CEP / Código Postal" required>
+      <h2>Método de pagamento:</h2>  
 
-    <h2>Método de pagamento:</h2>
-    <!--para criar um formulario usamos a tag forms-->
-    <form>
-        
-        <label for="nome">Cartão de crédito</label>
-        <input type="text" id="nome" name="nome" required>
+      <label><input type="radio" name="pagamento"> Cartão de crédito </label>
 
-        <label for="sobrenome">Nome no cartão</label>
-        <input type="text" id="sobrenome" name="sobrenome" required>
-    
-        <label for="endereco">Código de segurança</label>
-        <input type="email" id="endereco" name="email" required>
-      
-        
-        <input type="text" placeholder="Pagamento na entrega"> <!--tipo de ngc que vc quer que ele seja ou aceite // o placeholder é mensagem que aparece dentro-->
+      <input type="text" placeholder="Número do cartão">
+      <input type="text" placeholder="Código de segurança">
 
-        <button type="submit">Faça seu pedido agora </button>
+      <label><input type="radio" name="pagamento"> Pagamento na entrega</label>
+      <input type="text" placeholder="Pagamento na entrega">
+
+
+      <button type="submit">Faça seu pedido agora</button>
+
+
+
 
     </form>
-      </header>
-
-    <section class="imagem-inicial"> <!-- Criei uma sessão ou divisória APENAS para a imagem do banner -->
-        <img src="img/Background+HorizontalBorder+Shadow.png" alt="imagem inical da Parte de Produtos">
-    </section>
-
+  </div>
 
 </body>
 </html>

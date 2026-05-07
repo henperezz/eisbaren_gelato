@@ -155,17 +155,56 @@ body {
     transform: translate(-50%, -50%); /*Faz com que o elemento se mova para o centro exato da tela, baseado em sua própria largura e altura*/
 
 }
-
-.imagem-inicial img {
-    width: 100%; /*Define que a largura da imagem se ajustará ao tamanho do container-pai*/
-    height: auto; /*Define que a altura da imagem se ajustará proporcionalmente à largura, mantendo a proporção original da imagem*/
+  ----------------------------------------------------------- */
+.checkout {
+  display: flex;            /* Coloca o formulário e o resumo um ao lado do outro */
+  justify-content: center;  /* Centraliza esse conjunto na tela */
+  gap: 40px;                /* Espaço de 40px entre o formulário e o resumo */
+  padding: 40px;            /* Espaço interno para não encostar nas bordas da tela */
+  
 }
 
+/* -----------------------------------------------------------
+   8. FORMULÁRIO (Inputs)
+   ----------------------------------------------------------- */
 .container {
-    border-radius: 10px; /*Define que as bordas do container serão arredondadas com um raio de 10px*/
-    background-color: #f8f8f8; /*Define que a cor de fundo do container é #f8f8f8*/
-    padding: 20px; /*Define que o espaço interno do container, ou seja, a distância entre o conteúdo e as bordas do container, é de 20px*/
-    margin: 20px; /*Define que a margem do container, ou seja, a distância entre o container e outros elementos ao redor, é de 20px*/
-
+  width: 500px;             /* Largura fixa para a área do formulário */
 }
-.
+
+form {
+  display: flex;            /* Empilha os campos um embaixo do outro */
+  flex-direction: column;   /* Direção de coluna (vertical) */
+  gap: 15px;                /* Espaço entre cada campo de digitação */
+}
+
+.linha {
+  display: flex;            /* Usado quando dois inputs ficam na mesma linha (ex: Cidade e Estado) */
+  gap: 10px;                /* Espaço entre esses dois inputs */
+}
+
+.linha input {
+  width: 100%;              /* Faz os inputs dividirem o espaço da linha igualmente */
+}
+
+input {
+  padding: 12px;            /* Espaço interno para o texto não grudar na borda do campo */
+  border-radius: 20px;      /* Deixa as bordas dos campos arredondadas */
+  border: 1px solid #ddd;   /* Borda fina que está em cinza claro*/
+}
+
+/* -----------------------------------------------------------
+   9. BOTÃO DE AÇÃO
+   ----------------------------------------------------------- */
+button {
+  margin-top: 20px;         /* Espaço acima do botão */
+  padding: 15px;            /* Tamanho interno do botão (altura e largura) */
+  border: none;             /* Remove a borda padrão feia do navegador */
+  border-radius: 25px;      /* Deixa o botão bem arredondado nas pontas */
+  background: #ed95ae; /* Usa o rosa choque definido lá no topo */
+  color: white;             /* Cor do texto do botão */
+  cursor: pointer;          /* Muda a seta do mouse para a "mãozinha" ao passar por cima */
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 10px #9e4e65;
+}
+
+
