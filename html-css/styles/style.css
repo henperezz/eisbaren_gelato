@@ -380,7 +380,7 @@ section{
     font-size: 1rem;
     font-weight: bold;
     color: #ffffff;
-    padding-top: 40px;
+    padding-top: 40px; /*Esse aqui que alinhou tudo*/
 }
 
 .footer-links ul {
@@ -418,10 +418,7 @@ section{
     margin: 6px 0;
 }
 
-<<<<<<< HEAD
 
-=======
->>>>>>> ead4748101ca52f590a2faf2ebba3f9d2973a5ca
 /*Configurações dos icone de contatos*/
 li .material-symbols-outlined {
   font-size: 20px;     /* controla o tamanho do ícone, pois o  width não funciona em icones*/
