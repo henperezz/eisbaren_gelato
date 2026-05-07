@@ -361,12 +361,22 @@ section{
     gap: 50px;
     align-items: center;
     justify-content: center;
+  display: grid;
+  grid-template-columns: 250px 1fr 1fr; /* tem que bater com o tamanho da logo */
+  gap: 50px;
+  align-items: start;  /* alinha tudo verticalmente no centro */
+}
+
+.footer-logo{
+  align-self: center;
 }
 
 .footer-logo img {
     width: 400px;
+    width: 250px;
     border-radius: 20px;
     padding: 5px;
+
 }
 
 .footer-links h4,
@@ -376,6 +386,7 @@ section{
     font-size: 1rem;
     font-weight: bold;
     color: #ffffff;
+    padding-top: 40px;
 }
 
 .footer-links ul {
@@ -415,12 +426,19 @@ section{
     margin: 6px 0;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ead4748101ca52f590a2faf2ebba3f9d2973a5ca
 /*Configurações dos icone de contatos*/
 .footer-contact p img{
     width: 20px;
     margin-right: 5px;
   
+li .material-symbols-outlined {
+  font-size: 20px;     /* controla o tamanho do ícone, pois o  width não funciona em icones*/
+  margin-right: 5px; /*espaço entre o texto e o icone*/
+  vertical-align: middle; /* alinha o ícone com o texto da frente */
 }
 
 .social-icons img {
