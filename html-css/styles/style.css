@@ -356,11 +356,6 @@ section{
 }
 
 .footer-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 50px;
-    align-items: center;
-    justify-content: center;
   display: grid;
   grid-template-columns: 250px 1fr 1fr; /* tem que bater com o tamanho da logo */
   gap: 50px;
@@ -418,8 +413,6 @@ section{
   text-decoration: none;
   list-style: none;
   color: #ffffff;
-  align-items: center;
-  justify-content: center;
 }
 
 .footer-contact p {
@@ -431,10 +424,6 @@ section{
 =======
 >>>>>>> ead4748101ca52f590a2faf2ebba3f9d2973a5ca
 /*Configurações dos icone de contatos*/
-.footer-contact p img{
-    width: 20px;
-    margin-right: 5px;
-  
 li .material-symbols-outlined {
   font-size: 20px;     /* controla o tamanho do ícone, pois o  width não funciona em icones*/
   margin-right: 5px; /*espaço entre o texto e o icone*/
