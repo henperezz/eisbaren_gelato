@@ -198,6 +198,11 @@ body {
   transition: 0.7s;
 }
 
+.favorite_icon {
+  vertical-align: middle;
+  color: var(--text3-color);
+}
+
 .priceTag {
   color: var(--text5-color);
   font-family: var(--font2);
