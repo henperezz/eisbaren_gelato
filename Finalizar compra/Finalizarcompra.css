@@ -143,8 +143,8 @@ body {
 
 /*Edição do texto central*/
 .imagem-inicial h1 {
-    width: 623px; /*Largura*/
-    height: 90px; /*Altura*/
+    width: 923px; /*Largura*/
+    height: 70px; /*Altura*/
     left: 430px; /*Posição para a direita*/
     font-family: "Berkshire Swash", cursive;
     font-size: var(--size-text4);
@@ -159,8 +159,8 @@ body {
 .checkout {
   display: flex;            /* Coloca o formulário e o resumo um ao lado do outro */
   justify-content: center;  /* Centraliza esse conjunto na tela */
-  gap: 40px;                /* Espaço de 40px entre o formulário e o resumo */
-  padding: 40px;            /* Espaço interno para não encostar nas bordas da tela */
+  gap: 50px;                /* Espaço de 40px entre o formulário e o resumo */
+  padding: 50px;            /* Espaço interno para não encostar nas bordas da tela */
   
 }
 
@@ -195,17 +195,29 @@ form {
   
 }
 
-.opcao-pagamento img{
-  width: 60px;/* Define a largura da imagem */
-  height: auto; /* Mantém a proporção da imagem */
-
+.opcao-pagamento {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 20px;
+  border: 1px solid #ddd;   /* Borda fina que está em cinza claro*/
+  cursor: pointer;
+  margin-bottom: 8px;
 }
 
-.opcao-pagamento{
-  display: flex;
-  align-items: center; /* Centraliza as imagens verticalmente */
-  gap: 10;
-  margin-top:12px;
+.opcao-pagamento span {
+  flex: 1;
+}
+
+.img-cartao {
+  width: 20px;
+  height: auto;
+}
+
+.img-Symbol {
+  width: 20px;
+  height: auto;
 }
 
 input {
@@ -218,7 +230,7 @@ input {
    9. BOTÃO DE AÇÃO
    ----------------------------------------------------------- */
 button {
-  margin-top: 20px;         /* Espaço acima do botão */
+  margin-top: 30px;         /* Espaço acima do botão */
   padding: 15px;            /* Tamanho interno do botão (altura e largura) */
   border: none;             /* Remove a borda padrão feia do navegador */
   border-radius: 25px;      /* Deixa o botão bem arredondado nas pontas */

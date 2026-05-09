@@ -58,7 +58,7 @@
 
     <section class="imagem-inicial"> <!-- Criei uma sessão ou divisória APENAS para a imagem do banner -->
         <img src="img/Frame 18.png" alt="imagem inical da Parte de Produtos">
-        <center><h1> Finalizar <p> compra </h1></center>
+            <h1> Finalizar <p> compra </h1>
 
     </section>
     
@@ -87,9 +87,9 @@
       <h2>Método de pagamento:</h2>
 
       <label class="opcao-pagamento">
-       <input type="radio" name="pagamento"> Cartão de crédito
-      <img src="img/Finalizar compra PIX.png" alt="Cartão de crédito">
-      <img src="img/Finalizar compra CARTÃO.png" alt="Cartão de crédito">
+        <input type="radio" name="pagamento" checked>
+        <span>Cartão de crédito</span>
+        <img src="img/credit_card_24dp_787878_FILL0_wght400_GRAD0_opsz24.png" alt="Cartão" class="img-cartao">
       </label>
    
  
@@ -97,7 +97,12 @@
       <input type="text" placeholder="Número do cartão">
       <input type="text" placeholder="Código de segurança">
 
-      <label><input type="radio" name="pagamento"> Pagamento na entrega</label>
+      
+      <label class="opcao-pagamento">
+        <input type="radio" name="pagamento">
+        <span>Pagamento na entrega</span>
+        <img src="img/Symbol.png" alt="Dinheiro" class="img-Symbol">
+      </label>
       
 
       <button type="button">Faça seu pedido agora</button>
