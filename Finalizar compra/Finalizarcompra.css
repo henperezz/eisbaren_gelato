@@ -195,17 +195,17 @@ form {
   
 }
 
-.imagem img{
+.opcao-pagamento img{
   width: 60px;/* Define a largura da imagem */
   height: auto; /* Mantém a proporção da imagem */
 
 }
 
-.imagem{
+.opcao-pagamento{
   display: flex;
   align-items: center; /* Centraliza as imagens verticalmente */
-  gap: 8px;
-  margin-top:5px;
+  gap: 10;
+  margin-top:12px;
 }
 
 input {
