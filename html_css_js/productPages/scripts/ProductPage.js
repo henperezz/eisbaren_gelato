@@ -6,7 +6,7 @@ buttonSwitch.addEventListener("click", () => {
   /*headerContainer.classList.toggle("dark");*/
 });
 
-let favoriteIcon = document.getElementById("favorite_icon");
+let favoriteIcon = document.getElementById("favoriteIcon");
 
 favoriteIcon.addEventListener("click", () => {
   favoriteIcon.classList.toggle("favorited");

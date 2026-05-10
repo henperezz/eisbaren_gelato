@@ -198,14 +198,21 @@ body {
   transition: 0.7s;
 }
 
-#favorite_icon {
+#favoriteIcon {
   vertical-align: middle;
   color: var(--text3-color);
   cursor: pointer;
+  transition: 0.2s ease-in-out;
+  font-variation-settings: "FILL" 1;
 }
 
-#favorite_icon.favorited {
+#favoriteIcon:hover {
+  transform: translateY(-3px);
+}
+
+#favoriteIcon.favorited {
   color: var(--text5-color);
+  font-variation-settings: "FILL" 1;
 }
 
 .priceTag {
@@ -220,6 +227,7 @@ body {
 .descriptionProduct {
   color: var(--text3-color);
   font-size: 1rem;
+  line-height: 1.2rem;
   width: 26.25rem;
   padding-left: clamp(67px, 20vw, 150px);
   padding-top: 1.2rem;
@@ -278,8 +286,8 @@ body {
 
 .line {
   width: 642px;
-  margin-top: 44px;
-  margin-bottom: 32px;
+  margin-top: 32px;
+  margin-bottom: 16px;
   margin-left: clamp(67px, 20vw, 150px);
   color: #e3e4e5;
   transition: 0.5s;
@@ -299,7 +307,7 @@ body {
 
 .buttonAddCart {
   width: 252px;
-  height: 52px;
+  height: 48px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -318,4 +326,39 @@ body {
 .buttonAddCart:hover {
   transform: translateY(-5px);
   box-shadow: 0px 8px 10px #9e4e65;
+}
+
+.productDescription {
+  display: flex;
+  flex-direction: column;
+  margin-left: 3.9rem;
+}
+
+.descriptionTitle {
+  font-size: 20px;
+  font-family: var(--font2);
+  font-weight: 700;
+  color: var(--text5-color);
+  padding: 2rem 0 10px 7px;
+}
+
+.rowTitleDescription {
+  width: 7.7%;
+  background-color: var(--text5-color);
+  height: 2px;
+  border-radius: 5px;
+  border-color: var(--text5-color);
+}
+
+.textIngredients {
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
+}
+
+.descriptionText {
+  color: var(--text3-color);
+  font-size: 1rem;
+  line-height: 1.2rem;
+  max-width: 55%;
 }
