@@ -142,10 +142,18 @@ body {
 }
 
 /*Edição do texto central*/
+.imagem-inicial {
+    position: relative; /*Faz com que o elemento continue em sua posição original sem afetar os elementos ao redor, necessário para a posição absoluta do h1*/
+    width: 100%;
+    height: auto;
+}
+
+.imagem-inicial img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /*Garante que a imagem preencha o espaço disponível sem distorcer, cortando as partes que ultrapassarem o container*/
+}
 .imagem-inicial h1 {
-    width: 923px; /*Largura*/
-    height: 70px; /*Altura*/
-    left: 430px; /*Posição para a direita*/
     font-family: "Berkshire Swash", cursive;
     font-size: var(--size-text4);
     color: var(--text2-color);
@@ -153,14 +161,19 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); /*Faz com que o elemento se mova para o centro exato da tela, baseado em sua própria largura e altura*/
-
+    text-align: center; /*Centraliza o texto dentro do elemento h1*/
+    width: 100%; /*Garante que o h1 ocupe toda a largura disponível, necessário para o text-align funcionar corretamente*/
 }
+
+
+/* -----------------------------------------------------------
+   7. ESTRUTURA PRINCIPAL (Checkout)
   ----------------------------------------------------------- */
 .checkout {
   display: flex;            /* Coloca o formulário e o resumo um ao lado do outro */
   justify-content: center;  /* Centraliza esse conjunto na tela */
-  gap: 50px;                /* Espaço de 40px entre o formulário e o resumo */
-  padding: 50px;            /* Espaço interno para não encostar nas bordas da tela */
+  gap: 40px;                /* Espaço de 40px entre o formulário e o resumo */
+  padding: 40px;            /* Espaço interno para não encostar nas bordas da tela */
   
 }
 
@@ -169,7 +182,7 @@ body {
    ----------------------------------------------------------- */
 .container {
   width: 500px;             /* Largura fixa para a área do formulário */
-  margin-left: 80px; 
+  margin-left: 100px; 
   margin-top: 30px;
 }
 
@@ -177,6 +190,7 @@ h2{
   font-size: var(--size-text3); /* Usa o tamanho de texto definido lá no topo */
   color: var(--text2-color); /* Usa a cor definida lá no topo */
   margin-bottom: 10px; /* Espaço abaixo do título */
+  font-weight: 500; /* Deixa o título em negrito */
 }
 
 form {
@@ -230,6 +244,7 @@ input {
    9. BOTÃO DE AÇÃO
    ----------------------------------------------------------- */
 button {
+  z-index: 1;
   margin-top: 30px;         /* Espaço acima do botão */
   padding: 15px;            /* Tamanho interno do botão (altura e largura) */
   border: none;             /* Remove a borda padrão feia do navegador */
