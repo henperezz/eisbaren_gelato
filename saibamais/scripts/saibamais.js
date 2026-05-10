@@ -20,7 +20,6 @@ buttonSwitch.addEventListener("click", () => {
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
 
-
 // Remove splash após alguns segundos
 window.addEventListener("load", () => {
     const splash = document.getElementById("splash");
