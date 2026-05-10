@@ -332,6 +332,7 @@ body {
   display: flex;
   flex-direction: column;
   margin-left: 3.9rem;
+  margin-top: 5%;
 }
 
 .descriptionTitle {
@@ -361,4 +362,87 @@ body {
   font-size: 1rem;
   line-height: 1.2rem;
   max-width: 55%;
+  padding-left: 5px;
+}
+
+.lineDivisor {
+  margin: 3.5rem;
+  width: 87%;
+  color: #e3e4e5;
+}
+
+.productRecommendation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+.recommendationTitle {
+  font-family: var(--font3);
+  font-size: var(--size-text4);
+  font-weight: 500;
+  padding-bottom: 20px;
+}
+
+.recommendationTinyChange {
+  color: var(--text4-color);
+}
+
+.RecommendationInfo {
+  display: flex;
+  flex-direction: row;
+}
+
+.containerRecommendation {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+.circleProduct {
+  height: 254px;
+  width: 254px;
+  background-color: var(--casquinha-color);
+  border-radius: 254px;
+}
+
+.recommendationProduct {
+  height: 254px;
+  width: 254px;
+}
+
+.listRecommendation {
+  list-style: none;
+}
+
+.linksRecommendation {
+  text-decoration: none;
+}
+
+.nameRecommendation {
+  padding-top: 15px;
+}
+
+.nameRecommendation,
+.surnameRecommendation {
+  font-size: 20px;
+  font-family: var(--font2);
+  font-weight: 600;
+  color: var(--text2-color);
+}
+
+.buttonGoTo {
+  display: flex;
+  align-items: center;
+  padding-left: 50px;
+  margin-left: 37px;
+  margin-top: 20px;
+  width: 8rem;
+  height: 2rem;
+  background-color: var(--text4-color);
+  color: #ffffff;
+  border-radius: 16px;
 }
