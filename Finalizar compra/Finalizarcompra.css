@@ -143,16 +143,16 @@ body {
 
 /*Edição do texto central*/
 .imagem-inicial h1 {
-    width: 623px; /*Largura*/
-    height: 90px; /*Altura*/
+    width: 500px; /*Largura*/
+    height: 100px; /*Altura*/
     left: 430px; /*Posição para a direita*/
     font-family: "Berkshire Swash", cursive;
     font-size: var(--size-text4);
     color: var(--text2-color);
     position: absolute; /*Faz com que o elemento se sobressaia sobre outros elementos, saindo do fluxo original*/
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /*Faz com que o elemento se mova para o centro exato da tela, baseado em sua própria largura e altura*/
+    top: 30%;
+    left: 30%;
+    transform: translate(-30%, -30%); /*Faz com que o elemento se mova para o centro exato da tela, baseado em sua própria largura e altura*/
 
 }
   ----------------------------------------------------------- */
