@@ -395,6 +395,12 @@ body {
   flex-direction: row;
 }
 
+.ulRecommendation {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+}
+
 .containerRecommendation {
   display: flex;
   flex-direction: column;
@@ -428,9 +434,9 @@ body {
 
 .nameRecommendation,
 .surnameRecommendation {
-  font-size: 20px;
+  font-size: 23px;
   font-family: var(--font2);
-  font-weight: 600;
+  font-weight: 700;
   color: var(--text2-color);
 }
 
@@ -445,4 +451,13 @@ body {
   background-color: var(--text4-color);
   color: #ffffff;
   border-radius: 16px;
+}
+
+.priceTagRecommendation {
+  color: var(--text5-color);
+  font-family: var(--font2);
+  font-size: 30px;
+  font-weight: 700;
+  transition: 0.7s;
+  padding-top: 5px;
 }
