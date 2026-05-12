@@ -142,7 +142,7 @@ body {
 }
 
 
-<<<<<<< HEAD
+
 
 /* Definição dos tamanhos dos itens*/
 .logo img {
@@ -205,23 +205,3 @@ body {
     font-size: 800;
      
 }
-=======
-.banner{
-    position: relative; /*faz com que texto va par ao lugar certo com base no banner msm*/
-
-}
-
-.container-texto{
-    position: relative;
-    top: 50%;
-    left: 50%;
-    right: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-
-    
-}
-
-
->>>>>>> d09eff753033ea7ea0c0389f90b04f381f1046e4
-
