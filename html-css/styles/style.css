@@ -356,17 +356,21 @@ section{
 }
 
 .footer-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 50px;
-    align-items: center;
-    justify-content: center;
+  display: grid;
+  grid-template-columns: 250px 1fr 1fr; /* tem que bater com o tamanho da logo */
+  gap: 50px;
+  align-items: start;  /* alinha tudo verticalmente no centro */
+}
+
+.footer-logo{
+  align-self: center;
 }
 
 .footer-logo img {
-    width: 400px;
+    width: 250px;
     border-radius: 20px;
     padding: 5px;
+
 }
 
 .footer-links h4,
@@ -376,6 +380,7 @@ section{
     font-size: 1rem;
     font-weight: bold;
     color: #ffffff;
+    padding-top: 40px; /*Esse aqui que alinhou tudo*/
 }
 
 .footer-links ul {
@@ -403,24 +408,22 @@ section{
     padding: 0;
     margin: 0;
 }
-
 .linksFooter{
   text-decoration: none;
   list-style: none;
   color: #ffffff;
-  align-items: center;
-  justify-content: center;
 }
 
 .footer-contact p {
     margin: 6px 0;
 }
 
+
 /*Configurações dos icone de contatos*/
-.footer-contact p img{
-    width: 20px;
-    margin-right: 5px;
-  
+li .material-symbols-outlined {
+  font-size: 20px;     /* controla o tamanho do ícone, pois o  width não funciona em icones*/
+  margin-right: 5px; /*espaço entre o texto e o icone*/
+  vertical-align: middle; /* alinha o ícone com o texto da frente */
 }
 
 .social-icons img {
@@ -440,7 +443,7 @@ section{
     align-items: center;
     margin-top: 50px;
     padding-top: 25px;
-    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    border-top: 1px solid rgba(109, 0, 0, 0.4);
     font-size: 0.85rem;
     color: #ffffff;
 }
