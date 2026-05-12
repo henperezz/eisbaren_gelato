@@ -12,33 +12,137 @@
     @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0; /* Reseta as configurações de margin pré-existentes na página*/
+  padding: 0; /*Reseta as configurações de padding pré-existentes na página*/
 }
 
-header {
-  /*O degradê*/
-  background: linear-gradient(to bottom, #cf7eae 0%, #e69cc6 14%, #dba7bf 34%, #e8a3b8 70%);
-  opacity: 100%;
-  width: 100%; /*baseada no tamanho do elemento pai*/
-  position: fixed;/*Deixa o meunu fixo*/
-  top: 0;
-  left: 0;
-  z-index: 100; /* Garante que os menus fiquem atrás dos cards */
+body {
+  background-color: #ffffff;
+  font-family: var(--font2);
+  font-size: var(--size-text1);
 }
 
-.container {
+.headerContainer {
+  display: flex; /*Define que o container é flexível*/
+  flex-direction: row; /*Define que a direção do container é na horizonta (row) não na vertical (column)*/
+  height: 98px;
+  width: auto;
+  background: linear-gradient(
+    to bottom,
+    #cf7eae 0%,
+    #e69cc6 14%,
+    #dba7bf 34%,
+    #e8a3b8 70%
+  ); /*Define que o background do container será gradiente*/
+}
+
+.headerLogo {
+  /*Define o tamanho exato da logo*/
+  width: clamp(80px, 12vw, 159px);
+  height: clamp(80px, 12vw, 159px);
+}
+
+.logoContainer {
+  /*Define que o container é flex, e é automaticamente ajustado para o meio do container-pai*/
   display: flex;
-  flex-direction: row; /*Deixa a direção em formato de linha */
+  justify-content: center;
   align-items: center;
+  margin-left: 1rem;
+}
 
-  max-width: auto;  /*largura*/
-  height: 110px;  /*altura*/
-  left: 0.24px;  /*Direção*/
-  top: -0.47px; /*Superior*/
+.headerTextContainer {
+  display: flex; /*Define que o display é flex, o alinhamento na horizontal é no fim do container e que o alinhamento na vertical é no centro*/
+  align-items: center;
+  justify-content: flex-end;
+  margin-left: auto; /*Define que o tamanho da margem para o container do logo é automatico, se ajustando conforme necessário*/
+  padding-bottom: 3.5rem; /*Define que o tamanho da margem para baixo do item até a borda do container é 56px (3.5rem)*/
+  padding-right: 4rem; /*Define que o tamanho da margem para direita do item até a borda do container é 64px (4rem)*/
+}
+
+.listHeader {
+  display: flex;
+  flex-direction: row;
+  margin-top: 4rem;
+  list-style: none; /*Define que a lista não terá marcações, nem bolinhas nem quadrados*/
+  gap: 11.22px; /*Define que a distância entre os items do container é 11.22px*/
+}
+
+.textLink {
+  display: inline-block; /*Define que os textos são inline-block, ou seja, os elementos estão um do lado do outro porém se aceita definições de largura ou altura, necessário para o efeito de hover*/
+  text-decoration: none; /*Define que os links não terão a linha embaixo deles*/
+  color: #ffffff;
+  font-family:#ffffff;
+  font-size: 16px;
+  font-weight: 600; /*Define que a fonte será semi-bold*/
+  transition: 0.3s ease-out; /*Define que a transição entre os efeitos (no caso :hover) será de 0.3s desacelerando no final do movimento para maior sensação de suavidade*/
+}
+
+/*tenho que ARRUMAR essa parte*/
+.perfilHeader {
+  width: 18.67px;
+  height: 15.67px;
+  transition: 0.3s ease-out;
+  padding-top: 0.25rem;
+}
+
+/*tenho que ARRUMAR essa parte*/
+.textLink:hover,
+.perfilHeader:hover {
+  color: #859678;
+  text-shadow: 0px 5px 6px #859678; /*Define que o texto terá nenhuma sombra no eixo x e terá 5px no eixo y com um blur (tipo esfumaceamento) de 6px e a cor a mesma do texto*/
+  transform: translateY(
+    -4px
+  ); /*Define que o texto se moverá para cima (números negativos empurram para cima, positivos para baixo) em -4px*/
+}
+
+.buttonSwitch {
+  width: 30px;
+  height: 15px;
+  margin-top: 1.5rem;
+  margin-right: 1%; /*Define que a margem da direita tem o tamanho de 1% do elemento pai */
+  border: #ffffff solid 2px; /*Define tamanho da borda, cor e tipo*/
+  border-radius: 30px;
+  position: relative; /*Faz com que o elemento continue em sua posição original sem afetar os elementos ao redor*/
+  cursor: pointer; /*Faz com que aparece o ponteiro de clicar quando o mouse está em cima do elemento*/
+}
+
+.buttonSwitch .buttonIndicator {
+  width: 15px;
+  height: 15px;
+  background-color: #ffffff;
+  border-radius: 150px;
+  transform: scale(
+    0.8
+  ); /*Faz com que o elemento se transforme baseado em uma escala (ele se ajustava a 0.8 do elemento original)*/
+  position: absolute; /*O elemento está em posição absoluta, ou seja, se sobressaí sobre outros elementos, saindo do fluxo original*/
+  left: 0;
+  transition: 0.4s;
+}
+
+.buttonSwitch.dark .buttonIndicator {
+  /*Parte do comando js para quando se é clicado, a ação de mudar a bolinha do switcher e a cor dela*/
+  left: 15px;
+  background-color: #859678;
+}
+
+.buttonSwitch.dark {
+  /*Parte do comando js para quando se é clicado, alterar a cor da borda do elemento*/
+  border-color: #859678;
+}
+
+/*ESTILIZAÇÃO DO BANNER PRINCIPAL*/
+.imagem-inicial {
+    position: relative; /*necessario para que o texto possa ficar no centro do banner*/
+    display:  inline-block;
+    width: 100%; /*ocupa 100% da tela*/
+    overflow: hidden; /*Permite que a imagem não vaze para fora*/
+    width: 100%; /* Faz a imagem preecher toda a tela*/
+    height: auto; /* Ajuda a fazer com que a imagem não fique achatada*/
+    display: block; /*ocupa  largura necessaria*/
 }
 
 
+<<<<<<< HEAD
 
 /* Definição dos tamanhos dos itens*/
 .logo img {
@@ -101,4 +205,23 @@ header {
     font-size: 800;
      
 }
+=======
+.banner{
+    position: relative; /*faz com que texto va par ao lugar certo com base no banner msm*/
+
+}
+
+.container-texto{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    
+}
+
+
+>>>>>>> d09eff753033ea7ea0c0389f90b04f381f1046e4
 

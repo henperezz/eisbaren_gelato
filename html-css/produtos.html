@@ -4,7 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produtos</title>
+
+    <!--Link do style-->
     <link rel="stylesheet" href="styles/style.css">
+
+    <!--Link do icone de perfil-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=group" />
+
+    <!--link da fonte Berkshire Swash-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
 </head>
 <body>
@@ -15,6 +25,41 @@
             <!--Class para a logo-->
             <div class="logo">
                <a href="saibamais.html"><img src="imagensFigma/logo.jpg" alt="Logo eibaren"></a> 
+    <header class="headerContainer" id="headerContainer">
+      <!--id necessário para produzir o efeito de mudança de cor que será adicionado posteriormente-->
+      <div class="logoContainer">
+        <img
+          src="ImagensFigma/logo.jpg"
+          alt="Logo Eisbaren"
+          class="headerLogo"
+        />
+      </div>
+
+      <div class="headerTextContainer">
+        <nav>
+          <ul class="listHeader">
+            <li class="linksList"><a class="textLink" href="">INÍCIO</a></li>
+            <li class="linksList">
+              <a class="textLink" href="">SAIBA MAIS</a>
+            </li>
+            <li class="linksList"><a class="textLink" href="">PRODUTOS</a></li>
+            <li class="linksList"><a class="textLink" href="">CARRINHO</a></li>
+            <li class="linksList"><a class="textLink" href="">PERFIL<span class="material-symbols-outlined">group</span></a></li>
+          </ul>
+        </nav>
+      </div>
+    
+    <div class="buttonSwitch" id="buttonSwitch">
+        <!--id necessária para capitar no js, container especial que é o switcher de modos-->
+        <div class="buttonIndicator"></div>
+        <!--é o indicador do switcher-->
+      </div>
+    </header>
+
+        <!--Sessão para colocar o banner principal-->
+        <section class="container-banner">
+            <div class="banner">
+                <img src="ImagensFigma/banner.png" class="imagem-inicial" alt="Fundo Produtos">
             </div>
             <!--Parte para colocar os topicos do menu-->
             <div class="menu">
@@ -28,14 +73,21 @@
                         <li><a href="#">PERFIL</a></li>
                     </ul>
                 </nav>
+            <!--Acabei de descobrir que para deixar o texto no centro, é necessario que o texto e a div esteje na msm section (burrice)-->
+            <div class="container-texto">
+                <h1>NOSSOS PRODUTOS</h1>
             </div>
-        </div>
 
         <!--Sessão para colocar o banner principal-->
         <section class="banner">
             <img src="imagensFigma/banner.png" alt="Fundo Produtos">
         </section>
 
+
+
+
+        <!--Link do javascript-->
+        <script src="Finalizarcompra.js"></script>
     </header>
     
 </body>
