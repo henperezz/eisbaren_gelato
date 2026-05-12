@@ -71,9 +71,9 @@ body {
   display: inline-block; /*Define que os textos são inline-block, ou seja, os elementos estão um do lado do outro porém se aceita definições de largura ou altura, necessário para o efeito de hover*/
   text-decoration: none; /*Define que os links não terão a linha embaixo deles*/
   color: #ffffff;
-  font-family:#ffffff;
+  font-family: 'inter', sans-serif;
   font-size: 16px;
-  font-weight: 600; /*Define que a fonte será semi-bold*/
+  font-weight: 500; /*Define que a fonte será semi-bold*/
   transition: 0.3s ease-out; /*Define que a transição entre os efeitos (no caso :hover) será de 0.3s desacelerando no final do movimento para maior sensação de suavidade*/
 }
 
@@ -131,32 +131,32 @@ body {
 }
 
 /*ESTILIZAÇÃO DO BANNER PRINCIPAL*/
+
+
+/*Edição do texto central*/
 .imagem-inicial {
-    position: relative; /*necessario para que o texto possa ficar no centro do banner*/
-    display:  inline-block;
-    width: 100%; /*ocupa 100% da tela*/
-    overflow: hidden; /*Permite que a imagem não vaze para fora*/
-    width: 100%; /* Faz a imagem preecher toda a tela*/
-    height: auto; /* Ajuda a fazer com que a imagem não fique achatada*/
-    display: block; /*ocupa  largura necessaria*/
+    position: relative; /*Faz com que o elemento continue em sua posição original sem afetar os elementos ao redor, necessário para a posição absoluta do h1*/
+    width: 100%;
+    height: auto;
 }
 
-
-.banner{
-    position: relative; /*faz com que texto va par ao lugar certo com base no banner msm*/
-
+.imagem-inicial img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /*Garante que a imagem preencha o espaço disponível sem distorcer, cortando as partes que ultrapassarem o container*/
 }
-
-.container-texto{
-    position: relative;
+.imagem-inicial h1 {
+    font-family: "Berkshire Swash", cursive;
+    font-size: 80px;
+    color: var(--cor-letra);
+    position: absolute; /*Faz com que o elemento se sobressaia sobre outros elementos, saindo do fluxo original*/
     top: 50%;
     left: 50%;
-    right: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-
-    
+    transform: translate(-50%, -50%); /*Faz com que o elemento se mova para o centro exato da tela, baseado em sua própria largura e altura*/
+    text-align: center; /*Centraliza o texto dentro do elemento h1*/
+    width: 100%; /*Garante que o h1 ocupe toda a largura disponível, necessário para o text-align funcionar corretamente*/
 }
+
 
 
 
