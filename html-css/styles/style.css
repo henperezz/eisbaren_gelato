@@ -11,6 +11,9 @@
 /*Importanto a fonte princiapal*/
     @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+    /*Fonte da barra de pesquisa*/
+    @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 * {
   margin: 0; /* Reseta as configurações de margin pré-existentes na página*/
   padding: 0; /*Reseta as configurações de padding pré-existentes na página*/
@@ -167,13 +170,68 @@ body {
 
 
 
-/*Estilização da barra de pesquisa*/
+/*ESTILIZAÇÃO DA BARRA DE PESQUISA*/
 .caixa-pesquisa{
   position: absolute; /*permite colocar o elemento a onde vc quiser*/
-/*AQUI TEM QUE COLOCAR OS TOP E O LEFT PRA FICAR */
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);/*corrige erros para deixar no centro*/
-
+  background: linear-gradient(to bottom,
+    #cf7eae 0%,
+    #e69cc6 14%,
+    #dba7bf 34%,
+    #e8a3b8 70%);
+  height: 40px;
+  padding: 10px;
+  border-radius: 40px;
+  display: flex; /*alinhamento do conteudo*/
+  justify-content: space-between; /*joga o primeiro item totalmente pra esqueda e o outro totalmente para a direita*/
+  align-items: center;/*centralização dos elementos*/
 
 }
+/*Tirando efeitos padrões da barra de pesquisa, como: Borda, backgroud brando etc*/
 
+.barra-pesquisa{
+  border: none; /*tira as bordas de dentro*/
+  background: none; /*tirando acor padrão de dentro*/
+  outline: none; /*tira a borda quando clicamos na barra*/
+  padding: 0;
+  color: aliceblue; /*cor do texto digitado*/
+  font-size: 16px;/*tamanho da letra*/
+  line-height: 40px; /*tamanho da linha*/
+  width: 0; /*pra fazer a barra de pesquisa aparecer apenas quando o mouse passar, temos que tirar o width*/
+  font-family: 'Open Sans';
+  transition: .5s;
+}
 
+/*Mudando a cor do placeholder*/
+::-webkit-input-placeholder { /*muda todos os placesholder da sua aplicação*/
+  color: aliceblue;
+}
+
+/*Estilização da lupa*/
+.lupa-btn{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /*por ser 50% as bordas vão ficar literalmente redondas*/
+  background: linear-gradient(to bottom,
+    #e69cc6 0%,
+    #e69cc6 14%,
+    #dba7bf 34%,
+    #e8a3b8 70%);
+  display: flex;
+  justify-content: center; /*alinhamento horizontal*/
+  align-items: center; /*alinhamento vertical*/
+  transition: .5s;
+}
+
+/*Fazer a bolinha abrir quando o mouse passar (TRANSIÇÃO)*/
+.caixa-pesquisa:hover > .barra-pesquisa{ /*quando o mouse passar pela caixa de pesuisa, o sinal d emaior significa que eu quero que apareça ou se transforme na barra de pesquisa*/
+  width: 240px;/*para aparecer*/
+  padding: 0 6px;  /*quando tem dois valores, o 1º é o vertical e o segundo o horizontal*/
+}
+
+/*COR no botão (lupa) quando passado o mouse*/
+.caixa-pesquisa:hover > .lupa-btn{
+  background: aliceblue;
+}
