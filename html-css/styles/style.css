@@ -40,6 +40,11 @@ body {
   /*Define o tamanho exato da logo*/
   width: clamp(80px, 12vw, 159px);
   height: clamp(80px, 12vw, 159px);
+  transition: 0.5s;
+}
+
+.headerLogo:hover {
+  transform: translateY(-5px);
 }
 
 .logoContainer {
@@ -70,24 +75,23 @@ body {
 .textLink {
   display: inline-block; /*Define que os textos são inline-block, ou seja, os elementos estão um do lado do outro porém se aceita definições de largura ou altura, necessário para o efeito de hover*/
   text-decoration: none; /*Define que os links não terão a linha embaixo deles*/
-  color: #ffffff;
-  font-family: 'inter', sans-serif;
+  color: var(--text1-color);
+  font-family: var(--font1);
   font-size: 16px;
-  font-weight: 500; /*Define que a fonte será semi-bold*/
+  font-weight: 600; /*Define que a fonte será semi-bold*/
   transition: 0.3s ease-out; /*Define que a transição entre os efeitos (no caso :hover) será de 0.3s desacelerando no final do movimento para maior sensação de suavidade*/
 }
 
-/*tenho que ARRUMAR essa parte*/
-.perfilHeader {
-  width: 18.67px;
-  height: 15.67px;
+.material-symbols-outlined.profile {
+  font-size: 19px;
+  color: var(--text1-color);
+  cursor: pointer;
   transition: 0.3s ease-out;
-  padding-top: 0.25rem;
 }
 
-/*tenho que ARRUMAR essa parte*/
 .textLink:hover,
-.perfilHeader:hover {
+.perfilHeader:hover,
+.material-symbols-outlined.profile:hover {
   color: #859678;
   text-shadow: 0px 5px 6px #859678; /*Define que o texto terá nenhuma sombra no eixo x e terá 5px no eixo y com um blur (tipo esfumaceamento) de 6px e a cor a mesma do texto*/
   transform: translateY(
@@ -156,7 +160,6 @@ body {
     text-align: center; /*Centraliza o texto dentro do elemento h1*/
     width: 100%; /*Garante que o h1 ocupe toda a largura disponível, necessário para o text-align funcionar corretamente*/
 }
-
 
 
 
