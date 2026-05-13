@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Perfil</title>
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> <!-- icone do perfil -->
+
+  <link rel="stylesheet" href="perfil.css">
+</head>
+<body>
+  <div class="perfil-container">
+    <!-- -->
+    <header class="topo">
+      <button class="btn-voltar">
+        <i class="fa-solid fa-arrow-left"></i> <!-- Botão de voltar -->
+      </button>
+      <h1>Meu Perfil</h1>
+      <button class="btn-config">
+        <i class="fa-solid fa-gear"></i> <!-- fa-solid → ícone preenchido, fa-gear - icone que representa engrenagem da configuração -->
+      </button>
+    </header>
+
+    <!-- PERFIL -->
+    <section class="perfil">
+      <div class="foto-perfil">
+        <i class="fa-regular fa-user icone-user"></i>
+        <button class="btn-camera">
+          <i class="fa-solid fa-camera"></i>
+        </button>
+      </div>
+      <div class="dados-perfil">
+        <h2>Eisbaren Gelato</h2>
+        <p>EisbarenGelato@gmail.com</p>
+        <button class="btn-editar">
+          Editar Perfil
+        </button>
+      </div>
+    </section>
+
+    <!-- MENU -->
+    <nav class="menu">
+      <!-- FAVORITOS -->
+      <div class="menu-item">
+        <div class="menu-esquerda">
+          <i class="fa-regular fa-heart"></i>
+          <span>Meus Favoritos</span>
+        </div>
+        <i class="fa-solid fa-chevron-right"></i>
+      </div>
+
+      <!-- CARRINHO -->
+      <div class="menu-item">
+        <div class="menu-esquerda">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span>Carrinho de Compras</span>
+        </div>
+        <i class="fa-solid fa-chevron-right" i></i>
+      </div>
+      <hr>
+
+      <!-- LOCALIZAÇÃO -->
+      <div class="menu-item">
+        <div class="menu-esquerda">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Localização</span>
+        </div> 
+        <i class="fa-solid fa-chevron-right"></i> 
+      </div>
+
+      <!-- CUPONS -->
+      <div class="menu-item">
+        <div class="menu-esquerda">
+          <i class="fa-solid fa-ticket"></i>
+          <span>Cupons</span>
+        </div>
+        <i class="fa-solid fa-chevron-right"></i>
+      </div>
+
+      <!-- A AVALIAR -->
+      <div class="menu-item">
+        <div class="menu-esquerda">
+          <i class="fa-regular fa-star"></i>
+          <span>A Avaliar</span>
+        </div>
+        <i class="fa-solid fa-chevron-right"></i>
+      </div>
+      <hr>
+
+      <!-- HISTÓRICO -->
+      <div class="menu-item">
+        <div class="menu-esquerda">
+          <i class="fa-regular fa-clock"></i>
+          <span>Histórico</span>
+        </div>
+        <i class="fa-solid fa-chevron-right"></i>
+      </div>
+
+      <!-- SAIR -->
+      <div class="menu-item">
+        <div class="menu-esquerda">
+          <i class="fa-solid fa-right-from-bracket"></i> <!-- Ícone de saída -->
+          <span>Sair</span>
+        </div>
+        <i class="fa-solid fa-chevron-right"></i> <!-- Ícone de seta para indicar que é clicável -->
+      </div>
+    </nav>
+  </div>
+    <script src="perfil.js"></script>
+</body>
+</html>
