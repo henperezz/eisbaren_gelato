@@ -165,6 +165,7 @@ section{
   text-decoration: none; /* tira o sublinhado do link */
   z-index: 1;
   
+  
 }
 
 .card img {
@@ -173,6 +174,8 @@ section{
   left: 50%;
   transform: translateX(-50%);
   object-fit: contain;
+  transition: 0.3s;
+  
 }
 
 /* Ajustes das imagens */
@@ -181,6 +184,7 @@ section{
   height: 69%;
   width: auto; /* Deixa a largura proporcional */
   top: 90px; /* Pra fazer ele abaixar */
+  transform: scale(1.05);
 
 }
 
@@ -188,12 +192,14 @@ section{
   height: 60%;
   width: auto;
   top: 120px;
+  transform: scale(1.05);
 }
 
 .img-acai {
   height: 105%;
   width: auto;
   top: 30px;
+  transform: scale(1.05);
 
 }
 
@@ -338,10 +344,12 @@ section{
   transition: 0.3s;             /* transição hover */
   margin-left: 400px;  /* empurra o botao pra direita */
   margin-top: 250px;   /* deixando mais pra baixo */
+  transition: 0.3s;
 }
 
 .btn-saibaMais:hover {
   background-color: #870028;    /* fundo vermelho ao passar o mouse */
+  transform: scale(1.05);
 }
 
 
