@@ -37,27 +37,16 @@
       item.style.transform = "scale(1)";
     });
   });
+ // Botão editar perfil
+const btn = document.querySelector(".btn-editar");
 
-  // Botão editar perfil 
-  const btn = document.querySelector(".btn-editar");
+btn.addEventListener("click", () => {
+  btn.style.transform = "scale(0.97)";
 
-  btn.addEventListener("click", () => {
-    btn.style.transform = "scale(0.97)";
-    btn.innerText = "Salvando...";
-
-    setTimeout(() => {
-      btn.innerText = "Salvo ✔";
-      btn.style.background = "#d98aa0";
-
-      setTimeout(() => {
-        btn.innerText = "Editar Perfil";
-        btn.style.background = "#ee9fb2";
-        btn.style.transform = "scale(1)";
-      }, 1200);
-
-    }, 900);
-  });
-
+  setTimeout(() => {
+    btn.style.transform = "scale(1)";
+  }, 120);
+});
   // Hover sutil na foto de perfil (para destacar a imagem )
   const foto = document.querySelector(".foto-perfil");
 
