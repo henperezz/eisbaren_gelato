@@ -162,4 +162,18 @@ body {
 }
 
 
+/*COLOCANDO O SANDUICHE E A BARRA DE PESQUISA*/
+/*Estilização do sanduiche*/
+
+
+
+/*Estilização da barra de pesquisa*/
+.caixa-pesquisa{
+  position: absolute; /*permite colocar o elemento a onde vc quiser*/
+/*AQUI TEM QUE COLOCAR OS TOP E O LEFT PRA FICAR */
+  transform: translate(-50%, -50%);/*corrige erros para deixar no centro*/
+
+
+}
+
 

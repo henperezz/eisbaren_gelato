@@ -16,6 +16,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
+    <!--LINK DO MENU SANDUICHE -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu" />
+
+
+<!---------------------------------------------------------------------------------------------------------------------------------------------->
 </head>
 <body>
     <header class="headerContainer" id="headerContainer">
@@ -49,19 +54,51 @@
       </div>
     </header>
 
-        <!--Sessão para colocar o banner principal-->
+    <!--Sessão para colocar o banner principal-->
     <section class="imagem-inicial"> <!-- Criei uma sessão ou divisória APENAS para a imagem do banner -->
         <img src="ImagensFigma/banner.png" alt="imagem inical da Parte de Produtos">
         <h1> NOSSOS <p> PRODUTOS </h1>
     </section>
 
+    </header>
 
+    <!--Criação do menu SANDUICHE-->
+    <div class="barra-sanduiche">
+      <button class="btn-sanduiche" id="btn-sanduiche">
+        <span><img src="ImagensFigma/menuIconn.png"></span>
+      </button> 
+    </div>
 
+    <!-- Parte dos tópicos escondidos no sanduiche -->
+    <!-- MENU ESCONDIDO -->
+    <div class="menu-sanduiche" id="menu-sanduiche">
+      <h3>Categorias</h3>
+      <nav>
+        <ul>
+          <li><a href="#">Milk Shakes</a></li>
+          <li><a href="#">Picolé</a></li>
+          <li><a href="#">Açaí</a></li>
+          <li><a href="#">Pote de Sorvete</a></li>
+          <li><a href="#">Casquinhas</a></li>
+          <li><a href="#">Sundae</a></li>
+          <li><a href="#">Kids</a></li>
+        </ul>
+      </nav>
+    </div>
 
+    <!--Barra de pesquisa-->
+    <div class="caixa-pesquisa">
+      <input type="text" class="barra-pesquisa" placeholder="Pesquisar">
+      <!--criação do botão da barra de pesquisa -->
+      <a href="#" class="lupa-btn"> 
+        <img src="ImagensFigma/lupaPesquisa.svg" alt="lupaPesquisa">
+        <!-- UMA OBSERVAÇÃO: Imagens em formato SVG são melhore para  mudar a cor, além de não perderem a qualidade quando der um zoom -->
+         <!--OBRSERVAÇÃO 2: Usar alt em imagens ajuda com que o google recomende mais o seu site por acessibilidade-->
+      </a>
+    </div>
+   
         <!--Link do javascript-->
         <script src="Finalizarcompra.js"></script>
-    </header>
-    
 </body>
 </html>
 
