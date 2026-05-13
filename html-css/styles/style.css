@@ -75,7 +75,7 @@ body {
 .textLink {
   display: inline-block; /*Define que os textos são inline-block, ou seja, os elementos estão um do lado do outro porém se aceita definições de largura ou altura, necessário para o efeito de hover*/
   text-decoration: none; /*Define que os links não terão a linha embaixo deles*/
-  color: var(--text1-color);
+  color: #fff;
   font-family: var(--font1);
   font-size: 16px;
   font-weight: 600; /*Define que a fonte será semi-bold*/
