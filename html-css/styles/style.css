@@ -173,11 +173,10 @@ body {
 /*ESTILIZAÇÃO DA BARRA DE PESQUISA*/
 .caixa-pesquisa{
   position: absolute; /*permite colocar o elemento a onde vc quiser*/
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);/*corrige erros para deixar no centro*/
+  bottom: 10px;   /* distância do fundo */
+  right: 10px;    /* distância da direita */
   background: linear-gradient(to bottom,
-    #cf7eae 0%,
+    #e69cc6 6%,
     #e69cc6 14%,
     #dba7bf 34%,
     #e8a3b8 70%);
