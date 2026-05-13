@@ -165,7 +165,6 @@ body {
     width: 100%; /*Garante que o h1 ocupe toda a largura disponível, necessário para o text-align funcionar corretamente*/
 }
 
-
 /* -----------------------------------------------------------
    7. ESTRUTURA PRINCIPAL (Checkout)
   ----------------------------------------------------------- */
@@ -240,52 +239,216 @@ input {
   border: 1px solid #ddd;   /* Borda fina que está em cinza claro*/
 }
 
-/* -----------------------------------------------------------
-   9. BOTÃO DE AÇÃO
-   ----------------------------------------------------------- */
-button {
-  z-index: 1;
-  margin-top: 30px;         /* Espaço acima do botão */
-  padding: 15px;            /* Tamanho interno do botão (altura e largura) */
-  border: none;             /* Remove a borda padrão feia do navegador */
-  border-radius: 25px;      /* Deixa o botão bem arredondado nas pontas */
-  background: #ed95ae; /* Usa o rosa choque definido lá no topo */
-  color: white;             /* Cor do texto do botão */
-  cursor: pointer;          /* Muda a seta do mouse para a "mãozinha" ao passar por cima */
+/* ---------------------------------------------------
+   BOTÃO FAÇA SEU PEDIDO 
+--------------------------------------------------- */
+button{
+  width: 100%;
+
+  margin-top: 10px;
+
+  padding: 16px;
+
+  border: none;
+
+  border-radius: 30px;
+
+  background-color: #eb638c;
+
+  color: white;
+
+  font-size: 16px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  /* efeito de luz embaixo */
+  box-shadow: 
+    0 8px 20px rgba(235, 13, 80, 0.863);
+}
+
+/* HOVER */
+button:hover{
+  background-color: #e61c5c;
+
   transform: translateY(-5px);
-  box-shadow: 0px 8px 10px #9e4e65;
+
+  /* luz mais forte */
+  box-shadow: 
+    0 12px 25px rgba(233, 75, 122, 0.945);
 }
 
-/* responsivo */
+/* CLIQUE */
+button:active{
+  transform: translateY(-2px);
 
-@media (max-width: 768px) {
-  .checkout {
-    flex-direction: column; /* Empilha o formulário e o resumo um embaixo do outro em telas menores */
-    align-items: center;    /* Centraliza os itens quando empilhados */
-  }
-
-  .container {
-    width: 100%;            /* O formulário ocupa toda a largura disponível em telas menores */
-    max-width: 400px;       /* Limita a largura máxima para evitar que fique muito esticado */
-  }
+  box-shadow: 
+    0 6px 15px rgba(209, 17, 74, 0.966);
 }
-
-/* pedido */
-
+/* ---------------------------------------------------
+   CARD
+--------------------------------------------------- */
 .card{
-  background: #E5E5E5;
-  border-radius: 16px;
+  width: 100%;
+
+  margin-top: 20px;
+
+  background: #f2f2f2;
+
   padding: 20px;
-  width:100%;
-  max-width: 420px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+
+  border-radius: 16px;
+
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.08);
 }
 
-h2{
-  text-align: center;
-  font-size: 1.4rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-  color: var(--text2-color);
+/* ---------------------------------------------------
+   RESPONSIVIDADE
+--------------------------------------------------- */
 
+/* TABLET */
+@media(max-width:768px){
+
+  .container{
+    padding: 20px;
+  }
+
+  h2{
+    font-size: 1.3rem;
+  }
+}
+
+/* CELULAR */
+@media(max-width:480px){
+
+  body{
+    padding: 12px;
+  }
+
+  .container{
+    padding: 18px;
+  }
+
+  .linha{
+    flex-direction: column;
+  }
+
+  input{
+    padding: 13px;
+    font-size: 14px;
+  }
+
+  button{
+    padding: 15px;
+    font-size: 15px;
+  }
+
+  h2{
+    font-size: 1.2rem;
+  }
+
+  .opcao-pagamento{
+    padding: 12px;
+  }
+}
+
+/* BOTÕES DO APLICAR  */
+button{
+  width: 100%;
+
+  padding: 16px;
+
+  border: none;
+
+  border-radius: 30px;
+
+  background: #eb638c;
+
+  color: white;
+
+  font-size: 16px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+
+  box-shadow:
+    0 8px 20px rgba(235, 13, 80, 0.4);
+}
+
+/* HOVER */
+button:hover{
+  transform: translateY(-5px);
+
+  background: #e61c5c;
+}
+
+/* CUPOM */
+.cupom-area{
+  display: flex;
+
+  gap: 10px;
+
+  margin: 20px 0;
+}
+
+.input-cupom{
+  flex: 1;
+}
+
+.btn-cupom{
+  width: auto;
+
+  padding: 12px 20px;
+}
+
+/* ITENS */
+.resumo-item{
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-bottom: 15px;
+}
+
+.resumo-total{
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-top: 20px;
+
+  font-size: 22px;
+
+  font-weight: bold;
+}
+
+/* LINHA */
+hr{
+  margin: 20px 0;
+
+  border: none;
+
+  border-top: 1px solid #ccc;
+}
+
+/* RESPONSIVO */
+@media(max-width:900px){
+
+  .checkout{
+    flex-direction: column;
+  }
+
+  .container,
+  .card{
+    width: 100%;
+  }
+
+  .linha{
+    flex-direction: column;
+  }
 }

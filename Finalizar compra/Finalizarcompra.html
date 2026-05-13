@@ -16,7 +16,7 @@
       <!--id necessário para produzir o efeito de mudança de cor que será adicionado posteriormente-->
       <div class="logoContainer">
         <img
-          src="img/logo.jpg"
+          src="../assets/img/logo.jpg"
           alt="Logo Eisbaren"
           class="headerLogo"
         />
@@ -58,24 +58,110 @@
 
     <section class="imagem-inicial"> <!-- Criei uma sessão ou divisória APENAS para a imagem do banner -->
         <img src="img/Frame 18.png" alt="imagem inical da Parte de Produtos">
-            <h1> Carrinho de <p> compra </h1>
+            <h1> Finalizar <p> compra </h1>
     </section>
+     
+<div class="container">
+    <h2>Endereço de cobrança:</h2>
+    <!--para criar um formulario usamos a tag forms-->
 
-      <div class="carrinho-header">
-       <h2>Carrinho de compras</h2>
-        <h2>(04 unid)</h2>
+    <form>
+      <div class="linha">
+        <input type="text" placeholder="Nome" required>
+        <input type="text" placeholder="Sobrenome" required>
+      </div>
+
+      <div class="linha">
+        <input type="email" placeholder="Email" required>
+        <input type="text" placeholder="Selecionar estado">
+      </div>
+
+      <div class="linha">
+        <input type="text" placeholder="Selecione a cidade">
+        <input type="text" placeholder="CEP / Código Postal">
+      </div>
+
+    
+      <h2>Método de pagamento:</h2>
+
+      <label class="opcao-pagamento">
+        <input type="radio" name="pagamento" checked>
+        <span>Cartão de crédito</span>
+        <img src="img/credit_card_24dp_787878_FILL0_wght400_GRAD0_opsz24.png" alt="Cartão" class="img-cartao">
+      </label>
+   
+ 
+
+      <input type="text" placeholder="Número do cartão">
+      <input type="text" placeholder="Código de segurança">
+
+      
+      <label class="opcao-pagamento">
+        <input type="radio" name="pagamento">
+        <span>Pagamento na entrega</span>
+        <img src="img/Symbol.png" alt="Dinheiro" class="img-Symbol">
+      </label>
+      
+
+      <button type="button">Faça seu pedido agora</button>
+      
+
+     
+       <!-- RESUMO DO PEDIDO -->
+    <div class="card">
+
+      <h2>Resumo do pedido</h2>
+
+      <!-- CUPOM -->
+      <div class="cupom-area">
+
+        <input
+          type="text"
+          placeholder="Aplicar cupons"
+          class="input-cupom"
+        >
+
+        <button class="btn-cupom">
+          Aplicar
+        </button>
+
+      </div>
+
+      <!-- DETALHES -->
+      <div class="detalhes-pedido">
+
+        <h3>Detalhes do produto:</h3>
+
+        <div class="resumo-item">
+          <span>Subtotal</span>
+          <strong>R$200,99</strong>
+        </div>
+
+        <div class="resumo-item">
+          <span>Envio</span>
+          <strong>R$15,00</strong>
+        </div>
+
+      </div>
+
+      <hr>
+
+      <!-- TOTAL -->
+      <div class="resumo-total">
+        <span>Total geral</span>
+        <strong>R$215,99</strong>
+      </div>
+
+      <!-- BOTÃO -->
+      <button class="btn-checkout">
+        Fazer Checkout →
+      </button>
+
     </div>
 
-    <div class="table-header">
-        <div class="table-cell">Detalhes do produto</div>
-        <div class="table-cell">Preço</div>
-        <div class="table-cell">Quantidade</div>
-        <div class="table-cell">Total</div>
   </div>
 
+</body>
+</html>
 
 
-
-
-  
-       
