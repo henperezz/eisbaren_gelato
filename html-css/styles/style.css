@@ -166,23 +166,44 @@ body {
 
 
 /*COLOCANDO O SANDUICHE E A BARRA DE PESQUISA*/
+
 /*Estilização do sanduiche*/
 
 /*Tirando efeitos padrões do botão*/
-.btn-sanduiche{
-  border: none;
-  background: none;
+.sanduiche-container{
+  border: none; /*tira as bordas de dentro*/
+  background: none; /*tirando acor padrão de dentro*/
   outline: none; /*tira a borda quando clicamos na barra*/
-  padding: 0;
-  color: var(--cor-letra);
-  transition: 0.3s;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px; /*da um efeito bonito*/
+  gap: 10px /*espaçamento entre o menu e a palavra categorias*/
 }
 
-.btn-sanduiche:hover{
+/*estilização do snaduiche*/
+.sanduiche-btn {
+  display: flex;
+  flex-direction: column; /*deixa eles em colunas*/
+  gap: 5px; /*espaçamento entre as linhas*/
+}
+
+.sanduiche-btn span {
+  display: block; /*O display block faz o span ocupar uma linha inteira, como se fosse um bloco*/
+  width: 25px; /*comprimento da linha */
+  height: 3px; /*grossura das linhas*/
+  background: #913b6c; /*coloquei essa cor pq eu achei bonita*/
+  border-radius: 2px; /*arredondamento das linhas*/
+}
+
+/*estilização da categoria*/
+.sanduiche-container h2{
   
+
 }
 
-/*talvez utilizar a opção do width=0 funcione no sanduice*/
+
 
 
 
