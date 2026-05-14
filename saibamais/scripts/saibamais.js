@@ -1,4 +1,3 @@
-// script.js
 
 // Efeito de revelação ao rolar
 const observer = new IntersectionObserver((entries) => {
@@ -14,6 +13,7 @@ let headerContainer = document.getElementById("headerContainer");
 
 buttonSwitch.addEventListener("click", () => {
   buttonSwitch.classList.toggle("dark");
+  
   /*headerContainer.classList.toggle("dark");*/
 });
 

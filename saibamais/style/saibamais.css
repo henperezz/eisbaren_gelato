@@ -1,6 +1,9 @@
-/* 1. CONFIGURAÇÕES TÉCNICAS E FONTE */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bigshot+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("   https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap");
+
 
 
 :root {
@@ -14,22 +17,10 @@
     --cor-texto:#B9B920;           
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-.hidden {
-    opacity: 0;
-    filter: blur(5px);
-    transform: translateY(30px);
-    transition: all 1s;
-}
-
-.show { /*Essa parte é para mostrar os elementos conforme o usúario descer a tela*/
-    opacity: 1;
-    filter: blur(0);
-    transform: translateY(0);
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body {
@@ -39,45 +30,38 @@ body {
     background-color: var(--branco);
 }
 
-/* 2. NAVBAR (MENU) */
 .headerContainer {
-    display: flex;
-    justify-content: space-between; /*Define que o alinhamento dos itens na horizontal é no início e no fim do container, ou seja, o logo fica no início e os links ficam no fim do container*/
-    align-items: center;
-    padding: 10px 5%; /*Define que o tamanho da margem para os itens do container é 10px para cima e para baixo e 5% para direita e para esquerda, ou seja, a margem lateral é responsiva, se ajustando conforme o tamanho da tela*/
-    height: 110px;
-    position: fixed;  
-    top: 0;
-    width: 100%;
-    z-index: 100;
-    box-shadow: none; /*Define que o container não terá sombra*/
-    transition: background 0.3s ease; /*Define que a transição entre os efeitos (no caso :hover) será de 0.3s e com uma aceleração suave*/
-   background: linear-gradient(
+  display: flex; /*Define que o container é flexível*/
+  flex-direction: row; /*Define que a direção do container é na horizonta (row) não na vertical (column)*/
+  height: 98px;
+  width: auto;
+  background: linear-gradient(
     to bottom,
     #cf7eae 0%,
     #e69cc6 14%,
     #dba7bf 34%,
     #e8a3b8 70%
-    ); 
+  ); /*Define que o background do container será gradiente*/
 }
 
-.logoContainer  {
-    display: inline-block;
-    cursor: pointer;
-}
-
-.logoContainer img {
+.headerLogo {
+  /*Define o tamanho exato da logo*/
   width: clamp(80px, 12vw, 159px);
   height: clamp(80px, 12vw, 159px);
   transition: 0.5s;
-  transition: transform 0.3s ease;
 }
 
-.logoContainer img:hover {
-    transform: scale(1.05);  /*a logo aumenta 5% do seu tamanho original quando o mouse estiver em cima dela*/
+.headerLogo:hover {
+  transform: translateY(-5px);
 }
 
-
+.logoContainer {
+  /*Define que o container é flex, e é automaticamente ajustado para o meio do container-pai*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1rem;
+}
 
 .headerTextContainer {
   display: flex; /*Define que o display é flex, o alinhamento na horizontal é no fim do container e que o alinhamento na vertical é no centro*/
@@ -99,21 +83,23 @@ body {
 .textLink {
   display: inline-block; /*Define que os textos são inline-block, ou seja, os elementos estão um do lado do outro porém se aceita definições de largura ou altura, necessário para o efeito de hover*/
   text-decoration: none; /*Define que os links não terão a linha embaixo deles*/
-  color: var(--branco);
+  color: var(--text1-color);
+  font-family: var(--font1);
   font-size: 16px;
   font-weight: 600; /*Define que a fonte será semi-bold*/
   transition: 0.3s ease-out; /*Define que a transição entre os efeitos (no caso :hover) será de 0.3s desacelerando no final do movimento para maior sensação de suavidade*/
 }
 
-.perfilHeader {
-  width: 14.67px;
-  height: 12px;
+.material-symbols-outlined.profile {
+  font-size: 19px;
+  color: var(--text1-color);
+  cursor: pointer;
   transition: 0.3s ease-out;
-  padding-top: 0.25rem;
 }
 
 .textLink:hover,
-.perfilHeader:hover {
+.perfilHeader:hover,
+.material-symbols-outlined.profile:hover {
   color: #859678;
   text-shadow: 0px 5px 6px #859678; /*Define que o texto terá nenhuma sombra no eixo x e terá 5px no eixo y com um blur (tipo esfumaceamento) de 6px e a cor a mesma do texto*/
   transform: translateY(
@@ -124,9 +110,8 @@ body {
 .buttonSwitch {
   width: 30px;
   height: 15px;
-  top: -10px;
   margin-top: 1.5rem;
-  margin-right: 1%;
+  margin-right: 1%; /*Define que a margem da direita tem o tamanho de 1% do elemento pai */
   border: #ffffff solid 2px; /*Define tamanho da borda, cor e tipo*/
   border-radius: 30px;
   position: relative; /*Faz com que o elemento continue em sua posição original sem afetar os elementos ao redor*/
@@ -136,7 +121,6 @@ body {
 .buttonSwitch .buttonIndicator {
   width: 15px;
   height: 15px;
-  top:auto;
   background-color: #ffffff;
   border-radius: 150px;
   transform: scale(
@@ -157,6 +141,7 @@ body {
   /*Parte do comando js para quando se é clicado, alterar a cor da borda do elemento*/
   border-color: #859678;
 }
+
  
 
 /* 3. HERO SECTION (BANNER PRINCIPAL) */
@@ -202,13 +187,10 @@ body {
     object-position: top; 
     filter: brightness(0.75); 
 }
-
-/* 4. SEÇÕES DE CONTEÚDO COM DEGRADÊS */
-/* Apenas as seções do main */
 .info-section .container {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: left;
     justify-content: space-between;
     gap: 40px;
     position: relative;
@@ -217,16 +199,15 @@ body {
 }
 
 .info-text {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    max-width: 600px;
-    text-align: center;
-    font-size: 23px;
+    flex:1;
+    max-width:650px;
+    display:flex;
+    flex-direction:column; /*Define que os elementos dentro do container serão organizados em uma coluna, ou seja, um embaixo do outro*/
+    justify-content:left; /*Define que os elementos dentro do container serão centralizados verticalmente, ou seja, o espaço acima e abaixo dos elementos será igual*/
+    align-items:flex-start;
+    text-align:left;
+    top: -100px;
 }
-
     .info-text {
         align-items: flex-start;     
     } 
@@ -236,14 +217,17 @@ body {
     }
 
 
-.info-text h2 {
-    margin-bottom: 15px;     
+.info-text h2{
+    font-size:2rem;
+    margin-bottom:15px;
 }
 
 .info-text p {
-    max-width: 600px;      
-    line-height: 1.6;      
-    text-align: left;       
+    max-width:42ch;
+    font-size:1.4rem;
+    line-height:1.6;
+    color:#444;
+    text-align:left;       
     margin: 0;              
     word-wrap: break-word;  
 }
@@ -252,25 +236,22 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;       
-    justify-content: center;
-    gap: 100px;
+    justify-content: space-between;
+    gap: 40px;
     min-height: 700px;         
-    padding: 40px;             
+    padding: 100px 10%;             
 }
 
 .image-lupa img,
 .image-mps img,
-.image-ps img {
-    max-width: 250px;          
-    width: 230%;
-    aspect-ratio: 1 / 1;       
-    height: auto;
-    object-fit: cover;
-    border-radius: 25px;
-    display: block;
-    margin: 0 auto;
+.image-ps img,
+.image-arco img{
+    width:100%;
+    max-width:280px;
+    height:auto;
+    object-fit:contain;
+    display:block;
 }
-
 .image-mps img{
     max-width: 350px;          
     width: 230%;
@@ -328,6 +309,7 @@ body {
 .section-brand {
     padding: 100px 10%;
     background: linear-gradient(180deg, var(--amarelo-eisbaren) 80%, var(--rosa-eisbaren) 100%);
+    min-height: 200px;
 }
 
 .brand-flex {
@@ -365,7 +347,6 @@ body {
     
 }
 
-/* 6. FOOTER */
 .main-footer {
     background: linear-gradient(to bottom, #ffb0c4 0%, #faacc1 14%, #f8b0c8 34%, #e8a3b8 70%);
     padding: 80px 10% 30px;
@@ -448,4 +429,5 @@ body {
     color: var(--branco);
     text-decoration: underline;
 }
+
 
