@@ -168,6 +168,22 @@ body {
 /*COLOCANDO O SANDUICHE E A BARRA DE PESQUISA*/
 /*Estilização do sanduiche*/
 
+/*Tirando efeitos padrões do botão*/
+.btn-sanduiche{
+  border: none;
+  background: none;
+  outline: none; /*tira a borda quando clicamos na barra*/
+  padding: 0;
+  color: var(--cor-letra);
+  transition: 0.3s;
+}
+
+.btn-sanduiche:hover{
+  
+}
+
+/*talvez utilizar a opção do width=0 funcione no sanduice*/
+
 
 
 /*ESTILIZAÇÃO DA BARRA DE PESQUISA*/
