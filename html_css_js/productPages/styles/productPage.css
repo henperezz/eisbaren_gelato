@@ -429,6 +429,11 @@ body {
   width: 254px;
   background-color: var(--casquinha-color);
   border-radius: 254px;
+  transition: 0.5s ease-in-out;
+}
+
+.circleProduct:hover {
+  transform: scale(1.1);
 }
 
 .recommendationProduct {
