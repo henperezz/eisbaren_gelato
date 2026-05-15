@@ -165,10 +165,7 @@ body {
 }
 
 
-/*COLOCANDO O SANDUICHE E A BARRA DE PESQUISA*/
-
-/*Estilização do sanduiche*/
-
+/*ESTILIZAÇÃO DO SANDUICHE*/
 /*Tirando efeitos padrões do botão*/
 .sanduiche-container{
   border: none; /*tira as bordas de dentro*/
@@ -205,12 +202,7 @@ body {
   color: var(--cor-letra);
 }
 
-
-
-
-
-
-
+/*ESTILIZAÇÃO DO CARD DROPDOWN*/
 
 /*ESTILIZAÇÃO DA BARRA DE PESQUISA*/
 .caixa-pesquisa{
