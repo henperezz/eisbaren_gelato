@@ -195,13 +195,18 @@ body {
   height: 3px; /*grossura das linhas*/
   background: #913b6c; /*coloquei essa cor pq eu achei bonita*/
   border-radius: 2px; /*arredondamento das linhas*/
+  cursor: pointer;
 }
 
-/*estilização da categoria*/
-.sanduiche-container h2{
-  
-
+.texto-sanduiche{
+  font-family: "Berkshire Swash";
+  font-size: 22px;
+  font-weight: 300;
+  color: var(--cor-letra);
 }
+
+
+
 
 
 
