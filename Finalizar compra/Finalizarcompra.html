@@ -1,167 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Finalizarcompra.css"> 
-    <title>Finalizar compra</title>
-    <link
-      rel="shortcut icon"
-      href="../assets/img/logo 48X48.png"
-      type="image/x-icon"
-    />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Finalizarcompra.css"> 
+  <title>Finalizar compra</title>
+  <link rel="shortcut icon" href="img/logo.jpg" type="image/x-icon"/>
 </head>
 <body>
-    <header class="headerContainer" id="headerContainer">
-      <!--id necessário para produzir o efeito de mudança de cor que será adicionado posteriormente-->
-      <div class="logoContainer">
-        <img
-          src="../assets/img/logo.jpg"
-          alt="Logo Eisbaren"
-          class="headerLogo"
-        />
-      </div>
+  <header class="headerContainer" id="headerContainer">
+    <div class="logoContainer">
+      <img src="img/logo.jpg" alt="Logo Eisbaren" class="headerLogo"/>
+    </div>
 
-      <div class="headerTextContainer">
-        <nav>
-          <ul class="listHeader">
-            <li class="linksList"><a class="textLink" href="">INÍCIO</a></li>
-            <li class="linksList">
-              <a class="textLink" href="">SAIBA MAIS</a>
-            </li>
-            <li class="linksList"><a class="textLink" href="">PRODUTOS</a></li>
-            <li class="linksList"><a class="textLink" href="">CARRINHO</a></li>
-            <li class="linksList"><a class="textLink" href="">PERFIL</a></li>
-            <li class="linksList">
-              <a href=""
-              <!--tenho que ARRUMAR essa parte-->
-                <img 
-                  src="img/group_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png"
-                  alt="Perfil"
-                  class="perfilHeader"
-              /></a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    
+    <div class="headerTextContainer">
+      <nav>
+        <ul class="listHeader">
+          <li class="linksList"><a class="textLink" href="">INÍCIO</a></li>
+          <li class="linksList"><a class="textLink" href="">SAIBA MAIS</a></li>
+          <li class="linksList"><a class="textLink" href="">PRODUTOS</a></li>
+          <li class="linksList"><a class="textLink" href="">CARRINHO</a></li>
+          <li class="linksList"><a class="textLink" href="">PERFIL</a></li>
+          <li class="linksList">
+            <a href="">
+              <img src="img/group_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt="Perfil" class="perfilHeader"/>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  
     <div class="buttonSwitch" id="buttonSwitch">
-        <!--id necessária para capitar no js, container especial que é o switcher de modos-->
-        <div class="buttonIndicator"></div>
-        <!--é o indicador do switcher-->
-      </div>
-    </header>
+      <div class="buttonIndicator"></div>
+    </div>
+  </header>
 
-   <script src="Finalizarcompra.js"></script>
-
-</header>
-
-    <section class="imagem-inicial"> <!-- Criei uma sessão ou divisória APENAS para a imagem do banner -->
-        <img src="img/Frame 18.png" alt="imagem inical da Parte de Produtos">
-            <h1> Finalizar <p> compra </h1>
-    </section>
+  <section class="imagem-inicial">
+    <img src="img/Frame 18.png" alt="imagem inicial da Parte de Produtos">
+    <h1>Finalizar <p>compra</p></h1>
+  </section>
      
-<div class="container">
-    <h2>Endereço de cobrança:</h2>
-    <!--para criar um formulario usamos a tag forms-->
+  <!-- WRAPPER PRINCIPAL -->
+  <div class="checkout">
 
-    <form>
-      <div class="linha">
-        <input type="text" placeholder="Nome" required>
-        <input type="text" placeholder="Sobrenome" required>
-      </div>
+    <!-- BLOCO DO FORMULÁRIO -->
+    <div class="container">
+      <h2>Endereço de cobrança:</h2>
+      <form>
+        <div class="linha">
+          <input type="text" placeholder="Nome" required>
+          <input type="text" placeholder="Sobrenome" required>
+        </div>
 
-      <div class="linha">
-        <input type="email" placeholder="Email" required>
-        <input type="text" placeholder="Selecionar estado">
-      </div>
+        <div class="linha">
+          <input type="email" placeholder="Email" required>
+          <input type="text" placeholder="Selecionar estado">
+        </div>
 
-      <div class="linha">
-        <input type="text" placeholder="Selecione a cidade">
-        <input type="text" placeholder="CEP / Código Postal">
-      </div>
+        <div class="linha">
+          <input type="text" placeholder="Selecione a cidade">
+          <input type="text" placeholder="CEP / Código Postal">
+        </div>
 
-    
-      <h2>Método de pagamento:</h2>
+        <h2>Método de pagamento:</h2>
 
-      <label class="opcao-pagamento">
-        <input type="radio" name="pagamento" checked>
-        <span>Cartão de crédito</span>
-        <img src="img/credit_card_24dp_787878_FILL0_wght400_GRAD0_opsz24.png" alt="Cartão" class="img-cartao">
-      </label>
-   
- 
+        <label class="opcao-pagamento">
+          <input type="radio" name="pagamento" checked>
+          <span>Cartão de crédito</span>
+          <img src="img/credit_card_24dp_787878_FILL0_wght400_GRAD0_opsz24.png" alt="Cartão" class="img-cartao">
+        </label>
 
-      <input type="text" placeholder="Número do cartão">
-      <input type="text" placeholder="Código de segurança">
+        <input type="text" placeholder="Número do cartão">
+        <input type="text" placeholder="Código de segurança">
 
-      
-      <label class="opcao-pagamento">
-        <input type="radio" name="pagamento">
-        <span>Pagamento na entrega</span>
-        <img src="img/Symbol.png" alt="Dinheiro" class="img-Symbol">
-      </label>
-      
+        <label class="opcao-pagamento">
+          <input type="radio" name="pagamento">
+          <span>Pagamento na entrega</span>
+          <img src="img/Symbol.png" alt="Dinheiro" class="img-Symbol">
+        </label>
 
-      <button type="button">Faça seu pedido agora</button>
-      
+        <button type="button">Faça seu pedido agora</button>
+      </form>
+    </div>
 
-     
-       <!-- RESUMO DO PEDIDO -->
+    <!-- BLOCO DO RESUMO -->
     <div class="card">
-
       <h2>Resumo do pedido</h2>
 
-      <!-- CUPOM -->
       <div class="cupom-area">
-
-        <input
-          type="text"
-          placeholder="Aplicar cupons"
-          class="input-cupom"
-        >
-
-        <button class="btn-cupom">
-          Aplicar
-        </button>
-
+        <input type="text" placeholder="Aplicar cupons" class="input-cupom">
+        <button class="btn-cupom">Aplicar</button>
       </div>
 
-      <!-- DETALHES -->
       <div class="detalhes-pedido">
-
         <h3>Detalhes do produto:</h3>
-
         <div class="resumo-item">
           <span>Subtotal</span>
           <strong>R$200,99</strong>
         </div>
-
         <div class="resumo-item">
           <span>Envio</span>
           <strong>R$15,00</strong>
         </div>
-
       </div>
 
       <hr>
 
-      <!-- TOTAL -->
       <div class="resumo-total">
         <span>Total geral</span>
         <strong>R$215,99</strong>
       </div>
 
-      <!-- BOTÃO -->
-      <button class="btn-checkout">
-        Fazer Checkout →
-      </button>
-
+      <button class="btn-checkout">Fazer Checkout →</button>
     </div>
 
   </div>
 
+  <script src="Finalizarcompra.js"></script>
 </body>
 </html>
-
-
