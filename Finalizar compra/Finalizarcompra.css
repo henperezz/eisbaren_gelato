@@ -245,24 +245,15 @@ input {
 --------------------------------------------------- */
 button{
   width: 100%;
-
   margin-top: 10px;
-
   padding: 16px;
-
   border: none;
-
   border-radius: 30px;
-
   background-color: #eb638c;
-
   color: white;
-
   font-size: 16px;
   font-weight: bold;
-
   cursor: pointer;
-
   transition: all 0.3s ease;
 
   /* efeito de luz embaixo */
@@ -292,9 +283,9 @@ button:active{
    CARD
 --------------------------------------------------- */
 .card {
-  flex: 0 0 40%;      /* ocupa 40% da largura, mais à direita */
-  margin-top: 30px;
-  margin-left: auto;  /* empurra o card para a direita */
+  flex: 0 0 30%;      /* ocupa 30% da largura, mais à direita */
+  align-self: flex-start; /* Alinha o card ao topo do container */
+  margin: 80px auto  30px auto; /* Margem superior de 80px, centralizado horizontalmente, e margem inferior de 30px */
   background: #f2f2f2;
   padding: 20px;
   border-radius: 16px;
@@ -302,6 +293,11 @@ button:active{
   position: sticky;
   top: 40px;
 }
+
+.card h1{
+  text-align: center; 
+}
+
 /* ---------------------------------------------------
    RESPONSIVIDADE
 --------------------------------------------------- */
@@ -355,25 +351,15 @@ button:active{
 /* BOTÕES DO APLICAR  */
 button{
   width: 100%;
-
   padding: 16px;
-
   border: none;
-
   border-radius: 30px;
-
   background: #eb638c;
-
   color: white;
-
   font-size: 16px;
-
   font-weight: bold;
-
   cursor: pointer;
-
   transition: 0.3s ease;
-
   box-shadow:
     0 8px 20px rgba(235, 13, 80, 0.4);
 }
@@ -381,16 +367,13 @@ button{
 /* HOVER */
 button:hover{
   transform: translateY(-5px);
-
   background: #e61c5c;
 }
 
 /* CUPOM */
 .cupom-area{
   display: flex;
-
   gap: 10px;
-
   margin: 20px 0;
 }
 
@@ -400,39 +383,49 @@ button:hover{
 
 .btn-cupom{
   width: auto;
-
   padding: 12px 20px;
 }
 
 /* ITENS */
 .resumo-item{
   display: flex;
-
   justify-content: space-between;
-
   margin-bottom: 15px;
+  margin-top: 20px;
 }
+
+.detalhes-pedido{
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+
 
 .resumo-total{
   display: flex;
-
   justify-content: space-between;
-
   margin-top: 20px;
-
+  margin-bottom: 32px;
   font-size: 22px;
-
   font-weight: bold;
 }
 
 /* LINHA */
 hr{
   margin: 20px 0;
-
   border: none;
-
   border-top: 1px solid #ccc;
 }
+
+
+
+.text{
+  color: #1d1c1c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
 
 /* RESPONSIVO */
 @media(max-width:900px){
@@ -450,3 +443,4 @@ hr{
     flex-direction: column;
   }
 }
+
