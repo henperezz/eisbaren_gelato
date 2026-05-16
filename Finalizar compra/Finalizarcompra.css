@@ -43,7 +43,8 @@ body {
     #cf7eae 0%,
     #e69cc6 14%,
     #dba7bf 34%,
-    #e8a3b8 70%
+    #e8a3b8 90%,
+    #ffffff
   ); /*Define que o background do container será gradiente*/
 }
 
@@ -51,6 +52,11 @@ body {
   /*Define o tamanho exato da logo*/
   width: clamp(80px, 12vw, 159px);
   height: clamp(80px, 12vw, 159px);
+  transition: 0.5s;
+}
+
+.headerLogo:hover {
+  transform: translateY(-5px);
 }
 
 .logoContainer {
@@ -88,17 +94,16 @@ body {
   transition: 0.3s ease-out; /*Define que a transição entre os efeitos (no caso :hover) será de 0.3s desacelerando no final do movimento para maior sensação de suavidade*/
 }
 
-/*tenho que ARRUMAR essa parte*/
-.perfilHeader {
-  width: 18.67px;
-  height: 15.67px;
+.material-symbols-outlined.profile {
+  font-size: 19px;
+  color: var(--text1-color);
+  cursor: pointer;
   transition: 0.3s ease-out;
-  padding-top: 0.25rem;
 }
 
-/*tenho que ARRUMAR essa parte*/
 .textLink:hover,
-.perfilHeader:hover {
+.perfilHeader:hover,
+.material-symbols-outlined.profile:hover {
   color: #859678;
   text-shadow: 0px 5px 6px #859678; /*Define que o texto terá nenhuma sombra no eixo x e terá 5px no eixo y com um blur (tipo esfumaceamento) de 6px e a cor a mesma do texto*/
   transform: translateY(
@@ -141,7 +146,9 @@ body {
   border-color: #859678;
 }
 
+/* -------------------------------------------------------------------------------------------------------------------------------------- */
 /*Edição do texto central*/
+
 .imagem-inicial {
     position: relative; /*Faz com que o elemento continue em sua posição original sem afetar os elementos ao redor, necessário para a posição absoluta do h1*/
     width: 100%;
@@ -155,8 +162,8 @@ body {
 }
 .imagem-inicial h1 {
     font-family: "Berkshire Swash", cursive;
-    font-size: var(--size-text4);
-    color: var(--text2-color);
+    font-size: 80px;
+    color: var(--cor-letra);
     position: absolute; /*Faz com que o elemento se sobressaia sobre outros elementos, saindo do fluxo original*/
     top: 50%;
     left: 50%;
@@ -164,6 +171,7 @@ body {
     text-align: center; /*Centraliza o texto dentro do elemento h1*/
     width: 100%; /*Garante que o h1 ocupe toda a largura disponível, necessário para o text-align funcionar corretamente*/
 }
+
 
 /* -----------------------------------------------------------
    7. ESTRUTURA PRINCIPAL (Checkout)
