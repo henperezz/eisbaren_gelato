@@ -317,3 +317,15 @@ body {
 .caixa-pesquisa:hover > .lupa-btn{
   background: aliceblue;
 }
+
+/*ESTILIZAÇÃO DOS PRODUTOS*/
+section .produto-milkshake{
+  padding: 40px 30px;
+}
+
+.milkShake h1{
+  font-family: "Berkshire Swash";
+  font-weight: 200;
+  font-size: 24px;
+}
+
