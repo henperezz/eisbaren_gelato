@@ -159,7 +159,7 @@ body {
 }
 .imagem-inicial h1 {
     font-family: "Berkshire Swash", cursive;
-    font-size: 80px;
+    font-size: 55px;
     color: var(--cor-letra);
     position: absolute; /*Faz com que o elemento se sobressaia sobre outros elementos, saindo do fluxo original*/
     top: 50%;
@@ -213,7 +213,7 @@ body {
 /*ESTILIZAÇÃO DO CARD DROPDOWN*/
 /*estilizando o fundo do dropdown*/
 .dropdown {
-  display: none; /*tirei o display pra fazer ele aparecer só quando for clicado*/
+   display: none;/*display none para que ele começe escondido*/
   flex-direction: column;
   width: 180px; /*largura*/
   margin-top: 8px; /*distancia de cima*/
@@ -223,8 +223,8 @@ body {
   background: #ffffff; /*fundo do ***caixa***/
 }
 
-.dropdown.open{
-  display: flex;
+.dropdown.active {
+  display: flex; /*quando eu colocar a classe 'active' no dropdown no js, ele aparece */
 }
 
 /*tirando as configurações padrões do ul*/
