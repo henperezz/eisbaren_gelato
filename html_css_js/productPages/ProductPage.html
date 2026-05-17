@@ -78,15 +78,49 @@
             um doce clássico e irresistível
           </p>
 
-          <div class="additionals" id="additionals">
-            <p>
+          <div class="additionals">
+            <p class="additionalsTitle">
               Adicionais
-              <span class="material-symbols-outlined arrow_right">
+              <span class="material-symbols-outlined arrowRight">
                 arrow_right
               </span>
             </p>
           </div>
-
+          <div class="additionalsList">
+            <p class="additionalsTitleMenu">Escolha até 5 opções</p>
+            <hr />
+            <ul>
+              <li class="additionalsItems">
+                <p>Creme de pistache</p>
+                <span id="valueAdditionals">R$8,00</span>
+                <span class="plusAdditionals">+</span>
+                <hr />
+              </li>
+              <li class="additionalsItems">
+                <p>Creme de pistache</p>
+                <span id="valueAdditionals">R$8,00</span>
+                <span class="plusAdditionals">+</span>
+                <hr />
+              </li>
+              <li class="additionalsItems">
+                <p>Creme de pistache</p>
+                <span id="valueAdditionals">R$8,00</span>
+                <span class="plusAdditionals">+</span>
+                <hr />
+              </li>
+              <li class="additionalsItems">
+                <p>Creme de pistache</p>
+                <span id="valueAdditionals">R$8,00</span>
+                <span class="plusAdditionals">+</span>
+                <hr />
+              </li>
+              <li class="additionalsItems">
+                <p>Creme de pistache</p>
+                <span id="valueAdditionals">R$8,00</span>
+                <span class="plusAdditionals">+</span>
+              </li>
+            </ul>
+          </div>
           <p class="size">Tamanho:</p>
 
           <ul class="listSizeButton">
@@ -106,9 +140,10 @@
           <ul class="listCartCounter">
             <li class="itensCartCounter">
               <!--Fazer Botões para aumentar ou diminuir a quantidade de itens-->
-
-              <div class="counterPlaceholder">
-                <p class="counterPlaceholder">Placeholder -</p>
+              <div class="quantity">
+                <button class="buttonMinus buttonQuantity">-</button>
+                <span id="valueQuantity">0</span>
+                <button class="buttonPlus buttonQuantity">+</button>
               </div>
               <!--Fazer botões para aumentar ou diminuir a quantidade de itens para comprar-->
             </li>
@@ -134,17 +169,14 @@
             chocolate cremoso com pedaços crocantes proporciona uma experiência
             rica e irresistível a cada colherada. Perfeito para os amantes de
             chocolate que buscam uma<strong>
-              sobremesa intensa, equilibrada e cheia de sabor.
-            </strong>
+              sobremesa intensa, equilibrada e cheia de sabor.</strong
+            >
           </p>
-
-          <div class="ingredients">
-            <p class="warningText">
-              <span class="material-symbols-outlined warning">warning</span
-              >CONTÉM GLÚTEN, LACTOSE E CACAU
-            </p>
-          </div>
         </div>
+        <span class="warningText">
+          <span class="material-symbols-outlined warning">warning</span>Contém
+          Glútem e Lactose!
+        </span>
       </div>
 
       <hr class="lineDivisor" />
@@ -289,6 +321,6 @@
     </footer>
 
     <script src="scripts/ProductPage.js"></script>
-    <!--chama o script js para a alteração das cores-->
+    <!--chama o script js-->
   </body>
 </html>
