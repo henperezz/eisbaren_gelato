@@ -8,7 +8,7 @@
    --rosa-eisbaren: #ffaec1;
   --rosa-forte: #f83d8e;
   --rosa-claro: #ffd6e7;
-  --amarelo-eisbaren: #fdae0c;
+  --amarelo-eisbaren: #fBFBD7;
   --azul-eisbaren: #a8d8ea;
   --text1-color: #ffffff;
   --text2-color: #0f0200;
@@ -219,7 +219,7 @@ body {
  
 .info-text p {
   max-width: 42ch;
-  font-size: 1.4rem;
+  font-size: 2.0rem;
   line-height: 1.6;
   color: #444;
   text-align: left;
@@ -228,7 +228,7 @@ body {
 }
  
 .info-text h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 15px;
 }
  
@@ -285,14 +285,14 @@ body {
 
 /* Aplicando as cores em degradê */
 .section-pink {
-  background: linear-gradient(180deg, var(--rosa-eisbaren) 0%, var(--rosa-claro) 100%);
+  background: linear-gradient(180deg, var(--rosa-claro) 0%, var(--rosa-claro) 100%);
 }
 .section-pink h2 {
   color: var(--rosa-forte);
 }
  
 .section-yellow {
-  background: linear-gradient(180deg, var(--amarelo-eisbaren) 0%, #ffe08a 100%);
+  background: linear-gradient(180deg, var(--amarelo-eisbaren) 0%, var(--amarelo-eisbaren) 100%);
 }
 .section-yellow h2 {
   color: #d4a017;
@@ -306,7 +306,11 @@ body {
 }
  
 .section-pink-light {
-  background: linear-gradient(180deg, var(--rosa-claro) 0%, #fff0f5 100%);
+  background: linear-gradient(180deg, var(--rosa-claro) 0%, var(--rosa-claro) 100%);
+}
+
+.section-pink-light h2 {
+  color: #b13673;
 }
 /* Grid de Valores Estilizado */
 .valores-grid {
@@ -336,8 +340,8 @@ body {
     gap: 40px;
     flex-wrap: wrap;
     width: 100%;
-    max-width: 1200px; /* Opcional: centraliza o conteúdo em telas ultra-wide */
-    margin-top: -15px;
+    max-width: 1200px; 
+    margin-top: -15px; /* Ajuste para alinhar melhor com a seção anterior */
 }
 
 /* Logo / Imagem */
@@ -348,6 +352,7 @@ body {
     max-height: 500px;
     object-fit: contain; /* Evita distorção */
     display: block;
+    
 }
 
 /* Texto */
