@@ -44,9 +44,10 @@ body {
     #e69cc6 14%,
     #dba7bf 34%,
     #e8a3b8 90%,
-    #ffffff
+    #e8a3b8
   ); /*Define que o background do container será gradiente*/
 }
+
 
 .headerLogo {
   /*Define o tamanho exato da logo*/
