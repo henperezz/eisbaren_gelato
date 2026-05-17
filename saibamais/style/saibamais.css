@@ -1,0 +1,507 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("   https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap");
+
+:root {
+  /*Define cores, fontes e tamanhos de textos que serão utilizados posteriormente*/
+
+   --rosa-eisbaren: #ffaec1;
+  --rosa-forte: #f83d8e;
+  --rosa-claro: #ffd6e7;
+  --amarelo-eisbaren: #fBFBD7;
+  --azul-eisbaren: #a8d8ea;
+  --text1-color: #ffffff;
+  --text2-color: #0f0200;
+  --text3-color: #787878;
+  --text4-color: #d788a6;
+  --text5-color: #f83d8e;
+  --text6-color: #3568e9;
+  --size-text1: 13.7px;
+  --size-text3: 16px;
+  --size-text4: 64px;
+  --size-text6: 14px;
+  --font1: "Inter", sans-serif;
+  --font2: "Archivo", sans-serif;
+  --font3: "Berkshire Swash", sans-serif;
+}
+
+* {
+  margin: 0; /* Reseta as configurações de margin pré-existentes na página*/
+  padding: 0; /*Reseta as configurações de padding pré-existentes na página*/
+}
+
+body {
+  background-color: #ffffff;
+  font-family: var(--font2);
+  font-size: var(--size-text1);
+}
+
+.headerContainer {
+  display: flex; /*Define que o container é flexível*/
+  flex-direction: row; /*Define que a direção do container é na horizonta (row) não na vertical (column)*/
+  height: 98px;
+  width: auto;
+  background: linear-gradient(
+    to bottom,
+    #cf7eae 0%,
+    #e69cc6 14%,
+    #dba7bf 34%,
+    #e8a3b8 90%,
+    #e8a3b8
+  ); /*Define que o background do container será gradiente*/
+}
+
+.headerLogo {
+  /*Define o tamanho exato da logo*/
+  width: clamp(80px, 12vw, 159px);
+  height: clamp(80px, 12vw, 159px);
+  transition: 0.5s;
+}
+
+.headerLogo:hover {
+  transform: translateY(-5px);
+}
+
+.logoContainer {
+  /*Define que o container é flex, e é automaticamente ajustado para o meio do container-pai*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.headerTextContainer {
+  display: flex; /*Define que o display é flex, o alinhamento na horizontal é no fim do container e que o alinhamento na vertical é no centro*/
+  align-items: center;
+  justify-content: flex-end;
+  margin-left: auto; /*Define que o tamanho da margem para o container do logo é automatico, se ajustando conforme necessário*/
+  padding-bottom: 3.5rem; /*Define que o tamanho da margem para baixo do item até a borda do container é 56px (3.5rem)*/
+  padding-right: 4rem; /*Define que o tamanho da margem para direita do item até a borda do container é 64px (4rem)*/
+}
+
+.listHeader {
+  display: flex;
+  flex-direction: row;
+  margin-top: 4rem;
+  list-style: none; /*Define que a lista não terá marcações, nem bolinhas nem quadrados*/
+  gap: 11.22px; /*Define que a distância entre os items do container é 11.22px*/
+}
+
+.textLink {
+  display: inline-block; /*Define que os textos são inline-block, ou seja, os elementos estão um do lado do outro porém se aceita definições de largura ou altura, necessário para o efeito de hover*/
+  text-decoration: none; /*Define que os links não terão a linha embaixo deles*/
+  color: var(--text1-color);
+  font-family: var(--font1);
+  font-size: 16px;
+  font-weight: 600; /*Define que a fonte será semi-bold*/
+  transition: 0.3s ease-out; /*Define que a transição entre os efeitos (no caso :hover) será de 0.3s desacelerando no final do movimento para maior sensação de suavidade*/
+}
+
+.material-symbols-outlined.profile {
+  font-size: 19px;
+  color: var(--text1-color);
+  cursor: pointer;
+  transition: 0.3s ease-out;
+}
+
+.textLink:hover,
+.perfilHeader:hover,
+.material-symbols-outlined.profile:hover {
+  color: #859678;
+  text-shadow: 0px 5px 6px #859678; /*Define que o texto terá nenhuma sombra no eixo x e terá 5px no eixo y com um blur (tipo esfumaceamento) de 6px e a cor a mesma do texto*/
+  transform: translateY(
+    -4px
+  ); /*Define que o texto se moverá para cima (números negativos empurram para cima, positivos para baixo) em -4px*/
+}
+
+.buttonSwitch {
+  width: 30px;
+  height: 15px;
+  margin-top: 1.5rem;
+  margin-right: 1%; /*Define que a margem da direita tem o tamanho de 1% do elemento pai */
+  border: #ffffff solid 2px; /*Define tamanho da borda, cor e tipo*/
+  border-radius: 30px;
+  position: relative; /*Faz com que o elemento continue em sua posição original sem afetar os elementos ao redor*/
+  cursor: pointer; /*Faz com que aparece o ponteiro de clicar quando o mouse está em cima do elemento*/
+}
+
+.buttonSwitch .buttonIndicator {
+  width: 15px;
+  height: 15px;
+  background-color: #ffffff;
+  border-radius: 150px;
+  transform: scale(
+    0.8
+  ); /*Faz com que o elemento se transforme baseado em uma escala (ele se ajustava a 0.8 do elemento original)*/
+  position: absolute; /*O elemento está em posição absoluta, ou seja, se sobressaí sobre outros elementos, saindo do fluxo original*/
+  left: 0;
+  transition: 0.4s;
+}
+
+.buttonSwitch.dark .buttonIndicator {
+  /*Parte do comando js para quando se é clicado, a ação de mudar a bolinha do switcher e a cor dela*/
+  left: 15px;
+  background-color: #859678;
+}
+
+.buttonSwitch.dark {
+  /*Parte do comando js para quando se é clicado, alterar a cor da borda do elemento*/
+  border-color: #859678;
+}
+
+/* -------------------------------------------------------------------------------------------------------- */
+
+
+/* 3. HERO SECTION (BANNER PRINCIPAL) */
+.hero-section { /*Essa seção é a parte do banner principal, onde tem a imagem de fundo e o texto em cima da imagem, aquela parte do nossa história*/
+    position: relative;
+    height: 100vh; /*Define que a altura da seção é 100% da altura da tela do usuário, ou seja, a seção ocupará toda a altura da tela, independente do tamanho do dispositivo*/
+    min-height: 400px;
+    overflow: hidden; /*Define que o conteúdo que ultrapassar os limites da seção será escondido, ou seja, a imagem de fundo não ultrapassará os limites da seção, tipo, nn vai invadir a parte do main*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-text {
+    position: absolute; /*Define que o texto está em posição absoluta, ou seja, se sobressaí sobre outros elementos, saindo do fluxo original, ou seja, o texto fica em cima da imagem de fundo*/
+    z-index: 2; /*Isso significa que esse comando será exibido acima de outros elementos com z-index menor, exemplo a imagem da loja seria z-index: 1;*/
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-family: 'Berkshire Swash', cursive;
+    font-size: clamp(3rem, 8vw, 7rem);
+    color: #ffffff;
+    letter-spacing: 1.5px;
+    -webkit-text-stroke: 0.7px #4e2f19; /*isso define o contorno ao redor do texto.*/
+    
+}
+
+.image-loja {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;   
+    height: 100%;  
+    z-index: 1; /*como descrito no hero-text, a imagem da loja fica atrás do texto;*/
+}
+
+.image-loja img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top; 
+    filter: brightness(0.75); 
+}
+
+/* --------------------------------------------------------------------------------- */
+
+.info-section .container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  min-height: 700px;
+  padding: 100px 10%;
+}
+ 
+.info-text {
+  flex: 1;
+  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+ 
+.info-text p {
+  max-width: 42ch;
+  font-size: 2.0rem;
+  line-height: 1.6;
+  color: #444;
+  text-align: left;
+  margin: 0;
+  word-wrap: break-word;
+}
+ 
+.info-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+ 
+.image-lupa img,
+.image-mps img,
+.image-ps img,
+.image-arco img {
+  width: 100%;
+  max-width: 430px;
+  aspect-ratio: 1 / 1;
+  height: auto;
+  object-fit: cover;
+  border-radius: 35px;
+  box-shadow: none;
+  display: block;
+  margin: 0 auto;
+}
+ 
+.image-mps img {
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 1 / 1;
+  height: auto;
+  object-fit: cover;
+  border-radius: 35px;
+  box-shadow: none;
+  display: block;
+  margin: 0 auto;
+}
+ 
+.image-arco img {
+  width: 100%;
+  max-width: 350px;
+  aspect-ratio: 1 / 1;
+  height: auto;
+  object-fit: cover;
+  border-radius: 35px;
+  box-shadow: none;
+  display: block;
+  margin: 0 auto;
+}
+
+.image-ps img{
+  width: 100%;
+  max-width: 430px;
+  aspect-ratio: 1 / 1;
+  height: auto;
+  object-fit: cover;
+  border-radius: 35px;
+  box-shadow: none;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Aplicando as cores em degradê */
+.section-pink {
+  background: linear-gradient(180deg, var(--rosa-claro) 0%, var(--rosa-claro) 100%);
+}
+.section-pink h2 {
+  color: var(--rosa-forte);
+}
+ 
+.section-yellow {
+  background: linear-gradient(180deg, var(--amarelo-eisbaren) 0%, var(--amarelo-eisbaren) 100%);
+}
+.section-yellow h2 {
+  color: #d4a017;
+}
+ 
+.section-blue {
+  background: linear-gradient(180deg, var(--azul-eisbaren) 0%, #d0eef8 100%);
+}
+.section-blue h2 {
+  color: #5b8fb9;
+}
+ 
+.section-pink-light {
+  background: linear-gradient(180deg, var(--rosa-claro) 0%, var(--rosa-claro) 100%);
+}
+
+.section-pink-light h2 {
+  color: #b13673;
+}
+/* Grid de Valores Estilizado */
+.valores-grid {
+    display: flex;
+    flex-direction: column; /* empilha verticalmente */
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.section-brand {
+    background-color: #f7f1c7;
+    width: 100%;
+    padding: 35px 0;
+}
+
+/* Container principal */
+.brand-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  min-height: 700px;
+  padding: 100px 10%;
+}
+
+/* Texto */
+.brand-text {
+  flex: 1;
+  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.brand-text h2{
+    font-size:2.5rem;
+    margin-bottom:15px;
+    color: #775e47;
+}
+
+.brand-text p {
+  max-width: 42ch;
+  font-size: 2.0rem;
+  line-height: 1.6;
+  color: #444;
+  text-align: left;
+  margin: 0;
+  word-wrap: break-word;
+}
+
+/* Logo */
+.brand-logo img {
+    width: 450px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .brand-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        padding: 0 20px;
+    }
+
+    .brand-text {
+        width: 100%;
+        max-width: 330px;
+    }
+
+    .brand-text p {
+        text-align: center;
+    }
+
+    .brand-logo img {
+        width: 140px;
+    }
+}
+
+/* -------------------------------------------------------------------------------------------------------- */
+
+/*ESTILIZAÇÃO DO FOOTER*/
+.main-footer {
+  background: linear-gradient(to bottom, #ffb0c4 0%, #faacc1 14%, #f8b0c8 34%, #e8a3b8 70%);
+    padding: 80px 10% 30px;
+    margin-top: 0;
+    color: #ffffff;
+    font-size: 0.85rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 250px 1fr 1fr; /* tem que bater com o tamanho da logo */
+  gap: 50px;
+  align-items: start;  /* alinha tudo verticalmente no centro */
+}
+
+.footer-logo{
+  align-self: center;
+}
+
+.footer-logo img {
+    width: 250px;
+    border-radius: 20px;
+    padding: 5px;
+
+}
+
+.footer-links h4,
+.footer-contact h4 {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    padding-top: 40px; /*Esse aqui que alinhou tudo*/
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #ffffff;
+    display: block;
+    margin-bottom: 12px;
+    font-size:0.85rem;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #525946;
+    padding-left: 5px;
+}
+
+
+.footer-contact ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.linksFooter{
+  text-decoration: none;
+  list-style: none;
+  color: #ffffff;
+}
+
+.footer-contact p {
+    margin: 6px 0;
+}
+
+
+/*Configurações dos icone de contatos*/
+li .material-symbols-outlined {
+  font-size: 20px;     /* controla o tamanho do ícone, pois o  width não funciona em icones*/
+  margin-right: 5px; /*espaço entre o texto e o icone*/
+  vertical-align: middle; /* alinha o ícone com o texto da frente */
+}
+
+.social-icons img {
+    width: 20px;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+    
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    margin-top: 50px;
+    padding-top: 25px;
+    border-top: 1px solid rgba(109, 0, 0, 0.4);
+    font-size: 0.85rem;
+    color: #ffffff;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.footer-bottom a {
+    color: #ffffff;
+    text-decoration: underline;
+}
