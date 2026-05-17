@@ -172,10 +172,9 @@ body {
 .hero-text h1 {
     font-family: 'Berkshire Swash', cursive;
     font-size: clamp(3rem, 8vw, 7rem);
-    color: var(--branco);
+    color: #ffffff;
     letter-spacing: 1.5px;
-
-    -webkit-text-stroke: 0.7px var(--texto); /*isso define o contorno ao redor do texto.*/
+    -webkit-text-stroke: 0.7px #4e2f19; /*isso define o contorno ao redor do texto.*/
     
 }
 
@@ -237,7 +236,7 @@ body {
 .image-ps img,
 .image-arco img {
   width: 100%;
-  max-width: 350px;
+  max-width: 430px;
   aspect-ratio: 1 / 1;
   height: auto;
   object-fit: cover;
@@ -249,7 +248,7 @@ body {
  
 .image-mps img {
   width: 100%;
-  max-width: 350px;
+  max-width: 500px;
   aspect-ratio: 1 / 1;
   height: auto;
   object-fit: cover;
@@ -273,7 +272,7 @@ body {
 
 .image-ps img{
   width: 100%;
-  max-width: 350px;
+  max-width: 430px;
   aspect-ratio: 1 / 1;
   height: auto;
   object-fit: cover;
@@ -314,8 +313,8 @@ body {
 }
 /* Grid de Valores Estilizado */
 .valores-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    display: flex;
+    flex-direction: column; /* empilha verticalmente */
     gap: 20px;
     margin-top: 40px;
 }
@@ -348,9 +347,9 @@ body {
 }
 
 .brand-text h2{
-    font-size:2rem;
+    font-size:2.5rem;
     margin-bottom:15px;
-    color: #8a7764;
+    color: #775e47;
 }
 
 .brand-text p {
