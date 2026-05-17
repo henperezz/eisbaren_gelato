@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style/saibamais.css" />
     <link
       rel="shortcut icon"
-      href="img/logo.jpg"
+      href="../assets/img/icones/logo.jpg"
       type="image/x-icon"
     />
     <link
@@ -49,7 +49,8 @@
         <!--é o indicador do switcher-->
       </div>
     </header>
-
+    
+    
     <div class="hero-section"> <!-- essa seção contém o texto e a imagem principal -->
         <div class="hero-text">
             <h1>NOSSA HISTÓRIA</h1>
@@ -59,7 +60,7 @@
         </div>
     </div>
 
-<main> <!-- aqui tem as seções de informação, que são a missão, visão, valores e propósito da empresa -->
+    <main> <!-- aqui tem as seções de informação, que são a missão, visão, valores e propósito da empresa -->
         <section class="info-section section-pink hidden"> 
             <div class="container">
                 <div class="info-text">
@@ -127,44 +128,51 @@
         </section>
     </main>
 
-    <footer class="main-footer"> <!-- aqui tem o footer, que é a parte de baixo da página, onde tem o logo, os links para as outras páginas e o contato -->
-        <div class="container footer-grid">
-        <!-- Logo -->
+
+  <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="footer-grid">
+            <!-- Logo -->
             <div class="footer-logo">
                 <img src="img/logo.jpg" alt="Eisbären Gelato">
             </div>
 
-            <!-- Menu  -->
-            <div class="footer-links"> <!-- não é bem um menu, mas sim links para outras páginas no carrossel-->
-                <h4>Menu</h4> 
+            <!-- Menu Institucional -->
+            <div class="footer-links">
+                <h4>MENU INSTITUCIONAL</h4>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html">inicío</a></li>
+                    <li><a href="lojas.html">Nossas lojas</a></li>
                     <li><a href="login.html">Login</a></li>
-                    <li><a href="saibamais.html">Nossa História</a></li>
+                    <li><a href="saibamais.html">Sobre nós</a></li>
                     <li><a href="pedido.html">Peça Aqui</a></li>
                 </ul>
             </div>
 
             <!-- Contato -->
-            <div class="footer-contact"> <!-- aqui tem o contato, que é o email, o telefone e as redes sociais -->
+            <div class="footer-contact">
                 <h4>CONTATO</h4>
-                <p>EisbärenGelato@gmail.com</p>
-                <p><img src="img/Phone call.png" alt="telefone"> +55 19 3211-6698</p>
-                <p><img src="img/icon (1).png" alt="redes sociais"> Acompanhe a gente nas redes sociais</p>
+                <!--Lista linkada-->
+                <ul>
+                    <li ><span class="material-symbols-outlined">mail</span><a class="linksFooter" href="mailto:EisbarenGelato@gmail.com">   EisbarenGelato@gmail.com</a></li>
+                    <li><span class="material-symbols-outlined">call</span><a class="linksFooter" href="malito:+55 19 3211-6698">  +55 19 3211-6698</a></li>
+                </ul>
+
+                <p>Acompanhe a gente nas redes sociais</p>
                 <div class="social-icons">
                     <a href="#"><img src="ImagensFigma/facebook.png" alt="Facebook"></a>
                     <a href="#"><img src="ImagensFigma/instagram.png" alt="Instagram"></a>
                 </div>
-                </div>
             </div>
         </div>
 
-        <!-- Texto final --> <!-- aqui tem o texto final, que é a parte de baixo do footer, onde tem o copyright e a política de privacidade -->
+        <!-- Texto final -->
         <div class="footer-bottom">
             <p>© 2026 Eisbären Gelato Sorvetes. Todos os direitos reservados.</p> 
             <a href="privacidade.html">Política de Privacidade</a>  
         </div>
     </footer>
+
     <script src="scripts/saibamais.js"></script>
 </body>
 </html>
