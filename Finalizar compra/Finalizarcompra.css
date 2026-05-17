@@ -225,7 +225,7 @@ form {
   border-radius: 20px;
   border: 1px solid #ddd;   /* Borda fina que está em cinza claro*/
   cursor: pointer;
-  margin-bottom: 8px;
+  margin-bottom: 0px;
 }
 
 .opcao-pagamento span {
