@@ -25,24 +25,35 @@
 
 </head>
 <body>
-    <header id="header">
-<!-- Aqui eu criei o inicio das divs-->
-        <div class="container"> 
-<!-- Logo que ficara também no menu -->
-            <div class="logo">
-                 <a href="index.html"><img src="ImagensFigma/logo.jpg"></a>
-            </div>
-<!-- Criação dos tópico do menu -->
-            <div class="menu">
-                <nav>
-                    <a href="index.html"> INÍCIO </a>
-                    <a href="../saibamais/saibamais.html"> SOBRE NÓS </a>
-                    <a href="#"> PRODUTOS </a>
-                    <a href="#"> CARRINHO </a>
-                    <a href="#"> PERFIL <span class="material-symbols-outlined"> group </span> </a>
-                </nav>
-            </div>
-        </div>
+    <header class="headerContainer" id="headerContainer">
+      <!--id necessário para produzir o efeito de mudança de cor que será adicionado posteriormente-->
+      <div class="logoContainer">
+        <img
+          src="ImagensFigma/logo.jpg"
+          alt="Logo Eisbaren"
+          class="headerLogo"
+        />
+      </div>
+
+      <div class="headerTextContainer">
+        <nav>
+          <ul class="listHeader">
+            <li class="linksList"><a class="textLink" href="">INÍCIO</a></li>
+            <li class="linksList">
+              <a class="textLink" href="">SAIBA MAIS</a>
+            </li>
+            <li class="linksList"><a class="textLink" href="">PRODUTOS</a></li>
+            <li class="linksList"><a class="textLink" href="">CARRINHO</a></li>
+            <li class="linksList"><a class="textLink" href="">PERFIL<span class="material-symbols-outlined">group</span></a></li>
+          </ul>
+        </nav>
+      </div>
+    
+    <div class="buttonSwitch" id="buttonSwitch">
+        <!--id necessária para capitar no js, container especial que é o switcher de modos-->
+        <div class="buttonIndicator"></div>
+        <!--é o indicador do switcher-->
+      </div>
     </header>
 
     <section class="imagem-inicial"> <!-- Criei uma sessão ou divisória APENAS para a imagem do banner -->
@@ -183,5 +194,6 @@
         </div>
     </footer>
 
+    <script src="scripts/scripts.js"></script> 
 </body>
 </html>
