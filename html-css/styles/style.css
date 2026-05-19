@@ -213,7 +213,7 @@ body {
 /*ESTILIZAÇÃO DO CARD DROPDOWN*/
 /*estilizando o fundo do dropdown*/
 .dropdown {
-   display: none;/*display none para que ele começe escondido*/
+  /*display none para que ele começe escondido*/
   flex-direction: column;
   width: 180px; /*largura*/
   margin-top: 8px; /*distancia de cima*/
