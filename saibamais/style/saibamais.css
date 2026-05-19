@@ -284,14 +284,28 @@ body {
 
 /* Aplicando as cores em degradê */
 .section-pink {
-  background: linear-gradient(180deg, var(--rosa-claro) 0%, var(--rosa-claro) 100%);
+  background: linear-gradient(
+    to bottom,
+    var(--rosa-eisbaren) 0%,
+    var(--rosa-eisbaren) 14%,
+    var(--rosa-eisbaren) 34%,
+    rgb(255, 200, 200) 90%,
+    var(--amarelo-eisbaren)
+  )
 }
 .section-pink h2 {
   color: var(--rosa-forte);
 }
  
 .section-yellow {
-  background: linear-gradient(180deg, var(--amarelo-eisbaren) 0%, var(--amarelo-eisbaren) 100%);
+  background: linear-gradient(
+    to bottom,
+    var(--amarelo-eisbaren) 0%,
+    var(--amarelo-eisbaren) 14%,
+    var(--amarelo-eisbaren) 34%,
+    rgb(255, 253, 235) 90%,
+    var(--azul-eisbaren)
+  )
 }
 .section-yellow h2 {
   color: #d4a017;
