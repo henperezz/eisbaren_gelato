@@ -13,3 +13,4 @@ favoriteIcon.addEventListener("click", () => {
 });
 
 //parte do sanduiche
+
