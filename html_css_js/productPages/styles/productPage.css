@@ -270,6 +270,7 @@ body {
   margin-left: 11.7rem;
   margin-top: 25rem;
   border: #e3e4e3 1px solid;
+  border-top: var(--text5-color) 2px solid;
   padding: 10px 10px;
   border-radius: 20px;
   background-color: #ffffff;

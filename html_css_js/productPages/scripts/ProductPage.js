@@ -12,10 +12,10 @@ favoriteIcon.addEventListener("click", () => {
   favoriteIcon.classList.toggle("favorited");
 });
 
-let value = 0;
+let value = 1;
 
 document.querySelector(".buttonMinus").addEventListener("click", () => {
-  if (value == 0) {
+  if (value == 1) {
     return;
   } else {
     value--;
