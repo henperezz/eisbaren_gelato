@@ -162,28 +162,15 @@ body {
     object-fit: cover; /*Garante que a imagem preencha o espaço disponível sem distorcer, cortando as partes que ultrapassarem o container*/
 }
 .imagem-inicial h1 {
-<<<<<<< HEAD
-    width: 500px; /*Largura*/
-    height: 100px; /*Altura*/
-    left: 430px; /*Posição para a direita*/
-=======
->>>>>>> 13940b7a12c5de16426851e951c04a768338c8c8
     font-family: "Berkshire Swash", cursive;
     font-size: 80px;
     color: var(--cor-letra);
     position: absolute; /*Faz com que o elemento se sobressaia sobre outros elementos, saindo do fluxo original*/
-<<<<<<< HEAD
-    top: 30%;
-    left: 30%;
-    transform: translate(-30%, -30%); /*Faz com que o elemento se mova para o centro exato da tela, baseado em sua própria largura e altura*/
-
-=======
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); /*Faz com que o elemento se mova para o centro exato da tela, baseado em sua própria largura e altura*/
     text-align: center; /*Centraliza o texto dentro do elemento h1*/
     width: 100%; /*Garante que o h1 ocupe toda a largura disponível, necessário para o text-align funcionar corretamente*/
->>>>>>> 13940b7a12c5de16426851e951c04a768338c8c8
 }
 
 
@@ -198,14 +185,15 @@ body {
   gap: 60px;
   padding: 40px;
   flex-wrap: nowrap;
+  
 }
 /* -----------------------------------------------------------
    8. FORMULÁRIO (Inputs)
    ----------------------------------------------------------- */
 .container {
   flex: 0 0 55%;      /* ocupa 55% da largura */
-  max-width: 600px;
-  margin-top: 30px;
+  max-width: 800px;
+  margin-top: 50px;
 }
 
 h2{
@@ -562,6 +550,7 @@ li .material-symbols-outlined {
 
 .social-icons img:hover {
   transform: scale(1.1);
+
 }
 
 .footer-bottom {
