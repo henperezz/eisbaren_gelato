@@ -19,6 +19,9 @@
     /*Fonte da barra de pesquisa*/
     @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
+  /* Fonte da descrição que fica abaixo das bolinhas  */
+    @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Berkshire+Swash&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
 * {
   margin: 0; /* Reseta as configurações de margin pré-existentes na página*/
   padding: 0; /*Reseta as configurações de padding pré-existentes na página*/
@@ -379,12 +382,14 @@ body {
 }
 
 .conteudo-texto p{
-  font-family: "Inter", sans-serif;
+  font-family: "Archivo", sans-serif;
   font-size: 18px;
   font-weight: 500;
 }
 
 .conteudo-texto h3{
+  font-family: "Archivo", sans-serif; /*fonte*/
+  font-weight: 800;
   color: var(--cor-preco);
 }
 
