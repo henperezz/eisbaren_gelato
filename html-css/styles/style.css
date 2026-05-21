@@ -318,17 +318,37 @@ body {
   background: aliceblue;
 }
 
-/*ESTILIZAÇÃO DOS PRODUTOS*/
-section .produto-milkshake{
+/*ESTILIZAÇÃO DAS SESSÕES DOS PRODUTOS MILK SHAKE*/
+.produtos-Milk-Shakes{
   padding: 40px 30px;
 }
 
-.milkShake h1{
+.sessao h1{
   font-family: "Berkshire Swash";
-  font-weight: 200;
-  font-size: 24px;
+  font-size: 25px;
+  font-weight: 500;
+
+  margin-left: 180px; /*distancia apartir da esquerda*/
+  margin-top: 30px; /*distancia do topo*/
 }
 
-/*ESTILIZAÇÃO DOS PRODUTOS*/
+/* .grid-produtos{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+} */
+
+.milkshake1 img{
+  height: 200px; /*tamanho da imagem*/
+  weight: 200px; /*largura da imagem*/
+
+
+  border-radius: 50%;
+  background-color: var(--cor-redonda1); /* troca a cor por categoria */
+  display: flex;
+  align-items: center; /*alinahdno a foto ao centro das bolinhas*/
+  justify-content: center;
+  overflow: hidden;
+}
 
 
