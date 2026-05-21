@@ -313,42 +313,92 @@ body {
   padding: 0 6px;  /*quando tem dois valores, o 1º é o vertical e o segundo o horizontal*/
 }
 
-/*COR no botão (lupa) quando passado o mouse*/
+/*cor no botão (lupa) quando passado o mouse*/
 .caixa-pesquisa:hover > .lupa-btn{
   background: aliceblue;
 }
 
+/*________________________________________________________*/
 /*ESTILIZAÇÃO DAS SESSÕES DOS PRODUTOS MILK SHAKE*/
-.produtos-Milk-Shakes{
+.produtos-Milk-Shakes {
   padding: 40px 30px;
 }
 
-.sessao h1{
+.sessao h1 {
   font-family: "Berkshire Swash";
   font-size: 25px;
   font-weight: 500;
 
-  margin-left: 180px; /*distancia apartir da esquerda*/
+  margin-left: 180px; /*Distancia da parte esquerda*/
   margin-top: 30px; /*distancia do topo*/
 }
 
-/* .grid-produtos{
+
+/*deixei tudo em forma de coluna*/
+.grid-produtos {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-} */
-
-.milkshake1 img{
-  height: 200px; /*tamanho da imagem*/
-  weight: 200px; /*largura da imagem*/
-
-
-  border-radius: 50%;
-  background-color: var(--cor-redonda1); /* troca a cor por categoria */
-  display: flex;
-  align-items: center; /*alinahdno a foto ao centro das bolinhas*/
-  justify-content: center;
-  overflow: hidden;
+  grid-template-columns: repeat(5, 1fr); /*5 itens em uma linha só*/
+  gap: 24px; /*distancia entre os topicos*/
 }
 
+/* o card que empilha imagem, texto e botão */
+.card-produto {
+  display: flex;
+  flex-direction: column; /*ecenssial para o empilhamento */
+  align-items: center;
+  text-align: center;
+  gap: 12px; /*distancia entre os tópicos*/
+}
+
+/* fazendo as bolinhas coloridas */
+.img-circular {
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  background-color: var(--cor-redonda1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* coloca o hover só na imagem */
+.img-circular img {
+  width: 80%; /*pra ela não ocupar 100% da bolinha */
+  height: 80%;
+  object-fit: contain;
+  transition: 0.3s;
+}
+
+.img-circular img:hover {
+  transform: scale(1.2); /* só a imagem cresce */
+}
+
+/*estilização das infos em baio da imagem*/
+.conteudo-texto h2{
+  font-size: 15px;
+}
+
+.conteudo-texto p{
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.conteudo-texto h3{
+  color: var(--cor-preco);
+}
+
+/*estilização do botao*/
+.botao-btn a{
+  text-decoration: none;
+  padding: 10px 10px;
+  border-radius: 15px;
+  background-color: var(--cor-botao);
+  color: #ffffff;
+  transition: 0.3s;
+}
+
+.botao-btn a:hover{
+  transform: scale(1.2);
+}
 
