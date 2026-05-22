@@ -378,13 +378,13 @@ body {
 
 /*estilização das infos em baio da imagem*/
 .conteudo-texto h2{
-  font-size: 15px;
+  font-size: 12px;
 }
 
 .conteudo-texto p{
   font-family: "Archivo", sans-serif;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .conteudo-texto h3{
@@ -397,7 +397,7 @@ body {
 .botao-btn a{
   text-decoration: none;
   padding: 10px 10px;
-  border-radius: 15px;
+  border-radius: 20px;
   background-color: var(--cor-botao);
   color: #ffffff;
   transition: 0.3s;
