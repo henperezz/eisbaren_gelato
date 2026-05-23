@@ -1,16 +1,26 @@
-let buttonSwitch = document.getElementById("buttonSwitch");
-let headerContainer = document.getElementById("headerContainer");
+/* ── DARK MODE ── */
+const buttonSwitch = document.getElementById("buttonSwitch");
+if (buttonSwitch) {
+  buttonSwitch.addEventListener("click", () => {
+    buttonSwitch.classList.toggle("dark");
+  });
+}
 
-buttonSwitch.addEventListener("click", () => {
-  buttonSwitch.classList.toggle("dark");
-  /*headerContainer.classList.toggle("dark");*/
-});
+/* ── FAVORITO ── */
+const favoriteIcon = document.getElementById("favoriteIcon");
+if (favoriteIcon) {
+  favoriteIcon.addEventListener("click", () => {
+    favoriteIcon.classList.toggle("favorited");
+  });
+}
 
-let favoriteIcon = document.getElementById("favoriteIcon");
+/* ── SANDUÍCHE ── */
+const btnSanduiche = document.querySelector(".sanduiche-container");
+const dropdown = document.getElementById("dropdown");
 
-favoriteIcon.addEventListener("click", () => {
-  favoriteIcon.classList.toggle("favorited");
-});
-
-//parte do sanduiche
-
+if (btnSanduiche && dropdown) {
+  btnSanduiche.addEventListener("click", () => {
+    btnSanduiche.classList.toggle("aberto");
+    dropdown.classList.toggle("aberto");
+  });
+}

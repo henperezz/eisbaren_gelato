@@ -216,7 +216,8 @@ body {
 /*ESTILIZAÇÃO DO CARD DROPDOWN*/
 /*estilizando o fundo do dropdown*/
 .dropdown {
-  display: none;/*display none para que ele começe escondido*/
+  position: absolute; /* sai do fluxo — não empurra mais o conteúdo */
+  z-index: 50;        /* fica na frente de tudo */
   flex-direction: column;
   width: 180px; /*largura*/
   margin-top: 8px; /*distancia de cima*/
@@ -224,10 +225,16 @@ body {
   border-radius: 9px; /*arredontdamento da borda*/
   overflow: hidden; /*faz o border-radius funcionar nos filhos*/
   background: #ffffff; /*fundo do ***caixa***/
+
+  opacity: 0;              /* invisível */
+  visibility: hidden;      /* não ocupa espaço no clique */
+  transition: 0.3s;
 }
 
 .dropdown.aberto {
   display: block; /*quando eu colocar a classe 'active' no dropdown no js, ele aparece */
+  opacity: 1;              /* visível */
+  visibility: visible;
 }
 
 /*tirando as configurações padrões do ul*/
@@ -332,8 +339,8 @@ body {
   font-size: 25px;
   font-weight: 500;
 
-  margin-left: 180px; /*Distancia da parte esquerda*/
-  margin-top: 30px; /*distancia do topo*/
+  margin-left: 60px; /*Distancia da parte esquerda*/
+  margin-top: 10px; /*distancia do topo*/
 }
 
 
@@ -341,7 +348,7 @@ body {
 .grid-produtos {
   display: grid;
   grid-template-columns: repeat(5, 1fr); /*5 itens em uma linha só*/
-  gap: 24px; /*distancia entre os topicos*/
+  gap: 9px; /*distancia entre os topicos*/
 }
 
 /* o card que empilha imagem, texto e botão */
@@ -400,7 +407,7 @@ body {
   font-family: "Archivo", sans-serif; /*fonte*/
   font-weight: 800;
   color: var(--cor-preco);
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 /*estilização do botao*/
@@ -417,23 +424,34 @@ body {
   font-size: 16px;
   padding: 14px 20px; /*espaço de dentro do botão, cima e baixo, e laterias*/
   border-radius: 30px;
-  transition: 0.3s;
+  transition: transform 0.5s;
+}
+
+.btn-comprar:hover{
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 10px #9e4e65;
 }
 
 .btn-icone {
-  width: 36px; /*largura da bolinha*/
-  height: 36px;
+  width: 45px; /*largura da bolinha*/
+  height: 45px;
   border-radius: 50%; /*pra deixar redondo*/
   background-color: var(--cor-botao);
   display: flex;  /* centraliza o ícone */
   align-items: center;
   justify-content: center;
   text-decoration: none;
+  transition: transform 0.5s;
+}
+
+.btn-icone:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 8px 10px #9e4e65;
 }
 
 /*ajustando de fato a imagem do carrinho*/
 .btn-icone img {
-  width: 18px;
-  height: 18px;
+  width: 25px;
+  height: 25px;
 }
 
