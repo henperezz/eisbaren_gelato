@@ -220,7 +220,10 @@ form {
   width: 100%;              /* Faz os inputs dividirem o espaço da linha igualmente */
   
 }
-
+/* -----------------------------------------------------------
+   9. OPÇÕES DE PAGAMENTO
+   ----------------------------------------------------------- */
+   
 .opcao-pagamento {
   display: flex;
   align-items: center;
