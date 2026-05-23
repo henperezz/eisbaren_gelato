@@ -310,7 +310,22 @@ body {
 .section-yellow h2 {
   color: #d4a017;
 }
- 
+
+.section-pink{
+  background: linear-gradient(
+    to bottom,
+    var(--rosa-eisbaren) 0%,
+    var(--rosa-eisbaren) 14%,
+    var(--rosa-eisbaren) 34%,
+    rgb(255, 200, 200) 90%,
+    var(--amarelo-eisbaren)
+  )
+}
+.section-pink h2 {
+  color: var(--rosa-forte);
+}
+
+
 .section-blue {
   background: linear-gradient(180deg, var(--azul-eisbaren) 0%, #d0eef8 100%);
 }

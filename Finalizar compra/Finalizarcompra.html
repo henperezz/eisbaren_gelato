@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finalizar Compra</title>
+
+    <link rel="stylesheet" href="Finalizarcompra.css" />
+
+    <link
+      rel="shortcut icon"
+      href="../ImagensFigma/logo.jpg"
+      type="image/x-icon"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..20"
+    />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="headerContainer" id="headerContainer">
+      <div class="logoContainer">
+        <img
+          src="img/logo.jpg"
+          alt="Logo Eisbaren"
+          class="headerLogo"
+        />
+      </div>
+
+      <div class="headerTextContainer">
+        <nav>
+          <ul class="listHeader">
+            <li class="linksList">
+              <a class="textLink" href="">INÍCIO</a>
+            </li>
+
+            <li class="linksList">
+              <a class="textLink" href="">SAIBA MAIS</a>
+            </li>
+
+            <li class="linksList">
+              <a class="textLink" href="">PRODUTOS</a>
+            </li>
+
+            <li class="linksList">
+              <a class="textLink" href="">CARRINHO</a>
+            </li>
+
+            <li class="linksList">
+              <a class="textLink" href="">PERFIL</a>
+            </li>
+
+            <li class="linksList">
+              <span class="material-symbols-outlined profile">
+                group
+              </span>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="buttonSwitch" id="buttonSwitch">
+        <div class="buttonIndicator"></div>
+      </div>
+    </header>
+
+    <!-- IMAGEM INICIAL -->
+    <section class="imagem-inicial">
+      <img
+        src="img/Frame 18.png"
+        alt="imagem inicial da Parte de Produtos"
+      />
+
+      <!-- H1 CORRIGIDO -->
+      <h1>
+        Finalizar <br />
+        compra
+      </h1>
+    </section>
+
+    <!-- WRAPPER PRINCIPAL -->
+    <div class="checkout">
+
+      <!-- FORMULÁRIO -->
+      <div class="container">
+        <h2>Endereço de cobrança:</h2>
+
+        <form>
+          <div class="linha">
+            <input type="text" placeholder="Nome" required />
+            <input type="text" placeholder="Sobrenome" required />
+          </div>
+
+          <div class="linha">
+            <input type="email" placeholder="Email" required />
+            <input type="text" placeholder="Selecionar estado" />
+          </div>
+
+          <div class="linha">
+            <input type="text" placeholder="Selecione a cidade" />
+            <input type="text" placeholder="CEP / Código Postal" />
+          </div>
+
+          
+          <h2>Método de pagamento:</h2>
+
+          <label class="opcao-pagamento">
+            <input
+              type="radio"
+              name="pagamento"
+              checked
+            />
+
+            <span>Cartão de crédito</span>
+
+            <img
+              src="img/credit_card_24dp_787878_FILL0_wght400_GRAD0_opsz24.png"
+              alt="Cartão"
+              class="img-cartao"
+            />
+          </label>
+
+          <input
+            type="text"
+            placeholder="Número do cartão"
+          />
+
+          <input
+            type="text"
+            placeholder="Código de segurança"
+          />
+
+          <label class="opcao-pagamento">
+            <input
+              type="radio"
+              name="pagamento"
+            />
+
+            <span>Pagamento na entrega</span>
+
+            <img
+              src="img/Symbol.png"
+              alt="Dinheiro"
+              class="img-Symbol"
+            />
+          </label>
+
+          <button type="button">
+            Confirmar pedido
+          </button>
+        </form>
+      </div>
+
+      <!-- CARD RESUMO -->
+      <div class="card">
+        <h1>Resumo do pedido</h1>
+
+        <hr />
+
+        <div class="cupom-area">
+          <input
+            type="text"
+            placeholder="Aplicar cupons"
+            class="input-cupom"
+          />
+
+          <button class="btn-cupom">
+            Aplicar
+          </button>
+        </div>
+
+        <hr />
+
+        <div class="detalhes-pedido">
+          <h3>Detalhes do produto:</h3>
+
+           <hr />
+           
+          <div class="resumo-item">
+            <span>3x Classic Vanilla</span>
+            <strong>R$13.00</strong>
+          </div>
+
+          <div class="resumo-item">
+            <span>6x Chocolate Brownie</span>
+            <strong>R$23.00</strong>
+          </div>
+
+          <div class="resumo-item">
+            <span>4x Stawberry Cake</span>
+            <strong>R$22.00</strong>
+          </div>
+
+          <hr />
+
+          <div class="resumo-item">
+            <span>Subtotal</span>
+            <strong>R$200,99</strong>
+          </div>
+
+          <div class="resumo-item">
+            <span>Envio</span>
+            <strong>R$15,00</strong>
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="resumo-total">
+          <span>Total geral</span>
+          <strong>R$215,99</strong>
+        </div>
+
+        <button class="btn-checkout">
+          Finalizar compra
+        </button>
+
+        <hr />
+
+        <label class="text">
+          <img
+            src="img/Symbol (1).png"
+            alt="Dinheiro"
+            class="img-Symbol"
+          />
+
+          <p>
+            Pagamentos seguros e protegidos,
+            devoluções fáceis. Produtos 100%
+            autênticos
+          </p>
+        </label>
+      </div>
+
+    </div>
+    <!-- FECHAMENTO DA CHECKOUT -->
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+      <div class="footer-grid">
+
+        <!-- LOGO -->
+        <div class="footer-logo">
+          <img
+            src="img/logo.jpg"
+            alt="Eisbären Gelato"
+          />
+        </div>
+
+        <!-- MENU -->
+        <div class="footer-links">
+          <h4>NOSSAS PÁGINAS</h4>
+
+          <ul>
+            <li>
+              <a href="index.html">Início</a>
+            </li>
+
+            <li>
+              <a href="login.html">Login</a>
+            </li>
+
+            <li>
+              <a href="saibamais.html">
+                Sobre nós
+              </a>
+            </li>
+
+            <li>
+              <a href="pedido.html">
+                Peça Aqui
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- CONTATO -->
+        <div class="footer-contact">
+          <h4>CONTATO</h4>
+
+          <ul>
+            <li>
+              <span class="material-symbols-outlined mail">
+                mail
+              </span>
+
+              <a
+                class="linksFooter"
+                href="mailto:EisbarenGelato@gmail.com"
+              >
+                EisbarenGelato@gmail.com
+              </a>
+            </li>
+
+            <li>
+              <span class="material-symbols-outlined call">
+                call
+              </span>
+
+              <!-- CORRIGIDO: mailto -> tel -->
+              <a
+                class="linksFooter"
+                href="tel:+551932116698"
+              >
+                +55 19 3211-6698
+              </a>
+            </li>
+          </ul>
+
+          <p>
+            Acompanhe a gente nas redes sociais
+          </p>
+
+          <div class="social-icons">
+            <a href="#">
+              <img
+                src="ImagensFigma/facebook.png"
+                alt="Facebook"
+              />
+            </a>
+
+            <a href="#">
+              <img
+                src="ImagensFigma/instagram.png"
+                alt="Instagram"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- TEXTO FINAL -->
+      <div class="footer-bottom">
+        <p>
+          © 2026 Eisbären Gelato Sorvetes.
+          Todos os direitos reservados.
+        </p>
+
+        <a href="privacidade.html">
+          Política de Privacidade
+        </a>
+      </div>
+    </footer>
+
+    <!-- SCRIPT -->
+    <script src="Finalizarcompra.js"></script>
+  </body>
+</html>
