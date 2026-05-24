@@ -327,14 +327,29 @@ body {
 
 
 .section-blue {
-  background: linear-gradient(180deg, var(--azul-eisbaren) 0%, #d0eef8 100%);
+   background: linear-gradient(
+    to bottom,
+    var(--azul-eisbaren) 0%,
+    var(--azul-eisbaren) 14%,
+    var(--azul-eisbaren) 34%,
+    #ccf1ff 90%,
+    var(--rosa-claro)
+  )
 }
 .section-blue h2 {
   color: #5b8fb9;
 }
  
 .section-pink-light {
-  background: linear-gradient(180deg, var(--rosa-claro) 0%, var(--rosa-claro) 100%);
+   background: linear-gradient(
+    to bottom,
+    var(--rosa-claro) 0%,
+    var(--rosa-claro) 14%,
+    var(--rosa-claro) 34%,
+    #ffd6e7 90%,
+     #f7f1c7
+
+  )
 }
 
 .section-pink-light h2 {
