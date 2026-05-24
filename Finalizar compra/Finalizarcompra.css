@@ -199,7 +199,7 @@ body {
 h2{
   font-size: var(--size-text3); /* Usa o tamanho de texto definido lá no topo */
   color: var(--text2-color); /* Usa a cor definida lá no topo */
-  margin-bottom: 10px; /* Espaço abaixo do título */
+  margin-bottom: 15px; /* Espaço abaixo do título */
   font-weight: 500; /* Deixa o título em negrito */
 
 }
@@ -224,6 +224,15 @@ form {
    9. OPÇÕES DE PAGAMENTO
    ----------------------------------------------------------- */
    
+  
+h3{
+  font-size: var(--size-text3); /* Usa o tamanho de texto definido lá no topo */
+  color: var(--text2-color); /* Usa a cor definida lá no topo */
+  margin-bottom: -1px; /* Espaço abaixo do título */
+  font-weight: 500; /* Deixa o título em negrito */
+
+}
+
 .opcao-pagamento {
   display: flex;
   align-items: center;
@@ -238,6 +247,9 @@ form {
 .opcao-pagamento span {
   flex: 1;
 }
+
+
+
 
 .img-cartao {
   width: 20px;
