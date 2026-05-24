@@ -41,8 +41,7 @@ body{
   color: #111;
 }
 
-.btn-voltar,
-.btn-config{
+.btn-voltar{
   border: none;
   background: transparent;
   font-size: clamp(16px, 1.5vw, 18px);
