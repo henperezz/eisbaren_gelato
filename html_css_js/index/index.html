@@ -27,33 +27,41 @@
     />
 
     <!--ICONE FOOTER-->
+    <!--o link de ambos deve ser um só para os dois icones, tanto para o email ou o telefone -->
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=mail"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=call,mail"
     />
   </head>
   <body>
-    <header id="header">
-      <!-- Aqui eu criei o inicio das divs-->
-      <div class="container">
-        <!-- Logo que ficara também no menu -->
-        <div class="logo">
-          <a href="index.html"
-            ><img src="../../assets/img/icones/logo.jpg"
-          /></a>
-        </div>
-        <!-- Criação dos tópico do menu -->
-        <div class="menu">
-          <nav>
-            <a href="#"> INÍCIO </a>
-            <a href="#"> SOBRE NÓS </a>
-            <a href="#"> PRODUTOS </a>
-            <a href="#"> CARRINHO </a>
-            <a href="#">
-              PERFIL <span class="material-symbols-outlined"> group </span>
-            </a>
-          </nav>
-        </div>
+    <header class="headerContainer" id="headerContainer">
+      <!--id necessário para produzir o efeito de mudança de cor que será adicionado posteriormente-->
+      <div class="logoContainer">
+        <img src="img/logo.jpg" alt="Logo Eisbaren" class="headerLogo" />
+      </div>
+
+      <div class="headerTextContainer">
+        <nav>
+          <ul class="listHeader">
+            <li class="linksList"><a class="textLink" href="">INÍCIO</a></li>
+            <li class="linksList">
+              <a class="textLink" href="">SAIBA MAIS</a>
+            </li>
+            <li class="linksList"><a class="textLink" href="">PRODUTOS</a></li>
+            <li class="linksList"><a class="textLink" href="">CARRINHO</a></li>
+            <li class="linksList">
+              <a class="textLink" href=""
+                >PERFIL<span class="material-symbols-outlined">group</span></a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="buttonSwitch" id="buttonSwitch">
+        <!--id necessária para capitar no js, container especial que é o switcher de modos-->
+        <div class="buttonIndicator"></div>
+        <!--é o indicador do switcher-->
       </div>
     </header>
 
@@ -78,11 +86,7 @@
         <a href="pagina-milkShakes" class="card bg-rosa"
           ><!-- COLOCANDO AS IMAGENS COMO FORMA DE LINK-->
           <!-- MILK SHAKE -->
-          <img
-            src="../../assets/img/produtos/Carrossel de MILK SHAKES.png"
-            class="img-milkskahe"
-            alt="Milk-Shake"
-          />
+          <img src="../../assets/img/" class="img-milkskahe" alt="Milk-Shake" />
           <!-- Aqui eu criei uma classe para cada item, para modificar cada um separadamente-->
           <div class="legenda">
             <span> Milk-Shakes </span>
@@ -92,11 +96,7 @@
 
         <!-- PICOLÉ -->
         <a href="pagina-picole" class="card bg-laranja">
-          <img
-            src="../../assets/img/produtos/Carrossel de PICOLÉ.png"
-            class="img-picole"
-            alt="Picolé"
-          />
+          <img src="img/picole.png" class="img-picole" alt="Picolé" />
           <div class="legenda">
             <span> Picolé </span>
             <p>Conheça +</p>
@@ -105,11 +105,7 @@
 
         <!-- AÇAI -->
         <a href="pagina-acai" class="card bg-vermelho">
-          <img
-            src="../../assets/img/produtos/Carrossel de AÇAI.png"
-            class="img-acai"
-            alt="Açai"
-          />
+          <img src="img/acai.png" class="img-acai" alt="Açai" />
           <div class="legenda">
             <span> Açai </span>
             <p>Conheça +</p>
@@ -119,7 +115,7 @@
         <!-- POTES DE SORVETE -->
         <a href="pagina-potes-de-sorvete" class="card bg-rosa">
           <img
-            src="../../assets/img/produtos/Carrossel de POTE DE SORVETE.png"
+            src="img/poteSorvete.png"
             class="img-potes"
             alt=" Pote de Sorvete"
           />
@@ -132,7 +128,7 @@
         <!-- CASQUINHAS  -->
         <a href="pagina-casquinhas" class="card bg-laranja">
           <img
-            src="../../assets/img/produtos/Carrossel de POTE DE CASQUINHAS.png"
+            src="img/casquinhas.svg"
             class="img-casquinhas"
             alt="Casquinhas"
           />
@@ -144,11 +140,7 @@
 
         <!-- SUNDEY -->
         <a href="pagina-sundeys" class="card bg-vermelho">
-          <img
-            src="../../assets/img/produtos/Carrossel de SUNDEY.png"
-            class="img-sundey"
-            alt="Sundey"
-          />
+          <img src="img/sundey.png" class="img-sundey" alt="Sundey" />
           <div class="legenda">
             <span> Sundae </span>
             <p>Conheça +</p>
@@ -160,10 +152,7 @@
     <!-- INICO DO SAIBA MAIS -->
     <section class="saiba-mais">
       <div class="imagem-loja">
-        <img
-          src="../../assets/img/fundos/saiba_mais_index.jpeg"
-          alt="Ilustração da nossa loja"
-        />
+        <img src="img/loja.png" alt="Ilustração da nossa loja" />
       </div>
 
       <div class="texto">
@@ -186,7 +175,9 @@
           aqui.
         </h3>
 
-        <a href="saibaMais.html" class="btn-saibaMais"> Saiba Mais </a>
+        <a href="../saibamais/saibamais.html" class="btn-saibaMais">
+          Saiba Mais
+        </a>
       </div>
     </section>
 
@@ -195,17 +186,17 @@
       <div class="footer-grid">
         <!-- Logo -->
         <div class="footer-logo">
-          <img src="../../assets/img/icones/logo.jpg" alt="Eisbären Gelato" />
+          <img src="img/logo.jpg" alt="Eisbären Gelato" />
         </div>
 
         <!-- Menu Institucional -->
         <div class="footer-links">
           <h4>MENU INSTITUCIONAL</h4>
           <ul>
-            <li><a href="index.html">inicio</a></li>
+            <li><a href="index.html">inicío</a></li>
             <li><a href="lojas.html">Nossas lojas</a></li>
             <li><a href="login.html">Login</a></li>
-            <li><a href="saibamais.html">Nossa História</a></li>
+            <li><a href="saibamais.html">Sobre nós</a></li>
             <li><a href="pedido.html">Peça Aqui</a></li>
           </ul>
         </div>
@@ -216,18 +207,14 @@
           <!--Lista linkada-->
           <ul>
             <li>
-              <img src="ImagensFigma/emailIcon.png" class="iconLink" /><a
-                class="linksFooter"
-                href="mailto:EisbarenGelato@gmail.com"
-              >
+              <span class="material-symbols-outlined">mail</span
+              ><a class="linksFooter" href="mailto:EisbarenGelato@gmail.com">
                 EisbarenGelato@gmail.com</a
               >
             </li>
             <li>
-              <img src="ImagensFigma/telefoneIcon.png" class="iconLink" /><a
-                class="linksFooter"
-                href="malito:+55 19 3211-6698"
-              >
+              <span class="material-symbols-outlined">call</span
+              ><a class="linksFooter" href="malito:+55 19 3211-6698">
                 +55 19 3211-6698</a
               >
             </li>
@@ -235,12 +222,8 @@
 
           <p>Acompanhe a gente nas redes sociais</p>
           <div class="social-icons">
-            <a href="#"
-              ><img src="ImagensFigma/facebook.png" alt="Facebook"
-            /></a>
-            <a href="#"
-              ><img src="ImagensFigma/instagram.png" alt="Instagram"
-            /></a>
+            <a href="#"><img src="img/facebook2.png" alt="Facebook" /></a>
+            <a href="#"><img src="img/instagram.png" alt="Instagram" /></a>
           </div>
         </div>
       </div>
@@ -251,5 +234,7 @@
         <a href="privacidade.html">Política de Privacidade</a>
       </div>
     </footer>
+
+    <script src="js/index.js"></script>
   </body>
 </html>
