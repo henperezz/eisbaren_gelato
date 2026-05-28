@@ -1,0 +1,726 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("   https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap");
+
+:root {
+  /*Define cores, fontes e tamanhos de textos que serão utilizados posteriormente*/
+  --casquinha-color: #fdae0c;
+  --milkshake-color: #ffaec1;
+  --acai-color: #c50d19;
+  --text1-color: #ffffff;
+  --text2-color: #0f0200;
+  --text3-color: #787878;
+  --text4-color: #d788a6;
+  --text5-color: #f83d8e;
+  --text6-color: #3568e9;
+  --size-text1: 13.7px;
+  --size-text3: 16px;
+  --size-text4: 64px;
+  --size-text6: 14px;
+  --font1: "Inter", sans-serif;
+  --font2: "Archivo", sans-serif;
+  --font3: "Berkshire Swash", sans-serif;
+}
+
+* {
+  margin: 0; /* Reseta as configurações de margin pré-existentes na página*/
+  padding: 0; /*Reseta as configurações de padding pré-existentes na página*/
+}
+
+body {
+  background-color: #ffffff;
+  font-family: var(--font2);
+  font-size: var(--size-text1);
+}
+
+.headerContainer {
+  display: flex; /*Define que o container é flexível*/
+  flex-direction: row; /*Define que a direção do container é na horizonta (row) não na vertical (column)*/
+  height: 98px;
+  width: auto;
+  background: linear-gradient(
+    to bottom,
+    #cf7eae 0%,
+    #e69cc6 14%,
+    #dba7bf 34%,
+    #e8a3b8 90%,
+    #ffffff
+  ); /*Define que o background do container será gradiente*/
+}
+
+.headerLogo {
+  /*Define o tamanho exato da logo*/
+  width: clamp(80px, 12vw, 159px);
+  height: clamp(80px, 12vw, 159px);
+  transition: 0.5s;
+}
+
+.headerLogo:hover {
+  transform: translateY(-5px);
+}
+
+.logoContainer {
+  /*Define que o container é flex, e é automaticamente ajustado para o meio do container-pai*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.headerTextContainer {
+  display: flex; /*Define que o display é flex, o alinhamento na horizontal é no fim do container e que o alinhamento na vertical é no centro*/
+  align-items: center;
+  justify-content: flex-end;
+  margin-left: auto; /*Define que o tamanho da margem para o container do logo é automatico, se ajustando conforme necessário*/
+  padding-bottom: 3.5rem; /*Define que o tamanho da margem para baixo do item até a borda do container é 56px (3.5rem)*/
+  padding-right: 4rem; /*Define que o tamanho da margem para direita do item até a borda do container é 64px (4rem)*/
+}
+
+.listHeader {
+  display: flex;
+  flex-direction: row;
+  margin-top: 4rem;
+  list-style: none; /*Define que a lista não terá marcações, nem bolinhas nem quadrados*/
+  gap: 11.22px; /*Define que a distância entre os items do container é 11.22px*/
+}
+
+.textLink {
+  display: inline-block; /*Define que os textos são inline-block, ou seja, os elementos estão um do lado do outro porém se aceita definições de largura ou altura, necessário para o efeito de hover*/
+  text-decoration: none; /*Define que os links não terão a linha embaixo deles*/
+  color: var(--text1-color);
+  font-family: var(--font1);
+  font-size: 16px;
+  font-weight: 600; /*Define que a fonte será semi-bold*/
+  transition: 0.3s ease-out; /*Define que a transição entre os efeitos (no caso :hover) será de 0.3s desacelerando no final do movimento para maior sensação de suavidade*/
+}
+
+.material-symbols-outlined.profile {
+  font-size: 19px;
+  color: var(--text1-color);
+  cursor: pointer;
+  transition: 0.3s ease-out;
+}
+
+.textLink:hover,
+.perfilHeader:hover,
+.material-symbols-outlined.profile:hover {
+  color: #859678;
+  text-shadow: 0px 5px 6px #859678; /*Define que o texto terá nenhuma sombra no eixo x e terá 5px no eixo y com um blur (tipo esfumaceamento) de 6px e a cor a mesma do texto*/
+  transform: translateY(
+    -4px
+  ); /*Define que o texto se moverá para cima (números negativos empurram para cima, positivos para baixo) em -4px*/
+}
+
+.buttonSwitch {
+  width: 30px;
+  height: 15px;
+  margin-top: 1.5rem;
+  margin-right: 1%; /*Define que a margem da direita tem o tamanho de 1% do elemento pai */
+  border: #ffffff solid 2px; /*Define tamanho da borda, cor e tipo*/
+  border-radius: 30px;
+  position: relative; /*Faz com que o elemento continue em sua posição original sem afetar os elementos ao redor*/
+  cursor: pointer; /*Faz com que aparece o ponteiro de clicar quando o mouse está em cima do elemento*/
+}
+
+.buttonSwitch .buttonIndicator {
+  width: 15px;
+  height: 15px;
+  background-color: #ffffff;
+  border-radius: 150px;
+  transform: scale(
+    0.8
+  ); /*Faz com que o elemento se transforme baseado em uma escala (ele se ajustava a 0.8 do elemento original)*/
+  position: absolute; /*O elemento está em posição absoluta, ou seja, se sobressaí sobre outros elementos, saindo do fluxo original*/
+  left: 0;
+  transition: 0.4s;
+}
+
+.buttonSwitch.dark .buttonIndicator {
+  /*Parte do comando js para quando se é clicado, a ação de mudar a bolinha do switcher e a cor dela*/
+  left: 15px;
+  background-color: #859678;
+}
+
+.buttonSwitch.dark {
+  /*Parte do comando js para quando se é clicado, alterar a cor da borda do elemento*/
+  border-color: #859678;
+}
+
+.productInfo {
+  display: flex;
+  flex-direction: row;
+  margin-top: 4.6rem;
+  margin-left: 3.9rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.containerImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: clamp(150px, 34vw, 597px);
+  height: clamp(142px, 32vw, 571px);
+  background-color: var(--casquinha-color);
+  border-radius: 20px;
+  position: relative;
+  transition: 0.7s;
+}
+.product {
+  width: clamp(70px, 22vw, 415px);
+  height: clamp(100px, 27vw, 634px);
+  transition: 0.7s;
+}
+
+.product:hover {
+  transform: translateY(-20px);
+}
+
+.containerInfoRight {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.ratingStars {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 27px;
+  padding-left: clamp(67px, 20vw, 150px);
+  transition: 0.7s;
+}
+
+.ratingStarsText {
+  padding-left: 5px;
+  font-size: 1rem;
+}
+
+.productName {
+  color: #212529;
+  font-family: var(--font2);
+  font-size: 30px;
+  font-weight: 700;
+  padding-left: clamp(67px, 20vw, 150px);
+  padding-bottom: 27px;
+  transition: 0.7s;
+}
+
+#favoriteIcon {
+  vertical-align: middle;
+  color: var(--text3-color);
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  font-variation-settings: "FILL" 1;
+  user-select: none;
+}
+
+#favoriteIcon:hover {
+  transform: translateY(-3px);
+}
+
+#favoriteIcon.favorited {
+  color: var(--text5-color);
+  font-variation-settings: "FILL" 1;
+}
+
+.priceTag {
+  color: var(--text5-color);
+  font-family: var(--font2);
+  font-size: 30px;
+  font-weight: 700;
+  padding-left: clamp(67px, 20vw, 150px);
+  transition: 0.7s;
+}
+
+.descriptionProduct {
+  color: var(--text3-color);
+  font-size: 1rem;
+  line-height: 1.2rem;
+  width: 26.25rem;
+  padding-left: clamp(67px, 20vw, 150px);
+  padding-top: 1.2rem;
+  padding-bottom: 2.625rem;
+  transition: 0.7s;
+}
+
+.additionals,
+.size {
+  /*Ainda em trabalho, pesquisar sobre menu dropdown*/
+  padding-bottom: 1.5rem;
+  padding-left: clamp(67px, 20vw, 150px);
+  transition: 0.7s;
+  user-select: none;
+}
+
+.material-symbols-outlined.arrowRight {
+  font-size: 18px;
+  vertical-align: middle;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.material-symbols-outlined.arrowRight.activated {
+  transform: rotate(90deg);
+}
+
+.additionalsTitle,
+.size {
+  font-size: 18px;
+  color: var(--text2-color);
+  font-weight: 700;
+}
+
+.additionalsList {
+  visibility: hidden; /*Faz com que o elemento nn fique visível, utiliza-se isso ao inves de displays por conta da capacidadd de animação e transição suave*/
+  opacity: 0; /*Faz com que a opacidade do elemento seja zero*/
+  position: absolute;
+  margin-left: 11.7rem;
+  margin-top: 28rem;
+  border: #e3e4e3 1px solid;
+  border-top: var(--text5-color) 2px solid;
+  padding: 10px 10px;
+  border-radius: 20px;
+  background-color: #ffffff;
+  cursor: auto;
+  z-index: 2;
+  transition:
+    opacity 0.3s ease-in-out,
+    visibility 0.3s ease-in-out;
+}
+
+.additionalsList.activated {
+  visibility: visible;
+  opacity: 1;
+}
+
+.additionalsTitleMenu {
+  font-family: var(--font2);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 10px 0px;
+}
+
+.additionalsList ul {
+  list-style: none;
+}
+
+hr {
+  color: #e3e4e3;
+}
+
+.additionalsItems {
+  cursor: pointer;
+  transition: 0.2s;
+  border: #ffffff 1px solid;
+  border-radius: 10px;
+}
+
+.additionalsItems:hover {
+  background-color: #e3e4e3;
+}
+
+.additionalsItems p {
+  font-family: var(--font2);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 10px 0px;
+}
+
+#valueAdditionals,
+.plusAdditionals {
+  color: var(--text6-color);
+  font-size: 0.7rem;
+}
+
+.plusAdditionals {
+  padding-left: 4rem;
+}
+
+.listSizeButton {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding-left: clamp(67px, 20vw, 150px);
+  gap: 15.36px;
+  transition: 0.7s;
+}
+
+.sizeButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 43px;
+  height: 43px;
+  border: #e3e4e5 solid 3px;
+  border-radius: 43px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.sizeButton:hover {
+  background-color: #f967a6;
+  border-color: #f967a6;
+  transform: translateY(-5px);
+  box-shadow: 0px 5px 10px #9e4e65;
+}
+
+.textSizeButton {
+  font-size: 18px;
+}
+
+.line {
+  width: 642px;
+  margin-top: 32px;
+  margin-bottom: 16px;
+  margin-left: clamp(67px, 20vw, 150px);
+  color: #e3e4e5;
+  transition: 0.5s;
+}
+
+.listCartCounter {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 2rem;
+  padding-left: clamp(67px, 10vw, 500px);
+  transition: 0.5s;
+}
+
+/*Fazer contador para quantidade de itens!!!*/
+.quantity {
+  display: inline-flex;
+  border-radius: 20rem;
+  border: 1px var(--text3-color) solid;
+  overflow: hidden;
+}
+
+.buttonQuantity {
+  height: 3rem;
+  width: 3.5rem;
+  border: none;
+  background: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.buttonQuantity:hover {
+  background: #e5e4e4;
+}
+
+#valueQuantity {
+  height: 3rem;
+  width: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px var(--text3-color) solid;
+  border-right: 1px var(--text3-color) solid;
+  font-size: 18px;
+}
+
+/*Fazer contador para quantidade de itens!!!*/
+
+.buttonAddCart {
+  width: 16rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  background-color: #ed95ae;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.textButtonCart {
+  color: var(--text1-color);
+  font-size: var(--size-text3);
+  font-weight: 500;
+}
+
+.buttonAddCart:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 10px #9e4e65;
+}
+
+.productDescription {
+  display: flex;
+  flex-direction: column;
+  margin-left: 3.9rem;
+  margin-top: 5%;
+}
+
+.descriptionTitle {
+  font-size: 20px;
+  font-family: var(--font2);
+  font-weight: 700;
+  color: var(--text5-color);
+  padding: 2rem 0 10px 7px;
+}
+
+.rowTitleDescription {
+  width: 7.7%;
+  background-color: var(--text5-color);
+  height: 2px;
+  border-radius: 5px;
+  border-color: var(--text5-color);
+}
+
+.textIngredients {
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
+}
+
+.descriptionText {
+  color: var(--text3-color);
+  font-size: 1rem;
+  line-height: 1.2rem;
+  max-width: 55%;
+  padding-left: 5px;
+}
+
+.ingredients {
+  margin-left: 6rem;
+  margin-top: 3rem;
+}
+
+.warningText {
+  font-family: var(--font2);
+  color: #c50d19;
+  font-size: 0.9 rem;
+  padding-top: 2rem;
+}
+
+.warning {
+  vertical-align: text-bottom;
+}
+
+.lineDivisor {
+  margin: 2.5rem;
+  width: 87%;
+  color: #e3e4e5;
+}
+
+.productRecommendation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+.recommendationTitle {
+  font-family: var(--font3);
+  font-size: var(--size-text4);
+  font-weight: 500;
+  padding-bottom: 50px;
+}
+
+.recommendationTinyChange {
+  color: var(--text4-color);
+}
+
+.RecommendationInfo {
+  display: flex;
+  flex-direction: row;
+}
+
+.ulRecommendation {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+}
+
+.containerRecommendation {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+.circleProduct {
+  height: 254px;
+  width: 254px;
+  background-color: var(--casquinha-color);
+  border-radius: 254px;
+  transition: 0.5s ease-in-out;
+}
+
+.circleProduct:hover {
+  transform: scale(1.1);
+}
+
+.recommendationProduct {
+  height: 254px;
+  width: 254px;
+  transition: 0.5s;
+}
+
+.recommendationProduct:hover {
+  transform: translateY(-5px);
+}
+
+.listRecommendation {
+  list-style: none;
+}
+
+.linksRecommendation {
+  text-decoration: none;
+}
+
+.nameRecommendation {
+  padding-top: 15px;
+}
+
+.nameRecommendation,
+.surnameRecommendation {
+  font-size: 23px;
+  font-family: var(--font2);
+  font-weight: 700;
+  color: var(--text2-color);
+}
+
+.buttonGoTo {
+  display: flex;
+  align-items: center;
+  padding-left: 50px;
+  margin-left: 37px;
+  margin-top: 20px;
+  width: 8rem;
+  height: 2rem;
+  background-color: var(--text4-color);
+  color: #ffffff;
+  border-radius: 16px;
+  transition: 0.5s;
+}
+
+.buttonGoTo:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 10px #9e4e65;
+}
+
+.priceTagRecommendation {
+  color: var(--text5-color);
+  font-family: var(--font2);
+  font-size: 30px;
+  font-weight: 700;
+  transition: 0.7s;
+  padding-top: 5px;
+}
+
+/* FOOTER */
+/*ESTILIZAÇÃO DO FOOTER*/
+.main-footer {
+  background: linear-gradient(
+    to bottom,
+    #ffffff 0%,
+    #e69cc6 14%,
+    #dba7bf 34%,
+    #e8a3b8 70%
+  );
+  padding: 80px 10% 30px;
+  margin-top: 5rem;
+  color: #ffffff;
+  font-size: 0.85rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 250px 1fr 1fr; /* tem que bater com o tamanho da logo */
+  gap: 50px;
+  align-items: start; /* alinha tudo verticalmente no centro */
+}
+
+.footer-logo {
+  align-self: center;
+}
+
+.footer-logo img {
+  width: 250px;
+  border-radius: 20px;
+  padding: 5px;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+  padding-top: 40px; /*Esse aqui que alinhou tudo*/
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #ffffff;
+  display: block;
+  margin-bottom: 12px;
+  font-size: 0.85rem;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: #525946;
+  padding-left: 5px;
+}
+
+.footer-contact ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.linksFooter {
+  text-decoration: none;
+  list-style: none;
+  color: #ffffff;
+}
+
+.footer-contact p {
+  margin: 6px 0;
+}
+
+/*Configurações dos icone de contatos*/
+li .material-symbols-outlined {
+  font-size: 20px; /* controla o tamanho do ícone, pois o  width não funciona em icones*/
+  margin-right: 5px; /*espaço entre o texto e o icone*/
+  vertical-align: middle; /* alinha o ícone com o texto da frente */
+}
+
+.social-icons img {
+  width: 20px;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+  padding-top: 25px;
+  border-top: 1px solid rgba(109, 0, 0, 0.4);
+  font-size: 0.85rem;
+  color: #ffffff;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+.footer-bottom a {
+  color: #ffffff;
+  text-decoration: underline;
+}
