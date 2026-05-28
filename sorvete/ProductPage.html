@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eisbaren Gelato</title>
+    <link rel="stylesheet" href="styles/productPage.css" />
+    <link
+      rel="shortcut icon"
+      href="../assets/img/Carrossel de AÇAI.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <header class="headerContainer" id="headerContainer">
+      <!--id necessário para produzir o efeito de mudança de cor que será adicionado posteriormente-->
+      <div class="logoContainer">
+        <img
+          src="../assets/img/logo.jpg"
+          alt="Logo Eisbaren"
+          class="headerLogo"
+        />
+      </div>
+
+      <div class="headerTextContainer">
+        <nav>
+          <ul class="listHeader">
+            <li class="linksList"><a class="textLink" href="">INÍCIO</a></li>
+            <li class="linksList">
+              <a class="textLink" href="">SAIBA MAIS</a>
+            </li>
+            <li class="linksList"><a class="textLink" href="">PRODUTOS</a></li>
+            <li class="linksList"><a class="textLink" href="">CARRINHO</a></li>
+            <li class="linksList"><a class="textLink" href="">PERFIL</a></li>
+            <li class="linksList">
+              <a href=""
+                ><img
+                  src="../assets/img/perfil.png"
+                  alt="Perfil"
+                  class="perfilHeader"
+              /></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="buttonSwitch" id="buttonSwitch">
+        <!--id necessária para capitar no js, container especial que é o switcher de modos-->
+        <div class="buttonIndicator"></div>
+        <!--é o indicador do switcher-->
+      </div>
+    </header>
+
+    <script src="scripts/ProductPage.js"></script>
+
+    <main>
+      <section class="productInfo">
+        <div class="containerImg">
+          <div class="imgProduct">
+            <img
+              src="../sorvete/img/Mix de Chocolate.png"
+              alt="Mix de chocolate"
+              class="product"
+            />
+          </div>
+        </div>
+        <section class="containerInfoRight">
+          <div class="ratingStars"></div>
+          <div class="containerProductName">
+            <h1 class="productName">Mix de Chocolate</h1>
+          </div>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
