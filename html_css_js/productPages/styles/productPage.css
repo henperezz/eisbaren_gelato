@@ -184,9 +184,16 @@ body {
 }
 
 .ratingStars {
+  display: flex;
+  flex-direction: row;
   padding-bottom: 27px;
   padding-left: clamp(67px, 20vw, 150px);
   transition: 0.7s;
+}
+
+.ratingStarsText {
+  padding-left: 5px;
+  font-size: 1rem;
 }
 
 .productName {
@@ -205,6 +212,7 @@ body {
   cursor: pointer;
   transition: 0.2s ease-in-out;
   font-variation-settings: "FILL" 1;
+  user-select: none;
 }
 
 #favoriteIcon:hover {
@@ -268,7 +276,7 @@ body {
   opacity: 0; /*Faz com que a opacidade do elemento seja zero*/
   position: absolute;
   margin-left: 11.7rem;
-  margin-top: 25rem;
+  margin-top: 28rem;
   border: #e3e4e3 1px solid;
   border-top: var(--text5-color) 2px solid;
   padding: 10px 10px;
