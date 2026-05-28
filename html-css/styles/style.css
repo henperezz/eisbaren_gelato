@@ -27,7 +27,7 @@
 
 body {
   background-color: #ffffff;
-  font-family: var(--font2);
+  font-family: 'Inter', sans-serif;
   font-size: var(--size-text1);
 }
 
@@ -42,7 +42,7 @@ body {
     #e69cc6 14%,
     #dba7bf 34%,
     #e8a3b8 90%,
-    #ffffff
+    #e8a3b8
   ); /*Define que o background do container será gradiente*/
 }
 
@@ -144,6 +144,18 @@ body {
   border-color: #859678;
 }
 
+/*Estilização do banner princiapl*/
+.imagem-inicial {
+    width: 100%;       /* Faz o banner ocupar toda a largura da tela */
+    height: auto;      /* Ajusta a altura automaticamente baseada na imagem */
+    overflow: hidden;  /* Esconde qualquer parte da imagem que ultrapasse o limite */
+}
+
+.imagem-inicial img {
+    width: 100%;       /* A imagem preenche a largura do contêiner */
+    height: auto;      /* A altura da imagem escala proporcionalmente */
+    display: block;    /* Remove espaços em branco indesejados embaixo da imagem */
+}
 
 /*ESTILIZÇÃO DO CARROCEL*/
 /* FIM DA ESTILIZAÇÃO DO CARROCEL*/
