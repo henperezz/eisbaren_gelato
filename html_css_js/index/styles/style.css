@@ -21,132 +21,100 @@
 
 /* Essa primeria parte do css serve para adicionar elementos do seu site, basicamente */
 * {
-  margin: 0; /* Reseta as configurações de margin pré-existentes na página*/
-  padding: 0; /*Reseta as configurações de padding pré-existentes na página*/
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
 }
 
-body {
-  background-color: #ffffff;
-  font-family: var(--font2);
-  font-size: var(--size-text1);
-}
-
-.headerContainer {
-  display: flex; /*Define que o container é flexível*/
-  flex-direction: row; /*Define que a direção do container é na horizonta (row) não na vertical (column)*/
-  height: 98px;
-  width: auto;
-  background: linear-gradient(
-    to bottom,
-    #cf7eae 0%,
-    #e69cc6 14%,
-    #dba7bf 34%,
-    #e8a3b8 90%,
-    #ffffff
-  ); /*Define que o background do container será gradiente*/
-}
-
-.headerLogo {
-  /*Define o tamanho exato da logo*/
-  width: clamp(80px, 12vw, 159px);
-  height: clamp(80px, 12vw, 159px);
-  transition: 0.5s;
-}
-
-.headerLogo:hover {
-  transform: translateY(-5px);
-}
-
-.logoContainer {
-  /*Define que o container é flex, e é automaticamente ajustado para o meio do container-pai*/
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 1rem;
-}
-
-.headerTextContainer {
-  display: flex; /*Define que o display é flex, o alinhamento na horizontal é no fim do container e que o alinhamento na vertical é no centro*/
-  align-items: center;
-  justify-content: flex-end;
-  margin-left: auto; /*Define que o tamanho da margem para o container do logo é automatico, se ajustando conforme necessário*/
-  padding-bottom: 3.5rem; /*Define que o tamanho da margem para baixo do item até a borda do container é 56px (3.5rem)*/
-  padding-right: 4rem; /*Define que o tamanho da margem para direita do item até a borda do container é 64px (4rem)*/
-}
-
-.listHeader {
+/*Aqui eu deifini o tamanho da classe container, ou seja, o tmaanho do menu etc*/
+.container {
   display: flex;
   flex-direction: row;
-  margin-top: 4rem;
-  list-style: none; /*Define que a lista não terá marcações, nem bolinhas nem quadrados*/
-  gap: 11.22px; /*Define que a distância entre os items do container é 11.22px*/
+  align-items: center;
+
+  max-width: auto;  /*largura*/
+  height: 110px;  /*altura*/
+  left: 0.24px;  /*Direção*/
+  top: -0.47px; /*Superior*/
+
+
 }
 
-.textLink {
-  display: inline-block; /*Define que os textos são inline-block, ou seja, os elementos estão um do lado do outro porém se aceita definições de largura ou altura, necessário para o efeito de hover*/
-  text-decoration: none; /*Define que os links não terão a linha embaixo deles*/
-  color: var(--text1-color);
-  font-family: var(--font1);
-  font-size: 16px;
-  font-weight: 600; /*Define que a fonte será semi-bold*/
-  transition: 0.3s ease-out; /*Define que a transição entre os efeitos (no caso :hover) será de 0.3s desacelerando no final do movimento para maior sensação de suavidade*/
-}
-
-.material-symbols-outlined.profile {
-  font-size: 19px;
-  color: var(--text1-color);
-  cursor: pointer;
-  transition: 0.3s ease-out;
-}
-
-.textLink:hover,
-.perfilHeader:hover,
-.material-symbols-outlined.profile:hover {
-  color: #859678;
-  text-shadow: 0px 5px 6px #859678; /*Define que o texto terá nenhuma sombra no eixo x e terá 5px no eixo y com um blur (tipo esfumaceamento) de 6px e a cor a mesma do texto*/
-  transform: translateY(
-    -4px
-  ); /*Define que o texto se moverá para cima (números negativos empurram para cima, positivos para baixo) em -4px*/
-}
-
-.buttonSwitch {
-  width: 30px;
-  height: 15px;
-  margin-top: 1.5rem;
-  margin-right: 1%; /*Define que a margem da direita tem o tamanho de 1% do elemento pai */
-  border: #ffffff solid 2px; /*Define tamanho da borda, cor e tipo*/
-  border-radius: 30px;
-  position: relative; /*Faz com que o elemento continue em sua posição original sem afetar os elementos ao redor*/
-  cursor: pointer; /*Faz com que aparece o ponteiro de clicar quando o mouse está em cima do elemento*/
-}
-
-.buttonSwitch .buttonIndicator {
-  width: 15px;
-  height: 15px;
-  background-color: #ffffff;
-  border-radius: 150px;
-  transform: scale(
-    0.8
-  ); /*Faz com que o elemento se transforme baseado em uma escala (ele se ajustava a 0.8 do elemento original)*/
-  position: absolute; /*O elemento está em posição absoluta, ou seja, se sobressaí sobre outros elementos, saindo do fluxo original*/
+/*Aqui tem a cor do menu, que inclusive mais para frente vou colocar em degrade*/
+header {
+  /*O degradê*/
+  background: linear-gradient(to bottom, #cf7eae 0%, #e69cc6 14%, #dba7bf 34%, #e8a3b8 70%);
+  opacity: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
   left: 0;
-  transition: 0.4s;
+  z-index: 100; /* Garante que os menus fiquem atrás dos cards */
+
+  
 }
 
-.buttonSwitch.dark .buttonIndicator {
-  /*Parte do comando js para quando se é clicado, a ação de mudar a bolinha do switcher e a cor dela*/
-  left: 15px;
-  background-color: #859678;
+/* Definição dos tamanhos dos itens*/
+.logo img {
+  width: 150px;
+  height: 150px;
+  left: 0.50px;
+  margin-right: 42.3rem;
 }
 
-.buttonSwitch.dark {
-  /*Parte do comando js para quando se é clicado, alterar a cor da borda do elemento*/
-  border-color: #859678;
+.menu {
+  width: 40%; /*Aqui eu coloquei uma "caixa de texto" maior para os topicos, para que não fique um de baixo do outro*/
+  letter-spacing: 0.29px; /*Espaçamento entre os tópicos do menu*/
+  font-size: 13.7px;
+  font-weight: 400;
+  text-transform: uppercase;/*Deixa tudo do menu em maiusculo*/
+  text-align: right;
+  margin-left: 14rem;
 }
 
+.menu nav a {
+  color: #ffffff;
+  text-decoration: none;
+  padding-right: 30px;
+  font-size:13.7px;
+  transition: 0.3s; /*Coloquei aqui a transição pr adeixar ela de certa forma mais suave */
+  
+}
+
+.menu nav a:hover {
+  color: #525946;
+}
+
+.menu nav a .material-symbols-outlined {
+  font-size: 23px; /* deixa o ícone do mesmo tamanho do texto */
+  position: relative;
+  top: 4px;
+  
+}
+
+section{
+  background-color: #FADADD;
+}
+
+.imagem-inicial {
+  width: 100%;
+  overflow: hidden;
+
+}
+
+.imagem-inicial img {
+  width: 100%; /* Faz a imagem preecher toda a tela*/
+  height: auto; /* Ajuda a fazer com que a imagem não fique achatada*/
+  display: block; /*Garante que toda a imagem oculpe tudo que falta, basicamente.*/
+  
+}
 
 /*ESTILIZÇÃO DO CARROCEL*/
 /* FIM DA ESTILIZAÇÃO DO CARROCEL*/
+
+
+
 
 
 /* ESTILIZAÇÃO DOS PRODUTOS */
@@ -168,7 +136,7 @@ body {
   padding-bottom: 10px; /* Espaço em baixo do titulo */
 
 /* Fontes presentes no figma */
-  font-family: "inter", sans-serif;/* Colanco a fonte certa*/
+  font-family: "inter", sans-serif;/* Colando a fonte certa*/
   font-weight: 900; /* Deixando em negrito, como no figma*/
   line-height: 44px; /* Altura da linha conforme o figma*/
 
@@ -197,7 +165,6 @@ body {
   text-decoration: none; /* tira o sublinhado do link */
   z-index: 1;
   
-  
 }
 
 .card img {
@@ -206,8 +173,6 @@ body {
   left: 50%;
   transform: translateX(-50%);
   object-fit: contain;
-  transition: 0.3s;
-  
 }
 
 /* Ajustes das imagens */
@@ -216,7 +181,6 @@ body {
   height: 69%;
   width: auto; /* Deixa a largura proporcional */
   top: 90px; /* Pra fazer ele abaixar */
-  transform: scale(1.05);
 
 }
 
@@ -224,14 +188,12 @@ body {
   height: 60%;
   width: auto;
   top: 120px;
-  transform: scale(1.05);
 }
 
 .img-acai {
   height: 105%;
   width: auto;
   top: 30px;
-  transform: scale(1.05);
 
 }
 
@@ -376,12 +338,10 @@ body {
   transition: 0.3s;             /* transição hover */
   margin-left: 400px;  /* empurra o botao pra direita */
   margin-top: 250px;   /* deixando mais pra baixo */
-  transition: 0.3s;
 }
 
 .btn-saibaMais:hover {
   background-color: #870028;    /* fundo vermelho ao passar o mouse */
-  transform: scale(1.05);
 }
 
 
@@ -396,21 +356,17 @@ body {
 }
 
 .footer-grid {
-  display: grid;
-  grid-template-columns: 250px 1fr 1fr; /* tem que bater com o tamanho da logo */
-  gap: 50px;
-  align-items: start;  /* alinha tudo verticalmente no centro */
-}
-
-.footer-logo{
-  align-self: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
 }
 
 .footer-logo img {
-    width: 250px;
+    width: 400px;
     border-radius: 20px;
     padding: 5px;
-
 }
 
 .footer-links h4,
@@ -420,7 +376,6 @@ body {
     font-size: 1rem;
     font-weight: bold;
     color: #ffffff;
-    padding-top: 40px; /*Esse aqui que alinhou tudo*/
 }
 
 .footer-links ul {
@@ -448,22 +403,24 @@ body {
     padding: 0;
     margin: 0;
 }
+
 .linksFooter{
   text-decoration: none;
   list-style: none;
   color: #ffffff;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer-contact p {
     margin: 6px 0;
 }
 
-
 /*Configurações dos icone de contatos*/
-li .material-symbols-outlined {
-  font-size: 20px;     /* controla o tamanho do ícone, pois o  width não funciona em icones*/
-  margin-right: 5px; /*espaço entre o texto e o icone*/
-  vertical-align: middle; /* alinha o ícone com o texto da frente */
+.footer-contact p img{
+    width: 20px;
+    margin-right: 5px;
+  
 }
 
 .social-icons img {
@@ -483,7 +440,7 @@ li .material-symbols-outlined {
     align-items: center;
     margin-top: 50px;
     padding-top: 25px;
-    border-top: 1px solid rgba(109, 0, 0, 0.4);
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
     font-size: 0.85rem;
     color: #ffffff;
 }
