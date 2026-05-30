@@ -176,8 +176,10 @@ body {
 ===================== */
 
 .carrinho {
-  width: 100%;
-  padding: clamp(30px, 6vw, 80px) 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: clamp(20px, 3vw, 45px);
 }
 
 .carrinho-container {
@@ -185,6 +187,9 @@ body {
   border-radius: clamp(10px, 1vw, 18px);
   padding: clamp(20px, 3vw, 45px);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  min-height: 1200px;
+
 }
 
 /* Header do carrinho */
@@ -219,5 +224,12 @@ body {
 .cart-table-header p {
   color: #8b8b8b;
   font-size: clamp(0.8rem, 1vw, 1rem);
+}
+
+.cart-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: clamp(20px, 3vw, 45px);
 }
 
