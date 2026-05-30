@@ -227,13 +227,6 @@ body {
 }
 
 .cart-item {
-<<<<<<< Updated upstream
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: clamp(20px, 3vw, 45px);
-=======
  
->>>>>>> Stashed changes
 }
 
