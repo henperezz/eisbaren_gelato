@@ -520,15 +520,8 @@ body {
 .PicoleChocolate {
   display: flex;
   margin-left: 8px;
-  
 }
 
-.PicoleMilhoVerde {
-  width: 100%;
-  height: 100%;
-  margin-top: 30px;
-  object-fit: cover; /* preenche o círculo sem distorcer a imagem */
-}
 
 .img-circular-picole img:hover {
   transform: scale(1.2); /* só a imagem cresce */
