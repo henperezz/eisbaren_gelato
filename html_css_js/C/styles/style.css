@@ -869,5 +869,133 @@ body {
   height: 25px;
 }
 
+/* ESTILIZAÇÃO DA SESSÃO CASQUINHAS */
+.produtos-casquinhas {
+  padding: 40px 30px;
+}
+
+.sessao-casquinhas h1 {
+  font-family: "Berkshire Swash";
+  font-size: 30px;
+  font-weight: 500;
+
+  margin-left: 60px; /*Distancia da parte esquerda*/
+  margin-top: 20px; /*distancia do topo*/
+}
+
+
+/*deixei tudo em forma de coluna*/
+.grid-produtos-casquinhas {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /*5 itens em uma linha só*/
+  margin-top: 30px; /*distancia entre o titulo e os produtos*/
+  gap: 9px; /*distancia entre os topicos*/
+}
+
+/* o card que empilha imagem, texto e botão */
+.card-produto-casquinhas {
+  display: flex;
+  flex-direction: column; /*ecenssial para o empilhamento */
+  align-items: center;
+  text-align: center;
+  gap: 12px; /*distancia entre os tópicos*/
+}
+
+/* fazendo as bolinhas coloridas */
+.img-circular-casquinhas {
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  background-color: var(--cor-redonda2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* coloca o hover só na imagem */
+.img-circular-casquinhas img {
+  width: 80%; /*pra ela não ocupar 100% da bolinha */
+  height: 80%;
+  margin-top: 30px;
+  object-fit: contain;
+  transition: 0.3s;
+}
+
+.img-circular-casquinhas a {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.img-circular-casquinhas img:hover {
+  transform: scale(1.2); /* só a imagem cresce */
+}
+
+/*estilização das infos em baio da imagem*/
+.conteudo-texto-casquinhas h2{
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
+.conteudo-texto-casquinhas p{
+  font-family: "Archivo", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.conteudo-texto-casquinhas h3{
+  font-family: "Archivo", sans-serif; /*fonte*/
+  font-weight: 800;
+  color: var(--cor-preco);
+  margin-bottom: 10px;
+}
+
+/*estilização do botao*/
+.botao-btn {
+  display: flex; /*coloca os itens lado a lado*/
+  align-items: center;
+  gap: 8px; /*espaçamento entre o botão e o incone de carrinho*/
+}
+
+.btn-comprar {
+  background-color: var(--cor-botao);
+  color: #fff;
+  text-decoration: none; /*tiranco o sublinhado*/
+  font-size: 16px;
+  padding: 14px 20px; /*espaço de dentro do botão, cima e baixo, e laterias*/
+  border-radius: 30px;
+  transition: transform 0.5s;
+}
+
+.btn-comprar:hover{
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 10px #9e4e65;
+}
+
+.btn-icone {
+  width: 45px; /*largura da bolinha*/
+  height: 45px;
+  border-radius: 50%; /*pra deixar redondo*/
+  background-color: var(--cor-botao);
+  display: flex;  /* centraliza o ícone */
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: transform 0.5s;
+}
+
+.btn-icone:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 8px 10px #9e4e65;
+}
+
+/*ajustando de fato a imagem do carrinho*/
+.btn-icone img {
+  width: 25px;
+  height: 25px;
+}
+
+
 
 
