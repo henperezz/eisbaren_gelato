@@ -783,17 +783,6 @@ body {
   transition: 0.3s;
 }
 
-/*Estilizaçãlo particular do açai de chocoboll e o açai puro*/
-.açai-chocoboll{
-  display: flex;
-  margin-left: 29px;
-}
-
-.açai-puro{
-  display: flex;
-  margin-left: 15px;
-}
-
 .img-circular-potes a {
   width: 100%;
   height: 100%;
@@ -1043,11 +1032,17 @@ body {
 
 /* coloca o hover só na imagem */
 .img-circular-sundae img {
-  width: 80%; /*pra ela não ocupar 100% da bolinha */
+  width: 140px; /*pra ela não ocupar 100% da bolinha */
   height: 80%;
   margin-top: 30px;
   object-fit: contain;
   transition: 0.3s;
+}
+
+.sundae-oreo {
+display: flex;
+margin-left:  35px;
+
 }
 
 .img-circular-sundae a {
@@ -1127,7 +1122,13 @@ body {
 
 /*ESTILIZAÇÃO DA SESSÃO KIDS FINALMENTE*/
 .produtos-kids {
-  padding: 40px 30px;
+  padding: 80px 30px;
+
+  background: linear-gradient(
+    to bottom,
+    #ffffff 90%,
+    #e8a3b870 100%
+  );
 }
 
 .sessao-kids h1 {
@@ -1363,4 +1364,113 @@ body {
 .btn-icone img {
   width: 25px;
   height: 25px;
+}
+
+
+/* ESTILIZAÇÃO DO FOOTER */
+.main-footer {
+  background: linear-gradient(to bottom, #ffb0c4 0%, #faacc1 14%, #f8b0c8 34%, #e8a3b8 70%);
+    padding: 80px 10% 30px;
+    margin-top: 0;
+    color: #ffffff;
+    font-size: 0.85rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-logo img {
+    width: 400px;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #ffffff;
+    display: block;
+    margin-bottom: 12px;
+    font-size:0.85rem;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #525946;
+    padding-left: 5px;
+}
+
+
+.footer-contact ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.linksFooter{
+  text-decoration: none;
+  list-style: none;
+  color: #ffffff;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-contact p {
+    margin: 6px 0;
+}
+
+/*Configurações dos icone de contatos*/
+.footer-contact p img{
+    width: 20px;
+    margin-right: 5px;
+  
+}
+
+.social-icons img {
+    width: 20px;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+    
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    margin-top: 50px;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    font-size: 0.85rem;
+    color: #ffffff;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.footer-bottom a {
+    color: #ffffff;
+    text-decoration: underline;
 }
