@@ -235,62 +235,38 @@ body {
 .image-mps img,
 .image-ps img,
 .image-arco img {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  height: auto;
-  object-fit: cover;
-  border-radius: 35px;
-  box-shadow: none;
-  display: block;
-  margin: 0 auto;
+    width: 700px;
+    height: auto;
+    display: block;
+    object-fit: contain;
 }
 
 .image-mps img {
-  width: 100%;
-  max-width: 1200px;
-  aspect-ratio: 16 / 9;
-  height: auto;
-  object-fit: cover;
-  border-radius: 35px;
-  box-shadow: none;
-  display: block;
-  margin: 0 auto;
+   width: 700px;
+    height: auto;
+    display: block;
+    object-fit: contain;
 }
 
 .image-arco img {
-  width: 100%;
-  max-width: 700px;
-  aspect-ratio: 16 / 9;
-  height: auto;
-  object-fit: cover;
-  border-radius: 35px;
-  box-shadow: none;
-  display: block;
-  margin: 0 auto;
+    width: 700px;
+    height: auto;
+    display: block;
+    object-fit: contain;
 }
 
 .image-ps img {
-  width: 100%;
-  max-width: 780px;
-  aspect-ratio: 16 / 9;
-  height: auto;
-  object-fit: cover;
-  border-radius: 35px;
-  box-shadow: none;
-  display: block;
-  margin: 0 auto;
+    width: 700px;
+    height: auto;
+    display: block;
+    object-fit: contain;
 }
 
 .image-lupa img {
-  width: 100%;
-  max-width: 780px;
-  aspect-ratio: 16 / 9;
-  height: auto;
-  object-fit: cover;
-  border-radius: 35px;
-  box-shadow: none;
-  display: block;
-  margin: 0 auto;
+    width: 700px;
+    height: auto;
+    display: block;
+    object-fit: contain;
 }
 
 /* Aplicando as cores em degradê */
