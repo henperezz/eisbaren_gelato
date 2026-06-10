@@ -125,8 +125,9 @@ input::-webkit-credentials-auto-fill-button { visibility: hidden; position: abso
 
 .forgot-password {
     text-decoration: none;
-    color: #777;
+    color: #ED95AE;
 }
+
 
 /* Estilo do Switch (Toggle Azul) */
 .switch-container {
