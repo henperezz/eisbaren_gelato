@@ -15,4 +15,12 @@ if (favoriteIcon) {
 }
 
 /* SANDUÍCHE */
-
+const btnSanduiche = document.querySelector(".sanduiche-container"); //o querySelector ele seleciona qualquer seletor do css
+const dropdown = document.getElementById("dropdown"); //o getelemnt... eele seleciona apenas elementos pelo ID especificamente
+ 
+if (btnSanduiche && dropdown) { //verifica se os dois elemntos existem mesmo
+  btnSanduiche.addEventListener("click", () => { //coloquei uma ação no botão (sanduiche) pra que assim que houver o clique
+    btnSanduiche.classList.toggle("aberto"); // acontece essas ações
+    dropdown.classList.toggle("aberto"); //de abrir 
+  });
+}
