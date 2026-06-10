@@ -1,4 +1,4 @@
-/* ── DARK MODE ── */
+/* DARK MODE */
 const buttonSwitch = document.getElementById("buttonSwitch");
 if (buttonSwitch) {
   buttonSwitch.addEventListener("click", () => {
@@ -6,7 +6,7 @@ if (buttonSwitch) {
   });
 }
 
-/* ── FAVORITO ── */
+
 const favoriteIcon = document.getElementById("favoriteIcon");
 if (favoriteIcon) {
   favoriteIcon.addEventListener("click", () => {
@@ -14,5 +14,5 @@ if (favoriteIcon) {
   });
 }
 
-/* ── SANDUÍCHE ── */
+/* SANDUÍCHE */
 
