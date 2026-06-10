@@ -15,12 +15,4 @@ if (favoriteIcon) {
 }
 
 /* ── SANDUÍCHE ── */
-const btnSanduiche = document.querySelector(".sanduiche-container");
-const dropdown = document.getElementById("dropdown");
 
-if (btnSanduiche && dropdown) {
-  btnSanduiche.addEventListener("click", () => {
-    btnSanduiche.classList.toggle("aberto");
-    dropdown.classList.toggle("aberto");
-  });
-}
