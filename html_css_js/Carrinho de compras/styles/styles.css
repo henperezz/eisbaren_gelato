@@ -170,11 +170,9 @@ body {
     width: 100%; /*Garante que o h1 ocupe toda a largura disponível, necessário para o text-align funcionar corretamente*/
 }
 
-
 /* =====================
    CARRINHO
 ===================== */
-
 .carrinho {
   display: flex;
   justify-content: center;
@@ -193,35 +191,13 @@ body {
 }
 
 /* Header do carrinho */
-
-.cart-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: clamp(20px, 3vw, 35px);
-}
-
-.cart-header h2 {
-  font-size: clamp(1.2rem, 2vw, 1.8rem);
-  font-weight: 700;
-}
-
-.cart-header span {
-  font-size: clamp(0.9rem, 1.3vw, 1rem);
-  font-weight: 600;
-}
-
-/* Títulos */
-
-.cart-table-header {
-  display: grid;
-  grid-template-columns: 2.5fr 1fr 1fr 1fr 0.3fr;
-  padding-bottom: clamp(15px, 2vw, 25px);
-  border-bottom: 1px solid #e7e7e7;
-  margin-bottom: clamp(10px, 2vw, 20px);
-}
-
-.cart-table-header p {
-  color: #8b8b8b;
+body {
   font-size: clamp(0.8rem, 1vw, 1rem);
+}
+
+.cart-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: clamp(20px, 3vw, 45px);
 }
