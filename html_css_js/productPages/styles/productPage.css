@@ -187,7 +187,7 @@ body {
   display: flex;
   flex-direction: row;
   padding-bottom: 27px;
-  padding-left: clamp(67px, 20vw, 150px);
+  margin-left: clamp(67px, 8vw, 420px);
   transition: 0.7s;
 }
 
@@ -201,7 +201,7 @@ body {
   font-family: var(--font2);
   font-size: 30px;
   font-weight: 700;
-  padding-left: clamp(67px, 20vw, 150px);
+  margin-left: clamp(67px, 8vw, 420px);
   padding-bottom: 27px;
   transition: 0.7s;
 }
@@ -229,7 +229,7 @@ body {
   font-family: var(--font2);
   font-size: 30px;
   font-weight: 700;
-  padding-left: clamp(67px, 20vw, 150px);
+  margin-left: clamp(67px, 8vw, 420px);
   transition: 0.7s;
 }
 
@@ -238,7 +238,7 @@ body {
   font-size: 1rem;
   line-height: 1.2rem;
   width: 26.25rem;
-  padding-left: clamp(67px, 20vw, 150px);
+  margin-left: clamp(67px, 8vw, 420px);
   padding-top: 1.2rem;
   padding-bottom: 2.625rem;
   transition: 0.7s;
@@ -248,7 +248,7 @@ body {
 .size {
   /*Ainda em trabalho, pesquisar sobre menu dropdown*/
   padding-bottom: 1.5rem;
-  padding-left: clamp(67px, 20vw, 150px);
+  margin-left: clamp(67px, 8vw, 420px);
   transition: 0.7s;
   user-select: none;
 }
@@ -341,7 +341,7 @@ hr {
   display: flex;
   flex-direction: row;
   list-style: none;
-  padding-left: clamp(67px, 20vw, 150px);
+  margin-left: clamp(67px, 8vw, 420px);
   gap: 15.36px;
   transition: 0.7s;
 }
@@ -373,7 +373,7 @@ hr {
   width: 642px;
   margin-top: 32px;
   margin-bottom: 16px;
-  margin-left: clamp(67px, 20vw, 150px);
+  margin-left: clamp(67px, 8vw, 420px);
   color: #e3e4e5;
   transition: 0.5s;
 }
@@ -383,7 +383,7 @@ hr {
   flex-direction: row;
   list-style: none;
   gap: 2rem;
-  padding-left: clamp(67px, 10vw, 500px);
+  margin-left: clamp(67px, 8vw, 420px);
   transition: 0.5s;
 }
 
