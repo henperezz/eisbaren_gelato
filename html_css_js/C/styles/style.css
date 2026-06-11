@@ -262,7 +262,10 @@ body {
   color: #787878;
 }
 
-/*estilização*/
+/*Tentativa de estilizar o fundo das bolinhas do input*/
+input{
+  color: #e69cc6;
+}
 
 /*ESTILIZAÇÃO DA BARRA DE PESQUISA*/
 .caixa-pesquisa{
@@ -371,6 +374,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.5s ease-in-out;
 }
 
 /* coloca o hover só na imagem */
@@ -388,6 +392,14 @@ body {
   height: 220px;
 }
 
+.img-circular:hover{
+  background: linear-gradient(to bottom,
+    #f27ea5 0%,
+    #ff88b9 14%,
+    #fe8eb7 34%,
+    #f793b1 70%);
+  transform: scale(1.1);
+}
 .img-circular img:hover {
   transform: scale(1.2); /* só a imagem cresce */
 }
