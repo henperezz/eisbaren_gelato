@@ -338,6 +338,10 @@ input{
   background: #fff;
 }
 
+.sessao a{
+  text-decoration: none;
+  color: #0F0200;
+}
 .sessao h1 {
   font-family: "Berkshire Swash";
   font-size: 35px;
@@ -474,6 +478,10 @@ input{
   padding: 40px 30px;
 }
 
+.sessao-picole a{
+  text-decoration: none;
+  color: #0F0200;
+}
 .sessao-picole h1 {
   font-family: "Berkshire Swash";
   font-size: 35px;
@@ -538,10 +546,10 @@ input{
 
 .img-circular-picole:hover{
   background: linear-gradient( to bottom,
-    #fdae25 0%,
-    #f8a92bd7 14%,
-    #f8ae36e7 34%,
-    #faae35 70%);
+    #ffe084 0%,
+    #ffe084 14%,
+    #ffe084 34%,
+    #ffe084 70%);
 }
 .img-circular-picole img:hover {
   transform: scale(1.2); /* só a imagem cresce */
@@ -618,6 +626,10 @@ input{
   background: #fff;
 }
 
+.sessao-açai a{
+  text-decoration: none;
+  color: #0F0200;
+}
 .sessao-açai h1 {
   font-family: "Berkshire Swash";
   font-size: 35px;
@@ -758,6 +770,11 @@ input{
   background: #fff;
 }
 
+.sessao-potes a{
+  text-decoration: none;
+  color: #0F0200;
+}
+
 .sessao-potes h1 {
   font-family: "Berkshire Swash";
   font-size: 30px;
@@ -883,6 +900,11 @@ input{
 /* ESTILIZAÇÃO DA SESSÃO CASQUINHAS */
 .produtos-casquinhas {
   padding: 40px 30px;
+}
+
+.sessao-casquinhas a{
+  text-decoration: none;
+  color: #0F0200;
 }
 
 .sessao-casquinhas h1 {
@@ -1012,6 +1034,11 @@ input{
 .produtos-sundae {
   padding: 80px 30px;
   background: #fff;
+}
+
+.sessao-sundae a{
+  text-decoration: none;
+  color: #0F0200;
 }
 
 .sessao-sundae h1 {
