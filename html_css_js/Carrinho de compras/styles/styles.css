@@ -220,31 +220,48 @@ body {
   border-radius: 20px;
 }
 
+
 .texto-milk h2 {
   position: relative;
   margin-left: 215px;
-  margin-top: -130px;
+  margin-top: -145px;
   color: var(--text2-color);
+  font-size: clamp(1.5rem, 1vw, 1rem);
 }
 
 .texto-milk span {
+  display: block;
   position: relative;
   margin-left: 215px;
-  margin-top: 20px;
+  margin-top: 10px;
   color: var(--text2-color);
 }
 
 .item-price {
- display: grid;
-  grid-template-columns: 2.5fr 1fr 1fr 1fr 0.3fr;
-  padding-bottom: clamp(15px, 2vw, 25px);
-  margin-top: 30px;
-  border-bottom: 1px solid #e7e7e7;
-  margin-bottom: clamp(10px, 2vw, 20px);
+  position: relative;
+  margin-left: 45%;
+  margin-top: -60px;
+  font-size: clamp(1.4rem, 1vw, 1rem);
+  color: #F83D8E;
 }
 
-.item-price h3{
-  color: #8b8b8b;
-  margin-left: 30px;
-  font-size: clamp(1.5rem, 1vw, 1rem);
+.item-quantity {
+  position: relative;
+  margin-left: 65%;
+  margin-top: -30px;
 }
+
+.item-total {
+  position: relative;
+  margin-left: 78%;
+  margin-top: -30px;
+  font-size: clamp(1.4rem, 1vw, 1rem);
+  color: #F83D8E;
+}
+
+.item-remove {
+  position: relative;
+  margin-left: 92%;
+  margin-top: -35px;
+}
+
