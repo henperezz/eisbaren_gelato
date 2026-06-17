@@ -397,11 +397,6 @@ input{
 }
 
 .img-circular:hover{
-  background: linear-gradient(to bottom,
-    #fa96b8 0%,
-    #f892bd 14%,
-    #f895b9 34%,
-    #f793b1 70%);
   transform: scale(1.1);
 }
 .img-circular img:hover {
@@ -545,12 +540,9 @@ input{
 }
 
 .img-circular-picole:hover{
-  background: linear-gradient( to bottom,
-    #ffe084 0%,
-    #ffe084 14%,
-    #ffe084 34%,
-    #ffe084 70%);
+  transform: scale(1.1);
 }
+
 .img-circular-picole img:hover {
   transform: scale(1.2); /* só a imagem cresce */
 }
@@ -666,6 +658,7 @@ input{
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.5s ease-in-out;
 }
 
 /* coloca o hover só na imagem */
@@ -694,6 +687,9 @@ input{
   display: block;
 }
 
+.img-circular-açai:hover{
+  transform: scale(1.1);
+}
 .img-circular-açai img:hover {
   transform: scale(1.2); /* só a imagem cresce */
 }
@@ -811,6 +807,7 @@ input{
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.5s ease-in-out;
 }
 
 /* coloca o hover só na imagem */
@@ -828,6 +825,9 @@ input{
   display: block;
 }
 
+.img-circular-potes:hover{
+  transform:scale(1.1);
+}
 .img-circular-potes img:hover {
   transform: scale(1.2); /* só a imagem cresce */
 }
@@ -943,6 +943,7 @@ input{
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.5s ease-in-out;
 }
 
 /* coloca o hover só na imagem */
@@ -958,6 +959,10 @@ input{
   width: 100%;
   height: 100%;
   display: block;
+}
+
+.img-circular-casquinhas:hover{
+  transform: scale(1.1);
 }
 
 .img-circular-casquinhas img:hover {
@@ -1077,6 +1082,7 @@ input{
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.5s ease-in-out;
 }
 
 
@@ -1099,6 +1105,10 @@ margin-left:  35px;
   width: 100%;
   height: 100%;
   display: block;
+}
+
+.img-circular-sundae:hover{
+  transform: scale(1.1);
 }
 
 .img-circular-sundae img:hover {
@@ -1231,6 +1241,7 @@ margin-left:  35px;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.5s ease-in-out;
 }
 
 .img-circular-kids2 {
@@ -1241,6 +1252,7 @@ margin-left:  35px;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.5s ease-in-out;
 }
 
 .img-circular-kids3 {
@@ -1251,6 +1263,7 @@ margin-left:  35px;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.5s ease-in-out;
 }
 
 .img-circular-kids4 {
@@ -1261,6 +1274,7 @@ margin-left:  35px;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.5s ease-in-out;
 }
 
 .img-circular-kids5 {
@@ -1271,6 +1285,7 @@ margin-left:  35px;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.5s ease-in-out;
 }
 
 
@@ -1343,6 +1358,26 @@ margin-left:  35px;
   width: 100%;
   height: 100%;
   display: block;
+}
+
+.img-circular-kids1:hover {
+  transform: scale(1.1); /* só a imagem cresce */
+}
+
+.img-circular-kids2:hover {
+  transform: scale(1.1); /* só a imagem cresce */
+}
+
+.img-circular-kids3:hover {
+  transform: scale(1.1); /* só a imagem cresce */
+}
+
+.img-circular-kids4:hover {
+  transform: scale(1.1); /* só a imagem cresce */
+}
+
+.img-circular-kids5:hover {
+  transform: scale(1.1); /* só a imagem cresce */
 }
 
 .img-circular-kids1 img:hover {
