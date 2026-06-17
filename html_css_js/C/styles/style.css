@@ -176,6 +176,31 @@ body {
 /*ESTILIZAÇÃO DO SANDUICHE*/
 /*Tirando efeitos padrões do botão*/
 
+/*Estilizando as cores das bolinhas */
+/*AIND APRECISA DE AJUSTES URGENTES PQ AS CORES TÃO TODAS BUGADAS*/
+.color-radio1{
+  accent-color: var(--cor-redonda1);
+}
+.color-radio2{
+  accent-color: var(--cor-redonda2);
+}
+.color-radio3{
+  accent-color: var(--cor-redonda3);
+}
+.color-radio4{
+  accent-color: var(--cor-redonda1);
+}
+.color-radio5{
+  accent-color: var(--cor-redonda2);
+}
+.color-radio6{
+  accent-color: var(--cor-redonda3);
+}
+.color-radio7{
+  accent-color: var(--cor-redonda1);
+}
+
+
 .sanduiche-container{
   border: none; /*tira as bordas de dentro*/
   background: none; /*tirando acor padrão de dentro*/
@@ -1187,7 +1212,7 @@ margin-left:  35px;
 }
 
 .produtos-kids-picole{
-  padding: 100px 30px;
+  padding: 120px 40px 300px;
   background: linear-gradient(to bottom,
     #ffffff 6%,
     #ffffff 14%,
