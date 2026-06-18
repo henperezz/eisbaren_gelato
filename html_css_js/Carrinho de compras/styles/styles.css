@@ -3,7 +3,7 @@
 @import url("   https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap");
 
 :root {
-  /*Define cores, fontes e tamanhos de textos que serão utilizados posteriormente*/
+  /Define cores, fontes e tamanhos de textos que serão utilizados posteriormente/
   --casquinha-color: #fdae0c;
   --milkshake-color: #ffaec1;
   --acai-color: #c50d19;
@@ -24,7 +24,7 @@
 
 * {
   margin: 0; /* Reseta as configurações de margin pré-existentes na página*/
-  padding: 0; /*Reseta as configurações de padding pré-existentes na página*/
+  padding: 0; /Reseta as configurações de padding pré-existentes na página/
 }
 
 body {
@@ -34,8 +34,8 @@ body {
 }
 
 .headerContainer {
-  display: flex; /*Define que o container é flexível*/
-  flex-direction: row; /*Define que a direção do container é na horizonta (row) não na vertical (column)*/
+  display: flex; /Define que o container é flexível/
+  flex-direction: row; /Define que a direção do container é na horizonta (row) não na vertical (column)/
   height: 98px;
   width: auto;
   background: linear-gradient(
@@ -45,11 +45,11 @@ body {
     #dba7bf 34%,
     #e8a3b8 90%,
     #e8a3b8
-  ); /*Define que o background do container será gradiente*/
+  ); /Define que o background do container será gradiente/
 }
 
 .headerLogo {
-  /*Define o tamanho exato da logo*/
+  /Define o tamanho exato da logo/
   width: clamp(80px, 12vw, 159px);
   height: clamp(80px, 12vw, 159px);
   transition: 0.5s;
@@ -60,7 +60,7 @@ body {
 }
 
 .logoContainer {
-  /*Define que o container é flex, e é automaticamente ajustado para o meio do container-pai*/
+  /Define que o container é flex, e é automaticamente ajustado para o meio do container-pai/
   display: flex;
   justify-content: center;
   align-items: center;
@@ -68,30 +68,30 @@ body {
 }
 
 .headerTextContainer {
-  display: flex; /*Define que o display é flex, o alinhamento na horizontal é no fim do container e que o alinhamento na vertical é no centro*/
+  display: flex; /Define que o display é flex, o alinhamento na horizontal é no fim do container e que o alinhamento na vertical é no centro/
   align-items: center;
   justify-content: flex-end;
-  margin-left: auto; /*Define que o tamanho da margem para o container do logo é automatico, se ajustando conforme necessário*/
-  padding-bottom: 3.5rem; /*Define que o tamanho da margem para baixo do item até a borda do container é 56px (3.5rem)*/
-  padding-right: 4rem; /*Define que o tamanho da margem para direita do item até a borda do container é 64px (4rem)*/
+  margin-left: auto; /Define que o tamanho da margem para o container do logo é automatico, se ajustando conforme necessário/
+  padding-bottom: 3.5rem; /Define que o tamanho da margem para baixo do item até a borda do container é 56px (3.5rem)/
+  padding-right: 4rem; /Define que o tamanho da margem para direita do item até a borda do container é 64px (4rem)/
 }
 
 .listHeader {
   display: flex;
   flex-direction: row;
   margin-top: 4rem;
-  list-style: none; /*Define que a lista não terá marcações, nem bolinhas nem quadrados*/
-  gap: 11.22px; /*Define que a distância entre os items do container é 11.22px*/
+  list-style: none; /Define que a lista não terá marcações, nem bolinhas nem quadrados/
+  gap: 11.22px; /Define que a distância entre os items do container é 11.22px/
 }
 
 .textLink {
-  display: inline-block; /*Define que os textos são inline-block, ou seja, os elementos estão um do lado do outro porém se aceita definições de largura ou altura, necessário para o efeito de hover*/
-  text-decoration: none; /*Define que os links não terão a linha embaixo deles*/
+  display: inline-block; /Define que os textos são inline-block, ou seja, os elementos estão um do lado do outro porém se aceita definições de largura ou altura, necessário para o efeito de hover/
+  text-decoration: none; /Define que os links não terão a linha embaixo deles/
   color: var(--text1-color);
   font-family: var(--font1);
   font-size: 16px;
-  font-weight: 600; /*Define que a fonte será semi-bold*/
-  transition: 0.3s ease-out; /*Define que a transição entre os efeitos (no caso :hover) será de 0.3s desacelerando no final do movimento para maior sensação de suavidade*/
+  font-weight: 600; /Define que a fonte será semi-bold/
+  transition: 0.3s ease-out; /Define que a transição entre os efeitos (no caso :hover) será de 0.3s desacelerando no final do movimento para maior sensação de suavidade/
 }
 
 .material-symbols-outlined.profile {
@@ -105,10 +105,10 @@ body {
 .perfilHeader:hover,
 .material-symbols-outlined.profile:hover {
   color: #859678;
-  text-shadow: 0px 5px 6px #859678; /*Define que o texto terá nenhuma sombra no eixo x e terá 5px no eixo y com um blur (tipo esfumaceamento) de 6px e a cor a mesma do texto*/
+  text-shadow: 0px 5px 6px #859678; /Define que o texto terá nenhuma sombra no eixo x e terá 5px no eixo y com um blur (tipo esfumaceamento) de 6px e a cor a mesma do texto/
   transform: translateY(
     -4px
-  ); /*Define que o texto se moverá para cima (números negativos empurram para cima, positivos para baixo) em -4px*/
+  ); /Define que o texto se moverá para cima (números negativos empurram para cima, positivos para baixo) em -4px/
 }
 
 .buttonSwitch {
@@ -116,10 +116,10 @@ body {
   height: 15px;
   margin-top: 1.5rem;
   margin-right: 1%; /*Define que a margem da direita tem o tamanho de 1% do elemento pai */
-  border: #ffffff solid 2px; /*Define tamanho da borda, cor e tipo*/
+  border: #ffffff solid 2px; /Define tamanho da borda, cor e tipo/
   border-radius: 30px;
-  position: relative; /*Faz com que o elemento continue em sua posição original sem afetar os elementos ao redor*/
-  cursor: pointer; /*Faz com que aparece o ponteiro de clicar quando o mouse está em cima do elemento*/
+  position: relative; /Faz com que o elemento continue em sua posição original sem afetar os elementos ao redor/
+  cursor: pointer; /Faz com que aparece o ponteiro de clicar quando o mouse está em cima do elemento/
 }
 
 .buttonSwitch .buttonIndicator {
@@ -129,26 +129,26 @@ body {
   border-radius: 150px;
   transform: scale(
     0.8
-  ); /*Faz com que o elemento se transforme baseado em uma escala (ele se ajustava a 0.8 do elemento original)*/
-  position: absolute; /*O elemento está em posição absoluta, ou seja, se sobressaí sobre outros elementos, saindo do fluxo original*/
+  ); /Faz com que o elemento se transforme baseado em uma escala (ele se ajustava a 0.8 do elemento original)/
+  position: absolute; /O elemento está em posição absoluta, ou seja, se sobressaí sobre outros elementos, saindo do fluxo original/
   left: 0;
   transition: 0.4s;
 }
 
 .buttonSwitch.dark .buttonIndicator {
-  /*Parte do comando js para quando se é clicado, a ação de mudar a bolinha do switcher e a cor dela*/
+  /Parte do comando js para quando se é clicado, a ação de mudar a bolinha do switcher e a cor dela/
   left: 15px;
   background-color: #859678;
 }
 
 .buttonSwitch.dark {
-  /*Parte do comando js para quando se é clicado, alterar a cor da borda do elemento*/
+  /Parte do comando js para quando se é clicado, alterar a cor da borda do elemento/
   border-color: #859678;
 }
 
-/*Edição do texto central*/
+/Edição do texto central/
 .imagem-inicial {
-    position: relative; /*Faz com que o elemento continue em sua posição original sem afetar os elementos ao redor, necessário para a posição absoluta do h1*/
+    position: relative; /Faz com que o elemento continue em sua posição original sem afetar os elementos ao redor, necessário para a posição absoluta do h1/
     width: 100%;
     height: auto;
 }
@@ -156,21 +156,21 @@ body {
 .imagem-inicial img {
     width: 100%;
     height: auto;
-    object-fit: cover; /*Garante que a imagem preencha o espaço disponível sem distorcer, cortando as partes que ultrapassarem o container*/
+    object-fit: cover; /Garante que a imagem preencha o espaço disponível sem distorcer, cortando as partes que ultrapassarem o container/
 }
 .imagem-inicial h1 {
     font-family: "Berkshire Swash", cursive;
     font-size: var(--size-text4);
     color: var(--text2-color);
-    position: absolute; /*Faz com que o elemento se sobressaia sobre outros elementos, saindo do fluxo original*/
+    position: absolute; /Faz com que o elemento se sobressaia sobre outros elementos, saindo do fluxo original/
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /*Faz com que o elemento se mova para o centro exato da tela, baseado em sua própria largura e altura*/
-    text-align: center; /*Centraliza o texto dentro do elemento h1*/
-    width: 100%; /*Garante que o h1 ocupe toda a largura disponível, necessário para o text-align funcionar corretamente*/
+    transform: translate(-50%, -50%); /Faz com que o elemento se mova para o centro exato da tela, baseado em sua própria largura e altura/
+    text-align: center; /Centraliza o texto dentro do elemento h1/
+    width: 100%; /Garante que o h1 ocupe toda a largura disponível, necessário para o text-align funcionar corretamente/
 }
 
-/*-----------------------------------------------------------------------------------------------*/
+/-----------------------------------------------------------------------------------------------/
 /* Header do carrinho */
 
 .cart-header {
@@ -212,56 +212,181 @@ body {
   font-size: clamp(1.3rem, 1vw, 1rem);
 }
 
-.img img{
-  width: 160px;
-  height: 160px;
-  margin-left: 40px;
-  background-color: #FFAEC1;
-  border-radius: 20px;
+/* ========================= */
+/* CARRINHO ORGANIZADO */
+/* ========================= */
+
+/* Espaço entre produtos */
+
+.img,
+.Açaí-Kiwi,
+.Kit-Picolé,
+.pote{
+
+margin-top:40px;
+
+clear:both;
+
 }
 
 
-.texto-milk h2 {
-  position: relative;
-  margin-left: 215px;
-  margin-top: -145px;
-  color: var(--text2-color);
-  font-size: clamp(1.5rem, 1vw, 1rem);
+
+/* IMAGEM */
+
+.img img,
+.Açaí-Kiwi img,
+.Kit-Picolé img,
+.pote img{
+
+width:160px;
+
+height:160px;
+
+margin-left:40px;
+
+border-radius:20px;
+
+background:#FFAEC1;
+
+object-fit:cover;
+
+float:left;
+
 }
 
-.texto-milk span {
-  display: block;
-  position: relative;
-  margin-left: 215px;
-  margin-top: 10px;
-  color: var(--text2-color);
+
+
+/* TEXTO */
+
+.texto-milk{
+
+margin-left:240px;
+
+margin-top:20px;
+
+min-height:160px;
+
 }
 
-.item-price {
-  position: relative;
-  margin-left: 45%;
-  margin-top: -60px;
-  font-size: clamp(1.4rem, 1vw, 1rem);
-  color: #F83D8E;
+.texto-milk h2{
+
+font-size:22px;
+
+line-height:1.2;
+
+margin-bottom:10px;
+
 }
 
-.item-quantity {
-  position: relative;
-  margin-left: 65%;
-  margin-top: -30px;
+.texto-milk span{
+
+color:#666;
+
 }
 
-.item-total {
-  position: relative;
-  margin-left: 78%;
-  margin-top: -30px;
-  font-size: clamp(1.4rem, 1vw, 1rem);
-  color: #F83D8E;
+
+
+/* PREÇO */
+
+.item-price{
+
+position:absolute;
+
+left:55%;
+
+transform:translateY(-120px);
+
 }
 
-.item-remove {
-  position: relative;
-  margin-left: 92%;
-  margin-top: -35px;
+.item-price h3{
+
+font-size:22px;
+
 }
 
+
+
+/* QUANTIDADE */
+
+.quantity{
+
+position:absolute;
+
+left:70%;
+
+transform:translateY(-120px);
+
+display:flex;
+
+gap:10px;
+
+}
+
+
+
+/* TOTAL */
+
+.item-total{
+
+position:absolute;
+
+left:85%;
+
+transform:translateY(-120px);
+
+}
+
+.item-total h3{
+
+font-size:22px;
+
+}
+
+
+
+/* REMOVER */
+
+.item-remove{
+
+position:absolute;
+
+right:30px;
+
+transform:translateY(-170px);
+
+}
+
+.item-remove img{
+
+width:40px;
+
+}
+
+
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+.item-price,
+.quantity,
+.item-total,
+.item-remove{
+
+position:static;
+
+transform:none;
+
+margin-left:220px;
+
+margin-top:10px;
+
+}
+
+.texto-milk{
+
+margin-left:200px;
+
+}
+
+}
