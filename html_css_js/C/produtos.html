@@ -90,13 +90,14 @@
       <!-- topicos que irão aparecer -->
       <div class="dropdown-menu">
         <ul class="lista-categorias">
-          <li class="item"><label><input class="color-radio1" type="radio" name="cat">Milk Shakes</label></li>
-          <li class="item"><label><input class="color-radio2" type="radio" name="cat"> Picolé</label></li>
-          <li class="item"><label><input class="color-radio3" type="radio" name="cat"> Açaí</label></li>
-          <li class="item"><label><input class="color-radio4" type="radio" name="cat"> Pote de Sorvete</label></li>
-          <li class="item"><label><input class="color-radio5" type="radio" name="cat"> Casquinhas</label></li>
-          <li class="item"><label><input class="color-radio6" type="radio" name="cat"> Sunday</label></li>
-          <li class="item"><label><input class="color-radio7" type="radio" name="cat"> Kids</label></li>
+          <!-- Aqui eu tentei criar um link ancora usando o id na sessão e o href no menu sanduyiche (obs:Não pegou) -->
+          <li class="item"><a href="#produtos-Milk-Shakes"><label><input class="color-radio" type="radio" name="cat">Milk Shakes</label></a></li>
+          <li class="item"><a href="#produtos-picole"><label><input class="color-radio" type="radio" name="cat"> Picolé</label></a></li>
+          <li class="item"><label><input class="color-radio" type="radio" name="cat"> Açaí</label></li>
+          <li class="item"><label><input class="color-radio" type="radio" name="cat"> Pote de Sorvete</label></li>
+          <li class="item"><label><input class="color-radio" type="radio" name="cat"> Casquinhas</label></li>
+          <li class="item"><label><input class="color-radio" type="radio" name="cat"> Sunday</label></li>
+          <li class="item"><label><input class="color-radio" type="radio" name="cat"> Kids</label></li>
         </ul>
 
       <!-- EXPLICAÇÃO DOS COMANDOS USADOS ACIMA -->
@@ -108,9 +109,9 @@
 
     <!-- PARTE DOS PRODUTOS -->
      <!-- Section do Milks Shakes -->
-  <section class="produtos-Milk-Shakes">
+  <section class="produtos-Milk-Shakes" id="produtos-Milk-Shakes">
     <div class="sessao">
-      <a href="#"><h1>Milk-Shakes</h1></a>
+      <h1>Milk-Shakes</h1>
     </div>
 
     <div class="grid-produtos">
@@ -237,7 +238,7 @@
   </section> 
   
   <!-- Section dos Picolés -->
-  <section class="produtos-picole">
+  <section class="produtos-picole" id="produtos-picole">
     <!--sessão dos produtos-->
     <div class="sessao-picole">
       <a href="#"><h1>Picolés</h1></a>
@@ -903,6 +904,9 @@
 
   <!-- SESSÃO INFANTIL PICOLÉS -->
   <section class="produtos-kids-picole">
+    <div class="sessao-kids">
+      <h1>Picolés</h1>
+    </div>
 
     <!-- PICOLÉ 1 -->
     <div class="grid-produtos-kids">

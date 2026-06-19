@@ -178,27 +178,10 @@ body {
 
 /*Estilizando as cores das bolinhas */
 /*AIND APRECISA DE AJUSTES URGENTES PQ AS CORES TÃO TODAS BUGADAS*/
-.color-radio1{
+.color-radio{
   accent-color: var(--cor-redonda1);
 }
-.color-radio2{
-  accent-color: var(--cor-redonda2);
-}
-.color-radio3{
-  accent-color: var(--cor-redonda3);
-}
-.color-radio4{
-  accent-color: var(--cor-redonda1);
-}
-.color-radio5{
-  accent-color: var(--cor-redonda2);
-}
-.color-radio6{
-  accent-color: var(--cor-redonda3);
-}
-.color-radio7{
-  accent-color: var(--cor-redonda1);
-}
+
 
 
 .sanduiche-container{
@@ -286,12 +269,6 @@ body {
   font-size: 14px;
   color: #787878;
 }
-
-/*Tentativa de estilizar o fundo das bolinhas do input*/
-input{
-  color: #e69cc6;
-}
-
 /*ESTILIZAÇÃO DA BARRA DE PESQUISA*/
 .caixa-pesquisa{
   position: absolute; /*permite colocar o elemento a onde vc quiser*/
