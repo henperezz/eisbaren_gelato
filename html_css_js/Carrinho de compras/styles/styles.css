@@ -292,7 +292,7 @@ body {
 .item-remove {
   position: relative;
   margin-left: 94%;
-  margin-top: -63px;
+  margin-top: -32px;
 }
 
 
@@ -339,23 +339,30 @@ body {
 
 }
 
+/* LINHA SEPARANDO OS PRODUTOS */
+
+.img,
+.Açaí-Kiwi,
+.Kit-Picolé,
+.pote{
+    border-bottom:1px solid #e7e7e7;  
+}
 
 /* RESPONSIVO */
 
-@media (max-width:480px){
-.texto-milk{
-  margin-left:20px;
-  margin-top:20px;
+@media(max-width:480px){
 
+.texto-milk{
+    margin-top:20px;
+    margin-left:20px;
 }
 
 .item-price,
 .quantity,
 .item-total,
 .item-remove{
-
-  margin-left:20px;
-  margin-top:20px;
-
+    margin-top:20px;
+    margin-left:20px;
 }
+
 }
