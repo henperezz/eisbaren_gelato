@@ -27,6 +27,10 @@
   padding: 0; /*Reseta as configurações de padding pré-existentes na página*/
 }
 
+html{
+  scroll-behavior: smooth; /*ESSE COMANDO ESTLIZA O SCROLL, usei no sanduiche, ous eja agr quando vc clica no snaduiche ele deixa mas suave*/
+}
+
 body {
   background-color: #ffffff;
   font-family: 'Inter', sans-serif;
@@ -177,18 +181,14 @@ body {
 /*Tirando efeitos padrões do botão*/
 
 /*Estilizando as cores das bolinhas */
-/*AIND APRECISA DE AJUSTES URGENTES PQ AS CORES TÃO TODAS BUGADAS*/
 .color-radio{
   accent-color: var(--cor-redonda1);
 }
-
-
 
 .sanduiche-container{
   border: none; /*tira as bordas de dentro*/
   background: none; /*tirando acor padrão de dentro*/
   outline: none; /*tira a borda quando clicamos na barra*/
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -208,8 +208,7 @@ body {
   margin-left: 20px;
   width: 23px; /*comprimento da linha */
   height: 3px; /*grossura das linhas*/
-  background: #d898b6;
-; /*coloquei essa cor pq eu achei bonita*/
+  background: #d898b6; /*coloquei essa cor pq eu achei bonita*/
   border-radius: 2px; /*arredondamento das linhas*/
   cursor: pointer;
 }
@@ -224,8 +223,9 @@ body {
 /*ESTILIZAÇÃO DO CARD DROPDOWN*/
 /*estilizando o fundo do dropdown*/
 .dropdown {
-  position: absolute; /* sai do fluxo — não empurra mais o conteúdo */
-  z-index: 50;        /* fica na frente de tudo */
+  position: absolute; /* sai do fluxo*/
+  z-index: 50;/*fica na frente de tudo*/
+  display: none;
   flex-direction: column;
   width: 180px; /*largura*/
   margin-top: 8px; /*distancia de cima*/
@@ -233,15 +233,14 @@ body {
   border-radius: 9px; /*arredontdamento da borda*/
   overflow: hidden; /*faz o border-radius funcionar nos filhos*/
   background: #ffffff; /*fundo do ***caixa***/
-
-  opacity: 0;              /* invisível */
-  visibility: hidden;      /* não ocupa espaço no clique */
+  opacity: 0;/* invisível */
+  visibility: hidden;/* não ocupa espaço no clique*/
   transition: 0.3s;
 }
 
 .dropdown.aberto {
   display: block; /*quando eu colocar a classe 'active' no dropdown no js, ele aparece */
-  opacity: 1;              /* visível */
+  opacity: 1;/*visível*/
   visibility: visible;
 }
 
@@ -257,18 +256,21 @@ body {
   background: #efeff0;
 }
 
-/*estilização do espaçamento, e da letra e cores*/
-.item label {
+/*estilização do espaçamento das letra e cores*/
+.link-categoria {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 14px 18px; /* espaço entre os tópicos */
+  padding: 14px 18px; /*espaço entre os tópicos*/
   cursor: pointer;
   width: 100%;
-  font-family: "Inter", sans-serif; /*fonts do topico*/
+  font-family: "Inter", sans-serif; /*fontess do topico*/
   font-size: 14px;
   color: #787878;
+  text-decoration: none; /*tira o sublinhado do link*/
 }
+
+
 /*ESTILIZAÇÃO DA BARRA DE PESQUISA*/
 .caixa-pesquisa{
   position: absolute; /*permite colocar o elemento a onde vc quiser*/
@@ -284,8 +286,14 @@ body {
   display: flex; /*alinhamento do conteudo*/
   justify-content: space-between; /*joga o primeiro item totalmente pra esqueda e o outro totalmente para a direita*/
   align-items: center;/*centralização dos elementos*/
-
 }
+
+/*estilização do conteudo escrito dentro da barra de pesquisa*/
+::placeholder{
+  font-size: 13px;
+  font-family: "Inter";
+}
+
 /*Tirando efeitos padrões da barra de pesquisa, como: Borda, backgroud brando etc*/
 
 .barra-pesquisa{
@@ -1189,7 +1197,7 @@ margin-left:  35px;
 }
 
 .produtos-kids-picole{
-  padding: 120px 40px 300px;
+  padding: 10px 40px 300px;
   background: linear-gradient(to bottom,
     #ffffff 6%,
     #ffffff 14%,
