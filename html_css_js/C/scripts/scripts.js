@@ -6,7 +6,6 @@ if (buttonSwitch) {
   });
 }
 
-
 const favoriteIcon = document.getElementById("favoriteIcon");
 if (favoriteIcon) {
   favoriteIcon.addEventListener("click", () => {
