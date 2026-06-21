@@ -90,18 +90,45 @@
       <!-- topicos que irão aparecer -->
       <div class="dropdown-menu">
         <ul class="lista-categorias">
-          <!-- Aqui eu tentei criar um link ancora usando o id na sessão e o href no menu sanduyiche (obs:Não pegou) -->
-          <li class="item"><a href="#produtos-Milk-Shakes"><label><input class="color-radio" type="radio" name="cat">Milk Shakes</label></a></li>
-          <li class="item"><a href="#produtos-picole"><label><input class="color-radio" type="radio" name="cat"> Picolé</label></a></li>
-          <li class="item"><label><input class="color-radio" type="radio" name="cat"> Açaí</label></li>
-          <li class="item"><label><input class="color-radio" type="radio" name="cat"> Pote de Sorvete</label></li>
-          <li class="item"><label><input class="color-radio" type="radio" name="cat"> Casquinhas</label></li>
-          <li class="item"><label><input class="color-radio" type="radio" name="cat"> Sunday</label></li>
-          <li class="item"><label><input class="color-radio" type="radio" name="cat"> Kids</label></li>
+          <li class="item">
+            <a href="#produtos-Milk-Shakes" class="link-categoria">
+              <input class="color-radio" type="radio" name="cat"> Milk Shakes
+            </a>
+          </li>
+          <li class="item">
+            <a href="#produtos-picole" class="link-categoria">
+              <input class="color-radio" type="radio" name="cat"> Picolé
+            </a>
+          </li>
+          <li class="item">
+            <a href="#produtos-acai" class="link-categoria">
+              <input class="color-radio" type="radio" name="cat"> Açaí
+            </a>
+          </li>
+          <li class="item">
+            <a href="#produtos-potes" class="link-categoria">
+              <input class="color-radio" type="radio" name="cat"> Pote de Sorvete
+            </a>
+          </li>
+          <li class="item">
+            <a href="#produtos-casquinhas" class="link-categoria">
+              <input class="color-radio" type="radio" name="cat"> Casquinhas
+            </a>
+          </li>
+          <li class="item">
+            <a href="#produtos-sundae" class="link-categoria">
+              <input class="color-radio" type="radio" name="cat"> Sundae
+            </a>
+          </li>
+          <li class="item">
+            <a href="#produtos-kids" class="link-categoria">
+              <input class="color-radio" type="radio" name="cat"> Kids
+            </a>
+          </li>
         </ul>
 
       <!-- EXPLICAÇÃO DOS COMANDOS USADOS ACIMA -->
-      <!--o label é util pra juntar com o inpuut, pois com ele os topocos tem a bolinha apenas por clicar na palavra ao invez da bolinha preencher apenas ao clicar dentro da bolinha-->
+        <!--eu basicamente fiz um link ancora, usando id em todos os input e em todos as sections-->
 
       <!-- input radio seriam as bolinhas e NAME é basicamente um comando que faz com que todos que tiverem o mesmo name competem entre si e consequentemente só um pode ser selecionado por vez-->
      </div>
@@ -349,7 +376,7 @@
   </section>
 
   <!-- SESSÃO AÇAI  -->
-  <section class="produtos-açai">
+  <section class="produtos-açai" id="produtos-acai">
     <!--sessão dos produtos-->
     <div class="sessao-açai">
       <a href="#"><h1>Açaí</h1></a>
@@ -460,7 +487,7 @@
   </section>
 
   <!-- SESSÂO POTEs SORVETE -->]
-  <section class="produtos-potes">
+  <section class="produtos-potes" id="produtos-potes">
     <!--sessão dos produtos-->
     <div class="sessao-potes">
       <a href="#"><h1>Potes de Sorvete</h1></a>
@@ -571,7 +598,7 @@
   </section>
 
   <!-- SESSÃO CASQUINHAS -->
-  <section class="produtos-casquinhas">
+  <section class="produtos-casquinhas" id="produtos-casquinhas">
     <!--sessão dos produtos-->
     <div class="sessao-casquinhas">
       <a href="#"><h1>Casquinhas</h1></a>
@@ -682,7 +709,7 @@
   </section>
 
    <!-- SESSÃO SUNDAE -->
-  <section class="produtos-sundae">
+  <section class="produtos-sundae" id="produtos-sundae">
     <!--sessão dos produtos-->
     <div class="sessao-sundae">
       <a href="#"><h1>Sundae</h1></a>
@@ -793,7 +820,7 @@
   </section>
 
   <!-- SESSÃO INFANTIL -->
-  <section class="produtos-kids">
+  <section class="produtos-kids" id="produtos-kids">
     <!--sessão dos produtos-->
     <div class="sessao-kids">
       <h3>Conheça Nossa Linha Infantil</h3>
