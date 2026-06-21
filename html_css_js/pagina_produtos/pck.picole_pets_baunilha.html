@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Coco Branco | Eisbaren</title>
+    <title>Picolé Pets Baunilha e Caramelo| Eisbaren</title>
     <link rel="stylesheet" href="styles/productPage.css" />
     <link
       rel="shortcut icon"
@@ -36,6 +36,14 @@
         background-color: var(--casquinha-color);
         border-radius: 254px;
         transition: 0.5s ease-in-out;
+      }
+
+      .milkshake {
+        background-color: var(--milkshake-color);
+      }
+
+      .acai {
+        background-color: var(--acai-color);
       }
 
       .img_caixas {
@@ -93,11 +101,11 @@
 
     <main>
       <section class="productInfo">
-        <div class="containerImg">
+        <div class="containerImg acai">
           <div class="imgProduct">
             <img
-              src="../../assets/img/produtos_geral/Casquinhas de Coco branco.png"
-              alt="Coco Branco"
+              src="../../assets/img/produtos_geral/Picolé de Bichos (2).png"
+              alt="Café com Chocolate"
               class="product"
             />
           </div>
@@ -112,17 +120,13 @@
             <p class="ratingStarsText"><strong>(5.0/5.0)</strong></p>
           </div>
           <h1 class="productName">
-            Coco Branco
+            Picolé Pets - Baunilha e Caramelo
             <span class="material-symbols-outlined" id="favoriteIcon">
               favorite
             </span>
           </h1>
           <h2 class="priceTag">R$6.99</h2>
-          <p class="descriptionProduct">
-            Um sorvete suave e cremoso de coco branco, coberto com lascas
-            tostadas que trazem um toque tropical e sofisticado. Refrescante,
-            leve e cheio de personalidade.
-          </p>
+          <p class="descriptionProduct">PLACEHOLDER</p>
 
           <div class="additionals">
             <p class="additionalsTitle">
@@ -210,16 +214,7 @@
         <hr class="rowTitleDescription" />
 
         <div class="textIngredients">
-          <p class="descriptionText">
-            Conheça a nossa <strong>Casquinha de Coco Branco</strong>, uma
-            combinação elegante entre a suavidade do sorvete cremoso e o sabor
-            tropical do coco fresco. As lascas tostadas que cobrem cada
-            casquinha adicionam aroma, textura e uma apresentação irresistível.
-            Ideal para quem busca uma sobremesa
-            <strong>refrescante, equilibrada</strong> e com aquele sabor
-            <strong>especial</strong> que só o
-            <strong>coco verdadeiro</strong> proporciona.
-          </p>
+          <p class="descriptionText">PLACEHOLDER</p>
         </div>
         <span class="warningText">
           <span class="material-symbols-outlined warning">warning</span>Contém
@@ -239,24 +234,6 @@
           <ul class="ulRecommendation">
             <li class="listRecommendation">
               <div class="containerRecommendation">
-                <a class="linksRecommendation" href="c.acai_crocante.html"
-                  ><div class="circleProduct">
-                    <img
-                      class="recommendationProduct"
-                      src="../../assets/img/produtos_geral/Casquinhas de Açai Cracante.png"
-                      alt=""
-                    />
-                  </div>
-                  <p class="nameRecommendation">Açaí</p>
-                  <p class="surnameRecommendation">Crocante</p>
-                  <p class="priceTagRecommendation">R$6.99</p>
-                  <div class="buttonGoTo">Ir para página</div>
-                </a>
-              </div>
-            </li>
-
-            <li class="listRecommendation">
-              <div class="containerRecommendation">
                 <a class="linksRecommendation" href="c.caramelo_salgado.html"
                   ><div class="circleProduct">
                     <img
@@ -272,18 +249,36 @@
                 </a>
               </div>
             </li>
+
             <li class="listRecommendation">
               <div class="containerRecommendation">
-                <a class="linksRecommendation" href="c.chocolate_intenso.html"
-                  ><div class="circleProduct">
+                <a class="linksRecommendation" href="mk.milkshake_caramelo.html"
+                  ><div class="circleProduct milkshake">
                     <img
                       class="recommendationProduct"
-                      src="../../assets/img/produtos_geral/Casquinhas de Chocolate intenso.png"
+                      src="../../assets/img/produtos_geral/Milkshake de Caramelo com Calda de Chocolate.png"
                       alt=""
                     />
                   </div>
-                  <p class="nameRecommendation">Chocolate</p>
-                  <p class="surnameRecommendation">Intenso</p>
+                  <p class="nameRecommendation">Milkshake de</p>
+                  <p class="surnameRecommendation">Caramelo</p>
+                  <p class="priceTagRecommendation">R$6.99</p>
+                  <div class="buttonGoTo">Ir para página</div>
+                </a>
+              </div>
+            </li>
+            <li class="listRecommendation">
+              <div class="containerRecommendation">
+                <a class="linksRecommendation" href="s.sundae_caramelo.html"
+                  ><div class="circleProduct acai">
+                    <img
+                      class="recommendationProduct img_caixas"
+                      src="../../assets/img/produtos_geral/Sunday de Caramelo.png"
+                      alt=""
+                    />
+                  </div>
+                  <p class="nameRecommendation">Sundae de</p>
+                  <p class="surnameRecommendation">Caramelo</p>
                   <p class="priceTagRecommendation">R$6.99</p>
                   <div class="buttonGoTo">Ir para página</div>
                 </a>
@@ -292,16 +287,16 @@
 
             <li class="listRecommendation">
               <div class="containerRecommendation">
-                <a class="linksRecommendation" href="cx.caixa_bob_esponja.html"
+                <a class="linksRecommendation" href="pck.picole_tubarao.html"
                   ><div class="circleProduct">
                     <img
                       class="recommendationProduct img_caixas"
-                      src="../../assets/img/produtos_geral/Caixa de Picolé do Bob  Esponja.png"
+                      src="../../assets/img/produtos_geral/Picolé de Tubarão.png"
                       alt=""
                     />
                   </div>
-                  <p class="nameRecommendation">Caixa de Picolé</p>
-                  <p class="surnameRecommendation">Bob Esponja</p>
+                  <p class="nameRecommendation">Picolé de</p>
+                  <p class="surnameRecommendation">Tubarão</p>
                   <p class="priceTagRecommendation">R$6.99</p>
                   <div class="buttonGoTo">Ir para página</div>
                 </a>
