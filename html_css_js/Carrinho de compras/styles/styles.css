@@ -170,7 +170,31 @@ body {
     width: 100%; /*Garante que o h1 ocupe toda a largura disponível, necessário para o text-align funcionar corretamente*/
 }
 
-/*-----------------------------------------------------------------------------------------------*/
+
+/* Header do carrinho */
+
+.cart-header {
+  display: flex;
+  width: auto ;
+  justify-content: space-between;
+  border-bottom: 1px solid #e7e7e7;
+  padding-bottom: clamp(15px, 2vw, 25px);
+  align-items: center;
+  margin-top: 40px;
+}
+
+.cart-header h2 {
+  font-size: clamp(1.4rem, 2vw, 1.8rem);
+  margin-left: 30px;
+  font-weight: 700;
+}
+
+.cart-header span {
+  font-size: clamp(1.4rem, 1.3vw, 1rem);
+  margin-right: 40px;
+  font-weight: 600;
+}
+
 /* Header do carrinho */
 
 .cart-header {
@@ -212,122 +236,143 @@ body {
   font-size: clamp(1.3rem, 1vw, 1rem);
 }
 
+
+/* ========================= */
+   /* CARRINHO ORGANIZADO */
+/* ========================= */
+
+/* Espaço entre produtos */
+
+.img,
+.Açaí-Kiwi,
+.Kit-Picolé,
+.pote{
+
+margin-top:40px;
+clear:both;
+
+}
+
+
+/* IMAGEM */
+
 .img img{
-  width: 160px;
-  height: 160px;
-  margin-left: 40px;
-  background-color: #FFAEC1;
-  border-radius: 20px;
+  width:160px;
+  height:160px;
+  margin-left:40px;
+  border-radius:20px;
+  background:#FFAEC1;
+  object-fit:cover;
+  float:left;
 }
-
-.texto-milk h2 {
-  position: relative;
-  margin-left: 215px;
-  margin-top: -145px;
-  color: var(--text2-color);
-  font-size: clamp(1.7rem, 1vw, 1rem);
-}
-
-.texto-milk span {
-  display: block;
-  margin-left: 215px;
-  margin-top: 10px;
-  color: var(--text2-color);
-  font-size: clamp(0.9rem, 1vw, 1rem);
-}
-
-
-.item-price {
-  position: relative;
-  margin-left: 43%;
-  margin-top: -50px;
-  font-size: clamp(1.8rem, 1vw, 1rem);
-  color: #F83D8E;
-}
-
-/*Fazer contador para quantidade de itens!!!*/
-.quantity {
-  display: inline-flex;
-  border-radius: 20rem;
-  border: 1px var(--text3-color) solid;
-  overflow: hidden;
-  margin-left: 61%;
-  margin-top: -50px;
-}
-
-.buttonQuantity {
-  height: 3rem;
-  width: 3.5rem;
-  border: none;
-  background: none;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.buttonQuantity:hover {
-  background: #e5e4e4;
-}
-
-#valueQuantity {
-  height: 3rem;
-  width: 2.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-left: 1px var(--text3-color) solid;
-  border-right: 1px var(--text3-color) solid;
-  font-size: 18px;
-}
-
-
-.item-total {
-  position: relative;
-  margin-left: 79%;
-  margin-top: -50px;
-  font-size: clamp(1.8rem, 1vw, 1rem);
-  color: #F83D8E;
-}
-
-.item-remove {
-  position: relative;
-  margin-left: 94%;
-  margin-top: -32px;
-}
-
 
 .Açaí-Kiwi img{
-  width: 160px;
-  height: 160px;
-  margin-left: 40px;
-  margin-top: 90px;
-  background-color: #C50D19;
-  border-radius: 25px;
+  width:160px;
+  height:160px;
+  margin-left:40px;
+  border-radius:20px;
+  background: #C50D19;
+  object-fit:cover;
+  float:left;
 }
 
 .Kit-Picolé img{
-  width: 160px;
-  height: 160px;
-  margin-left: 40px;
-  margin-top: 90px;
-  background-color: #FCAE0C;
-  border-radius: 25px;
+  width:160px;
+  height:160px;
+  margin-left:40px;
+  border-radius:20px;
+  background:#FCAE0C;
+  object-fit:cover;
+  float:left;
 }
 
 .pote img{
-  width: 160px;
-  height: 160px;
-  margin-left: 40px;
-  margin-top: 90px;
-  background-color: #FFAEC1;
-  border-radius: 25px;
+  width:160px;
+  height:160px;
+  margin-left:40px;
+  border-radius:20px;
+  background:#FFAEC1;
+  object-fit:cover;
+  float:left;
+
 }
 
+
+/* TEXTO */
+
+.texto-milk{
+
+ margin-left:240px;
+ margin-top:20px;
+ min-height:160px;
+
+}
+
+.texto-milk h2{
+  
+ font-size: 25px;
+ line-height:1.2;
+ margin-bottom:10px;
+
+}
+
+.texto-milk span{
+
+ color:#666;
+
+}
+
+
+/* PREÇO */
+
+.item-price{
+
+  position:absolute;
+  left:55%;
+  transform:translateY(-120px);
+
+}
+
+.item-price h3{
+  font-size:22px;
+
+}
+
+
+/* QUANTIDADE */
+
+.quantity{
+
+  position:absolute;
+  left:70%;
+  transform:translateY(-120px);
+  display:flex;
+  gap:10px;
+
+}
+
+
+
+/* TOTAL */
+
+.item-total{
+
+  position:absolute;
+  left:85%;
+  transform:translateY(-120px);
+
+}
+
+.item-total h3{
+  font-size:22px;
+
+}
 
 
 /* REMOVER */
 
 .item-remove{
+
   position:absolute;
   right:30px;
   transform:translateY(-170px);
@@ -339,30 +384,33 @@ body {
 
 }
 
-/* LINHA SEPARANDO OS PRODUTOS */
 
-.img,
-.Açaí-Kiwi,
-.Kit-Picolé,
-.pote{
-    border-bottom:1px solid #e7e7e7;  
-}
 
 /* RESPONSIVO */
 
-@media(max-width:480px){
-
-.texto-milk{
-    margin-top:20px;
-    margin-left:20px;
-}
+@media(max-width:768px){
 
 .item-price,
 .quantity,
 .item-total,
 .item-remove{
-    margin-top:20px;
-    margin-left:20px;
+
+  position:static;
+  transform:none;
+  margin-left:220px;
+  margin-top:10px;
+
+  }
 }
 
-}
+
+
+
+
+
+
+
+
+
+
+
