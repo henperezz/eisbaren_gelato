@@ -170,7 +170,7 @@ body {
     width: 100%; /*Garante que o h1 ocupe toda a largura disponível, necessário para o text-align funcionar corretamente*/
 }
 
-
+/*-----------------------------------------------------------------------------------------------*/
 /* Header do carrinho */
 
 .cart-header {
@@ -185,60 +185,59 @@ body {
 
 .cart-header h2 {
   font-size: clamp(1.4rem, 2vw, 1.8rem);
-  margin-left: 30px;
+  margin-left:20px;
   font-weight: 700;
 }
 
 .cart-header span {
   font-size: clamp(1.4rem, 1.3vw, 1rem);
-  margin-right: 40px;
+  margin-right:123px;
   font-weight: 600;
 }
 
-/* Header do carrinho */
-
-.cart-header {
-  display: flex;
-  width: auto ;
-  justify-content: space-between;
-  border-bottom: 1px solid #e7e7e7;
-  padding-bottom: clamp(15px, 2vw, 25px);
-  align-items: center;
-  margin-top: 40px;
-}
-
-.cart-header h2 {
-  font-size: clamp(1.4rem, 2vw, 1.8rem);
-  margin-left: 30px;
-  font-weight: 700;
-}
-
-.cart-header span {
-  font-size: clamp(1.4rem, 1.3vw, 1rem);
-  margin-right: 40px;
-  font-weight: 600;
-}
 
 /* Títulos */
 
-.cart-table-header {
-  display: grid;
-  grid-template-columns: 2.5fr 1fr 1fr 1fr 0.3fr;
-  padding-bottom: clamp(15px, 2vw, 25px);
-  margin-top: 30px;
-  border-bottom: 1px solid #e7e7e7;
-  margin-bottom: clamp(10px, 2vw, 20px);
+.cart-table-header{
+  display:grid;
+  grid-template-columns:2.5fr 1fr 1fr 1fr 0.3fr;
+  padding-bottom:clamp(15px,2vw,25px);
+  margin-top:30px;
+  border-bottom:1px solid #e7e7e7;
+  margin-bottom:clamp(10px,2vw,20px);
 }
 
-.cart-table-header p {
-  color: #8b8b8b;
-  margin-left: 30px;
-  font-size: clamp(1.3rem, 1vw, 1rem);
+/* ESTILO GERAL DOS TITULOS */
+
+.cart-table-header p{
+  color:#8b8b8b;
+  font-size:clamp(1.3rem,1vw,1rem);
+}
+
+
+/* DETALHES DO PRODUTO */
+
+.titulo-detalhes{
+ margin-left:40%;
+
+}
+
+.titulo-preco{
+ margin-left:30px;
+}
+
+.titulo-quantidade{
+  margin-right:65px;
+ text-align:center;
+}
+
+.titulo-total{
+ margin-left:50%;
 }
 
 
 /* ========================= */
-   /* CARRINHO ORGANIZADO */
+/* CARRINHO ORGANIZADO */
 /* ========================= */
 
 /* Espaço entre produtos */
@@ -257,6 +256,7 @@ clear:both;
 /* IMAGEM */
 
 .img img{
+
   width:160px;
   height:160px;
   margin-left:40px;
@@ -267,16 +267,18 @@ clear:both;
 }
 
 .Açaí-Kiwi img{
+  
   width:160px;
   height:160px;
   margin-left:40px;
   border-radius:20px;
-  background: #C50D19;
+  background:#C50D19;
   object-fit:cover;
   float:left;
 }
 
 .Kit-Picolé img{
+  
   width:160px;
   height:160px;
   margin-left:40px;
@@ -287,6 +289,7 @@ clear:both;
 }
 
 .pote img{
+
   width:160px;
   height:160px;
   margin-left:40px;
@@ -298,29 +301,34 @@ clear:both;
 }
 
 
+
 /* TEXTO */
 
 .texto-milk{
 
- margin-left:240px;
- margin-top:20px;
- min-height:160px;
+  margin-left:240px;
+  margin-top:60px;
+  min-height:160px;
 
 }
 
 .texto-milk h2{
-  
- font-size: 25px;
- line-height:1.2;
- margin-bottom:10px;
+
+  font-size:22px;
+  line-height:1.2;
+  margin-bottom:10px;
+  font-size: clamp(1.5rem, 1vw, 1rem);
+
 
 }
 
 .texto-milk span{
 
- color:#666;
+color:#666;
+font-size: clamp(1.1rem, 1vw, 1rem);
 
 }
+
 
 
 /* PREÇO */
@@ -328,26 +336,39 @@ clear:both;
 .item-price{
 
   position:absolute;
-  left:55%;
+  left:45%;
   transform:translateY(-120px);
+  font-size: clamp(1.5rem, 1vw, 1rem);
+
+
 
 }
 
 .item-price h3{
+
   font-size:22px;
+  margin-top:-20px;
+
 
 }
+
 
 
 /* QUANTIDADE */
 
 .quantity{
 
-  position:absolute;
-  left:70%;
-  transform:translateY(-120px);
-  display:flex;
-  gap:10px;
+position:absolute;
+
+left:65%;
+
+transform:translateY(-120px);
+
+display:flex;
+
+gap:15px;
+
+margin-top:-20px;
 
 }
 
@@ -360,31 +381,47 @@ clear:both;
   position:absolute;
   left:85%;
   transform:translateY(-120px);
+  font-size: clamp(1.5rem, 1vw, 1rem);
+
 
 }
 
 .item-total h3{
-  font-size:22px;
+
+ font-size:22px;
+
+
 
 }
+
 
 
 /* REMOVER */
 
 .item-remove{
 
-  position:absolute;
-  right:30px;
-  transform:translateY(-170px);
+position:absolute;
+
+right:30px;
+
+transform:translateY(-170px);
 
 }
 
 .item-remove img{
-  width:40px;
+
+width:40px;
 
 }
 
+/* LINHA ENTRE OS PRODUTOS */
 
+.linha-produto{
+    width: 100%;
+    height: 1px;
+    background-color:#e7e7e7;
+    margin: 40px 0;
+}
 
 /* RESPONSIVO */
 
@@ -395,22 +432,23 @@ clear:both;
 .item-total,
 .item-remove{
 
-  position:static;
-  transform:none;
-  margin-left:220px;
-  margin-top:10px;
+position:static;
 
-  }
+transform:none;
+
+margin-left:220px;
+
+margin-top:10px;
+
 }
 
+.texto-milk{
 
+margin-left:200px;
 
+}
 
-
-
-
-
-
+}
 
 
 
