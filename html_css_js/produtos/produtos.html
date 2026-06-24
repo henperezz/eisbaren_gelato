@@ -16,6 +16,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
+    <!--o link de ambos deve ser um só para os dois icones, tanto para o email ou o telefone -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=call,mail" />
+
 
 
 <!---------------------------------------------------------------------------------------------------------------------------------------------->
@@ -40,7 +43,10 @@
             </li>
             <li class="linksList"><a class="textLink" href="">PRODUTOS</a></li>
             <li class="linksList"><a class="textLink" href="">CARRINHO</a></li>
-            <li class="linksList"><a class="textLink" href="">PERFIL<span class="material-symbols-outlined">group</span></a></li>
+            <li class="linksList"><a class="textLink" href="">PERFIL</a></li>
+            <li class="linksList">
+              <span class="material-symbols-outlined profile"> group </span>
+            </li>
           </ul>
         </nav>
       </div>
@@ -85,19 +91,32 @@
     <!-- Criação do itens que ficaram no dropdown -->
     <div class="dropdown" id="dropdown">
       <!-- topicos que irão aparecer -->
-      <div class="dropdown-menu">
-        <ul class="lista-categorias">
-          <li class="item"><label><input type="radio" name="cat"> Milk Shakes</label></li>
-          <li class="item"><label><input type="radio" name="cat"> Picolé</label></li>
-          <li class="item"><label><input type="radio" name="cat"> Açaí</label></li>
-          <li class="item"><label><input type="radio" name="cat"> Pote de Sorvete</label></li>
-          <li class="item"><label><input type="radio" name="cat"> Casquinhas</label></li>
-          <li class="item"><label><input type="radio" name="cat"> Sunday</label></li>
-          <li class="item"><label><input type="radio" name="cat"> Kids</label></li>
-        </ul>
+      <ul class="lista-categorias">
+        <li class="item">
+          <a href="#produtos-Milk-Shakes" class="link-categoria">Milk Shakes</a>
+        </li>
+        <li class="item">
+          <a href="#produtos-picole" class="link-categoria">Picolé</a>
+        </li>
+        <li class="item">
+          <a href="#produtos-acai" class="link-categoria">Açaí</a>
+        </li>
+        <li class="item">
+          <a href="#produtos-potes" class="link-categoria">Pote de Sorvete</a>
+        </li>
+        <li class="item">
+          <a href="#produtos-casquinhas" class="link-categoria">Casquinhas</a>
+        </li>
+        <li class="item">
+          <a href="#produtos-sundae" class="link-categoria">Sundae</a>
+        </li>
+        <li class="item">
+          <a href="#produtos-kids" class="link-categoria">Kids</a>
+        </li>
+      </ul>
 
       <!-- EXPLICAÇÃO DOS COMANDOS USADOS ACIMA -->
-      <!--o label é util pra juntar com o inpuut, pois com ele os topocos tem a bolinha apenas por clicar na palavra ao invez da bolinha preencher apenas ao clicar dentro da bolinha-->
+        <!--eu basicamente fiz um link ancora, usando id em todos os input e em todos as sections-->
 
       <!-- input radio seriam as bolinhas e NAME é basicamente um comando que faz com que todos que tiverem o mesmo name competem entre si e consequentemente só um pode ser selecionado por vez-->
      </div>
@@ -105,7 +124,7 @@
 
     <!-- PARTE DOS PRODUTOS -->
      <!-- Section do Milks Shakes -->
-  <section class="produtos-Milk-Shakes">
+  <section class="produtos-Milk-Shakes" id="produtos-Milk-Shakes">
     <div class="sessao">
       <h1>Milk-Shakes</h1>
     </div>
@@ -113,7 +132,6 @@
     <div class="grid-produtos">
 
       <!-- CARD 1 -->
-
        <!-- div pra fazer o empilahemnto da imagem/avaliação/texto/botao -->
       <div class="card-produto">
         <div class="img-circular">
@@ -123,7 +141,7 @@
         <!-- texto que fica em baixo da imagem  -->
         <div class="conteudo-texto">
           <h2>⭐4.9/5</h2>
-          <p>Milk-Shake de </br> chocolate com </br> raspas</p>
+          <p>Milk-Shake de </br> Morango com </br> Chantilly</p>
           <h3>R$10.00</h3>
         </div>
 
@@ -137,7 +155,6 @@
       </div>
 
       <!-- CARD 2 -->
-
        <!-- div pra fazer o empilahemnto da imagem/avaliação/texto/botao -->
       <div class="card-produto">
         <div class="img-circular">
@@ -234,10 +251,10 @@
   </section> 
   
   <!-- Section dos Picolés -->
-  <section class="produtos-picole">
+  <section class="produtos-picole" id="produtos-picole">
     <!--sessão dos produtos-->
     <div class="sessao-picole">
-      <h1>Picolés</h1>
+      <a href="#"><h1>Picolés</h1></a>
     </div>
 
     <!--Vai ser basicamnto uma grip que vai conter todos os itens do picolé-->
@@ -345,10 +362,10 @@
   </section>
 
   <!-- SESSÃO AÇAI  -->
-  <section class="produtos-açai">
+  <section class="produtos-açai" id="produtos-acai">
     <!--sessão dos produtos-->
     <div class="sessao-açai">
-      <h1>Açaí</h1>
+      <a href="#"><h1>Açaí</h1></a>
     </div>
 
     <!--Vai ser basicamnto uma grip que vai conter todos os itens do picolé-->
@@ -456,10 +473,10 @@
   </section>
 
   <!-- SESSÂO POTEs SORVETE -->]
-  <section class="produtos-potes">
+  <section class="produtos-potes" id="produtos-potes">
     <!--sessão dos produtos-->
     <div class="sessao-potes">
-      <h1>Potes de Sorvete</h1>
+      <a href="#"><h1>Potes de Sorvete</h1></a>
     </div>
 
     <!--Vai ser basicamnto uma grip que vai conter todos os itens do picolé-->
@@ -567,10 +584,10 @@
   </section>
 
   <!-- SESSÃO CASQUINHAS -->
-  <section class="produtos-casquinhas">
+  <section class="produtos-casquinhas" id="produtos-casquinhas">
     <!--sessão dos produtos-->
     <div class="sessao-casquinhas">
-      <h1>Casquinhas</h1>
+      <a href="#"><h1>Casquinhas</h1></a>
     </div>
 
     <!--Vai ser basicamnto uma grip que vai conter todos os itens do picolé-->
@@ -584,7 +601,7 @@
         <!-- texto que ficara a baixo da imagem -->
          <div class="conteudo-texto-casquinhas">
           <h2>⭐4.9/5</h2>
-          <p>Casquinhas de <br> Morango Cremoso </p>
+          <p>Casquinha de <br> Morango Cremoso </p>
           <h3>R$6.99</h3>
          </div>
           <!-- Botão -->
@@ -645,7 +662,7 @@
         <!-- texto que ficara a baixo da imagem -->
          <div class="conteudo-texto-casquinhas">
           <h2>⭐4.9/5</h2>
-          <p>Casquinha de<br> Açaí Cracante</p>
+          <p>Casquinha de<br> Açaí Crocante</p>
           <h3>R$6.99</h3>
          </div>
           <!-- Botão -->
@@ -678,10 +695,10 @@
   </section>
 
    <!-- SESSÃO SUNDAE -->
-  <section class="produtos-sundae">
+  <section class="produtos-sundae" id="produtos-sundae">
     <!--sessão dos produtos-->
     <div class="sessao-sundae">
-      <h1>Sundae</h1>
+      <a href="#"><h1>Sundae</h1></a>
     </div>
 
     <!--Vai ser basicamnto uma grip que vai conter todos os itens do picolé-->
@@ -789,10 +806,11 @@
   </section>
 
   <!-- SESSÃO INFANTIL -->
-  <section class="produtos-kids">
+  <section class="produtos-kids" id="produtos-kids">
     <!--sessão dos produtos-->
     <div class="sessao-kids">
-      <h1>Linha Kids</h1>
+      <h3>Conheça Nossa Linha Infantil</h3>
+      <h1>Kit Caixas</h1>
     </div>
 
     <div class="grid-produtos-kids">
@@ -823,7 +841,7 @@
         <!-- texto que ficara a baixo da imagem -->
          <div class="conteudo-texto-kids">
           <h2>⭐4.9/5</h2>
-          <p>Kit Picolé <br>de Kinder </p>
+          <p>Kit Picolé <br>de Kinder bueno</p>
           <h3>R$23.00</h3>
          </div>
 
@@ -844,7 +862,7 @@
         <!-- texto que ficara a baixo da imagem -->
          <div class="conteudo-texto-kids">
           <h2>⭐4.9/5</h2>
-          <p>Kit Picolé de <br>Frogopé </p>
+          <p>Kit Picolé de <br>Frigopé </p>
           <h3>R$18.00</h3>
          </div>
           <!-- Botão -->
@@ -899,6 +917,9 @@
 
   <!-- SESSÃO INFANTIL PICOLÉS -->
   <section class="produtos-kids-picole">
+    <div class="sessao-kids">
+      <h1>Picolés</h1>
+    </div>
 
     <!-- PICOLÉ 1 -->
     <div class="grid-produtos-kids">
@@ -1045,10 +1066,10 @@
           <p>Acompanhe a gente nas redes sociais</p>
           <div class="social-icons">
             <a href="#"
-              ><img src="../../assets/img/icones/facebook2.png" alt="Facebook"
+              ><img src="ImagensFigma/facebook2.png" alt="Facebook"
             /></a>
             <a href="#"
-              ><img src="../../assets/img/icones/instagram.png" alt="Instagram"
+              ><img src="ImagensFigma/instagram.png" alt="Instagram"
             /></a>
           </div>
         </div>
