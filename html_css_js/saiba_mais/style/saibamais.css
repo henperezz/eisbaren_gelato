@@ -30,6 +30,9 @@
   padding: 0; /*Reseta as configurações de padding pré-existentes na página*/
 }
 
+html{
+  scroll-behavior: smooth;
+}
 body {
   background-color: #ffffff;
   font-family: var(--font2);
