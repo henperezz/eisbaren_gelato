@@ -99,7 +99,7 @@ body {
 
 .material-symbols-outlined.profile {
   font-size: 19px;
-  color: var(--text1-color);
+  color: #fff;
   cursor: pointer;
   transition: 0.3s ease-out;
 }
