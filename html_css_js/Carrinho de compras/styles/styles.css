@@ -185,14 +185,15 @@ body {
 
 .cart-header h2 {
   font-size: clamp(1.4rem, 2vw, 1.8rem);
-  margin-left:20px;
+  margin-left: 30px;
   font-weight: 700;
 }
 
 .cart-header span {
   font-size: clamp(1.4rem, 1.3vw, 1rem);
-  margin-right:123px;
+  margin-right: 40px;
   font-weight: 600;
+
 }
 
 
@@ -211,28 +212,27 @@ body {
 
 .cart-table-header p{
   color:#8b8b8b;
-  font-size:clamp(1.3rem,1vw,1rem);
+  font-size:clamp(1.4rem,1vw,1rem);
 }
 
 
 /* DETALHES DO PRODUTO */
 
 .titulo-detalhes{
- margin-left:40%;
+ margin-left: 4%;
 
 }
 
 .titulo-preco{
- margin-left:30px;
+ margin-left: 20%;
 }
 
 .titulo-quantidade{
-  margin-right:65px;
- text-align:center;
+ margin-left: 18%;
 }
 
 .titulo-total{
- margin-left:50%;
+ margin-left: 30%;
 }
 
 
@@ -251,7 +251,6 @@ margin-top:40px;
 clear:both;
 
 }
-
 
 /* IMAGEM */
 
@@ -281,6 +280,7 @@ clear:both;
   
   width:160px;
   height:160px;
+  
   margin-left:40px;
   border-radius:20px;
   background:#FCAE0C;
@@ -300,13 +300,11 @@ clear:both;
 
 }
 
-
-
 /* TEXTO */
 
 .texto-milk{
 
-  margin-left:240px;
+  margin-left:220px;
   margin-top:60px;
   min-height:160px;
 
@@ -317,15 +315,14 @@ clear:both;
   font-size:22px;
   line-height:1.2;
   margin-bottom:10px;
-  font-size: clamp(1.5rem, 1vw, 1rem);
-
+  font-size: clamp(1.6rem, 1vw, 1rem);
 
 }
 
 .texto-milk span{
 
 color:#666;
-font-size: clamp(1.1rem, 1vw, 1rem);
+font-size: clamp(1.2rem, 1vw, 1rem);
 
 }
 
@@ -338,9 +335,6 @@ font-size: clamp(1.1rem, 1vw, 1rem);
   position:absolute;
   left:45%;
   transform:translateY(-120px);
-  font-size: clamp(1.5rem, 1vw, 1rem);
-
-
 
 }
 
@@ -348,28 +342,49 @@ font-size: clamp(1.1rem, 1vw, 1rem);
 
   font-size:22px;
   margin-top:-20px;
-
+  font-size: clamp(2.1rem, 1vw, 1rem);
+  color:#F83D8E;
 
 }
 
 
-
 /* QUANTIDADE */
 
-.quantity{
+.quantity {
+  position:absolute;
+  left:62%;
+  transform:translateY(-120px);
+  gap: 10px;
+  margin-top:-20px;
+  display: inline-flex;
+  border-radius: 20rem;
+  border: 1px var(--text3-color) solid;
+  overflow: hidden;
+}
 
-position:absolute;
+.buttonQuantity {
+  height: 3rem;
+  width: 3.5rem;
+  border: none;
+  background: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
 
-left:65%;
+.buttonQuantity:hover {
+  background: #e5e4e4;
+}
 
-transform:translateY(-120px);
-
-display:flex;
-
-gap:15px;
-
-margin-top:-20px;
-
+#valueQuantity {
+  height: 3rem;
+  width: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px var(--text3-color) solid;
+  border-right: 1px var(--text3-color) solid;
+  font-size: 18px;
 }
 
 
@@ -377,40 +392,36 @@ margin-top:-20px;
 /* TOTAL */
 
 .item-total{
-
   position:absolute;
-  left:85%;
-  transform:translateY(-120px);
-  font-size: clamp(1.5rem, 1vw, 1rem);
-
-
+  left:80%;
+  transform:translateY(-120px)
 }
 
 .item-total h3{
 
- font-size:22px;
-
-
-
+  font-size:22px;
+  margin-top:-20px;
+  font-size: clamp(2.1rem, 1vw, 1rem);
+  color:#F83D8E;
 }
-
 
 
 /* REMOVER */
 
 .item-remove{
 
-position:absolute;
-
-right:30px;
-
-transform:translateY(-170px);
+  position:absolute;
+  right:30px;
+  margin-top:-20px;
+  margin-right: 30px;
+  font-weight: 600;
+  transform:translateY(-120px);
 
 }
 
 .item-remove img{
 
-width:40px;
+ width: 45px;
 
 }
 
@@ -420,35 +431,135 @@ width:40px;
     width: 100%;
     height: 1px;
     background-color:#e7e7e7;
-    margin: 40px 0;
+    margin: 20px 0;
 }
 
-/* RESPONSIVO */
-
-@media(max-width:768px){
-
-.item-price,
-.quantity,
-.item-total,
-.item-remove{
-
-position:static;
-
-transform:none;
-
-margin-left:220px;
-
-margin-top:10px;
-
+.acoes-carrinho{
+  display: flex;
+  justify-content: center;
+  gap: 70%;          /* espaço entre os textos */
+  margin-top: 90px;   /* espaço em cima */
+  padding: 0 20px;    /* espaço nas laterais */
 }
 
-.texto-milk{
-
-margin-left:200px;
-
+.acoes-carrinho a{
+    text-decoration: none;
+    color:#F54F7E;
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 40px;
 }
 
+/* FOOTER */
+/*ESTILIZAÇÃO DO FOOTER*/
+.main-footer {
+  background: linear-gradient(
+    to bottom,
+    #ffffff 0%,
+    #e69cc6 14%,
+    #dba7bf 34%,
+    #e8a3b8 70%
+  );
+  padding: 80px 10% 30px;
+  margin-top: 5rem;
+  color: #ffffff;
+  font-size: 0.85rem;
 }
 
+.footer-grid {
+  display: grid;
+  grid-template-columns: 250px 1fr 1fr; /* tem que bater com o tamanho da logo */
+  gap: 50px;
+  align-items: start; /* alinha tudo verticalmente no centro */
+}
 
+.footer-logo {
+  align-self: center;
+}
 
+.footer-logo img {
+  width: 250px;
+  border-radius: 20px;
+  padding: 5px;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+  padding-top: 40px; /*Esse aqui que alinhou tudo*/
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #ffffff;
+  display: block;
+  margin-bottom: 12px;
+  font-size: 0.85rem;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: #525946;
+  padding-left: 5px;
+}
+
+.footer-contact ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.linksFooter {
+  text-decoration: none;
+  list-style: none;
+  color: #ffffff;
+}
+
+.footer-contact p {
+  margin: 6px 0;
+}
+
+/*Configurações dos icone de contatos*/
+li .material-symbols-outlined {
+  font-size: 20px; /* controla o tamanho do ícone, pois o  width não funciona em icones*/
+  margin-right: 5px; /*espaço entre o texto e o icone*/
+  vertical-align: middle; /* alinha o ícone com o texto da frente */
+}
+
+.social-icons img {
+  width: 20px;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+  padding-top: 25px;
+  border-top: 1px solid rgba(109, 0, 0, 0.4);
+  font-size: 0.85rem;
+  color: #ffffff;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+.footer-bottom a {
+  color: #ffffff;
+  text-decoration: underline;
+}
