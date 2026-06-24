@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Picolé Pets - Morango e Banana | Eisbaren</title>
+    <link rel="stylesheet" href="styles/productPage.css" />
+    <link
+      rel="shortcut icon"
+      href="../../assets/img/icones/coroa 2.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..20"
+    />
+    <style>
+      .containerImg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: clamp(150px, 34vw, 597px);
+        height: clamp(142px, 32vw, 571px);
+        background-color: var(--casquinha-color);
+        border-radius: 20px;
+        position: relative;
+        transition: 0.7s;
+      }
+
+      .circleProduct {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 254px;
+        width: 254px;
+        background-color: var(--casquinha-color);
+        border-radius: 254px;
+        transition: 0.5s ease-in-out;
+      }
+
+      .milkshake {
+        background-color: var(--milkshake-color);
+      }
+
+      .acai {
+        background-color: var(--acai-color);
+      }
+
+      .img_caixas {
+        width: 180px;
+        height: 180px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="headerContainer" id="headerContainer">
+      <!--id necessário para produzir o efeito de mudança de cor que será adicionado posteriormente-->
+      <div class="logoContainer">
+        <img
+          src="../../assets/img/icones/logo.jpg"
+          alt="Logo Eisbaren"
+          class="headerLogo"
+        />
+      </div>
+
+      <div class="headerTextContainer">
+        <nav>
+          <ul class="listHeader">
+            <li class="linksList">
+              <a class="textLink" href="../index/index.html">INÍCIO</a>
+            </li>
+            <li class="linksList">
+              <a class="textLink" href="../saiba_mais/saibamais.html"
+                >SAIBA MAIS</a
+              >
+            </li>
+            <li class="linksList">
+              <a class="textLink" href="ProductPage.html">PRODUTOS</a>
+            </li>
+            <li class="linksList"><a class="textLink" href="#">CARRINHO</a></li>
+            <li class="linksList">
+              <a class="textLink" href="../cadastro/cadastro.html">PERFIL</a>
+            </li>
+            <li class="linksList">
+              <a href="../cadastro/cadastro.html"
+                ><span class="material-symbols-outlined profile">
+                  group
+                </span></a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="buttonSwitch" id="buttonSwitch">
+        <!--id necessária para captar no js, container especial que é o switcher de modos-->
+        <div class="buttonIndicator"></div>
+        <!--é o indicador do switcher-->
+      </div>
+    </header>
+
+    <main>
+      <section class="productInfo">
+        <div class="containerImg milkshake">
+          <div class="imgProduct">
+            <img
+              src="../../assets/img/produtos_geral/Picolé de Bichos.png"
+              alt="Café com Chocolate"
+              class="product"
+            />
+          </div>
+        </div>
+        <section class="containerInfoRight">
+          <div class="ratingStars">
+            <img src="../../assets/img/icones/Stars.png" alt="" />
+            <img src="../../assets/img/icones/Stars.png" alt="" />
+            <img src="../../assets/img/icones/Stars.png" alt="" />
+            <img src="../../assets/img/icones/Stars.png" alt="" />
+            <img src="../../assets/img/icones/Stars.png" alt="" />
+            <p class="ratingStarsText"><strong>(5.0/5.0)</strong></p>
+          </div>
+          <h1 class="productName">
+            Picolé Pets - Banana e Morango
+            <span class="material-symbols-outlined" id="favoriteIcon">
+              favorite
+            </span>
+          </h1>
+          <h2 class="priceTag">R$6.99</h2>
+          <p class="descriptionProduct">
+            Colorido, fofo e cheio de sabor! O Picolé Pets de morango e banana é
+            a combinação tropical que a criançada não vai conseguir resistir — e
+            ainda vem no formato da gatinha mais famosa do pedaço.
+          </p>
+
+          <div class="additionals">
+            <p class="additionalsTitle">
+              Adicionais
+              <span class="material-symbols-outlined arrowRight">
+                arrow_right
+              </span>
+            </p>
+          </div>
+          <div class="additionalsList">
+            <p class="additionalsTitleMenu">Escolha até 5 opções</p>
+            <hr />
+            <ul>
+              <li class="additionalsItems">
+                <p>Creme de pistache</p>
+                <span id="valueAdditionals">R$8,00</span>
+                <span class="plusAdditionals">+</span>
+                <hr />
+              </li>
+              <li class="additionalsItems">
+                <p>Creme de Avelã</p>
+                <span id="valueAdditionals">R$5,00</span>
+                <span class="plusAdditionals">+</span>
+                <hr />
+              </li>
+              <li class="additionalsItems">
+                <p>Creme de Ninho</p>
+                <span id="valueAdditionals">R$8,00</span>
+                <span class="plusAdditionals">+</span>
+                <hr />
+              </li>
+              <li class="additionalsItems">
+                <p>Creme de Kinder</p>
+                <span id="valueAdditionals">R$8,00</span>
+                <span class="plusAdditionals">+</span>
+                <hr />
+              </li>
+              <li class="additionalsItems">
+                <p>Frutas</p>
+                <span id="valueAdditionals">R$8,00</span>
+                <span class="plusAdditionals">></span>
+                <hr />
+              </li>
+            </ul>
+          </div>
+          <p class="size">Tamanho:</p>
+
+          <ul class="listSizeButton">
+            <li>
+              <div class="sizeButton"><p class="textSizeButton">G</p></div>
+            </li>
+            <li>
+              <div class="sizeButton"><p class="textSizFzeeButton">M</p></div>
+            </li>
+            <li>
+              <div class="sizeButton"><p class="textSizeButton">P</p></div>
+            </li>
+          </ul>
+
+          <hr class="line" />
+
+          <ul class="listCartCounter">
+            <li class="itensCartCounter">
+              <!--Fazer Botões para aumentar ou diminuir a quantidade de itens-->
+              <div class="quantity">
+                <button class="buttonMinus buttonQuantity">-</button>
+                <span id="valueQuantity">1</span>
+                <button class="buttonPlus buttonQuantity">+</button>
+              </div>
+              <!--Fazer botões para aumentar ou diminuir a quantidade de itens para comprar-->
+            </li>
+
+            <li class="itensCartCounter">
+              <div class="buttonAddCart" id="buttonAddCart">
+                <p class="textButtonCart">Adicionar ao carrinho</p>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </section>
+
+      <div class="productDescription">
+        <h3 class="descriptionTitle">Descrição</h3>
+
+        <hr class="rowTitleDescription" />
+
+        <div class="textIngredients">
+          <p class="descriptionText">
+            O Picolé Pets Banana e Morango chega em camadas coloridas e
+            vibrantes que encantam os olhos antes mesmo do primeiro bite. Com o
+            sabor tropical do morango e da banana em um sorvete cremoso e leve,
+            ele é a sobremesa perfeita para os pequenos aventureiros. Diversão
+            garantida do visual ao sabor, em cada mordida.
+          </p>
+        </div>
+        <span class="warningText">
+          <span class="material-symbols-outlined warning">warning</span>Contém
+          Glúten e Lactose!
+        </span>
+      </div>
+
+      <hr class="lineDivisor" />
+
+      <div class="productRecommendation">
+        <h2 class="recommendationTitle">
+          Recomendações da
+          <span class="recommendationTinyChange">Casa</span>
+        </h2>
+
+        <div class="recommendationInfo">
+          <ul class="ulRecommendation">
+            <li class="listRecommendation">
+              <div class="containerRecommendation">
+                <a
+                  class="linksRecommendation"
+                  href="pck.picole_pets_baunilha.html"
+                  ><div class="circleProduct acai">
+                    <img
+                      class="recommendationProduct img_caixas"
+                      src="../../assets/img/produtos_geral/Picolé de Bichos (2).png"
+                      alt=""
+                    />
+                  </div>
+                  <p class="nameRecommendation">Picolé Pets</p>
+                  <p class="surnameRecommendation">Baunilha e Caramelo</p>
+                  <p class="priceTagRecommendation">R$6.99</p>
+                  <div class="buttonGoTo">Ir para página</div>
+                </a>
+              </div>
+            </li>
+
+            <li class="listRecommendation">
+              <div class="containerRecommendation">
+                <a class="linksRecommendation" href="a.acai_banana_granola.html"
+                  ><div class="circleProduct acai">
+                    <img
+                      class="recommendationProduct"
+                      src="../../assets/img/produtos_geral/Açaí com Banana e Granola.png"
+                      alt=""
+                    />
+                  </div>
+                  <p class="nameRecommendation">Açaí c/</p>
+                  <p class="surnameRecommendation">Banana e Granola</p>
+                  <p class="priceTagRecommendation">R$6.99</p>
+                  <div class="buttonGoTo">Ir para página</div>
+                </a>
+              </div>
+            </li>
+            <li class="listRecommendation">
+              <div class="containerRecommendation">
+                <a class="linksRecommendation" href="pck.picole_fini.html"
+                  ><div class="circleProduct">
+                    <img
+                      class="recommendationProduct img_caixas"
+                      src="../../assets/img/produtos_geral/Picolé de Fini.png"
+                      alt=""
+                    />
+                  </div>
+                  <p class="nameRecommendation">Picolé</p>
+                  <p class="surnameRecommendation">Fini</p>
+                  <p class="priceTagRecommendation">R$6.99</p>
+                  <div class="buttonGoTo">Ir para página</div>
+                </a>
+              </div>
+            </li>
+
+            <li class="listRecommendation">
+              <div class="containerRecommendation">
+                <a class="linksRecommendation" href="pck.picole_unicornio.html"
+                  ><div class="circleProduct milkshake">
+                    <img
+                      class="recommendationProduct img_caixas"
+                      src="../../assets/img/produtos_geral/Picolé de unicórnio.png"
+                      alt=""
+                    />
+                  </div>
+                  <p class="nameRecommendation">Picolé de</p>
+                  <p class="surnameRecommendation">Unicórnio</p>
+                  <p class="priceTagRecommendation">R$6.99</p>
+                  <div class="buttonGoTo">Ir para página</div>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER!!!!!!!!!!!!!!!!!!!!!1-->
+    <footer class="main-footer">
+      <div class="footer-grid">
+        <!-- Logo -->
+        <div class="footer-logo">
+          <img src="../../assets/img/icones/logo.jpg  " alt="Eisbären Gelato" />
+        </div>
+
+        <!-- Menu Institucional -->
+        <div class="footer-links">
+          <h4>NOSSAS PÁGINAS</h4>
+          <ul>
+            <li><a href="../index/index.html">Inicío</a></li>
+            <li><a href="../login/login.html">Login</a></li>
+            <li><a href="../saibamais/saibamais.html">Sobre nós</a></li>
+            <li><a href="#">Peça Aqui</a></li>
+          </ul>
+        </div>
+
+        <!-- Contato -->
+        <div class="footer-contact">
+          <h4>CONTATO</h4>
+          <!--Lista linkada-->
+          <ul>
+            <li>
+              <span class="material-symbols-outlined mail">mail</span
+              ><a class="linksFooter" href="mailto:EisbarenGelato@gmail.com">
+                EisbarenGelato@gmail.com</a
+              >
+            </li>
+            <li>
+              <span class="material-symbols-outlined call">call</span
+              ><a class="linksFooter" href="malito:+55 19 3211-6698">
+                +55 19 3211-6698</a
+              >
+            </li>
+          </ul>
+
+          <p>Acompanhe a gente nas redes sociais</p>
+          <div class="social-icons">
+            <a href="#"
+              ><img src="../../assets/img/icones/facebook2.png" alt="Facebook"
+            /></a>
+            <a href="#"
+              ><img src="../../assets/img/icones/instagram.png" alt="Instagram"
+            /></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Texto final -->
+      <div class="footer-bottom">
+        <p>© 2026 Eisbaren Gelato Sorvetes. Todos os direitos reservados.</p>
+        <a href="privacidade.html">Política de Privacidade</a>
+      </div>
+    </footer>
+
+    <script src="scripts/ProductPage.js"></script>
+    <!--chama o script js-->
+  </body>
+</html>
