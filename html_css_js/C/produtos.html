@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos</title>
+
+    <!--Link do style-->
+    <link rel="stylesheet" href="styles/style.css">
+
+    <!--Link do icone de perfil-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=group" />
+
+    <!--link da fonte Berkshire Swash-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <!--o link de ambos deve ser um só para os dois icones, tanto para o email ou o telefone -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=call,mail" />
+
+
+
+<!---------------------------------------------------------------------------------------------------------------------------------------------->
+</head>
+<body>
+    <header class="headerContainer" id="headerContainer">
+      <!--id necessário para produzir o efeito de mudança de cor que será adicionado posteriormente-->
+      <div class="logoContainer">
+        <img
+          src="ImagensFigma/logo.jpg"
+          alt="Logo Eisbaren"
+          class="headerLogo"
+        />
+      </div>
+
+      <div class="headerTextContainer">
+        <nav>
+          <ul class="listHeader">
+            <li class="linksList"><a class="textLink" href="">INÍCIO</a></li>
+            <li class="linksList">
+              <a class="textLink" href="">SAIBA MAIS</a>
+            </li>
+            <li class="linksList"><a class="textLink" href="">PRODUTOS</a></li>
+            <li class="linksList"><a class="textLink" href="">CARRINHO</a></li>
+            <li class="linksList"><a class="textLink" href="">PERFIL</a></li>
+            <li class="linksList">
+              <span class="material-symbols-outlined profile"> group </span>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    
+    <div class="buttonSwitch" id="buttonSwitch">
+        <!--id necessária para capitar no js, container especial que é o switcher de modos-->
+        <div class="buttonIndicator"></div>
+        <!--é o indicador do switcher-->
+      </div>
+    </header>
+
+    <!--Sessão para colocar o banner principal-->
+    <section class="imagem-inicial"> <!-- Criei uma sessão ou divisória APENAS para a imagem do banner -->
+        <img src="ImagensFigma/banner.png" alt="imagem inical da Parte de Produtos">
+        <h1> NOSSOS <p> PRODUTOS </h1>
+    </section>
+
+    </header>
+
+    <!--Barra de pesquisa-->
+    <div class="caixa-pesquisa">
+      <input type="text" class="barra-pesquisa" placeholder="Pesquisar">
+      <!--criação do botão da barra de pesquisa -->
+      <a href="#" class="lupa-btn"> 
+        <img src="ImagensFigma/lupaPesquisa.svg" alt="lupaPesquisa">
+        <!-- UMA OBSERVAÇÃO: Imagens em formato SVG são melhore para  mudar a cor, além de não perderem a qualidade quando der um zoom -->
+         <!--OBRSERVAÇÃO 2: Usar alt em imagens ajuda com que o google recomende mais o seu site por acessibilidade-->
+      </a>
+    </div>
+
+    <!--Criação do menu com o nome categoria ao lado -->
+    <button class="sanduiche-container">
+      <div class="sanduiche-btn">
+        <!--criação de span vazios para virarem tre listras na estilização-->
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <span class="texto-sanduiche">Categorias</span>
+    </button>
+
+    <!-- Criação do itens que ficaram no dropdown -->
+    <div class="dropdown" id="dropdown">
+      <!-- topicos que irão aparecer -->
+      <ul class="lista-categorias">
+        <li class="item">
+          <a href="#produtos-Milk-Shakes" class="link-categoria">Milk Shakes</a>
+        </li>
+        <li class="item">
+          <a href="#produtos-picole" class="link-categoria">Picolé</a>
+        </li>
+        <li class="item">
+          <a href="#produtos-acai" class="link-categoria">Açaí</a>
+        </li>
+        <li class="item">
+          <a href="#produtos-potes" class="link-categoria">Pote de Sorvete</a>
+        </li>
+        <li class="item">
+          <a href="#produtos-casquinhas" class="link-categoria">Casquinhas</a>
+        </li>
+        <li class="item">
+          <a href="#produtos-sundae" class="link-categoria">Sundae</a>
+        </li>
+        <li class="item">
+          <a href="#produtos-kids" class="link-categoria">Kids</a>
+        </li>
+      </ul>
+
+      <!-- EXPLICAÇÃO DOS COMANDOS USADOS ACIMA -->
+        <!--eu basicamente fiz um link ancora, usando id em todos os input e em todos as sections-->
+
+      <!-- input radio seriam as bolinhas e NAME é basicamente um comando que faz com que todos que tiverem o mesmo name competem entre si e consequentemente só um pode ser selecionado por vez-->
+     </div>
+    </div>
+
+    <!-- PARTE DOS PRODUTOS -->
+     <!-- Section do Milks Shakes -->
+  <section class="produtos-Milk-Shakes" id="produtos-Milk-Shakes">
+    <div class="sessao">
+      <h1>Milk-Shakes</h1>
+    </div>
+
+    <div class="grid-produtos">
+
+      <!-- CARD 1 -->
+       <!-- div pra fazer o empilahemnto da imagem/avaliação/texto/botao -->
+      <div class="card-produto">
+        <div class="img-circular">
+            <a href="#"><img src="ImagensFigma/MilkShake1.svg" alt="Milk-Shake de Morango"></a>
+        </div>
+
+        <!-- texto que fica em baixo da imagem  -->
+        <div class="conteudo-texto">
+          <h2>⭐4.9/5</h2>
+          <p>Milk-Shake de </br> Morango com </br> Chantilly</p>
+          <h3>R$10.00</h3>
+        </div>
+
+        <!-- Botão -->
+        <div class="botao-btn">
+          <a href="#" class="btn-comprar">Comprar Agora</a>
+          <a href="#" class="btn-icone">
+            <img src="ImagensFigma/carrinhoIcon.svg">
+          </a>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+       <!-- div pra fazer o empilahemnto da imagem/avaliação/texto/botao -->
+      <div class="card-produto">
+        <div class="img-circular">
+          <a href="#"><img src="ImagensFigma/MilkShake2.svg" alt="Milk-Shake de Manga"></a>
+        </div>
+
+        <!-- texto que fica em baixo da imagem  -->
+        <div class="conteudo-texto">
+          <h2>⭐4.9/5</h2>
+          <p>Milk-Shake de</br> Manga com </br>frutas</p>
+          <h3>R$10.00</h3>
+        </div>
+
+        <!-- Botão -->
+        <div class="botao-btn">
+          <a href="#" class="btn-comprar">Comprar Agora</a>
+          <a href="#" class="btn-icone">
+            <img src="ImagensFigma/carrinhoIcon.svg">
+          </a>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+
+       <!-- div pra fazer o empilahemnto da imagem/avaliação/texto/botao -->
+      <div class="card-produto">
+        <div class="img-circular">
+          <a href="#"><img src="ImagensFigma/MilkShake3.png" alt="Milk-Shake de Morango"></a>
+        </div>
+
+        <!-- texto que fica em baixo da imagem  -->
+        <div class="conteudo-texto">
+          <h2>⭐4.9/5</h2>
+          <p>Milk-Shake de</br> chocolate com</br> raspas</p>
+          <h3>R$10.00</h3>
+        </div>
+
+        <!-- Botão -->
+        <div class="botao-btn">
+          <a href="#" class="btn-comprar">Comprar Agora</a>
+          <a href="#" class="btn-icone">
+            <img src="ImagensFigma/carrinhoIcon.svg">
+          </a>
+        </div>
+      </div>
+
+       <!-- CARD 4 -->
+
+       <!-- div pra fazer o empilahemnto da imagem/avaliação/texto/botao -->
+      <div class="card-produto">
+        <div class="img-circular">
+          <a href="#"><img src="ImagensFigma/MilkOREO.png" class="milk" alt="Milk-Shake de frutas Vermelhas"></a>
+        </div>
+
+        <!-- texto que fica em baixo da imagem  -->
+        <div class="conteudo-texto">
+          <h2>⭐4.9/5</h2>
+          <p>Milk-Shake de</br> De ninho com</br> Biscoito Oreo</p>
+          <h3>R$10.00</h3>
+        </div>
+
+        <!-- Botão -->
+        <div class="botao-btn">
+          <a href="#" class="btn-comprar">Comprar Agora</a>
+          <a href="#" class="btn-icone">
+            <img src="ImagensFigma/carrinhoIcon.svg">
+          </a>
+        </div>
+      </div>
+
+      <!-- MILK SHAKE 5  -->
+      <div class="card-produto">
+        <div class="img-circular">
+          <a href="#"><img src="ImagensFigma/Milkpistache.png" class="pistche-milk" alt="Milk-Shake de frutas Vermelhas"></a>
+        </div>
+
+        <!-- texto que fica em baixo da imagem  -->
+        <div class="conteudo-texto">
+          <h2>⭐4.9/5</h2>
+          <p>Milk-Shake de</br> Pistache com calda de</br> chocolate</p>
+          <h3>R$10.00</h3>
+        </div>
+
+        <!-- Botão -->
+        <div class="botao-btn">
+          <a href="#" class="btn-comprar">Comprar Agora</a>
+          <a href="#" class="btn-icone">
+            <img src="ImagensFigma/carrinhoIcon.svg">
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section> 
+  
+  <!-- Section dos Picolés -->
+  <section class="produtos-picole" id="produtos-picole">
+    <!--sessão dos produtos-->
+    <div class="sessao-picole">
+      <a href="#"><h1>Picolés</h1></a>
+    </div>
+
+    <!--Vai ser basicamnto uma grip que vai conter todos os itens do picolé-->
+
+    <!-- PICOLÉ DE MORANGO -->
+    <div class="grid-produtos-picole">
+      <div class="card-produto">
+        <div class="img-circular-picole">
+          <a href="#"><img src="ImagensFigma/Picolé de Morango.png" alt="Picolé de Morango"></a>
+        </div>
+        <!-- texto que ficara a baixo da imagem -->
+         <div class="conteudo-texto-picole">
+          <h2>⭐4.9/5</h2>
+          <p>Picolé de <br> Morango</p>
+          <h3>R$1.50</h3>
+         </div>
+          <!-- Botão -->
+          <div class="botao-btn">
+            <a href="#" class="btn-comprar">Comprar Agora</a>
+            <a href="#" class="btn-icone">
+              <img src="ImagensFigma/carrinhoIcon.svg">
+            </a>
+          </div>
+      </div>
+
+        <!-- PICOLÉ DE CHOCOLATE -->
+
+      <div class="card-produto">
+        <div class="img-circular-picole">
+          <a href="#"><img src="ImagensFigma/Picolé de Chcolato copy.png" class="PicoleChocolate" alt="Picolé de Chocolate"></a>
+        </div>
+        <!-- texto que ficara a baixo da imagem -->
+         <div class="conteudo-texto-picole">
+          <h2>⭐4.9/5</h2>
+          <p>Picolé de <br> Chocolate</p>
+          <h3>R$1.50</h3>
+         </div>
+          <!-- Botão -->
+          <div class="botao-btn">
+            <a href="#" class="btn-comprar">Comprar Agora</a>
+            <a href="#" class="btn-icone">
+              <img src="ImagensFigma/carrinhoIcon.svg">
+            </a>
+          </div>
+      </div>
+
+        <!-- PICOLÉ DE UVA -->
+      <div class="card-produto">
+        <div class="img-circular-picole">
+          <a href="#"><img src="ImagensFigma/Picolé de Uva.png" alt="Picolé de Uva"></a>
+        </div>
+        <!-- texto que ficara a baixo da imagem -->
+         <div class="conteudo-texto-picole">
+          <h2>⭐4.9/5</h2>
+          <p>Picolé de <br> Uva</p>
+          <h3>R$1.50</h3>
+         </div>
+          <!-- Botão -->
+          <div class="botao-btn">
+            <a href="#" class="btn-comprar">Comprar Agora</a>
+            <a href="#" class="btn-icone">
+              <img src="ImagensFigma/carrinhoIcon.svg">
+            </a>
+          </div>
+      </div>
+
+        <!--PICOLÉ DE FLOCOS-->
+      <div class="card-produto">
+        <div class="img-circular-picole">
+          <a href="#"><img src="ImagensFigma/Picolé de flocos.png" alt="Picolé de flocos"></a>
+        </div>
+        <!-- texto que ficara a baixo da imagem -->
+         <div class="conteudo-texto-picole">
+          <h2>⭐4.9/5</h2>
+          <p>Picolé de <br> Flocos</p>
+          <h3>R$1.50</h3>
+         </div>
+          <!-- Botão -->
+          <div class="botao-btn">
+            <a href="#" class="btn-comprar">Comprar Agora</a>
+            <a href="#" class="btn-icone">
+              <img src="ImagensFigma/carrinhoIcon.svg">
+            </a>
+          </div>
+      </div>
+
+        <!-- PICOLÉ DE MILHO VERDE -->
+      <div class="card-produto">
+        <div class="img-circular-picole">
+          <a href="#"><img src="ImagensFigma/PicoleMilhoVerde.png" class="PicoleMilhoVerde" alt="Picolé de Milho Verde"></a>
+        </div>
+         <div class="conteudo-texto-picole">
+          <h2>⭐4.9/5</h2>
+          <p>Picolé de <br> Milho Verde</p>
+          <h3>R$1.50</h3>
+         </div>
+          <div class="botao-btn">
+            <a href="#" class="btn-comprar">Comprar Agora</a>
+            <a href="#" class="btn-icone">
+              <img src="ImagensFigma/carrinhoIcon.svg">
+            </a>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SESSÃO AÇAI  -->
+  <section class="produtos-açai" id="produtos-acai">
+    <!--sessão dos produtos-->
+    <div class="sessao-açai">
+      <a href="#"><h1>Açaí</h1></a>
+    </div>
+
+    <!--Vai ser basicamnto uma grip que vai conter todos os itens do picolé-->
+
+    <!-- Açaí de KIWI -->
+    <div class="grid-produtos-açai">
+      <div class="card-produto">
+        <div class="img-circular-açai">
+          <a href="#"><img src="ImagensFigma/Açaí com Kiwi e Leite em pó.png" alt="Açaí com Kiwi e Leite em pó"></a>
+        </div>
+        <!-- texto que ficara a baixo da imagem -->
+         <div class="conteudo-texto-açai">
+          <h2>⭐4.9/5</h2>
+          <p>Açaí Com Kiwi <br> e Leite e pó</p>
+          <h3>R$15.00</h3>
+         </div>
+          <!-- Botão -->
+          <div class="botao-btn">
+            <a href="#" class="btn-comprar">Comprar Agora</a>
+            <a href="#" class="btn-icone">
+              <img src="ImagensFigma/carrinhoIcon.svg">
+            </a>
+          </div>
+      </div>
+
+        <!-- Açaí de creme branco -->
+      <div class="card-produto">
+        <div class="img-circular-açai">
+          <a href="#"><img src="ImagensFigma/Açaí com Creme Branco e Chocoball.png" class="açai-chocoboll" alt="Açaí com Creme Branco e Chocoball"></a>
+        </div>
+        <!-- texto que ficara a baixo da imagem -->
+         <div class="conteudo-texto-açai">
+          <h2>⭐4.9/5</h2>
+          <p>Açaí Com Creme de <br> Avelã e Chocoball</p>
+          <h3>R$15.00</h3>
+         </div>
+
+          <!-- Botão -->
+          <div class="botao-btn">
+            <a href="#" class="btn-comprar">Comprar Agora</a>
+            <a href="#" class="btn-icone">
+              <img src="ImagensFigma/carrinhoIcon.svg">
+            </a>
+          </div>
+      </div>
+
+        <!-- Mousse de Morango -->
+      <div class="card-produto">
+        <div class="img-circular-açai">
+          <a href="#"><img src="ImagensFigma/Açaí com Mousse de Morango.png" alt="Açaí com Mousse de Morango"></a>
+        </div>
+        <!-- texto que ficara a baixo da imagem -->
+         <div class="conteudo-texto-açai">
+          <h2>⭐4.9/5</h2>
+          <p>Açaí Com Mousse <br> De Morango</p>
+          <h3>R$15.00</h3>
+         </div>
+          <!-- Botão -->
+          <div class="botao-btn">
+            <a href="#" class="btn-comprar">Comprar Agora</a>
+            <a href="#" class="btn-icone">
+              <img src="ImagensFigma/carrinhoIcon.svg">
+            </a>
+          </div>
+      </div>
+
+        <!--Açaí de banana-->
+      <div class="card-produto">
+        <div class="img-circular-açai">
+          <a href="#"><img src="ImagensFigma/Açaí com Banana e Granola.png" alt="Açaí com Banana e Granola"></a>
+        </div>
+        <!-- texto que ficara a baixo da imagem -->
+         <div class="conteudo-texto-açai">
+          <h2>⭐4.9/5</h2>
+          <p>Açaí com Banana e <br> Granola</p>
+          <h3>R$15.00</h3>
+         </div>
+          <!-- Botão -->
+          <div class="botao-btn">
+            <a href="#" class="btn-comprar">Comprar Agora</a>
+            <a href="#" class="btn-icone">
+              <img src="ImagensFigma/carrinhoIcon.svg">
+            </a>
+          </div>
+      </div>
+
+        <!-- Açãí PURO -->
+      <div class="card-produto">
+        <div class="img-circular-açai">
+          <a href="#"><img src="ImagensFigma/Açaí Puro Batido (Simples).png" class="açai-puro" alt="Açaí Puro Batido"></a>
+        </div>
+         <div class="conteudo-texto-açai">
+          <h2>⭐4.9/5</h2>
+          <p>Açaí Puro Batido <br> Simples </p>
+          <h3>R$9.99</h3>
+         </div>
+          <div class="botao-btn">
+            <a href="#" class="btn-comprar">Comprar Agora</a>
+            <a href="#" class="btn-icone">
+              <img src="ImagensFigma/carrinhoIcon.svg">
+            </a>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SESSÂO POTEs SORVETE -->]
+  <section class="produtos-potes" id="produtos-potes">
+    <!--sessão dos produtos-->
+    <div class="sessao-potes">
+      <a href="#"><h1>Potes de Sorvete</h1></a>
+    </div>
+
+    <!--Vai ser basicamnto uma grip que vai conter todos os itens do picolé-->
+
+
+    <div class="grid-produtos-potes">
+      <div class="card-produto">
+        <div class="img-circular-potes">
+          <a href="#"><img src="ImagensFigma/Pote de Napolitano.png" class="pote-napolitano" alt="Pote de Napolitano"></a>
+        </div>
+        <!-- texto que ficara a baixo da imagem -->
+         <div class="conteudo-texto-potes">
+          <h2>⭐4.9/5</h2>
+          <p>Pote de Sorvete <br> Napolitano </p>
+          <h3>R$20.00</h3>
+         </div>
+          <!-- Botão -->
+          <div class="botao-btn">
+            <a href="#" class="btn-comprar">Comprar Agora</a>
+            <a href="#" class="btn-icone">
+              <img src="ImagensFigma/carrinhoIcon.svg">
+            </a>
+          </div>
+      </div>
+
+
+      <div class="card-produto">
+        <div class="img-circular-potes">
+          <a href="#"><img src="ImagensFigma/Pote de Oreo.png" class="pote-oreo" alt="Pote de Oreo"></a>
+        </div>
+        <!-- texto que ficara a baixo da imagem -->
+         <div class="conteudo-texto-potes">
+          <h2>⭐4.9/5</h2>
+          <p>Pote de Sorvete <br> Oreo</p>
+          <h3>R$28.00</h3>
+         </div>
+
+          <!-- Botão -->
+          <div class="botao-btn">
+            <a href="#" class="btn-comprar">Comprar Agora</a>
+            <a href="#" class="btn-icone">
+              <img src="ImagensFigma/carrinhoIcon.svg">
+            </a>
+          </div>
+      </div>
+
+
+      <div class="card-produto">
+        <div class="img-circular-potes">
+          <a href="#"><img src="ImagensFigma/Pote de Nozes com Nutella.png" alt="Pote de Nozes com Nutella"></a>
+        </div>
+        <!-- texto que ficara a baixo da imagem -->
+         <div class="conteudo-texto-potes">
+          <h2>⭐4.9/5</h2>
+          <p>Pote de Nozes com <br> Nutella</p>
+          <h3>R$30.00</h3>
+         </div>
+          <!-- Botão -->
+          <div class="botao-btn">
+            <a href="#" class="btn-comprar">Comprar Agora</a>
+            <a href="#" class="btn-icone">
+              <img src="ImagensFigma/carrinhoIcon.svg">
+            </a>
+          </div>
+      </div>
+
+
+      <div class="card-produto">
+        <div class="img-circular-potes">
+          <a href="#"><img src="ImagensFigma/Pote de Maracujá e Limão.png" alt="Pote de Maracujá e Limão"></a>
+        </div>
+        <!-- texto que ficara a baixo da imagem -->
+         <div class="conteudo-texto-potes">
+          <h2>⭐4.9/5</h2>
+          <p>Pote de Sorvete de<br> Maracujá e Limão</p>
+          <h3>R$25.00</h3>
+         </div>
+          <!-- Botão -->
+          <div class="botao-btn">
+            <a href="#" class="btn-comprar">Comprar Agora</a>
+            <a href="#" class="btn-icone">
+              <img src="ImagensFigma/carrinhoIcon.svg">
+            </a>
+          </div>
+      </div>
+
+
+      <div class="card-produto">
+        <div class="img-circular-potes">
+          <a href="#"><img src="ImagensFigma/Pote de Morango e leite condensado.png" class="pote-morango" alt="Pote de Morango e leite condensado"></a>
+        </div>
+         <div class="conteudo-texto-potes">
+          <h2>⭐4.9/5</h2>
+          <p>Pote de Sorvete de <br> Morango e Creme </p>
+          <h3>R$25.00</h3>
+         </div>
+          <div class="botao-btn">
+            <a href="#" class="btn-comprar">Comprar Agora</a>
+            <a href="#" class="btn-icone">
+              <img src="ImagensFigma/carrinhoIcon.svg">
+            </a>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SESSÃO CASQUINHAS -->
+  <section class="produtos-casquinhas" id="produtos-casquinhas">
+    <!--sessão dos produtos-->
+    <div class="sessao-casquinhas">
+      <a href="#"><h1>Casquinhas</h1></a>
+    </div>
+
+    <!--Vai ser basicamnto uma grip que vai conter todos os itens do picolé-->
+
+
+    <div class="grid-produtos-casquinhas">
+      <div class="card-produto">
+        <div class="img-circular-casquinhas">
+          <a href="#"><img src="ImagensFigma/Casquinhas de Morango Cremoso.png" alt="Casquinhas de Morango Cremoso"></a>
+        </div>
+        <!-- texto que ficara a baixo da imagem -->
+         <div class="conteudo-texto-casquinhas">
+          <h2>⭐4.9/5</h2>
+          <p>Casquinha de <br> Morango Cremoso </p>
+          <h3>R$6.99</h3>
+         </div>
+          <!-- Botão -->
+          <div class="botao-btn">
+            <a href="#" class="btn-comprar">Comprar Agora</a>
+            <a href="#" class="btn-icone">
+              <img src="ImagensFigma/carrinhoIcon.svg">
+            </a>
+          </div>
+      </div>
+
+
+      <div class="card-produto">
+        <div class="img-circular-casquinhas">
+          <a href="#"><img src="ImagensFigma/Casquinhas de Coco branco.png" class="casquinha-coco" alt="Casquinhas de Coco branco"></a>
+        </div>
+        <!-- texto que ficara a baixo da imagem -->
+         <div class="conteudo-texto-casquinhas">
+          <h2>⭐4.9/5</h2>
+          <p>Casquinha de <br> Coco branco</p>
+          <h3>R$6.99</h3>
+         </div>
+
+          <!-- Botão -->
+          <div class="botao-btn">
+            <a href="#" class="btn-comprar">Comprar Agora</a>
+            <a href="#" class="btn-icone">
+              <img src="ImagensFigma/carrinhoIcon.svg">
+            </a>
+          </div>
+      </div>
+
+
+      <div class="card-produto">
+        <div class="img-circular-casquinhas">
+          <a href="#"><img src="ImagensFigma/Casquinhas de Chocolate intenso.png" alt="Casquinhas de Chocolate intenso"></a>
+        </div>
+        <!-- texto que ficara a baixo da imagem -->
+         <div class="conteudo-texto-casquinhas">
+          <h2>⭐4.9/5</h2>
+          <p>Casquinha de <br> Chocolate intenso</p>
+          <h3>R$6.99</h3>
+         </div>
+          <!-- Botão -->
+          <div class="botao-btn">
+            <a href="#" class="btn-comprar">Comprar Agora</a>
+            <a href="#" class="btn-icone">
+              <img src="ImagensFigma/carrinhoIcon.svg">
+            </a>
+          </div>
+      </div>
+
+
+      <div class="card-produto">
+        <div class="img-circular-casquinhas">
+          <a href="#"><img src="ImagensFigma/Casquinhas de Açai Cracante.png" alt="Casquinhas de Açai Cracante"></a>
+        </div>
+        <!-- texto que ficara a baixo da imagem -->
+         <div class="conteudo-texto-casquinhas">
+          <h2>⭐4.9/5</h2>
+          <p>Casquinha de<br> Açaí Crocante</p>
+          <h3>R$6.99</h3>
+         </div>
+          <!-- Botão -->
+          <div class="botao-btn">
+            <a href="#" class="btn-comprar">Comprar Agora</a>
+            <a href="#" class="btn-icone">
+              <img src="ImagensFigma/carrinhoIcon.svg">
+            </a>
+          </div>
+      </div>
+
+
+      <div class="card-produto">
+        <div class="img-circular-casquinhas">
+          <a href="#"><img src="ImagensFigma/Casquinha de Cokie Com Gotas de Chocolate.png" class="casquinha-gotas" alt="Casquinha de Cokie Com Gotas de Chocolate"></a>
+        </div>
+         <div class="conteudo-texto-casquinhas">
+          <h2>⭐4.9/5</h2>
+          <p>Casquinha de Cokie <br>Com Gotas de Chocolate</p>
+          <h3>R$6.99</h3>
+         </div>
+          <div class="botao-btn">
+            <a href="#" class="btn-comprar">Comprar Agora</a>
+            <a href="#" class="btn-icone">
+              <img src="ImagensFigma/carrinhoIcon.svg">
+            </a>
+          </div>
+      </div>
+    </div>
+  </section>
+
+   <!-- SESSÃO SUNDAE -->
+  <section class="produtos-sundae" id="produtos-sundae">
+    <!--sessão dos produtos-->
+    <div class="sessao-sundae">
+      <a href="#"><h1>Sundae</h1></a>
+    </div>
+
+    <!--Vai ser basicamnto uma grip que vai conter todos os itens do picolé-->
+
+
+    <div class="grid-produtos-sundae">
+      <div class="card-produto">
+        <div class="img-circular-sundae">
+          <a href="#"><img src="ImagensFigma/Sunday de Caramelo.png" alt="Sunday de Caramelo"></a>
+        </div>
+        <!-- texto que ficara a baixo da imagem -->
+         <div class="conteudo-texto-sundae">
+          <h2>⭐4.9/5</h2>
+          <p>Sundae de <br>Caramelo </p>
+          <h3>R$12.00</h3>
+         </div>
+          <!-- Botão -->
+          <div class="botao-btn">
+            <a href="#" class="btn-comprar">Comprar Agora</a>
+            <a href="#" class="btn-icone">
+              <img src="ImagensFigma/carrinhoIcon.svg">
+            </a>
+          </div>
+      </div>
+
+
+      <div class="card-produto">
+        <div class="img-circular-sundae">
+          <a href="#"><img src="ImagensFigma/Sunday de Maracuja.png" class="sundae-maracuja" alt="Sunday de Maracuja"></a>
+        </div>
+        <!-- texto que ficara a baixo da imagem -->
+         <div class="conteudo-texto-sundae">
+          <h2>⭐4.9/5</h2>
+          <p>Sundae de <br>Maracujá </p>
+          <h3>R$12.00</h3>
+         </div>
+
+          <!-- Botão -->
+          <div class="botao-btn">
+            <a href="#" class="btn-comprar">Comprar Agora</a>
+            <a href="#" class="btn-icone">
+              <img src="ImagensFigma/carrinhoIcon.svg">
+            </a>
+          </div>
+      </div>
+
+
+      <div class="card-produto">
+        <div class="img-circular-sundae">
+          <a href="#"><img src="ImagensFigma/Sunday de Morongo.png" alt="Sunday de Morongo"></a>
+        </div>
+        <!-- texto que ficara a baixo da imagem -->
+         <div class="conteudo-texto-sundae">
+          <h2>⭐4.9/5</h2>
+          <p>Sundae de <br>Morango </p>
+          <h3>R$12.00</h3>
+         </div>
+          <!-- Botão -->
+          <div class="botao-btn">
+            <a href="#" class="btn-comprar">Comprar Agora</a>
+            <a href="#" class="btn-icone">
+              <img src="ImagensFigma/carrinhoIcon.svg">
+            </a>
+          </div>
+      </div>
+
+
+      <div class="card-produto">
+        <div class="img-circular-sundae">
+          <a href="#"><img src="ImagensFigma/Sunday de Baunilha com calda de Chocolate (2).png" alt="Sunday de Baunilha com calda de Chocolate"></a>
+        </div>
+        <!-- texto que ficara a baixo da imagem -->
+         <div class="conteudo-texto-sundae">
+          <h2>⭐4.9/5</h2>
+          <p>Sundae de <br>Baunilha com calda </p>
+          <h3>R$12.00</h3>
+         </div>
+          <!-- Botão -->
+          <div class="botao-btn">
+            <a href="#" class="btn-comprar">Comprar Agora</a>
+            <a href="#" class="btn-icone">
+              <img src="ImagensFigma/carrinhoIcon.svg">
+            </a>
+          </div>
+      </div>
+
+
+      <div class="card-produto">
+        <div class="img-circular-sundae">
+          <a href="#"><img src="ImagensFigma/Sunday de Oreo.png" class="sundae-oreo" alt="Sunday de Oreo"></a>
+        </div>
+         <div class="conteudo-texto-sundae">
+          <h2>⭐4.9/5</h2>
+          <p>Sundae de <br>Oreo </p>
+          <h3>R$12.00</h3>
+         </div>
+          <div class="botao-btn">
+            <a href="#" class="btn-comprar">Comprar Agora</a>
+            <a href="#" class="btn-icone">
+              <img src="ImagensFigma/carrinhoIcon.svg">
+            </a>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SESSÃO INFANTIL -->
+  <section class="produtos-kids" id="produtos-kids">
+    <!--sessão dos produtos-->
+    <div class="sessao-kids">
+      <h3>Conheça Nossa Linha Infantil</h3>
+      <h1>Kit Caixas</h1>
+    </div>
+
+    <div class="grid-produtos-kids">
+      <div class="card-produto">
+        <div class="img-circular-kids1">
+          <a href="#"><img src="ImagensFigma/Caixa de Picolé do Bob  Esponja.png" alt="Caixa de Picolé do Bob  Esponja"></a>
+        </div>
+        <!-- texto que ficara a baixo da imagem -->
+         <div class="conteudo-texto-kids">
+          <h2>⭐4.9/5</h2>
+          <p>Picolé do<br>Bob Esponja</p>
+          <h3>R$20.00</h3>
+         </div>
+          <!-- Botão -->
+          <div class="botao-btn">
+            <a href="#" class="btn-comprar">Comprar Agora</a>
+            <a href="#" class="btn-icone">
+              <img src="ImagensFigma/carrinhoIcon.svg">
+            </a>
+          </div>
+      </div>
+
+
+      <div class="card-produto">
+        <div class="img-circular-kids2">
+          <a href="#"><img src="ImagensFigma/Caixa de Picolé de Kinder.png" class="kids-kinder" alt="Caixa de Picolé de Kinder"></a>
+        </div>
+        <!-- texto que ficara a baixo da imagem -->
+         <div class="conteudo-texto-kids">
+          <h2>⭐4.9/5</h2>
+          <p>Kit Picolé <br>de Kinder bueno</p>
+          <h3>R$23.00</h3>
+         </div>
+
+          <!-- Botão -->
+          <div class="botao-btn">
+            <a href="#" class="btn-comprar">Comprar Agora</a>
+            <a href="#" class="btn-icone">
+              <img src="ImagensFigma/carrinhoIcon.svg">
+            </a>
+          </div>
+      </div>
+
+
+      <div class="card-produto">
+        <div class="img-circular-kids3">
+          <a href="#"><img src="ImagensFigma/Caixa de Picolé de Frigoplé.png" alt="Caixa de Picolé de Frigoplé"></a>
+        </div>
+        <!-- texto que ficara a baixo da imagem -->
+         <div class="conteudo-texto-kids">
+          <h2>⭐4.9/5</h2>
+          <p>Kit Picolé de <br>Frigopé </p>
+          <h3>R$18.00</h3>
+         </div>
+          <!-- Botão -->
+          <div class="botao-btn">
+            <a href="#" class="btn-comprar">Comprar Agora</a>
+            <a href="#" class="btn-icone">
+              <img src="ImagensFigma/carrinhoIcon.svg">
+            </a>
+          </div>
+      </div>
+
+
+      <div class="card-produto">
+        <div class="img-circular-kids4">
+          <a href="#"><img src="ImagensFigma/Caixa de Picolé de Cremes.png" alt="Caixa de Picolé de Cremes"></a>
+        </div>
+        <!-- texto que ficara a baixo da imagem -->
+         <div class="conteudo-texto-kids">
+          <h2>⭐4.9/5</h2>
+          <p>Kit Picolé de <br>Creme</p>
+          <h3>R$12.00</h3>
+         </div>
+          <!-- Botão -->
+          <div class="botao-btn">
+            <a href="#" class="btn-comprar">Comprar Agora</a>
+            <a href="#" class="btn-icone">
+              <img src="ImagensFigma/carrinhoIcon.svg">
+            </a>
+          </div>
+      </div>
+
+
+      <div class="card-produto">
+        <div class="img-circular-kids5">
+          <a href="#"><img src="ImagensFigma/caixa de Picolé de Bananinha.png" class="kids-bananinha" alt="caixa de Picolé de Bananinha"></a>
+        </div>
+         <div class="conteudo-texto-kids">
+          <h2>⭐4.9/5</h2>
+          <p>Kit Picolé de <br>Bananinha </p>
+          <h3>R$25.00</h3>
+         </div>
+          <div class="botao-btn">
+            <a href="#" class="btn-comprar">Comprar Agora</a>
+            <a href="#" class="btn-icone">
+              <img src="ImagensFigma/carrinhoIcon.svg">
+            </a>
+          </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- SESSÃO INFANTIL PICOLÉS -->
+  <section class="produtos-kids-picole">
+    <div class="sessao-kids">
+      <h1>Picolés</h1>
+    </div>
+
+    <!-- PICOLÉ 1 -->
+    <div class="grid-produtos-kids">
+      <div class="card-produto">
+        <div class="img-circular-kids1">
+          <a href="#"><img src="ImagensFigma/Picolé de Bichos.png" alt="Picolé de Bichos"></a>
+        </div>
+        <!-- texto que ficara a baixo da imagem -->
+         <div class="conteudo-texto-kids">
+          <h2>⭐4.9/5</h2>
+          <p>Picolé Pets<br>Morango e Banana</p>
+          <h3>R$8.50</h3>
+         </div>
+          <!-- Botão -->
+          <div class="botao-btn">
+            <a href="#" class="btn-comprar">Comprar Agora</a>
+            <a href="#" class="btn-icone">
+              <img src="ImagensFigma/carrinhoIcon.svg">
+            </a>
+          </div>
+      </div>
+
+<!-- PICOLÉ 2 -->
+      <div class="card-produto">
+        <div class="img-circular-kids2">
+          <a href="#"><img src="ImagensFigma/Picolé de Fini.png" class="picole-fini" alt="Picolé de Fini"></a>
+        </div>
+        <!-- texto que ficara a baixo da imagem -->
+         <div class="conteudo-texto-kids">
+          <h2>⭐4.9/5</h2>
+          <p>Picolé de </br> Fini</p>
+          <h3>R$6.70</h3>
+         </div>
+
+          <!-- Botão -->
+          <div class="botao-btn">
+            <a href="#" class="btn-comprar">Comprar Agora</a>
+            <a href="#" class="btn-icone">
+              <img src="ImagensFigma/carrinhoIcon.svg">
+            </a>
+          </div>
+      </div>
+
+<!-- PICOLÉ 3 -->
+      <div class="card-produto">
+        <div class="img-circular-kids3">
+          <a href="#"><img src="ImagensFigma/Picolé de Bichos (2).png" alt="Picolé de Bichos"></a>
+        </div>
+        <!-- texto que ficara a baixo da imagem -->
+         <div class="conteudo-texto-kids">
+          <h2>⭐4.9/5</h2>
+          <p>Picolé Pets<br>Baunilha e Caramelo</p>
+          <h3>R$8.90</h3>
+         </div>
+          <!-- Botão -->
+          <div class="botao-btn">
+            <a href="#" class="btn-comprar">Comprar Agora</a>
+            <a href="#" class="btn-icone">
+              <img src="ImagensFigma/carrinhoIcon.svg">
+            </a>
+          </div>
+      </div>
+
+<!-- PICOLÉ 4 -->
+      <div class="card-produto">
+        <div class="img-circular-kids4">
+          <a href="#"><img src="ImagensFigma/Picolé de unicórnio.png" alt="Picolé de Unicórnio"></a>
+        </div>
+        <!-- texto que ficara a baixo da imagem -->
+         <div class="conteudo-texto-kids">
+          <h2>⭐4.9/5</h2>
+          <p>Picolé de <br>Unicórnio</p>
+          <h3>R$7.30</h3>
+         </div>
+          <!-- Botão -->
+          <div class="botao-btn">
+            <a href="#" class="btn-comprar">Comprar Agora</a>
+            <a href="#" class="btn-icone">
+              <img src="ImagensFigma/carrinhoIcon.svg">
+            </a>
+          </div>
+      </div>
+
+<!-- PICOLÉ 5 -->
+      <div class="card-produto">
+        <div class="img-circular-kids5">
+          <a href="#"><img src="ImagensFigma/Picolé de Tubarão.png" class="picole-tubarao" alt="Picolé de Tubarão"></a>
+        </div>
+         <div class="conteudo-texto-kids">
+          <h2>⭐4.9/5</h2>
+          <p>Picolé de <br>Tubarão </p>
+          <h3>R$9.30</h3>
+         </div>
+          <div class="botao-btn">
+            <a href="#" class="btn-comprar">Comprar Agora</a>
+            <a href="#" class="btn-icone">
+              <img src="ImagensFigma/carrinhoIcon.svg">
+            </a>
+          </div>
+      </div>
+    </div>
+  </section>
+
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+      <div class="footer-grid">
+        <!-- Logo -->
+        <div class="footer-logo">
+          <img src="ImagensFigma/logo.jpg" alt="Eisbären Gelato" />
+        </div>
+
+        <!-- Menu Institucional -->
+        <div class="footer-links">
+          <h4>MENU INSTITUCIONAL</h4>
+          <ul>
+            <li><a href="index.html">inicío</a></li>
+            <li><a href="lojas.html">Nossas lojas</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="saibamais.html">Sobre nós</a></li>
+            <li><a href="pedido.html">Peça Aqui</a></li>
+          </ul>
+        </div>
+
+        <!-- Contato -->
+        <div class="footer-contact">
+          <h4>CONTATO</h4>
+          <!--Lista linkada-->
+          <ul>
+            <li>
+              <span class="material-symbols-outlined">mail</span
+              ><a class="linksFooter" href="mailto:EisbarenGelato@gmail.com">
+                EisbarenGelato@gmail.com</a
+              >
+            </li>
+            <li>
+              <span class="material-symbols-outlined">call</span
+              ><a class="linksFooter" href="malito:+55 19 3211-6698">
+                +55 19 3211-6698</a
+              >
+            </li>
+          </ul>
+
+          <p>Acompanhe a gente nas redes sociais</p>
+          <div class="social-icons">
+            <a href="#"
+              ><img src="ImagensFigma/facebook2.png" alt="Facebook"
+            /></a>
+            <a href="#"
+              ><img src="ImagensFigma/instagram.png" alt="Instagram"
+            /></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Texto final -->
+      <div class="footer-bottom">
+        <p>© 2026 Eisbären Gelato Sorvetes. Todos os direitos reservados.</p>
+        <a href="privacidade.html">Política de Privacidade</a>
+      </div>
+    </footer>
+
+        <!--Link do javascript-->
+        <script src="scripts/scripts.js"></script>
+</body>
+</html>
