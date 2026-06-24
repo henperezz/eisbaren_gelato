@@ -6,33 +6,19 @@ buttonSwitch.addEventListener("click", () => {
   /*headerContainer.classList.toggle("dark");*/
 });
 
-let favoriteIcon = document.getElementById("favoriteIcon");
+document.querySelectorAll(".quantity").forEach((group) => {
+  const display = group.querySelector("span"); // o contador dentro desse grupo
+  let value = 1;
 
-favoriteIcon.addEventListener("click", () => {
-  favoriteIcon.classList.toggle("favorited");
-});
+  group.querySelector(".buttonMinus").addEventListener("click", () => {
+    if (value > 1) {
+      value--;
+      display.textContent = value;
+    }
+  });
 
-let value = 1;
-
-document.querySelector(".buttonMinus").addEventListener("click", () => {
-  if (value == 1) {
-    return;
-  } else {
-    value--;
-  }
-  document.getElementById("valueQuantity").textContent = value;
-});
-
-document.querySelector(".buttonPlus").addEventListener("click", () => {
-  value++;
-  document.getElementById("valueQuantity").textContent = value;
-});
-
-let additionals = document.querySelector(".additionals");
-let additionalsList = document.querySelector(".additionalsList");
-let arrowRight = document.querySelector(".arrowRight");
-
-additionals.addEventListener("click", () => {
-  additionalsList.classList.toggle("activated");
-  arrowRight.classList.toggle("activated");
+  group.querySelector(".buttonPlus").addEventListener("click", () => {
+    value++;
+    display.textContent = value;
+  });
 });
