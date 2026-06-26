@@ -276,20 +276,23 @@ clear:both;
   float:left;
 }
 
-.Kit-Picolé img{
-  
+.Kit-Picolé{
   width:160px;
   height:160px;
-  
   margin-left:40px;
   border-radius:20px;
   background:#FCAE0C;
   object-fit:cover;
   float:left;
 }
+.Kit-Picolé img{
+  margin-top: 12px;
+  margin-left: 12px;
+  width:140px;
+  height:140px;
+}
 
-.pote img{
-
+.pote{
   width:160px;
   height:160px;
   margin-left:40px;
@@ -297,7 +300,12 @@ clear:both;
   background:#FFAEC1;
   object-fit:cover;
   float:left;
-
+}
+.pote img{
+  margin-top: 12px;
+  margin-left: 19px;
+  width:120px;
+  height:150px;
 }
 
 /* TEXTO */
