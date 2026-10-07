@@ -1,45 +1,52 @@
-:root{
-    /*Cores principais das bolinhas (card redondos)*/
-    --cor-redonda1: #FFAEC1;
-    --cor-redonda2: #FBAB2A;
-    --cor-redonda3: #C50D19;
-/*------COR DOS PREÇOS E BOTÕES E LETRAS --------*/
-    --cor-preco: #F83D8E;
-    --cor-botao: #ED95AE;
-    --cor-letra: #0F0200;
+:root {
+  /*Cores principais das bolinhas (card redondos)*/
+  --cor-redonda1: #ffaec1;
+  --cor-redonda2: #fbab2a;
+  --cor-redonda3: #c50d19;
+  /*------COR DOS PREÇOS E BOTÕES E LETRAS --------*/
+  --cor-preco: #f83d8e;
+  --cor-botao: #ed95ae;
+  --cor-letra: #0f0200;
 }
 /*Importanto a fonte princiapal*/
-    @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
-    /*FONTE INTER*/
+/*FONTE INTER*/
 
-    @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-  
+@import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
-    /*Fonte da barra de pesquisa*/
-    @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+/*Fonte da barra de pesquisa*/
+@import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
-  /* Fonte da descrição que fica abaixo das bolinhas  */
-    @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Berkshire+Swash&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+/* Fonte da descrição que fica abaixo das bolinhas  */
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Berkshire+Swash&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
 * {
   margin: 0; /* Reseta as configurações de margin pré-existentes na página*/
   padding: 0; /*Reseta as configurações de padding pré-existentes na página*/
 }
 
-html{
+html {
   scroll-behavior: smooth; /*ESSE COMANDO ESTLIZA O SCROLL, usei no sanduiche, ous eja agr quando vc clica no snaduiche ele deixa mas suave*/
 }
 
 body {
   background-color: #ffffff;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: var(--size-text1);
+  transition: 0.5s ease-in-out;
+}
+
+body.dark_mode {
+  background-color: #2b2229;
 }
 
 .headerContainer {
   display: flex; /*Define que o container é flexível*/
   flex-direction: row; /*Define que a direção do container é na horizonta (row) não na vertical (column)*/
+  position: sticky;
+  top: 0;
+  z-index: 99;
   height: 98px;
   width: auto;
   background: linear-gradient(
@@ -49,6 +56,30 @@ body {
     #dba7bf 34%,
     #e8a3b8 90%
   ); /*Define que o background do container será gradiente*/
+}
+
+#header_container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: linear-gradient(
+    to bottom,
+    #3d2435 0%,
+    #542f49 14%,
+    #493442 34%,
+    #3f2b35 90%,
+    #3f2b35 100%
+  );
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#header_container.dark_mode::before {
+  opacity: 1;
 }
 
 .headerLogo {
@@ -151,41 +182,47 @@ body {
 
 /*ESTILIZAÇÃO DO BANNER PRINCIPAL*/
 
-
 /*Edição do texto central*/
 .imagem-inicial {
-    position: relative; /*Faz com que o elemento continue em sua posição original sem afetar os elementos ao redor, necessário para a posição absoluta do h1*/
-    width: 100%;
-    height: auto;
+  position: relative; /*Faz com que o elemento continue em sua posição original sem afetar os elementos ao redor, necessário para a posição absoluta do h1*/
+  width: 100%;
+  height: auto;
 }
 
 .imagem-inicial img {
-    width: 100%;
-    height: auto;
-    object-fit: cover; /*Garante que a imagem preencha o espaço disponível sem distorcer, cortando as partes que ultrapassarem o container*/
-}
-.imagem-inicial h1 {
-    font-family: "Berkshire Swash", cursive;
-    font-size: 55px;
-    color: var(--cor-letra);
-    position: absolute; /*Faz com que o elemento se sobressaia sobre outros elementos, saindo do fluxo original*/
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /*Faz com que o elemento se mova para o centro exato da tela, baseado em sua própria largura e altura*/
-    text-align: center; /*Centraliza o texto dentro do elemento h1*/
-    width: 100%; /*Garante que o h1 ocupe toda a largura disponível, necessário para o text-align funcionar corretamente*/
+  width: 100%;
+  height: auto;
+  object-fit: cover; /*Garante que a imagem preencha o espaço disponível sem distorcer, cortando as partes que ultrapassarem o container*/
 }
 
+#img_inicial.dark_mode img {
+  filter: brightness(0.8);
+}
+
+.imagem-inicial h1 {
+  font-family: "Berkshire Swash", cursive;
+  font-size: 55px;
+  color: var(--cor-letra);
+  position: absolute; /*Faz com que o elemento se sobressaia sobre outros elementos, saindo do fluxo original*/
+  top: 50%;
+  left: 50%;
+  transform: translate(
+    -50%,
+    -50%
+  ); /*Faz com que o elemento se mova para o centro exato da tela, baseado em sua própria largura e altura*/
+  text-align: center; /*Centraliza o texto dentro do elemento h1*/
+  width: 100%; /*Garante que o h1 ocupe toda a largura disponível, necessário para o text-align funcionar corretamente*/
+}
 
 /*ESTILIZAÇÃO DO SANDUICHE*/
 /*Tirando efeitos padrões do botão*/
 
 /*Estilizando as cores das bolinhas */
-.color-radio{
+.color-radio {
   accent-color: var(--cor-redonda1);
 }
 
-.sanduiche-container{
+.sanduiche-container {
   border: none; /*tira as bordas de dentro*/
   background: none; /*tirando acor padrão de dentro*/
   outline: none; /*tira a borda quando clicamos na barra*/
@@ -193,7 +230,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 5px; /*da um efeito bonito*/
-  gap: 10px /*espaçamento entre o menu e a palavra categorias*/
+  gap: 10px; /*espaçamento entre o menu e a palavra categorias*/
 }
 
 /*estilização do snaduiche*/
@@ -213,18 +250,23 @@ body {
   cursor: pointer;
 }
 
-.texto-sanduiche{
+.texto-sanduiche {
   font-family: "Berkshire Swash";
   font-size: 24px;
   font-weight: 300;
   color: var(--cor-letra);
+  transition: 0.5s ease-in-out;
+}
+
+.texto-sanduiche.dark_mode {
+  color: #ffffff;
 }
 
 /*ESTILIZAÇÃO DO CARD DROPDOWN*/
 /*estilizando o fundo do dropdown*/
 .dropdown {
   position: absolute; /* sai do fluxo*/
-  z-index: 50;/*fica na frente de tudo*/
+  z-index: 50; /*fica na frente de tudo*/
   display: none;
   flex-direction: column;
   width: 180px; /*largura*/
@@ -233,26 +275,26 @@ body {
   border-radius: 9px; /*arredontdamento da borda*/
   overflow: hidden; /*faz o border-radius funcionar nos filhos*/
   background: #ffffff; /*fundo do ***caixa***/
-  opacity: 0;/* invisível */
-  visibility: hidden;/* não ocupa espaço no clique*/
+  opacity: 0; /* invisível */
+  visibility: hidden; /* não ocupa espaço no clique*/
   transition: 0.3s;
 }
 
 .dropdown.aberto {
   display: block; /*quando eu colocar a classe 'active' no dropdown no js, ele aparece */
-  opacity: 1;/*visível*/
+  opacity: 1; /*visível*/
   visibility: visible;
 }
 
 /*tirando as configurações padrões do ul*/
-.lista-categorias{
+.lista-categorias {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
 /*efeito cinza*/
-.item:hover{
+.item:hover {
   background: #efeff0;
 }
 
@@ -270,74 +312,79 @@ body {
   text-decoration: none; /*tira o sublinhado do link*/
 }
 
-
 /*ESTILIZAÇÃO DA BARRA DE PESQUISA*/
-.caixa-pesquisa{
+.caixa-pesquisa {
   position: absolute; /*permite colocar o elemento a onde vc quiser*/
-  left: 200px;    /* distância da direita */ /*REVISAR ISSO POIS PODE SER COMANDO REMENDO*/
-  background: linear-gradient(to bottom,
+  left: 200px; /* distância da direita */ /*REVISAR ISSO POIS PODE SER COMANDO REMENDO*/
+  background: linear-gradient(
+    to bottom,
     #e69cc6 6%,
     #e69cc6 14%,
     #dba7bf 34%,
-    #e8a3b8 70%);
+    #e8a3b8 70%
+  );
   height: 25px;
   padding: 10px;
   border-radius: 40px;
   display: flex; /*alinhamento do conteudo*/
   justify-content: space-between; /*joga o primeiro item totalmente pra esqueda e o outro totalmente para a direita*/
-  align-items: center;/*centralização dos elementos*/
+  align-items: center; /*centralização dos elementos*/
 }
 
 /*estilização do conteudo escrito dentro da barra de pesquisa*/
-::placeholder{
+::placeholder {
   font-size: 13px;
   font-family: "Inter";
 }
 
 /*Tirando efeitos padrões da barra de pesquisa, como: Borda, backgroud brando etc*/
 
-.barra-pesquisa{
+.barra-pesquisa {
   border: none; /*tira as bordas de dentro*/
   background: none; /*tirando acor padrão de dentro*/
   outline: none; /*tira a borda quando clicamos na barra*/
   padding: 0;
   color: aliceblue; /*cor do texto digitado*/
-  font-size: 16px;/*tamanho da letra*/
+  font-size: 16px; /*tamanho da letra*/
   line-height: 40px; /*tamanho da linha*/
   width: 0; /*pra fazer a barra de pesquisa aparecer apenas quando o mouse passar, temos que tirar o width*/
-  font-family: 'Open Sans';
-  transition: .5s;
+  font-family: "Open Sans";
+  transition: 0.5s;
 }
 
 /*Mudando a cor do placeholder*/
-::-webkit-input-placeholder { /*muda todos os placesholder da sua aplicação*/
+::-webkit-input-placeholder {
+  /*muda todos os placesholder da sua aplicação*/
   color: aliceblue;
 }
 
 /*Estilização da lupa*/
-.lupa-btn{
+.lupa-btn {
   width: 40px;
   height: 40px;
   border-radius: 50%; /*por ser 50% as bordas vão ficar literalmente redondas*/
-  background: linear-gradient(to bottom,
+  background: linear-gradient(
+    to bottom,
     #e69cc6 0%,
     #e69cc6 14%,
     #dba7bf 34%,
-    #e8a3b8 70%);
+    #e8a3b8 70%
+  );
   display: flex;
   justify-content: center; /*alinhamento horizontal*/
   align-items: center; /*alinhamento vertical*/
-  transition: .5s;
+  transition: 0.5s;
 }
 
 /*Fazer a bolinha abrir quando o mouse passar (TRANSIÇÃO)*/
-.caixa-pesquisa:hover > .barra-pesquisa{ /*quando o mouse passar pela caixa de pesuisa, o sinal d emaior significa que eu quero que apareça ou se transforme na barra de pesquisa*/
-  width: 240px;/*para aparecer*/
-  padding: 0 6px;  /*quando tem dois valores, o 1º é o vertical e o segundo o horizontal*/
+.caixa-pesquisa:hover > .barra-pesquisa {
+  /*quando o mouse passar pela caixa de pesuisa, o sinal d emaior significa que eu quero que apareça ou se transforme na barra de pesquisa*/
+  width: 240px; /*para aparecer*/
+  padding: 0 6px; /*quando tem dois valores, o 1º é o vertical e o segundo o horizontal*/
 }
 
 /*cor no botão (lupa) quando passado o mouse*/
-.caixa-pesquisa:hover > .lupa-btn{
+.caixa-pesquisa:hover > .lupa-btn {
   background: aliceblue;
 }
 
@@ -346,11 +393,12 @@ body {
 .produtos-Milk-Shakes {
   padding: 80px 30px;
   background: #fff;
+  transition: 0.5s ease-in-out;
 }
 
-.sessao a{
+.sessao a {
   text-decoration: none;
-  color: #0F0200;
+  color: #0f0200;
 }
 .sessao h1 {
   font-family: "Berkshire Swash";
@@ -359,8 +407,8 @@ body {
 
   margin-left: 60px; /*Distancia da parte esquerda*/
   margin-top: 20px; /*distancia do topo*/
+  transition: 0.5s ease-in-out;
 }
-
 
 /*deixei tudo em forma de coluna*/
 .grid-produtos {
@@ -406,7 +454,7 @@ body {
   height: 220px;
 }
 
-.img-circular:hover{
+.img-circular:hover {
   transform: scale(1.1);
 }
 .img-circular img:hover {
@@ -414,19 +462,23 @@ body {
 }
 
 /*estilização das infos em baio da imagem*/
-.conteudo-texto h2{
+.conteudo-texto {
+  transition: 0.5s ease-in-out;
+}
+
+.conteudo-texto h2 {
   font-size: 12px;
   margin-bottom: 15px;
 }
 
-.conteudo-texto p{
+.conteudo-texto p {
   font-family: "Archivo", sans-serif;
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 10px;
 }
 
-.conteudo-texto h3{
+.conteudo-texto h3 {
   font-family: "Archivo", sans-serif; /*fonte*/
   font-weight: 800;
   color: var(--cor-preco);
@@ -450,7 +502,7 @@ body {
   transition: transform 0.5s;
 }
 
-.btn-comprar:hover{
+.btn-comprar:hover {
   transform: translateY(-5px);
   box-shadow: 0px 8px 10px #9e4e65;
 }
@@ -460,16 +512,16 @@ body {
   height: 45px;
   border-radius: 50%; /*pra deixar redondo*/
   background-color: var(--cor-botao);
-  display: flex;  /* centraliza o ícone */
+  display: flex; /* centraliza o ícone */
   align-items: center;
   justify-content: center;
   text-decoration: none;
   transition: transform 0.5s;
 }
 
-.btn-icone:hover{
-    transform: scale(1.1);
-    box-shadow: 0px 8px 10px #9e4e65;
+.btn-icone:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 8px 10px #9e4e65;
 }
 
 /*ajustando de fato a imagem do carrinho*/
@@ -483,9 +535,9 @@ body {
   padding: 40px 30px;
 }
 
-.sessao-picole a{
+.sessao-picole a {
   text-decoration: none;
-  color: #0F0200;
+  color: #0f0200;
 }
 .sessao-picole h1 {
   font-family: "Berkshire Swash";
@@ -494,8 +546,8 @@ body {
 
   margin-left: 60px; /*Distancia da parte esquerda*/
   margin-top: 20px; /*distancia do topo*/
+  transition: 0.5s ease-in-out;
 }
-
 
 /*deixei tudo em forma de coluna*/
 .grid-produtos-picole {
@@ -549,7 +601,7 @@ body {
   margin-left: 8px;
 }
 
-.img-circular-picole:hover{
+.img-circular-picole:hover {
   transform: scale(1.1);
 }
 
@@ -558,19 +610,23 @@ body {
 }
 
 /*estilização das infos em baio da imagem*/
-.conteudo-texto-picole h2{
+.conteudo-texto-picole {
+  transition: 0.5s ease-in-out;
+}
+
+.conteudo-texto-picole h2 {
   font-size: 12px;
   margin-bottom: 15px;
 }
 
-.conteudo-texto-picole p{
+.conteudo-texto-picole p {
   font-family: "Archivo", sans-serif;
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 10px;
 }
 
-.conteudo-texto-picole h3{
+.conteudo-texto-picole h3 {
   font-family: "Archivo", sans-serif; /*fonte*/
   font-weight: 800;
   color: var(--cor-preco);
@@ -594,7 +650,7 @@ body {
   transition: transform 0.5s;
 }
 
-.btn-comprar:hover{
+.btn-comprar:hover {
   transform: translateY(-5px);
   box-shadow: 0px 8px 10px #9e4e65;
 }
@@ -604,16 +660,16 @@ body {
   height: 45px;
   border-radius: 50%; /*pra deixar redondo*/
   background-color: var(--cor-botao);
-  display: flex;  /* centraliza o ícone */
+  display: flex; /* centraliza o ícone */
   align-items: center;
   justify-content: center;
   text-decoration: none;
   transition: transform 0.5s;
 }
 
-.btn-icone:hover{
-    transform: scale(1.1);
-    box-shadow: 0px 8px 10px #9e4e65;
+.btn-icone:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 8px 10px #9e4e65;
 }
 
 /*ajustando de fato a imagem do carrinho*/
@@ -626,21 +682,21 @@ body {
 .produtos-açai {
   padding: 80px 30px;
   background: #fff;
+  transition: 0.5s ease-in-out;
 }
 
-.sessao-açai a{
+.sessao-açai a {
   text-decoration: none;
-  color: #0F0200;
+  color: #0f0200;
 }
 .sessao-açai h1 {
   font-family: "Berkshire Swash";
   font-size: 35px;
   font-weight: 500;
-
   margin-left: 60px; /*Distancia da parte esquerda*/
   margin-top: 20px; /*distancia do topo*/
+  transition: 0.5s ease-in-out;
 }
-
 
 /*deixei tudo em forma de coluna*/
 .grid-produtos-açai {
@@ -681,12 +737,12 @@ body {
 }
 
 /*Estilizaçãlo particular do açai de chocoboll e o açai puro*/
-.açai-chocoboll{
+.açai-chocoboll {
   display: flex;
   margin-left: 25px;
 }
 
-.açai-puro{
+.açai-puro {
   display: flex;
   margin-left: 15px;
 }
@@ -697,7 +753,7 @@ body {
   display: block;
 }
 
-.img-circular-açai:hover{
+.img-circular-açai:hover {
   transform: scale(1.1);
 }
 .img-circular-açai img:hover {
@@ -705,19 +761,23 @@ body {
 }
 
 /*estilização das infos em baio da imagem*/
-.conteudo-texto-açai h2{
+.conteudo-texto-açai {
+  transition: 0.5s ease-in-out;
+}
+
+.conteudo-texto-açai h2 {
   font-size: 12px;
   margin-bottom: 15px;
 }
 
-.conteudo-texto-açai p{
+.conteudo-texto-açai p {
   font-family: "Archivo", sans-serif;
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 10px;
 }
 
-.conteudo-texto-açai h3{
+.conteudo-texto-açai h3 {
   font-family: "Archivo", sans-serif; /*fonte*/
   font-weight: 800;
   color: var(--cor-preco);
@@ -741,7 +801,7 @@ body {
   transition: transform 0.5s;
 }
 
-.btn-comprar:hover{
+.btn-comprar:hover {
   transform: translateY(-5px);
   box-shadow: 0px 8px 10px #9e4e65;
 }
@@ -751,16 +811,16 @@ body {
   height: 45px;
   border-radius: 50%; /*pra deixar redondo*/
   background-color: var(--cor-botao);
-  display: flex;  /* centraliza o ícone */
+  display: flex; /* centraliza o ícone */
   align-items: center;
   justify-content: center;
   text-decoration: none;
   transition: transform 0.5s;
 }
 
-.btn-icone:hover{
-    transform: scale(1.1);
-    box-shadow: 0px 8px 10px #9e4e65;
+.btn-icone:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 8px 10px #9e4e65;
 }
 
 /*ajustando de fato a imagem do carrinho*/
@@ -769,16 +829,16 @@ body {
   height: 25px;
 }
 
-
 /* ESTILIZAÇÃO DA SESAO POTES */
 .produtos-potes {
   padding: 40px 30px;
   background: #fff;
+  transition: 0.5s ease-in-out;
 }
 
-.sessao-potes a{
+.sessao-potes a {
   text-decoration: none;
-  color: #0F0200;
+  color: #0f0200;
 }
 
 .sessao-potes h1 {
@@ -788,8 +848,8 @@ body {
 
   margin-left: 60px; /*Distancia da parte esquerda*/
   margin-top: 20px; /*distancia do topo*/
+  transition: 0.5s ease-in-out;
 }
-
 
 /*deixei tudo em forma de coluna*/
 .grid-produtos-potes {
@@ -835,27 +895,31 @@ body {
   display: block;
 }
 
-.img-circular-potes:hover{
-  transform:scale(1.1);
+.img-circular-potes:hover {
+  transform: scale(1.1);
 }
 .img-circular-potes img:hover {
   transform: scale(1.2); /* só a imagem cresce */
 }
 
 /*estilização das infos em baio da imagem*/
-.conteudo-texto-potes h2{
+.conteudo-texto-potes {
+  transition: 0.5s ease-in-out;
+}
+
+.conteudo-texto-potes h2 {
   font-size: 12px;
   margin-bottom: 15px;
 }
 
-.conteudo-texto-potes p{
+.conteudo-texto-potes p {
   font-family: "Archivo", sans-serif;
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 10px;
 }
 
-.conteudo-texto-potes h3{
+.conteudo-texto-potes h3 {
   font-family: "Archivo", sans-serif; /*fonte*/
   font-weight: 800;
   color: var(--cor-preco);
@@ -879,7 +943,7 @@ body {
   transition: transform 0.5s;
 }
 
-.btn-comprar:hover{
+.btn-comprar:hover {
   transform: translateY(-5px);
   box-shadow: 0px 8px 10px #9e4e65;
 }
@@ -889,16 +953,16 @@ body {
   height: 45px;
   border-radius: 50%; /*pra deixar redondo*/
   background-color: var(--cor-botao);
-  display: flex;  /* centraliza o ícone */
+  display: flex; /* centraliza o ícone */
   align-items: center;
   justify-content: center;
   text-decoration: none;
   transition: transform 0.5s;
 }
 
-.btn-icone:hover{
-    transform: scale(1.1);
-    box-shadow: 0px 8px 10px #9e4e65;
+.btn-icone:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 8px 10px #9e4e65;
 }
 
 /*ajustando de fato a imagem do carrinho*/
@@ -910,11 +974,13 @@ body {
 /* ESTILIZAÇÃO DA SESSÃO CASQUINHAS */
 .produtos-casquinhas {
   padding: 40px 30px;
+  background-color: #fff;
+  transition: 0.5s ease-in-out;
 }
 
-.sessao-casquinhas a{
+.sessao-casquinhas a {
   text-decoration: none;
-  color: #0F0200;
+  color: #0f0200;
 }
 
 .sessao-casquinhas h1 {
@@ -924,8 +990,8 @@ body {
 
   margin-left: 60px; /*Distancia da parte esquerda*/
   margin-top: 20px; /*distancia do topo*/
+  transition: 0.5s ease-in-out;
 }
-
 
 /*deixei tudo em forma de coluna*/
 .grid-produtos-casquinhas {
@@ -971,7 +1037,7 @@ body {
   display: block;
 }
 
-.img-circular-casquinhas:hover{
+.img-circular-casquinhas:hover {
   transform: scale(1.1);
 }
 
@@ -980,19 +1046,23 @@ body {
 }
 
 /*estilização das infos em baio da imagem*/
-.conteudo-texto-casquinhas h2{
+.conteudo-texto-casquinhas {
+  transition: 0.5s ease-in-out;
+}
+
+.conteudo-texto-casquinhas h2 {
   font-size: 12px;
   margin-bottom: 15px;
 }
 
-.conteudo-texto-casquinhas p{
+.conteudo-texto-casquinhas p {
   font-family: "Archivo", sans-serif;
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 10px;
 }
 
-.conteudo-texto-casquinhas h3{
+.conteudo-texto-casquinhas h3 {
   font-family: "Archivo", sans-serif; /*fonte*/
   font-weight: 800;
   color: var(--cor-preco);
@@ -1016,7 +1086,7 @@ body {
   transition: transform 0.5s;
 }
 
-.btn-comprar:hover{
+.btn-comprar:hover {
   transform: translateY(-5px);
   box-shadow: 0px 8px 10px #9e4e65;
 }
@@ -1026,16 +1096,16 @@ body {
   height: 45px;
   border-radius: 50%; /*pra deixar redondo*/
   background-color: var(--cor-botao);
-  display: flex;  /* centraliza o ícone */
+  display: flex; /* centraliza o ícone */
   align-items: center;
   justify-content: center;
   text-decoration: none;
   transition: transform 0.5s;
 }
 
-.btn-icone:hover{
-    transform: scale(1.1);
-    box-shadow: 0px 8px 10px #9e4e65;
+.btn-icone:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 8px 10px #9e4e65;
 }
 
 /*ajustando de fato a imagem do carrinho*/
@@ -1044,16 +1114,16 @@ body {
   height: 25px;
 }
 
-
 /* ESTILIZAÇÃO DA SESSÃO SUNDAE */
 .produtos-sundae {
   padding: 80px 30px;
   background: #fff;
+  transition: 0.5s ease-in-out;
 }
 
-.sessao-sundae a{
+.sessao-sundae a {
   text-decoration: none;
-  color: #0F0200;
+  color: #0f0200;
 }
 
 .sessao-sundae h1 {
@@ -1063,8 +1133,8 @@ body {
 
   margin-left: 60px; /*Distancia da parte esquerda*/
   margin-top: 20px; /*distancia do topo*/
+  transition: 0.5s ease-in-out;
 }
-
 
 /*deixei tudo em forma de coluna*/
 .grid-produtos-sundae {
@@ -1095,7 +1165,6 @@ body {
   transition: 0.5s ease-in-out;
 }
 
-
 /* coloca o hover só na imagem */
 .img-circular-sundae img {
   width: 140px; /*pra ela não ocupar 100% da bolinha */
@@ -1106,9 +1175,8 @@ body {
 }
 
 .sundae-oreo {
-display: flex;
-margin-left:  35px;
-
+  display: flex;
+  margin-left: 35px;
 }
 
 .img-circular-sundae a {
@@ -1117,7 +1185,7 @@ margin-left:  35px;
   display: block;
 }
 
-.img-circular-sundae:hover{
+.img-circular-sundae:hover {
   transform: scale(1.1);
 }
 
@@ -1126,19 +1194,23 @@ margin-left:  35px;
 }
 
 /*estilização das infos em baio da imagem*/
-.conteudo-texto-sundae h2{
+.conteudo-texto-sundae {
+  transition: 0.5s ease-in-out;
+}
+
+.conteudo-texto-sundae h2 {
   font-size: 12px;
   margin-bottom: 15px;
 }
 
-.conteudo-texto-sundae p{
+.conteudo-texto-sundae p {
   font-family: "Archivo", sans-serif;
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 10px;
 }
 
-.conteudo-texto-sundae h3{
+.conteudo-texto-sundae h3 {
   font-family: "Archivo", sans-serif; /*fonte*/
   font-weight: 800;
   color: var(--cor-preco);
@@ -1162,7 +1234,7 @@ margin-left:  35px;
   transition: transform 0.5s;
 }
 
-.btn-comprar:hover{
+.btn-comprar:hover {
   transform: translateY(-5px);
   box-shadow: 0px 8px 10px #9e4e65;
 }
@@ -1172,16 +1244,16 @@ margin-left:  35px;
   height: 45px;
   border-radius: 50%; /*pra deixar redondo*/
   background-color: var(--cor-botao);
-  display: flex;  /* centraliza o ícone */
+  display: flex; /* centraliza o ícone */
   align-items: center;
   justify-content: center;
   text-decoration: none;
   transition: transform 0.5s;
 }
 
-.btn-icone:hover{
-    transform: scale(1.1);
-    box-shadow: 0px 8px 10px #9e4e65;
+.btn-icone:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 8px 10px #9e4e65;
 }
 
 /*ajustando de fato a imagem do carrinho*/
@@ -1194,26 +1266,46 @@ margin-left:  35px;
 .produtos-kids {
   padding: 80px 30px;
   background: #fff;
+  transition: 0.5s ease-in-out;
 }
 
-.produtos-kids-picole{
+.produtos-kids-picole {
+  position: relative;
+  z-index: 1;
   padding: 10px 40px 300px;
-  background: linear-gradient(to bottom,
+  background: linear-gradient(
+    to bottom,
     #ffffff 6%,
     #ffffff 14%,
     #ffffff 34%,
     #ffffff 90%,
-    #ffb0c4 100%);
+    #ffb0c4 100%
+  );
 }
 
+.produtos-kids-picole::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: linear-gradient(to bottom, #2b2229 80%, #3d2435 100%);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
 
-.sessao-kids h3{
-  font-family: 'inter', sans-serif;
+.produtos-kids-picole.dark_mode::before {
+  opacity: 1;
+}
+
+.sessao-kids h3 {
+  font-family: "inter", sans-serif;
   font-weight: 900;
   font-size: 35px;
-
   margin: 40px;
-  color: #4D2B1A;
+  color: #4d2b1a;
 }
 
 .sessao-kids h1 {
@@ -1224,6 +1316,7 @@ margin-left:  35px;
   margin-left: 60px; /*Distancia da parte esquerda*/
   margin-top: 20px; /*distancia do topo*/
   margin-bottom: 60px;
+  transition: 0.5s ease-in-out;
 }
 /*deixei tudo em forma de coluna*/
 .grid-produtos-kids {
@@ -1240,6 +1333,37 @@ margin-left:  35px;
   align-items: center;
   text-align: center;
   gap: 12px; /*distancia entre os tópicos*/
+}
+
+.produtos-Milk-Shakes.dark_mode,
+.produtos-açai.dark_mode,
+.produtos-potes.dark_mode,
+.produtos-casquinhas.dark_mode,
+.produtos-potes.dark_mode,
+.produtos-kids.dark_mode,
+.produtos-sundae.dark_mode {
+  background-color: #2b2229;
+}
+
+.sessao.dark_mode h1,
+.sessao-picole.dark_mode a,
+.sessao-açai.dark_mode h1,
+.sessao-potes.dark_mode h1,
+.sessao-casquinhas.dark_mode h1,
+.sessao-sundae.dark_mode h1,
+.sessao-kids.dark_mode h1,
+.conteudo-texto-kids.dark_mode,
+.conteudo-texto-sundae.dark_mode,
+.conteudo-texto-casquinhas.dark_mode,
+.conteudo-texto-potes.dark_mode,
+.conteudo-texto-açai.dark_mode,
+.conteudo-texto-picole.dark_mode,
+.conteudo-texto.dark_mode {
+  color: #ffffff;
+}
+
+.sessao-kids.dark_mode h3 {
+  color: #c0c0c0;
 }
 
 /* fazendo as bolinhas coloridas */
@@ -1297,7 +1421,6 @@ margin-left:  35px;
   justify-content: center;
   transition: 0.5s ease-in-out;
 }
-
 
 /* coloca o hover só na imagem */
 .img-circular-kids1 img {
@@ -1411,19 +1534,23 @@ margin-left:  35px;
 }
 
 /*estilização das infos em baio da imagem*/
-.conteudo-texto-kids h2{
+.conteudo-texto-kids {
+  transition: 0.5s ease-in-out;
+}
+
+.conteudo-texto-kids h2 {
   font-size: 12px;
   margin-bottom: 15px;
 }
 
-.conteudo-texto-kids p{
+.conteudo-texto-kids p {
   font-family: "Archivo", sans-serif;
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 10px;
 }
 
-.conteudo-texto-kids h3{
+.conteudo-texto-kids h3 {
   font-family: "Archivo", sans-serif; /*fonte*/
   font-weight: 800;
   color: var(--cor-preco);
@@ -1447,7 +1574,7 @@ margin-left:  35px;
   transition: transform 0.5s;
 }
 
-.btn-comprar:hover{
+.btn-comprar:hover {
   transform: translateY(-5px);
   box-shadow: 0px 8px 10px #9e4e65;
 }
@@ -1457,16 +1584,16 @@ margin-left:  35px;
   height: 45px;
   border-radius: 50%; /*pra deixar redondo*/
   background-color: var(--cor-botao);
-  display: flex;  /* centraliza o ícone */
+  display: flex; /* centraliza o ícone */
   align-items: center;
   justify-content: center;
   text-decoration: none;
   transition: transform 0.5s;
 }
 
-.btn-icone:hover{
-    transform: scale(1.1);
-    box-shadow: 0px 8px 10px #9e4e65;
+.btn-icone:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 8px 10px #9e4e65;
 }
 
 /*ajustando de fato a imagem do carrinho*/
@@ -1475,10 +1602,11 @@ margin-left:  35px;
   height: 25px;
 }
 
-
 /*ESTILIZAÇÃO DO FOOTER */
 /*ESTILIZAÇÃO DO FOOTER*/
-.main-footer {
+#main_footer {
+  position: relative;
+  z-index: 1;
   background: linear-gradient(
     to bottom,
     #ffb0c4 0%,
@@ -1490,6 +1618,30 @@ margin-left:  35px;
   margin-top: 0;
   color: #ffffff;
   font-size: 0.85rem;
+}
+
+#main_footer::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    to bottom,
+    #3d2435 0%,
+    #542f49 14%,
+    #493442 34%,
+    #3f2b35 90%,
+    #3f2b35 100%
+  );
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#main_footer.dark_mode::before {
+  opacity: 1;
 }
 
 .footer-grid {
