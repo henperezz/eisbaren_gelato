@@ -172,44 +172,42 @@ body {
 }
 
 /* LEgenda principal que fica acima*/
+
+.produtos {
+  background: linear-gradient(
+    to bottom,
+    var(--cor-secundaria) 80%,
+    var(--cor-secundaria) 100%
+  );
+  padding: 40px 30px 80px;
+}
+
 .produtos h2 {
-  /*Mudando o estilo do titulo*/
   color: #4d2b1a;
-  text-align: center; /*Garante que o titulo fique no meio */
-  margin-top: 0px;
+  text-align: center;
   margin-bottom: 10px;
-  padding-top: 0px; /* Espaço entre em cima do titulo*/
-  padding-bottom: 10px; /* Espaço em baixo do titulo */
-
-  /* Fontes presentes no figma */
-  font-family: "inter", sans-serif; /* Colanco a fonte certa*/
-  font-weight: 900; /* Deixando em negrito, como no figma*/
-  line-height: 44px; /* Altura da linha conforme o figma*/
+  padding-bottom: 10px;
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+  line-height: 44px;
 }
 
-/*Organização para deixar as colunas nos seus lugares devidamente*/
 .grid-produtos {
-  display: grid; /*Ativação do modo grid*/
-  grid-template-columns: repeat(
-    3,
-    1fr
-  ); /* Criação de 3 colunas de tamanho igual*/
-  gap: 100px; /* Enpaçamento entre os cards*/
-  max-width: 1400px; /* Largura */
-  margin: 0 auto; /*Centralização do grip/colunas no centro da tela*/
-  padding-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;           /*era 100px */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 40px;
 }
-
-/* estilização dos quadrados que ficam atras dos produtos */
 
 .card {
-  position: relative; /* permite posicionar imagem e legenda dentro do quadrado */
+  position: relative;
   display: block;
-  margin-left: 29px;
-  height: 400px; /* altura do quadrado */
-  width: 80%; /* ocupa a coluna do grid */
-  border-radius: 8px; /* bordas arredondadas */
-  text-decoration: none; /* tira o sublinhado do link */
+  height: 400px;
+  width: 90%;
+  border-radius: 16px;
+  text-decoration: none;
   z-index: 1;
 }
 
@@ -217,35 +215,31 @@ body {
   position: absolute;
   bottom: 0;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%); /* centraliza a imagem */
   object-fit: contain;
   transition: 0.3s;
 }
 
-/* Ajustes das imagens */
-.img-milkskahe {
-  height: 69%;
-  width: auto; /* Deixa a largura proporcional */
-  top: 90px; /* Pra fazer ele abaixar */
-  transition: ;
+.imgs:hover {
+  transform: translateX(-50%) translateY(-10px); /*sobe a imagem */
 }
 
-.img-milkskahe:hover{
-  transform: scale(1.05);
+.img-milkskahe {
+  height: 69%;
+  width: auto;
+  top: 90px;
 }
 
 .img-picole {
   height: 60%;
   width: auto;
   top: 120px;
-  transform: scale(1.05);
 }
 
 .img-acai {
   height: 105%;
   width: auto;
   top: 30px;
-  transform: scale(1.05);
 }
 
 .img-potes {
@@ -266,33 +260,24 @@ body {
   top: 60px;
 }
 
-/* CORES DO CARDS/QUADRADOS COM AS IMAGENS */
-.bg-rosa {
-  background-color: var(--cor-quatenario); /* Milk Shake e Pote de Sorvete */
-}
+/* cores */
+.bg-rosa    { background-color: #ffaec1; }
+.bg-laranja { background-color: #fdae0c; }
+.bg-vermelho{ background-color: #c50d19; }
 
-.bg-laranja {
-  background-color: var(--cor-quinario); /* Picolé e Casquinhas */
-}
-
-.bg-vermelho {
-  background-color: var(--cor-senario); /* Açaí e Sunday */
-}
-
-/* Legenda */
+/* legenda */
 .legenda {
-  position: absolute; /* fica sobre a imagem */
-  bottom: 0; /* ancorado na parte inferior do card */
+  position: absolute;
+  bottom: 0;
   left: 0;
   right: 0;
-  z-index: 2; /* fica na frente da imagem */
-  border-radius: 6px; /* arredonda só os cantos de baixo */
+  z-index: 2;
+  border-radius: 0 0 16px 16px;
   background: linear-gradient(to top, #000000 0%, transparent);
   padding: 12px 16px 14px;
 }
 
 .legenda span {
-  /* span não é classe */
   display: block;
   color: #f5f5dc;
   margin-bottom: 8px;
@@ -302,10 +287,11 @@ body {
 }
 
 .legenda p {
-  display: inline-block;
+  display: flex;
   margin: 0;
   color: #f5f5dc;
   font-size: 0.85rem;
+  font-family: 'Inter', sans-serif;
   font-weight: 700;
   border-radius: 8px;
   padding: 4px 12px;
