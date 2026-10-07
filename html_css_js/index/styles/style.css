@@ -161,16 +161,6 @@ body {
 
 /* ESTILIZAÇÃO DOS PRODUTOS */
 
-/*Parte principal*/
-.produtos {
-  background: linear-gradient(
-    to bottom,
-    var(--cor-secundaria) 80%,
-    var(--cor-terciaria) 100%
-  );
-  padding: 150px 40px 300px;
-}
-
 /* LEgenda principal que fica acima*/
 
 .produtos {
@@ -179,7 +169,7 @@ body {
     var(--cor-secundaria) 80%,
     var(--cor-secundaria) 100%
   );
-  padding: 40px 30px 80px;
+  padding: 90px 30px 80px;
 }
 
 .produtos h2 {
