@@ -11,15 +11,14 @@
 }
 
 /*Adionando a fonte*/
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://googleapis.com");
 
-/* Essa primeria parte do css serve para adicionar elementos do seu site, basicamente */
 * {
-  margin: 0; /* Reseta as configurações de margin pré-existentes na página*/
-  padding: 0; /*Reseta as configurações de padding pré-existentes na página*/
+  margin: 0;
+  padding: 0;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -30,10 +29,14 @@ body {
 }
 
 .headerContainer {
-  display: flex; /*Define que o container é flexível*/
-  flex-direction: row; /*Define que a direção do container é na horizonta (row) não na vertical (column)*/
+  display: flex;
+  flex-direction: row;
   height: 98px;
   width: auto;
+  position: sticky;
+  top: 0;
+  z-index: 999999;
+
   background: linear-gradient(
     to bottom,
     #cf7eae 0%,
@@ -41,7 +44,31 @@ body {
     #dba7bf 34%,
     #e8a3b8 90%,
     #e8a3b8
-  ); /*Define que o background do container será gradiente*/
+  );
+}
+
+.headerContainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: linear-gradient(
+    to bottom,
+    #3d2435 0%,
+    #542f49 14%,
+    #493442 34%,
+    #3f2b35 90%,
+    #3f2b35 100%
+  );
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.headerContainer.dark_mode::before {
+  opacity: 1;
 }
 
 .headerLogo {
@@ -135,12 +162,6 @@ body {
 .buttonSwitch.dark .buttonIndicator {
   /*Parte do comando js para quando se é clicado, a ação de mudar a bolinha do switcher e a cor dela*/
   left: 15px;
-  background-color: #859678;
-}
-
-.buttonSwitch.dark {
-  /*Parte do comando js para quando se é clicado, alterar a cor da borda do elemento*/
-  border-color: #859678;
 }
 
 /*Estilização do banner princiapl*/
@@ -154,6 +175,11 @@ body {
   width: 100%;
   height: auto;
   display: block;
+  transition: filter 0.5s ease-in-out;
+}
+
+#img_initial.dark_mode {
+  filter: brightness(0.8);
 }
 
 /*ESTILIZÇÃO DO CARROCEL*/
@@ -162,13 +188,32 @@ body {
 /* ESTILIZAÇÃO DOS PRODUTOS */
 
 /*Parte principal*/
-.produtos {
+#section_produtos {
   background: linear-gradient(
     to bottom,
     var(--cor-secundaria) 80%,
     var(--cor-terciaria) 100%
   );
   padding: 150px 40px 300px;
+  position: relative;
+  z-index: 1;
+}
+
+#section_produtos::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: linear-gradient(#a85f82 80%, #70b8c5);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#section_produtos.dark_mode::before {
+  opacity: 1;
 }
 
 /* LEgenda principal que fica acima*/
@@ -230,7 +275,7 @@ body {
   transition: 0.3s;
 }
 
-.img-milkskahe:hover{
+.img-milkskahe:hover {
   transform: scaleY;
 }
 
@@ -312,7 +357,7 @@ body {
 }
 
 /* ESTILIZAÇÃO DO SAIBA MAIS */
-.saiba-mais {
+#saiba_mais {
   justify-content: center;
   align-items: center;
   background: linear-gradient(
@@ -323,6 +368,25 @@ body {
   gap: 90px; /*Distancia do texto com a imagem*/
   min-height: 700px;
   padding: 120px 40px 300px;
+  position: relative;
+  z-index: 1;
+}
+
+#saiba_mais::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: linear-gradient(#70b8c5 80%, #3d2435 100%);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#saiba_mais.dark_mode::before {
+  opacity: 1;
 }
 
 /*Editando a """"Moldura"""" ou seja  aparte que a imagem será colocada.*/
@@ -407,6 +471,32 @@ body {
   margin-top: 0;
   color: #ffffff;
   font-size: 0.85rem;
+  position: relative;
+  z-index: 1;
+}
+
+#footer_section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: linear-gradient(
+    to bottom,
+    #3d2435 0%,
+    #542f49 14%,
+    #493442 34%,
+    #3f2b35 90%,
+    #3f2b35 100%
+  );
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#footer_section.dark_mode::before {
+  opacity: 1;
 }
 
 .footer-grid {
