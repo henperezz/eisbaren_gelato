@@ -165,11 +165,10 @@ body {
 
 .produtos {
   background: linear-gradient(
-    to bottom,
     var(--cor-secundaria) 80%,
-    var(--cor-secundaria) 100%
+    var(--cor-terciaria) 100%
   );
-  padding: 90px 30px 80px;
+  padding: 90px 30px 220px;
 }
 
 .produtos h2 {
