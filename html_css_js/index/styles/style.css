@@ -217,7 +217,7 @@ body {
   position: absolute;
   bottom: 0;
   left: 50%;
-  /* transform: translateX(-50%); */
+  transform: translateX(-50%);
   object-fit: contain;
   transition: 0.3s;
 }
@@ -227,11 +227,11 @@ body {
   height: 69%;
   width: auto; /* Deixa a largura proporcional */
   top: 90px; /* Pra fazer ele abaixar */
-  transition: 0.3s;
+  transition: ;
 }
 
 .img-milkskahe:hover{
-  transform: scaleY;
+  transform: scale(1.05);
 }
 
 .img-picole {
