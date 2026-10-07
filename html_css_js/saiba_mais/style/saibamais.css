@@ -30,7 +30,7 @@
   padding: 0; /*Reseta as configurações de padding pré-existentes na página*/
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 body {
@@ -40,10 +40,14 @@ body {
 }
 
 .headerContainer {
-  display: flex; /*Define que o container é flexível*/
-  flex-direction: row; /*Define que a direção do container é na horizonta (row) não na vertical (column)*/
+  display: flex;
+  flex-direction: row;
   height: 98px;
   width: auto;
+  position: sticky;
+  top: 0;
+  z-index: 999999;
+
   background: linear-gradient(
     to bottom,
     #cf7eae 0%,
@@ -51,7 +55,31 @@ body {
     #dba7bf 34%,
     #e8a3b8 90%,
     #e8a3b8
-  ); /*Define que o background do container será gradiente*/
+  );
+}
+
+.headerContainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: linear-gradient(
+    to bottom,
+    #3d2435 0%,
+    #542f49 14%,
+    #493442 34%,
+    #3f2b35 90%,
+    #3f2b35 100%
+  );
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.headerContainer.dark_mode::before {
+  opacity: 1;
 }
 
 .headerLogo {
@@ -164,6 +192,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.5s ease-in-out;
+}
+
+.hero-section.dark_mode {
+  filter: brightness(0.7);
 }
 
 .hero-text {
@@ -277,6 +310,8 @@ body {
 
 /* Aplicando as cores em degradê */
 .section-pink {
+  position: relative;
+  z-index: 1;
   background: linear-gradient(
     to bottom,
     var(--rosa-eisbaren) 0%,
@@ -286,6 +321,24 @@ body {
     var(--amarelo-eisbaren)
   );
 }
+
+.section-pink::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: linear-gradient(to bottom, #a85f82 80%, #d6d080 100%);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.section-pink.dark_mode::before {
+  opacity: 1;
+}
+
 .section-pink h2 {
   color: var(--rosa-forte);
   font-family: var(--font3);
@@ -293,6 +346,8 @@ body {
 }
 
 .section-yellow {
+  position: relative;
+  z-index: 1;
   background: linear-gradient(
     to bottom,
     var(--amarelo-eisbaren) 0%,
@@ -302,6 +357,24 @@ body {
     var(--azul-eisbaren)
   );
 }
+
+.section-yellow::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: linear-gradient(to bottom, #d6d080 80%, #70b8c5);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.section-yellow.dark_mode::before {
+  opacity: 1;
+}
+
 .section-yellow h2 {
   color: #d4a017;
   font-family: var(--font3);
@@ -325,15 +398,35 @@ body {
 }
 
 .section-blue {
+  position: relative;
+  z-index: 1;
   background: linear-gradient(
     to bottom,
     var(--azul-eisbaren) 0%,
     var(--azul-eisbaren) 14%,
     var(--azul-eisbaren) 34%,
     #ccf1ff 90%,
-    var(--rosa-claro)
+    var(--rosa-eisbaren)
   );
 }
+
+.section-blue::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background: linear-gradient(#70b8c5 80%, #a85f82);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.section-blue.dark_mode::before {
+  opacity: 1;
+}
+
 .section-blue h2 {
   color: var(--text6-color);
   font-family: var(--font3);
@@ -356,6 +449,8 @@ body {
 }
 
 .section-brand {
+  position: relative;
+  z-index: 1;
   background: linear-gradient(
     to bottom,
     var(--amarelo-eisbaren) 0%,
@@ -364,6 +459,23 @@ body {
     rgb(255, 253, 235) 90%,
     var(--rosa-eisbaren)
   );
+}
+
+.section-brand::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(#d6d080 80%, #3d2435);
+  transition: opacity 0.5s ease-in-out;
+}
+
+.section-brand.dark_mode::before {
+  opacity: 1;
 }
 
 /* Grid de Valores Estilizado */
@@ -460,7 +572,9 @@ body {
 /* -------------------------------------------------------------------------------------------------------- */
 
 /*ESTILIZAÇÃO DO FOOTER*/
-.main-footer {
+#main_footer {
+  position: relative;
+  z-index: 1;
   background: linear-gradient(
     to bottom,
     #ffb0c4 0%,
@@ -472,6 +586,30 @@ body {
   margin-top: 0;
   color: #ffffff;
   font-size: 0.85rem;
+}
+
+#main_footer::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    to bottom,
+    #3d2435 0%,
+    #542f49 14%,
+    #493442 34%,
+    #3f2b35 90%,
+    #3f2b35 100%
+  );
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#main_footer.dark_mode::before {
+  opacity: 1;
 }
 
 .footer-grid {
