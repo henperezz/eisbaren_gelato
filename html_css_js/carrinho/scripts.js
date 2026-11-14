@@ -282,6 +282,8 @@ produtos.forEach((produto, index) => {
 
   }
 
+
+   
 });
 
 // Atualiza todos os valores ao carregar.
