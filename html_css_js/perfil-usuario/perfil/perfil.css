@@ -1,4 +1,3 @@
-/* ── RESET BÁSICO ── */
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +9,6 @@ body {
   background-color: #fff;
 }
 
-/* ── 1. MENU SUPERIOR (HEADER) ── */
 .headerContainer {
   display: flex;
   flex-direction: row;
@@ -86,16 +84,14 @@ body {
   transform: translateY(-4px);
 }
 
-/* ── 2. LAYOUT DO MEIO (SIDEBAR + CONTEÚDO) ── */
 .layout-principal {
   display: flex;
   min-height: calc(100vh - 98px); /* Garante altura mínima da tela */
 }
 
-/* MENU LATERAL */
 .menu-lateral {
-  width: 220px; /* Aumentei levemente de 160px para 220px para os textos não quebrarem feio */
-  flex-shrink: 0; /* Impede que o menu seja esmagado */
+  width: 220px; 
+  flex-shrink: 0; 
   background-color: #fff;
   border-right: 3px solid;
   border-image: linear-gradient(
@@ -205,16 +201,15 @@ body {
   font-size: 16px;
 }
 
-/* ÁREA PRINCIPAL (DIREITA) */
 .info-perfil {
-  flex: 1; /* Ocupa todo o espaço restante ao lado do menu */
+  flex: 1; 
   background-color: #fff;
   padding: 50px 60px;
 }
 
 .info-container {
   max-width: 900px;
-  margin: 0 auto; /* Centraliza o bloco no espaço disponível */
+  margin: 0 auto; 
 }
 
 .titulo-cupons {
@@ -258,7 +253,12 @@ body {
   color: #666;
 }
 
-/* GRID DOS CARDS */
+.grid-info a{
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
 .grid-info {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -306,7 +306,6 @@ body {
   transform: scale(1.15);
 }
 
-/* ── 3. FOOTER ── */
 .main-footer {
   background: linear-gradient(
     to bottom,
