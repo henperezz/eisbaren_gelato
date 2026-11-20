@@ -86,7 +86,7 @@ body {
 
 .layout-principal {
   display: flex;
-  min-height: calc(100vh - 98px); /* Garante altura mínima da tela */
+  min-height: calc(100vh - 98px);
 }
 
 .menu-lateral {
