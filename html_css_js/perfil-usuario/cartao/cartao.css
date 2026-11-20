@@ -1,4 +1,3 @@
-/* ── RESET BÁSICO ── */
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +9,6 @@ body {
   background-color: #fff;
 }
 
-/* ── 1. MENU SUPERIOR (HEADER) ── */
 .headerContainer {
   display: flex;
   flex-direction: row;
@@ -86,13 +84,11 @@ body {
   transform: translateY(-4px);
 }
 
-/* ── 2. LAYOUT DO MEIO (SIDEBAR + CONTEÚDO) ── */
 .layout-principal {
   display: flex;
   min-height: calc(100vh - 98px);
 }
 
-/* MENU LATERAL */
 .menu-lateral {
   width: 220px;
   flex-shrink: 0;
@@ -111,7 +107,6 @@ body {
   gap: 20px;
 }
 
-/* ── PERFIL NO MENU LATERAL ── */
 .perfil {
   display: flex;
   flex-direction: column;
@@ -171,14 +166,12 @@ body {
   color: #333;
 }
 
-/* ── DIVISÓRIA ── */
 .divisoria {
   border: none;
   border-top: 2px solid #f0f0f0;
   margin: 0;
 }
 
-/* ── NAVEGAÇÃO LATERAL ── */
 .nav-lateral ul {
   list-style: none;
   padding: 0;
@@ -214,7 +207,6 @@ body {
   font-size: 16px;
 }
 
-/* ── ÁREA PRINCIPAL (CARTÕES) ── */
 .pagina-cartoes {
   flex: 1;                    
   padding: 40px 60px;
@@ -223,10 +215,10 @@ body {
 
 .cartao-container {
   max-width: 900px;
-  margin: 0 auto; /* Centraliza perfeitamente no espaço ao lado do menu */
+  margin: 0 auto; 
 }
 
-/* ── TÍTULO + LINHA ── */
+
 .titulo-cartoes {
   font-family: 'Inter', sans-serif;
   font-size: 20px;
@@ -243,7 +235,7 @@ body {
   line-height: 1.4;
 }
 
-/* ── CONTEÚDO ── */
+
 .conteudo-cartoes {
   padding: 10px 0;
   display: flex;
@@ -265,7 +257,6 @@ body {
   color: #555;
 }
 
-/* ── BOTÃO ADICIONAR ── */
 .btn-adicionar {
   display: flex;
   align-items: center;
@@ -299,7 +290,7 @@ body {
   transform: translateX(4px);
 }
 
-/* ── 3. FOOTER ── */
+
 .main-footer {
   background: linear-gradient(
     to bottom,
