@@ -164,3 +164,94 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+
+/* ===== Botão de modo claro/escuro (mesmo padrão das outras páginas) ===== */
+.buttonSwitch {
+    box-sizing: content-box; /* o reset da página usa border-box e desalinhava a bolinha */
+    width: 30px;
+    height: 15px;
+    border: #ED95AE solid 2px;
+    border-radius: 30px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    transition: border-color 0.4s;
+}
+
+.buttonSwitch .buttonIndicator {
+    box-sizing: content-box;
+    width: 15px;
+    height: 15px;
+    background-color: #ED95AE;
+    border-radius: 150px;
+    transform: scale(0.8);
+    position: absolute;
+    left: 0;
+    transition: 0.4s;
+}
+
+.buttonSwitch.dark .buttonIndicator {
+    /* quando clica: bolinha vai para a direita e muda de cor */
+    left: 15px;
+    background-color: #859678;
+}
+
+.buttonSwitch.dark {
+    /* quando clica: muda a cor da borda */
+    border-color: #859678;
+}
+
+/* ===== MODO ESCURO (classe .dark_mode é colocada pelo shared/theme.js) ===== */
+body, .login-container, .profile-icon, .input-group, .input-group input,
+h1, footer, .back-icon {
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out,
+        border-color 0.5s ease-in-out;
+}
+
+body.dark_mode {
+    background-color: #2b2229;
+}
+
+.login-container.dark_mode {
+    background-color: #3a2f37;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.login-container.dark_mode h1 {
+    color: #f5ebf1;
+}
+
+.login-container.dark_mode .back-icon {
+    color: #f5ebf1;
+}
+
+.login-container.dark_mode .profile-icon {
+    background-color: #4a3b46;
+}
+
+.login-container.dark_mode .profile-icon span {
+    color: #f5ebf1;
+}
+
+.login-container.dark_mode .input-group {
+    background: #2b2229;
+    border-color: #5a4856;
+}
+
+.login-container.dark_mode .input-group input {
+    background: transparent;
+    color: #f5ebf1;
+}
+
+.login-container.dark_mode .input-group input::placeholder {
+    color: #a8949f;
+}
+
+.login-container.dark_mode .input-group span:not(.eye-icon) {
+    color: #c9b8c3;
+}
+
+.login-container.dark_mode footer {
+    color: #c9b8c3;
+}

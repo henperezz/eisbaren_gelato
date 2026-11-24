@@ -1,0 +1,128 @@
+/* ============================================================
+   theme.css - Modo escuro base para as páginas que ainda não
+   tinham estilo escuro: carrinho, finalizar_compra e
+   pagina_produtos (as 40 páginas de produto).
+   Só vale quando <html data-theme="dark"> (ver shared/theme.js)
+   ============================================================ */
+
+/* Fundo e texto geral */
+html[data-theme="dark"] body {
+  background-color: #2b2229;
+  color: #f1e6ee;
+}
+body {
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+/* Variáveis de texto reaproveitadas pelas páginas */
+html[data-theme="dark"] {
+  --text2-color: #f5ebf1; /* títulos que eram quase pretos */
+  --text3-color: #c9b8c3; /* textos secundários que eram cinza */
+}
+
+/* Cabeçalho */
+html[data-theme="dark"] .headerContainer {
+  background: linear-gradient(
+    to bottom,
+    #3d2435 0%,
+    #542f49 14%,
+    #493442 34%,
+    #3f2b35 90%,
+    #3f2b35 100%
+  );
+}
+
+/* Rodapé */
+html[data-theme="dark"] .main-footer {
+  background: linear-gradient(
+    to bottom,
+    #2b2229 0%,
+    #542f49 14%,
+    #493442 34%,
+    #3f2b35 70%
+  );
+}
+
+/* Faixa/banner do topo */
+html[data-theme="dark"] .imagem-inicial img {
+  filter: brightness(0.8);
+}
+
+/* ---------- Carrinho ---------- */
+html[data-theme="dark"] .cart-header,
+html[data-theme="dark"] .cart-header h2,
+html[data-theme="dark"] .cart-header span,
+html[data-theme="dark"] .texto-milk h2,
+html[data-theme="dark"] .acoes-carrinho {
+  color: #f5ebf1;
+  border-color: #4a3b46;
+}
+html[data-theme="dark"] .cart-table-header p,
+html[data-theme="dark"] .texto-milk span {
+  color: #c9b8c3;
+}
+html[data-theme="dark"] .linha-produto {
+  background-color: #4a3b46;
+}
+html[data-theme="dark"] .buttonQuantity {
+  color: #f5ebf1;
+}
+html[data-theme="dark"] .buttonQuantity:hover {
+  background: #4a3b46;
+}
+html[data-theme="dark"] #valueQuantity,
+html[data-theme="dark"] .quantity span {
+  color: #f5ebf1;
+}
+
+/* ---------- Finalizar compra ---------- */
+html[data-theme="dark"] .checkout h2,
+html[data-theme="dark"] .checkout h3,
+html[data-theme="dark"] .text,
+html[data-theme="dark"] label {
+  color: #f5ebf1;
+}
+html[data-theme="dark"] .card {
+  background: #3a2f37;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  color: #f5ebf1;
+}
+html[data-theme="dark"] .card h1 {
+  color: #f5ebf1;
+}
+html[data-theme="dark"] input {
+  background-color: #3a2f37;
+  color: #f5ebf1;
+  border-color: #5a4856;
+}
+html[data-theme="dark"] input::placeholder {
+  color: #a8949f;
+}
+html[data-theme="dark"] hr {
+  border-color: #4a3b46;
+  color: #4a3b46;
+}
+
+/* ---------- Página de produto ---------- */
+html[data-theme="dark"] .productName,
+html[data-theme="dark"] .descriptionTitle,
+html[data-theme="dark"] .additionalsTitleMenu,
+html[data-theme="dark"] .nameRecommendation,
+html[data-theme="dark"] .surnameRecommendation,
+html[data-theme="dark"] .size {
+  color: #f5ebf1;
+}
+html[data-theme="dark"] .additionalsList {
+  background-color: #3a2f37;
+}
+html[data-theme="dark"] .additionalsItems:hover {
+  background-color: #4a3b46;
+}
+html[data-theme="dark"] .additionalsItems p {
+  color: #f5ebf1;
+}
+html[data-theme="dark"] .line,
+html[data-theme="dark"] .lineDivisor {
+  color: #4a3b46;
+  border-color: #4a3b46;
+}

@@ -1,31 +1,5 @@
-//dark mode
-const buttonSwitch = document.getElementById("buttonSwitch");
-const header = document.getElementById("header_container");
-const img_inicial = document.getElementById("img_inicial");
-const body = document.body;
-const footer = document.getElementById("main_footer");
-const texto_sanduiche = document.querySelector(".texto-sanduiche");
+// O modo escuro agora é controlado por ../shared/theme.js (salva a escolha entre páginas)
 
-buttonSwitch.addEventListener("click", () => {
-  buttonSwitch.classList.toggle("dark");
-  header.classList.toggle("dark_mode");
-  img_inicial.classList.toggle("dark_mode");
-  body.classList.toggle("dark_mode");
-  footer.classList.toggle("dark_mode");
-  texto_sanduiche.classList.toggle("dark_mode");
-
-  document
-    .querySelectorAll(
-      ".produtos-Milk-Shakes, .produtos-açai, .produtos-potes, .produtos-casquinhas, .produtos-sundae, .produtos-potes, .produtos-kids, .produtos-kids-picole ",
-    )
-    .forEach((section) => section.classList.toggle("dark_mode"));
-
-  document
-    .querySelectorAll(
-      ".sessao, .sessao-picole, .sessao-açai, .sessao-potes, .sessao-casquinhas, .sessao-sundae, .sessao-kids, .conteudo-texto-kids, .conteudo-texto-sundae, .conteudo-texto-casquinhas, .conteudo-texto-potes, .conteudo-texto-açai, .conteudo-texto-picole, .conteudo-texto",
-    )
-    .forEach((div) => div.classList.toggle("dark_mode"));
-});
 //-------------------------------------------------------------------------
 
 //sanduiche

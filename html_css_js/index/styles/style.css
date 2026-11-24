@@ -162,6 +162,12 @@ body {
 .buttonSwitch.dark .buttonIndicator {
   /*Parte do comando js para quando se é clicado, a ação de mudar a bolinha do switcher e a cor dela*/
   left: 15px;
+  background-color: #859678;
+}
+
+.buttonSwitch.dark {
+  /*Parte do comando js para quando se é clicado, alterar a cor da borda do elemento*/
+  border-color: #859678;
 }
 
 /*Estilização do banner princiapl*/
