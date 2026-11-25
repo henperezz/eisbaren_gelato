@@ -14,14 +14,18 @@ document.querySelectorAll(".eye-icon").forEach(icon => {
 
 const form = document.getElementById("loginForm");
 const emailInput = document.getElementById("email");
-const senhaInput = document.getElementById("senha");
+const senhaInput =
+    document.getElementById("senha") ||
+    form.querySelector('input[type="password"], .input-group:nth-child(2) input');
 const lembrar = document.getElementById("lembrar");
+
+console.log("login.js carregado", { emailInput, senhaInput, lembrar });
 
 // Preenche o email se o usuário marcou "Lembre de mim"
 const emailLembrado = localStorage.getItem("emailLembrado");
-if (emailLembrado) {
+if (emailLembrado && emailInput) {
     emailInput.value = emailLembrado;
-    lembrar.checked = true;
+    if (lembrar) lembrar.checked = true;
 }
 
 form.addEventListener("submit", (event) => {
@@ -35,22 +39,25 @@ form.addEventListener("submit", (event) => {
         usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
     } catch (e) {}
 
+    console.log("usuários cadastrados:", usuarios.length);
+
     const encontrado = usuarios.find(
         u => u.email.toLowerCase() === email && u.senha === senha
     );
 
     if (!encontrado) {
-        alert("Email ou senha incorretos.");
+        alert("Email ou senha incorretos (ou usuário não cadastrado neste navegador).");
         return;
     }
 
-    if (lembrar.checked) {
-        localStorage.setItem("emailLembrado", encontrado.email);
-    } else {
-        localStorage.removeItem("emailLembrado");
+    if (lembrar) {
+        if (lembrar.checked) {
+            localStorage.setItem("emailLembrado", encontrado.email);
+        } else {
+            localStorage.removeItem("emailLembrado");
+        }
     }
 
-    // Salva o usuário logado, sem a senha
     const { senha: _, ...usuarioLogado } = encontrado;
     localStorage.setItem("usuarioDados", JSON.stringify(usuarioLogado));
 
