@@ -4,14 +4,13 @@ document.addEventListener("DOMContentLoaded", () => {
         dadosSalvos = JSON.parse(localStorage.getItem("usuarioDados"));
     } catch (e) {}
 
-    if (!dadosSalvos) return; // o menu-usuario.js já redireciona para o login
+    if (!dadosSalvos) return;
 
     const campos = ["usuario", "nome", "email", "telefone"];
     campos.forEach(id => {
         document.getElementById(id).value = dadosSalvos[id] || "";
     });
 
-    // Botão "Trocar"
     const botoesTrocar = document.querySelectorAll(".btn-trocar");
     botoesTrocar.forEach(botao => {
         botao.addEventListener("click", (e) => {
@@ -25,7 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Salvar alterações
     const formPerfil = document.getElementById("form-perfil");
     formPerfil.addEventListener("submit", (e) => {
         e.preventDefault();
@@ -44,7 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const emailAntigo = dadosSalvos.email;
 
-        // Impede trocar para um email que já é de outra pessoa
         const emailEmUso = usuarios.some(
             u => u.email.toLowerCase() === novosDados.email.toLowerCase()
                 && u.email.toLowerCase() !== emailAntigo.toLowerCase()
@@ -54,18 +51,15 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        // Atualiza o usuário logado
         localStorage.setItem("usuarioDados", JSON.stringify(novosDados));
         dadosSalvos = novosDados;
 
-        // Atualiza também na lista de usuários, mantendo a senha
         const i = usuarios.findIndex(u => u.email.toLowerCase() === emailAntigo.toLowerCase());
         if (i !== -1) {
             usuarios[i] = { ...usuarios[i], ...novosDados };
             localStorage.setItem("usuarios", JSON.stringify(usuarios));
         }
 
-        // Atualiza o nome no menu lateral na hora
         const nomeLateral = document.getElementById("nome-usuario-lateral");
         if (nomeLateral) nomeLateral.textContent = novosDados.nome;
 

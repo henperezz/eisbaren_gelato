@@ -1,4 +1,3 @@
-// Mostrar / Esconder senha
 document.querySelectorAll(".eye-icon").forEach(icon => {
     icon.addEventListener("click", () => {
         const input = icon.previousElementSibling;
@@ -21,7 +20,6 @@ const lembrar = document.getElementById("lembrar");
 
 console.log("login.js carregado", { emailInput, senhaInput, lembrar });
 
-// Preenche o email se o usuário marcou "Lembre de mim"
 const emailLembrado = localStorage.getItem("emailLembrado");
 if (emailLembrado && emailInput) {
     emailInput.value = emailLembrado;

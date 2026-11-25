@@ -1,4 +1,3 @@
-// Mostrar / Esconder senha
 document.querySelectorAll('.eye-icon').forEach(icon => {
     icon.addEventListener('click', () => {
         const input = icon.previousElementSibling;
@@ -36,7 +35,6 @@ form.addEventListener('submit', (event) => {
         usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
     } catch (e) {}
 
-    // Impede email repetido
     if (usuarios.some(u => u.email.toLowerCase() === emailLimpo.toLowerCase())) {
         alert("Este email já está cadastrado. Faça login.");
         return;
@@ -53,7 +51,6 @@ form.addEventListener('submit', (event) => {
     usuarios.push(novoUsuario);
     localStorage.setItem("usuarios", JSON.stringify(usuarios));
 
-    // Já deixa logado, sem a senha
     const { senha: _, ...usuarioLogado } = novoUsuario;
     localStorage.setItem("usuarioDados", JSON.stringify(usuarioLogado));
 

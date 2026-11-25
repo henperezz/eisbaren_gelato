@@ -14,11 +14,10 @@ document.addEventListener("DOMContentLoaded", () => {
         logado = JSON.parse(localStorage.getItem("usuarioDados"));
     } catch (e) {}
 
-    if (!logado) return; // o menu-usuario.js já redireciona para o login
+    if (!logado) return;
 
     const campos = ["cep", "rua", "numero"];
 
-    // Lê a lista de usuários e acha o usuário logado
     const lerUsuarios = () => {
         try {
             return JSON.parse(localStorage.getItem("usuarios")) || [];
@@ -32,18 +31,15 @@ document.addEventListener("DOMContentLoaded", () => {
         u => u.email.toLowerCase() === logado.email.toLowerCase()
     );
 
-    // Preenche os campos com o endereço salvo (se existir)
     const enderecoSalvo = (usuarioAtual && usuarioAtual.endereco) || {};
     const temEndereco = campos.some(id => enderecoSalvo[id]);
 
     campos.forEach(id => {
         const input = document.getElementById(id);
         input.value = enderecoSalvo[id] || "";
-        // Se já tem endereço salvo, trava o campo até clicar em "Trocar"
         if (temEndereco) input.setAttribute("disabled", "true");
     });
 
-    // Botão "Trocar"
     const botoesTrocar = document.querySelectorAll(".trocar-loc");
     botoesTrocar.forEach(botao => {
         botao.addEventListener("click", (e) => {
@@ -57,7 +53,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Salvar endereço
     const form = document.getElementById("form-localizacao");
     form.addEventListener("submit", (e) => {
         e.preventDefault();
@@ -73,7 +68,6 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        // Relê a lista para não sobrescrever alterações feitas em outra aba
         const lista = lerUsuarios();
         const i = lista.findIndex(
             u => u.email.toLowerCase() === logado.email.toLowerCase()
@@ -87,7 +81,6 @@ document.addEventListener("DOMContentLoaded", () => {
         lista[i] = { ...lista[i], endereco };
         localStorage.setItem("usuarios", JSON.stringify(lista));
 
-        // Trava os campos de novo
         campos.forEach(id => {
             document.getElementById(id).setAttribute("disabled", "true");
         });
