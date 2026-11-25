@@ -228,18 +228,16 @@ body {
 
 /* ── TÍTULO ── */
 .titulo-info {
-  font-family: 'Inter', sans-serif;
-  font-size: 2rem;
-  font-weight: 900;
+  font-size: 1.2rem;
+  font-weight: 800;
   color: #ff8aa5;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
 .subtitulo-info {
-  font-family: 'Inter', sans-serif;
   font-size: 12px;
-  color: #888;
-  line-height: 1.5;
+  color: #999;
+  margin-bottom: 30px;
 }
 
 /* ── FORMULÁRIO ── */

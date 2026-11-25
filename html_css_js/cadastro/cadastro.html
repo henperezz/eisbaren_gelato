@@ -33,16 +33,16 @@
         </div>
         <h1>CADASTRE-SE</h1>
       </header>
-
+      
       <form id="cadastroForm">
         <div class="input-group">
           <span class="material-symbols-outlined">person_outline</span>
-          <input type="text" placeholder="Nome" required />
+          <input type="text" placeholder="Nome" id="nome" required />
         </div>
 
         <div class="input-group">
           <span class="material-symbols-outlined">person_outline</span>
-          <input type="text" placeholder="Sobrenome" required />
+          <input type="text" placeholder="Sobrenome" id="sobrenome" required />
         </div>
 
         <div class="input-group">
@@ -58,22 +58,19 @@
 
         <div class="input-group">
           <span class="material-symbols-outlined">lock</span>
-          <input
-            type="password"
-            placeholder="Confirmar senha"
-            id="confirmarSenha"
-            required
-          />
+          <input type="password" placeholder="Confirmar senha" id="confirmarSenha" required />
           <span class="material-symbols-outlined eye-icon">visibility_off</span>
         </div>
 
         <button type="submit" class="login-btn" id="btnEnviar">CADASTRO</button>
       </form>
 
+
       <footer>
         Já tem uma conta? <a href="../login/login.html">Entrar</a>
       </footer>
     </div>
+
     <script src="scripts/cadastro.js"></script>
   </body>
 </html>

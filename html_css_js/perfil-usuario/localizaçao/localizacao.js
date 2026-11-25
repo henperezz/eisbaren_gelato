@@ -1,12 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
-    
-    const dadosSalvos = JSON.parse(localStorage.getItem("usuarioDados"));
-
-
-    if (dadosSalvos && dadosSalvos.nome) {
+    try {
+        const dados = JSON.parse(localStorage.getItem("usuarioDados"));
         const nomeLateral = document.getElementById("nome-usuario-lateral");
-        if (nomeLateral) {
-            nomeLateral.textContent = dadosSalvos.nome;
+        if (dados && dados.nome && nomeLateral) {
+            nomeLateral.textContent = dados.nome;
         }
-    }
+    } catch (e) {}
 });
