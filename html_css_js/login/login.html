@@ -43,18 +43,30 @@
       <form id="loginForm">
         <div class="input-group">
           <span class="material-symbols-outlined">mail</span>
-          <input type="email" id="email" placeholder="Email" required />
+          <input
+            type="email"
+            id="email"
+            placeholder="Email"
+            autocomplete="email"
+            required
+          />
         </div>
 
         <div class="input-group">
           <span class="material-symbols-outlined">lock</span>
-          <input type="password" placeholder="Senha" required />
+          <input
+            type="password"
+            id="senha"
+            placeholder="Senha"
+            autocomplete="current-password"
+            required
+          />
           <span class="material-symbols-outlined eye-icon">visibility_off</span>
         </div>
 
         <div class="options">
           <label class="switch-container">
-            <input type="checkbox" />
+            <input type="checkbox" id="lembrar" />
             <span class="slider"></span>
             <span class="label-text">Lembre de mim</span>
           </label>
@@ -82,6 +94,7 @@
         <a href="../cadastro/cadastro.html">Cadastre-se agora</a>
       </footer>
     </div>
+
     <script src="scripts/login.js"></script>
   </body>
 </html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Favoritos - Eisbären Gelato</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="favoritos.css">
+</head>
+<body>
+
+  <header class="headerContainer" id="headerContainer">
+    <div class="logoContainer">
+      <img src="assents/logo.jpg" alt="Logo Eisbaren" class="headerLogo" />
+    </div>
+
+    <div class="headerTextContainer">
+      <nav>
+        <ul class="listHeader">
+          <li class="linksList">
+            <a class="textLink" href="../../index/index.html">INÍCIO</a>
+          </li>
+          <li class="linksList">
+            <a class="textLink" href="../../saiba_mais/saibamais.html">SAIBA MAIS</a>
+          </li>
+          <li class="linksList">
+            <a class="textLink" href="../../produtos/produtos.html">PRODUTOS</a>
+          </li>
+          <li class="linksList">
+            <a class="textLink" href="../../carrinho/Carrinhocompras.html">CARRINHO</a>
+          </li>
+          <li class="linksList">
+            <a class="textLink" href="../perfil/perfil.html">PERFIL</a>
+          </li>
+          <li class="linksList">
+            <a href="../perfil/perfil.html">
+              <span class="material-symbols-outlined profile">group</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="layout-principal">
+
+    <aside class="menu-lateral">
+      <div class="perfil">
+        <div class="foto-perfil">
+          <img src="assents/user-profile-lineart-icon-rounded-outline-simple-avatar-symbol-on-transparent-background-free-png.webp" alt="Foto de perfil">
+        </div>
+        <h3 id="nome-usuario-lateral">Josevaldo Costa</h3>
+        <div class="perfil-btns">
+          <a href="../dados-pessoais/dados.html" class="btn-editar">EDITAR</a>
+          <a href="../../cadastro/cadastro.html" class="btn-sair">↦ Sair</a>
+        </div>
+      </div>
+
+
+      <hr class="divisoria">
+
+      <nav class="nav-lateral">
+        <ul>
+          <li>
+            <a href="../cupom/cupom.html">
+              <span class="icone">🎫</span>
+              Meus Cupons
+            </a>
+          </li>
+          <li class="item-ativo">
+            <a href="../favoritos/favorito.html">
+              <span class="icone">♡</span>
+              Meus Favoritos
+            </a>
+          </li>
+          <li>
+            <a href="../perfil/perfil.html">
+              <span class="icone">👤</span>
+              Perfil
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="pagina-favoritos">
+      <div class="favorito-container">
+
+        <h1 class="titulo-favoritos">MEUS FAVORITOS</h1>
+        <p class="subtitulo-favoritos">
+          Aqui estão os produtos que você marcou como favoritos.
+        </p>
+
+        <div class="lista-favoritos" id="lista-favoritos">
+
+          <div class="item-favorito">
+            <img src="../../../assets/img/produtos_geral/Sunday de Morongo.png" alt="Sundae de Morango">
+            <div class="favorito-info">
+              <h3>SUNDAE DE MORANGO</h3>
+              <p>Sundae cremoso com calda de morango e cobertura especial.</p>
+            </div>
+            <button class="btn-excluir">EXCLUIR</button>
+          </div>
+
+        </div>
+      </div>
+    </main>
+
+  </div>
+
+  <footer class="main-footer">
+    <div class="footer-grid">
+      <div class="footer-logo">
+        <img src="assents/logo.jpg" alt="Eisbären Gelato" />
+      </div>
+
+      <div class="footer-links">
+        <h4>MENU INSTITUCIONAL</h4>
+        <ul>
+          <li><a href="../../index/index.html">Início</a></li>
+          <li><a href="../../login/login.html">Login</a></li>
+          <li><a href="../../saiba_mais/saibamais.html">Sobre nós</a></li>
+          <li><a href="../../produtos/produtos.html">Peça Aqui</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>CONTATO</h4>
+        <ul>
+          <li>
+            <span class="material-symbols-outlined">mail</span>
+            <a class="linksFooter" href="mailto:EisbarenGelato@gmail.com">EisbarenGelato@gmail.com</a>
+          </li>
+          <li>
+            <span class="material-symbols-outlined">call</span>
+            <a class="linksFooter" href="tel:+551932116698">+55 19 3211-6698</a>
+          </li>
+        </ul>
+
+        <p>Acompanhe a gente nas redes sociais</p>
+        <div class="social-icons">
+          <a href="#"><img src="../../../assets/img/icones/facebook2.png" alt="Facebook"></a>
+          <a href="#"><img src="../../../assets/img/icones/instagram.png" alt="Instagram"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Eisbären Gelato Sorvetes. Todos os direitos reservados.</p>
+      <a href="#">Política de Privacidade</a>
+    </div>
+  </footer>
+
+  <script src="../menu-usuario.js"></script>
+  <script src="favoritos.js"></script>
+</body>
+</html>
