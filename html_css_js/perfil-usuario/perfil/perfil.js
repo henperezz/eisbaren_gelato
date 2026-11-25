@@ -4,14 +4,24 @@ document.addEventListener("DOMContentLoaded", () => {
         dados = JSON.parse(localStorage.getItem("usuarioDados"));
     } catch (e) {}
 
-    if (!dados) return;
+    // Protege a página: sem login, volta para o login
+    if (!dados) {
+        window.location.href = "../../login/login.html";
+        return;
+    }
 
-    const set = (id, valor) => {
-        const el = document.getElementById(id);
-        if (el && valor) el.textContent = valor;
-    };
+    // Nome no menu lateral
+    const nomeLateral = document.getElementById("nome-usuario-lateral");
+    if (nomeLateral && dados.nome) {
+        nomeLateral.textContent = dados.nome;
+    }
 
-    set("nome-usuario-lateral", dados.nome); // menu lateral
-    set("perfil-nome", dados.nome);          // centro da página
-    set("perfil-email", dados.email);        // centro da página
+    // Botão Sair
+    const btnSair = document.querySelector(".btn-sair");
+    if (btnSair) {
+        btnSair.setAttribute("href", "../../login/login.html");
+        btnSair.addEventListener("click", () => {
+            localStorage.removeItem("usuarioDados");
+        });
+    }
 });

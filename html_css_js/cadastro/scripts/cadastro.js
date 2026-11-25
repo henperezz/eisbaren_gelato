@@ -12,7 +12,6 @@ document.querySelectorAll('.eye-icon').forEach(icon => {
     });
 });
 
-// Salvar cadastro e redirecionar
 const form = document.getElementById('cadastroForm');
 const nomeInput = document.getElementById('nome');
 const sobrenomeInput = document.getElementById('sobrenome');
@@ -32,15 +31,31 @@ form.addEventListener('submit', (event) => {
         return;
     }
 
-    const usuarioDados = {
+    let usuarios = [];
+    try {
+        usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+    } catch (e) {}
+
+    // Impede email repetido
+    if (usuarios.some(u => u.email.toLowerCase() === emailLimpo.toLowerCase())) {
+        alert("Este email já está cadastrado. Faça login.");
+        return;
+    }
+
+    const novoUsuario = {
         usuario: emailLimpo.split('@')[0],
         nome: `${nomeInput.value.trim()} ${sobrenomeInput.value.trim()}`,
         email: emailLimpo,
+        senha: senha.value,
         telefone: "(19) 00000-0000"
     };
 
-    // Não salvamos a senha no localStorage (não é seguro)
-    localStorage.setItem("usuarioDados", JSON.stringify(usuarioDados));
+    usuarios.push(novoUsuario);
+    localStorage.setItem("usuarios", JSON.stringify(usuarios));
+
+    // Já deixa logado, sem a senha
+    const { senha: _, ...usuarioLogado } = novoUsuario;
+    localStorage.setItem("usuarioDados", JSON.stringify(usuarioLogado));
 
     btnEnviar.disabled = true;
     btnEnviar.innerText = "CADASTRANDO...";
