@@ -1,0 +1,205 @@
+.buttonSwitch {
+  box-sizing: content-box;
+  width: 30px;
+  height: 15px;
+  margin-top: 1.5rem;
+  margin-right: 1%;
+  border: #ffffff solid 2px;
+  border-radius: 30px;
+  position: relative;
+  cursor: pointer;
+  transition: border-color 0.4s;
+}
+
+.buttonSwitch .buttonIndicator {
+  box-sizing: content-box;
+  width: 15px;
+  height: 15px;
+  background-color: #ffffff;
+  border-radius: 150px;
+  transform: scale(0.8);
+  position: absolute;
+  left: 0;
+  transition: 0.4s;
+}
+
+.buttonSwitch.dark .buttonIndicator {
+  left: 15px;
+  background-color: #859678;
+}
+
+.buttonSwitch.dark {
+  border-color: #859678;
+}
+
+body,
+.menu-lateral,
+.info-perfil,
+.conteudo-cupons,
+.pagina-favoritos,
+.pagina-cartoes,
+.info-perfil-pagina,
+.pagina-localizacao,
+.grid-info .card,
+.nav-lateral a,
+.campo-linha input,
+.campo-loc-linha input {
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out,
+    border-color 0.5s ease-in-out;
+}
+
+html[data-theme="dark"] body {
+  background-color: #2b2229;
+  color: #f5ebf1;
+}
+
+html[data-theme="dark"] .headerContainer {
+  background: linear-gradient(
+    to bottom,
+    #3d2435 0%,
+    #542f49 14%,
+    #493442 34%,
+    #3f2b35 90%,
+    #3f2b35 100%
+  );
+}
+
+html[data-theme="dark"] .main-footer {
+  background: linear-gradient(
+    to bottom,
+    #2b2229 0%,
+    #542f49 14%,
+    #493442 34%,
+    #3f2b35 70%
+  );
+}
+
+html[data-theme="dark"] .menu-lateral {
+  background-color: #342a31;
+}
+
+html[data-theme="dark"] .info-perfil,
+html[data-theme="dark"] .conteudo-cupons,
+html[data-theme="dark"] .pagina-favoritos,
+html[data-theme="dark"] .pagina-cartoes,
+html[data-theme="dark"] .info-perfil-pagina,
+html[data-theme="dark"] .pagina-localizacao {
+  background-color: #2b2229;
+}
+
+html[data-theme="dark"] .perfil h3 {
+  color: #f5ebf1;
+}
+
+html[data-theme="dark"] .btn-sair {
+  color: #c9b8c3;
+}
+
+html[data-theme="dark"] .btn-sair:hover {
+  color: #ffffff;
+}
+
+html[data-theme="dark"] .divisoria {
+  border-top-color: #4a3b46;
+}
+
+html[data-theme="dark"] .nav-lateral a {
+  color: #c9b8c3;
+}
+
+html[data-theme="dark"] .nav-lateral a:hover,
+html[data-theme="dark"] .item-ativo a {
+  background-color: #4a3b46;
+  color: #f472b6;
+}
+
+html[data-theme="dark"] .subtitulo-perfil,
+html[data-theme="dark"] .subtitulo-cupons,
+html[data-theme="dark"] .subtitulo-favoritos,
+html[data-theme="dark"] .subtitulo-cartao,
+html[data-theme="dark"] .subtitulo-info,
+html[data-theme="dark"] .subtitulo-localizacao {
+  color: #c9b8c3;
+}
+
+html[data-theme="dark"] .perfil-dados p {
+  color: #f5ebf1;
+}
+
+html[data-theme="dark"] .perfil-dados h5 {
+  color: #c9b8c3;
+}
+
+html[data-theme="dark"] .grid-info .card {
+  background-color: #3a2f37;
+}
+
+html[data-theme="dark"] .grid-info .card h4 {
+  color: #f5ebf1;
+}
+
+html[data-theme="dark"] .grid-info .card p {
+  color: #c9b8c3;
+}
+
+html[data-theme="dark"] .grid-info .card:hover {
+  background-color: #4a3b46;
+  box-shadow: 0 8px 18px rgba(244, 114, 182, 0.25);
+}
+
+html[data-theme="dark"] .btn-ver-mais {
+  color: #c9b8c3;
+  border-bottom-color: #7a6572;
+}
+
+html[data-theme="dark"] .btn-ver-mais:hover {
+  color: #ffffff;
+}
+
+html[data-theme="dark"] .lista-favoritos {
+  border-top-color: #4a3b46;
+}
+
+html[data-theme="dark"] .item-favorito {
+  border-bottom-color: #4a3b46;
+}
+
+html[data-theme="dark"] .favorito-info h3 {
+  color: #f5ebf1;
+}
+
+html[data-theme="dark"] .favorito-info p {
+  color: #c9b8c3;
+}
+
+html[data-theme="dark"] .bloco-cartao h2 {
+  color: #f5ebf1;
+}
+
+html[data-theme="dark"] .campo label,
+html[data-theme="dark"] .campo-loc label {
+  color: #c9b8c3;
+}
+
+html[data-theme="dark"] .campo-linha input,
+html[data-theme="dark"] .campo-loc-linha input {
+  background-color: #3a2f37;
+  color: #f5ebf1;
+  border-color: #5a4856;
+}
+
+html[data-theme="dark"] .campo-linha input:disabled,
+html[data-theme="dark"] .campo-loc-linha input:disabled {
+  background-color: #2f262c;
+  color: #e6d9e1;
+}
+
+html[data-theme="dark"] .campo-linha input::placeholder,
+html[data-theme="dark"] .campo-loc-linha input::placeholder {
+  color: #a8949f;
+}
+
+html[data-theme="dark"] .campo-linha input:not(:disabled),
+html[data-theme="dark"] .campo-loc-linha input:focus {
+  border-color: #ff8aa5;
+}

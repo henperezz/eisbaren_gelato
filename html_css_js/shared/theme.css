@@ -126,3 +126,39 @@ html[data-theme="dark"] .lineDivisor {
   color: #4a3b46;
   border-color: #4a3b46;
 }
+
+html[data-theme="dark"] .additionalsItems.selecionado {
+  background-color: #5a3a4c;
+}
+
+html[data-theme="dark"] .carrinho-vazio,
+html[data-theme="dark"] .cart-resumo span {
+  color: #f5ebf1;
+}
+
+html[data-theme="dark"] .item-carrinho .quantity span {
+  color: #f5ebf1;
+  border-color: #5a4856;
+}
+
+html[data-theme="dark"] .popup-fundo {
+  background-color: rgba(0, 0, 0, 0.55);
+}
+
+html[data-theme="dark"] .popup-caixa {
+  background-color: #3a2f37;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+html[data-theme="dark"] .popup-caixa h2 {
+  color: #f5ebf1;
+}
+
+html[data-theme="dark"] .popup-caixa p {
+  color: #c9b8c3;
+}
+
+html[data-theme="dark"] .popup-continuar {
+  color: #ff8aa5;
+  border-color: #ff8aa5;
+}

@@ -1,136 +1,127 @@
-// O modo escuro agora é controlado por ../shared/theme.js (salva a escolha entre páginas)
+let listaCarrinho = document.getElementById("listaCarrinho");
+let carrinhoVazio = document.getElementById("carrinhoVazio");
+let cartResumo = document.getElementById("cartResumo");
+let cartCount = document.getElementById("cart-count");
+let cartTotal = document.getElementById("cart-total");
+let linkFinalizar = document.getElementById("linkFinalizar");
 
 function formatarPreco(valor) {
   return valor.toLocaleString("pt-BR", {
     style: "currency",
-
     currency: "BRL",
   });
 }
 
-function salvarCarrinho() {
-  localStorage.setItem(
-    chaveCarrinho,
-
-    JSON.stringify(
-      produtos.map((produto) => ({
-        quantidade: produto.quantidade,
-
-        removido: produto.removido,
-      })),
-    ),
-  );
+function lerCarrinho() {
+  return JSON.parse(localStorage.getItem("carrinho")) || [];
 }
 
-function atualizarContador() {
+function salvarCarrinho(carrinho) {
+  localStorage.setItem("carrinho", JSON.stringify(carrinho));
+}
+
+function desenharCarrinho() {
+  let carrinho = lerCarrinho();
   let quantidadeTotal = 0;
+  let valorTotal = 0;
+  let html = "";
 
-  produtos.forEach((produto) => {
-    if (!produto.removido) {
-      quantidadeTotal += produto.quantidade;
+  carrinho.forEach((produto) => {
+    quantidadeTotal += produto.quantity;
+    valorTotal += produto.price * produto.quantity;
+
+    let adicionais = "";
+    if (produto.additionals.length > 0) {
+      adicionais = `<span class="item-adicionais">+ ${produto.additionals.join(", ")}</span>`;
     }
+
+    html += `
+      <div class="item-carrinho">
+        <div class="item-detalhes">
+          <div class="img-item">
+            <img src="${produto.image}" alt="${produto.name}">
+          </div>
+          <div class="texto-milk">
+            <h2>${produto.name}</h2>
+            <span>Tamanho: ${produto.size}</span>
+            ${adicionais}
+          </div>
+        </div>
+        <div class="item-price">
+          <h3>${formatarPreco(produto.price)}</h3>
+        </div>
+        <div class="quantity">
+          <button class="buttonMinus buttonQuantity">-</button>
+          <span>${produto.quantity}</span>
+          <button class="buttonPlus buttonQuantity">+</button>
+        </div>
+        <div class="item-total">
+          <h3>${formatarPreco(produto.price * produto.quantity)}</h3>
+        </div>
+        <div class="item-remove">
+          <img src="img/Button.png" alt="Botão para remover o item do carrinho">
+        </div>
+      </div>
+      <div class="linha-produto"></div>
+    `;
   });
 
-  document.getElementById("cart-count").textContent =
-    `(${quantidadeTotal} Unid)`;
+  listaCarrinho.innerHTML = html;
+  cartCount.textContent = `(${quantidadeTotal} Unid)`;
+  cartTotal.textContent = formatarPreco(valorTotal);
+
+  if (carrinho.length === 0) {
+    carrinhoVazio.style.display = "block";
+    cartResumo.style.display = "none";
+  } else {
+    carrinhoVazio.style.display = "none";
+    cartResumo.style.display = "flex";
+  }
+
+  ativarBotoes();
 }
 
-function atualizarCarrinho() {
-  produtos.forEach((produto, index) => {
-    if (produto.removido) return;
+function ativarBotoes() {
+  let botoesMais = document.querySelectorAll(".buttonPlus");
+  let botoesMenos = document.querySelectorAll(".buttonMinus");
+  let botoesRemover = document.querySelectorAll(".item-remove img");
 
-    // Atualiza a quantidade na tela.
-
-    quantidades[index].querySelector("span").textContent = produto.quantidade;
-
-    // Calcula o valor total do produto.
-
-    let total = produto.preco * produto.quantidade;
-
-    // Mostra o valor atualizado.
-
-    totais[index].textContent = formatarPreco(total);
+  botoesMais.forEach((botao, index) => {
+    botao.addEventListener("click", () => {
+      let carrinho = lerCarrinho();
+      carrinho[index].quantity++;
+      salvarCarrinho(carrinho);
+      desenharCarrinho();
+    });
   });
 
-  atualizarContador();
+  botoesMenos.forEach((botao, index) => {
+    botao.addEventListener("click", () => {
+      let carrinho = lerCarrinho();
+      if (carrinho[index].quantity > 1) {
+        carrinho[index].quantity--;
+        salvarCarrinho(carrinho);
+        desenharCarrinho();
+      }
+    });
+  });
 
-  salvarCarrinho();
+  botoesRemover.forEach((botao, index) => {
+    botao.style.cursor = "pointer";
+    botao.addEventListener("click", () => {
+      let carrinho = lerCarrinho();
+      carrinho.splice(index, 1);
+      salvarCarrinho(carrinho);
+      desenharCarrinho();
+    });
+  });
 }
 
-quantidades.forEach((grupo, index) => {
-  const botaoMenos = grupo.querySelector(".buttonMinus");
-
-  const botaoMais = grupo.querySelector(".buttonPlus");
-
-  // Botão de diminuir.
-
-  botaoMenos.addEventListener("click", () => {
-    if (produtos[index].quantidade > 1) {
-      produtos[index].quantidade--;
-
-      atualizarCarrinho();
-    }
-  });
-
-  // Botão de aumentar.
-
-  botaoMais.addEventListener("click", () => {
-    produtos[index].quantidade++;
-
-    atualizarCarrinho();
-  });
-});
-
-botoesRemover.forEach((botao, index) => {
-  botao.style.cursor = "pointer";
-
-  botao.addEventListener("click", () => {
-    // Marca o produto como removido.
-
-    produtos[index].removido = true;
-
-    // Esconde os elementos desse produto.
-
-    imagens[index].style.display = "none";
-
-    textos[index].style.display = "none";
-
-    precos[index].parentElement.style.display = "none";
-
-    quantidades[index].style.display = "none";
-
-    totais[index].parentElement.style.display = "none";
-
-    botao.style.display = "none";
-
-    if (linhas[index]) {
-      linhas[index].style.display = "none";
-    }
-
-    atualizarCarrinho();
-  });
-});
-
-produtos.forEach((produto, index) => {
-  if (produto.removido) {
-    imagens[index].style.display = "none";
-
-    textos[index].style.display = "none";
-
-    precos[index].parentElement.style.display = "none";
-
-    quantidades[index].style.display = "none";
-
-    totais[index].parentElement.style.display = "none";
-
-    botoesRemover[index].style.display = "none";
-
-    if (linhas[index]) {
-      linhas[index].style.display = "none";
-    }
+linkFinalizar.addEventListener("click", (evento) => {
+  if (lerCarrinho().length === 0) {
+    evento.preventDefault();
+    alert("Seu carrinho está vazio!");
   }
 });
 
-// Atualiza todos os valores ao carregar.
-
-atualizarCarrinho();
+desenharCarrinho();

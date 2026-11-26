@@ -17,6 +17,7 @@
     <link rel="shortcut icon" href="img/coroa 2.png" type="image/x-icon" />
       <link rel="stylesheet" href="../shared/theme.css" />
     <script src="../shared/theme.js"></script>
+    <script src="../shared/perfil.js"></script>
   </head>
 
   <body>
@@ -49,7 +50,7 @@
               <a class="textLink" href="../cadastro/cadastro.html">PERFIL</a>
             </li>
             <li class="linksList">
-              <a href="../perfil/perfil.html"
+              <a href="../perfil-usuario/perfil/perfil.html"
                 ><span class="material-symbols-outlined profile">
                   group
                 </span></a
@@ -81,7 +82,7 @@
       <div class="container">
         <h2>Endereço de cobrança:</h2>
 
-        <form>
+        <form id="formPedido">
           <div class="linha">
             <input type="text" placeholder="Nome" required />
             <input type="text" placeholder="Sobrenome" required />
@@ -121,7 +122,7 @@
             <img src="img/Symbol.png" alt="Dinheiro" class="img-Symbol" />
           </label>
 
-          <button type="button">Confirmar pedido</button>
+          <button type="button" id="btnConfirmar">Confirmar pedido</button>
         </form>
       </div>
 
@@ -144,31 +145,15 @@
 
           <hr />
 
-          <div class="resumo-item">
-            <span>3x Classic Vanilla</span>
-            <strong>R$13.00</strong>
-          </div>
-
-          <div class="resumo-item">
-            <span>6x Chocolate Brownie</span>
-            <strong>R$23.00</strong>
-          </div>
-
-          <div class="resumo-item">
-            <span>4x Stawberry Cake</span>
-            <strong>R$22.00</strong>
-          </div>
-
+          <div id="resumoItens"></div>
           <hr />
-
           <div class="resumo-item">
             <span>Subtotal</span>
-            <strong>R$200,99</strong>
+            <strong id="resumoSubtotal">R$0,00</strong>
           </div>
-
           <div class="resumo-item">
             <span>Envio</span>
-            <strong>R$15,00</strong>
+            <strong id="resumoEnvio">R$0,00</strong>
           </div>
         </div>
 
@@ -176,10 +161,10 @@
 
         <div class="resumo-total">
           <span>Total geral</span>
-          <strong>R$215,99</strong>
+          <strong id="resumoTotal">R$0,00</strong>
         </div>
 
-        <button class="btn-checkout">Finalizar compra</button>
+        <button class="btn-checkout" id="btnFinalizar">Finalizar compra</button>
 
         <hr />
 

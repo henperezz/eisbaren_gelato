@@ -18,7 +18,6 @@ const senhaInput =
     form.querySelector('input[type="password"], .input-group:nth-child(2) input');
 const lembrar = document.getElementById("lembrar");
 
-console.log("login.js carregado", { emailInput, senhaInput, lembrar });
 
 const emailLembrado = localStorage.getItem("emailLembrado");
 if (emailLembrado && emailInput) {
@@ -37,7 +36,6 @@ form.addEventListener("submit", (event) => {
         usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
     } catch (e) {}
 
-    console.log("usuários cadastrados:", usuarios.length);
 
     const encontrado = usuarios.find(
         u => u.email.toLowerCase() === email && u.senha === senha

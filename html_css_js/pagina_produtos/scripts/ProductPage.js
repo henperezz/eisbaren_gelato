@@ -1,36 +1,3 @@
-// O modo escuro agora é controlado por ../shared/theme.js (salva a escolha entre páginas)
-
-let favoriteIcon = document.getElementById("favoriteIcon");
-
-favoriteIcon.addEventListener("click", () => {
-  favoriteIcon.classList.toggle("favorited");
-});
-
-let value = 1;
-
-document.querySelector(".buttonMinus").addEventListener("click", () => {
-  if (value == 1) {
-    return;
-  } else {
-    value--;
-  }
-  document.getElementById("valueQuantity").textContent = value;
-});
-
-document.querySelector(".buttonPlus").addEventListener("click", () => {
-  value++;
-  document.getElementById("valueQuantity").textContent = value;
-});
-
-let additionals = document.querySelector(".additionals");
-let additionalsList = document.querySelector(".additionalsList");
-let arrowRight = document.querySelector(".arrowRight");
-
-additionals.addEventListener("click", () => {
-  additionalsList.classList.toggle("activated");
-  arrowRight.classList.toggle("activated");
-});
-
 document.addEventListener("DOMContentLoaded", () => {
 
   // ELEMENTOS DA PÁGINA
@@ -54,8 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const additionalsItems = document.querySelectorAll(".additionalsItems");
 
   const favoriteIcon = document.getElementById("favoriteIcon");
-
-  const buttonSwitch = document.getElementById("buttonSwitch");
 
   const productNameElement = document.querySelector(".productName");
 
@@ -141,7 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     );
 
-    return productPrice + additionalTotal;
+    return Math.round((productPrice + additionalTotal) * 100) / 100;
 
   }
 
@@ -189,7 +154,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       button.style.color = "#ffffff";
 
-      selectedSize = button.querySelector(".textSizeButton")
+      selectedSize = button.querySelector("p")
 
         .textContent.trim();
 
@@ -227,7 +192,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         );
 
-        item.style.backgroundColor = "";
+        item.classList.remove("selecionado");
 
         plus.textContent = "+";
 
@@ -245,7 +210,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       selectedAdditionals.push(item);
 
-      item.style.backgroundColor = "#fce4ed";
+      item.classList.add("selecionado");
 
       plus.textContent = "✓";
 
@@ -261,17 +226,55 @@ document.addEventListener("DOMContentLoaded", () => {
 
   });
 
-  // MODO ESCURO
-
-  buttonSwitch.addEventListener("click", () => {
-
-    buttonSwitch.classList.toggle("dark");
-
-    document.body.classList.toggle("dark");
-
-  });
-
   // ADICIONAR AO CARRINHO
+
+  function mostrarPopup(nome, tamanho, quantidade) {
+    let popupAntigo = document.querySelector(".popup-fundo");
+    if (popupAntigo) {
+      popupAntigo.remove();
+    }
+
+    let popup = document.createElement("div");
+    popup.className = "popup-fundo";
+    popup.innerHTML = `
+      <div class="popup-caixa" role="dialog" aria-modal="true">
+        <div class="popup-icone">
+          <span>✓</span>
+        </div>
+        <h2>Produto adicionado!</h2>
+        <p>${quantidade}x ${nome} (${tamanho})</p>
+        <div class="popup-botoes">
+          <button class="popup-continuar">Continuar comprando</button>
+          <a class="popup-carrinho" href="../carrinho/Carrinhocompras.html">Ver carrinho</a>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(popup);
+
+    let botaoContinuar = popup.querySelector(".popup-continuar");
+    botaoContinuar.focus();
+
+    function fecharPopup() {
+      popup.remove();
+      document.removeEventListener("keydown", aoApertarTecla);
+    }
+
+    function aoApertarTecla(evento) {
+      if (evento.key === "Escape") {
+        fecharPopup();
+      }
+    }
+
+    botaoContinuar.addEventListener("click", fecharPopup);
+
+    popup.addEventListener("click", (evento) => {
+      if (evento.target === popup) {
+        fecharPopup();
+      }
+    });
+
+    document.addEventListener("keydown", aoApertarTecla);
+  }
 
   buttonAddCart.addEventListener("click", () => {
 
@@ -345,7 +348,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     localStorage.setItem("carrinho", JSON.stringify(cart));
 
-    alert("Produto adicionado ao carrinho!");
+    mostrarPopup(productName, selectedSize, quantity);
 
     // Reiniciar seleções
 
